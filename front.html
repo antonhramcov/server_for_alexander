@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /* Простые стили для улучшения внешнего вида */
+
+    body {
+      min-height: 100vh;
+      padding: 50px;
+      display: flex
+    ;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #663613;
+      color: #FFFFFF;
+      font-size: 18px;
+      font-family: "Roboto", sans-serif;
+    }
+    .form {
+      width: 740px;
+      padding: 55px 80px;
+      background-color: #18191C;
+    }
+    form {
+      display: block;
+      margin-top: 0em;
+      unicode-bidi: isolate;
+    }
+
+    input[type="text"], input[type="number"], input[type="tel"], input[type="email"], select {
+      margin-bottom: 10px;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .input-label {
+      display: flex
+    ;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .input-label, .radio-legend {
+      margin-bottom: 25px;
+    }
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    user agent stylesheet
+    label {
+      cursor: default;
+    }
+    button {
+      background-color: #FF8630;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .error-message {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <form id="myForm" class="form">
+    <div>
+      <p>Выберите желаемые стандарты</p>
+      <select multiple size="4" name="standarts" id="standarts"  required>
+        <option value="9001">ГОСТ Р ИСО 9001-2015</option>
+        <option value="14001">ГОСТ Р ИСО 14001-2016</option>
+        <option value="45001">ГОСТ Р ИСО 45001-2020</option>
+        <option value="50001">ГОСТ Р ИСО 50001-2023</option>
+        <option value="51705">ГОСТ Р 51705.1-2024 (ХАССП)</option>
+        <option value="22000">ГОСТ Р ИСО 22000-2019</option>
+        <option value="27001">ГОСТ Р ИСО/МЭК 27001-2021</option>
+        <option value="56404">ГОСТ Р 56404-2021</option>
+        <option value="13485">ГОСТ ISO 13485-2017</option>
+        <option value="20000">ГОСТ Р ИСО/МЭК 20000-1-2021</option>
+        <option value="54762">ГОСТ Р 54762-2011</option>
+        <option value="58876">ГОСТ Р 58876-2020</option>
+        <option value="58139">ГОСТ Р 58139-2018</option>
+        <option value="19443">ГОСТ Р ИСО 19443-2020</option>
+      </select>
+    </div>
+    <p>Данные о компании</p>
+    <div>
+      <label class="input-label">Наименование компании:</label>
+      <input name="name" id="name" type="text">
+    </div>
+    <div>
+      <label>Регион:</label>
+      <select name="region" id="region" size="1">
+        <option value="01">01 Республика Адыгея</option>
+        <option value="02">02 Республика Башкортостан</option>
+        <option value="03">03 Республика Бурятия</option>
+        <option value="04">04 Республика Алтай</option>
+        <option value="05">05 Республика Дагестан</option>
+        <option value="06">06 Республика Ингушетия</option>
+        <option value="07">07 Кабардино-Балкарская Республика</option>
+        <option value="08">08 Республика Калмыкия</option>
+        <option value="09">09 Карачаево-Черкесская Республика</option>
+        <option value="10">10 Республика Карелия</option>
+        <option value="11">11 Республика Коми</option>
+        <option value="12">12 Республика Марий Эл</option>
+        <option value="13">13 Республика Мордовия</option>
+        <option value="14">14 Республика Саха (Якутия)</option>
+        <option value="15">15 Республика Северная Осетия - Алания</option>
+        <option value="16">16 Республика Татарстан (Татарстан)</option>
+        <option value="17">17 Республика Тыва</option>
+        <option value="18">18 Удмуртская Республика</option>
+        <option value="19">19 Республика Хакасия</option>
+        <option value="20">20 Чеченская Республика</option>
+        <option value="21">21 Чувашская Республика - Чувашия</option>
+        <option value="22">22 Алтайский край</option>
+        <option value="23">23 Краснодарский край</option>
+        <option value="24">24 Красноярский край</option>
+        <option value="25">25 Приморский край</option>
+        <option value="26">26 Ставропольский край</option>
+        <option value="27">27 Хабаровский край</option>
+        <option value="28">28 Амурская область</option>
+        <option value="29">29 Архангельская область</option>
+        <option value="30">30 Астраханская область</option>
+        <option value="31">31 Белгородская область</option>
+        <option value="32">32 Брянская область</option>
+        <option value="33">33 Владимирская область</option>
+        <option value="34">34 Волгоградская область</option>
+        <option value="35">35 Вологодская область</option>
+        <option value="36">36 Воронежская область</option>
+        <option value="37">37 Ивановская область</option>
+        <option value="38">38 Иркутская область</option>
+        <option value="39">39 Калининградская область</option>
+        <option value="40">40 Калужская область</option>
+        <option value="41">41 Камчатский край</option>
+        <option value="42">42 Кемеровская область - Кузбасс</option>
+        <option value="43">43 Кировская область</option>
+        <option value="44">44 Костромская область</option>
+        <option value="45">45 Курганская область</option>
+        <option value="46">46 Курская область</option>
+        <option value="47">47 Ленинградская область</option>
+        <option value="48">48 Липецкая область</option>
+        <option value="49">49 Магаданская область</option>
+        <option value="50">50 Московская область</option>
+        <option value="51">51 Мурманская область</option>
+        <option value="52">52 Нижегородская область</option>
+        <option value="53">53 Новгородская область</option>
+        <option value="54">54 Новосибирская область</option>
+        <option value="55">55 Омская область</option>
+        <option value="56">56 Оренбургская область</option>
+        <option value="57">57 Орловская область</option>
+        <option value="58">58 Пензенская область</option>
+        <option value="59">59 Пермский край</option>
+        <option value="60">60 Псковская область</option>
+        <option value="61">61 Ростовская область</option>
+        <option value="62">62 Рязанская область</option>
+        <option value="63">63 Самарская область</option>
+        <option value="64">64 Саратовская область</option>
+        <option value="65">65 Сахалинская область</option>
+        <option value="66">66 Свердловская область</option>
+        <option value="67">67 Смоленская область</option>
+        <option value="68">68 Тамбовская область</option>
+        <option value="69">69 Тверская область</option>
+        <option value="70">70 Томская область</option>
+        <option value="71">71 Тульская область</option>
+        <option value="72">72 Тюменская область</option>
+        <option value="73">73 Ульяновская область</option>
+        <option value="74">74 Челябинская область</option>
+        <option value="75">75 Забайкальский край</option>
+        <option value="76">76 Ярославская область</option>
+        <option value="77">77 г. Москва</option>
+        <option value="78">78 г. Санкт-Петербург</option>
+        <option value="79">79 Еврейская автономная область</option>
+        <option value="83">83 Ненецкий автономный округ</option>
+        <option value="86">86 Ханты-Мансийский автономный округ - Югра</option>
+        <option value="87">87 Чукотский автономный округ</option>
+        <option value="89">89 Ямало-Ненецкий автономный округ</option>
+        <option value="91">91 Республика Крым</option>
+        <option value="92">92 г. Севастополь</option>
+        <option value="99">99 иные территории, включая город и космодром Байконур</option>
+      </select>
+    </div>
+    <p>Данные об офисе (офисах)</p>
+    <div>
+      <label>Адрес компании:</label>
+      <input name="address_0" id="address_0" type="text">
+    </div>
+    <div>
+      <label>Общая численность:</label>
+      <input name="number_0" id="number_0" type="number">
+    </div>
+    <div id="container"></div>
+    <button onclick="createBlock()">Добавить информацию об еще одном офисе</button>
+    <script>
+      let maxBlocks = 20; // Максимальное количество офисов
+      let currentBlocks = 0; // Текущее количество добавленных офисов
+      function createBlock() {
+        if (currentBlocks+1 >= maxBlocks) {
+          alert(`Вы достигли лимита! Можно добавить информацию максимум о ${maxBlocks} офисах!`);
+          return;
+        }
+        const newBlock1 = document.createElement('div');
+        newBlock1.className = 'block';
+        const label1 = document.createElement('label');
+        label1.textContent = 'Адрес компании:';
+        const input1 = document.createElement('input');
+        input1.type = 'text';
+        input1.id = `address_${currentBlocks+1}`;
+        input1.name = `address_${currentBlocks+1}`;
+        input1.required = true;
+        newBlock1.appendChild(label1);
+        newBlock1.appendChild(input1);
+
+        const newBlock2 = document.createElement('div');
+        newBlock2.className = 'block';
+        const label2 = document.createElement('label');
+        label2.textContent = 'Общая численность:';
+        const input2 = document.createElement('input');
+        input2.type = 'number';
+        input2.id = `number_${currentBlocks+1}`;
+        input2.name = `number_${currentBlocks+1}`;
+        input2.required = true;
+        newBlock2.appendChild(label2);
+        newBlock2.appendChild(input2);
+        document.getElementById('container').appendChild(newBlock1);
+        document.getElementById('container').appendChild(newBlock2);
+        currentBlocks++;}
+    </script>
+    <div>
+      <label>Область сертификации (основной ОКВЭД или вид деятельности компании):</label>
+      <input name="activity" id="activity" type="text">
+    </div>
+    <div>
+      <label>Желаемые сроки для проведения аудита:</label>
+      <input name="date" id="date" type="text">
+    </div>
+    <div>
+      <label>Примечания и пожелания:</label>
+      <input name="notes" id="notes" type="text">
+    </div>
+    <p>Контактные данные</p>
+    <div>
+      <label>ФИО:</label>
+      <input name="fullname" id="fullname" type="text">
+    </div>
+    <div>
+      <label>Телефон:</label>
+      <input name="phone" id="phone" type="tel">
+    </div>
+    <div>
+      <label>Адрес электронной почты:</label>
+      <input name="email" id="email" type="email">
+    </div>
+    <div>
+      <label>Предпочитаемый вид связи и время для связи:</label>
+      <input name="connection" id="connection" type="text">
+    </div>
+    <button type="submit" id="find">Найти орган сертификации</button>
+    <div id="result"></div>
+    <button type="submit" id="send" onclick="sendToUrl2()">Отправить заявку</button>
+  </form>
+</main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Клик на кнопку поиска компаний
+    $('#find').on('click', function (event) {
+      event.preventDefault(); // Отмена стандартного поведения кнопки
+
+      const select = document.getElementById('standarts');
+      const selectedValues = Array.from(select.options)
+              .filter(option => option.selected)
+              .map(option => option.value);
+
+      console.log("Выбранные стандарты:", selectedValues);
+
+      $.ajax({
+        url: 'http://127.0.0.1:5000/get_names_companies_from_standarts',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ standarts: selectedValues }),
+        success: function (response) {
+          if (response.status === 'ok') {
+            createCompanySelect(response.options);
+          } else {
+            console.error('Ошибка при получении списка компаний');
+          }
+        },
+        error: function (xhr, status, error) {
+          console.error("Ошибка запроса:", error);
+        }
+      });
+    });
+  });
+
+  // Функция для создания селекта с компаниями (ограничение в 4 компании)
+  function createCompanySelect(companies) {
+    let container = document.getElementById("companyContainer");
+    if (!container) {
+      container = document.createElement("div");
+      container.id = "companyContainer";
+      document.getElementById("myForm").insertBefore(container, document.getElementById("result"));
+    }
+    container.innerHTML = ""; // Очищаем контейнер перед обновлением
+
+    const label = document.createElement("label");
+    label.textContent = "Выберите компании (максимум 8):";
+    container.appendChild(label);
+
+    const select = document.createElement("select");
+    select.id = "companySelect";
+    select.multiple = true;
+    select.size = Math.min(companies.length, 8); // Показываем не более 6 строк
+
+    companies.forEach(company => {
+      const option = document.createElement("option");
+      option.value = company;
+      option.textContent = company;
+      select.appendChild(option);
+    });
+
+    select.addEventListener("change", function () {
+      if (select.selectedOptions.length > 8) {
+        alert("Вы можете выбрать не более 8 компаний!");
+        Array.from(select.selectedOptions).slice(4).forEach(option => option.selected = false);
+      }
+    });
+
+    container.appendChild(select);
+  }
+
+  // Функция отправки данных на сервер
+  async function sendToUrl2(event) {
+    event.preventDefault(); // Отключаем стандартную отправку формы
+
+    const form = document.getElementById("myForm");
+    let formData = {};
+
+    const inputs = form.querySelectorAll("input, select");
+    inputs.forEach(input => {
+      if (input.type === "checkbox") {
+        formData[input.id] = input.checked;
+      } else if (input.type === "radio") {
+        if (input.checked) {
+          formData[input.name] = input.value;
+        }
+      }
+      else {
+        formData[input.id] = input.value;
+      }
+    });
+
+    // Добавляем выбранные компании в formData
+    const companySelect = document.getElementById("companySelect");
+    if (companySelect) {
+      formData["selectedCompanies"] = Array.from(companySelect.selectedOptions).map(option => option.value);
+    }
+
+    // Добавляем выбранные компании в formData
+    const standartsSelect = document.getElementById("standarts");
+    if (standartsSelect) {
+      formData["selectedStandarts"] = Array.from(standartsSelect.selectedOptions).map(option => option.value);
+    }
+
+    console.log("🛠 Отправляемые данные:", JSON.stringify(formData, null, 2)); // Вывод тела запроса в консоль
+
+    try {
+      const response = await fetch("http://127.0.0.1:5000/send_request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Ошибка HTTP: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log("✅ Ответ сервера:", result);
+
+      if (result.status === "ok") {
+        alert("Данные успешно отправлены!");
+      } else {
+
+      }
+    } catch (error) {
+
+    }
+  }
+
+  // Добавляем обработчик клика на кнопку "Отправить заявку"
+  document.getElementById("send").addEventListener("click", sendToUrl2);
+
+</script>
+</body>
+</html>
