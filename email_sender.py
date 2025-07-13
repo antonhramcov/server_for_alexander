@@ -2,8 +2,8 @@ import smtplib, models
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-email = 'auditadvisor@yandex.ru'
-password = 'prqkowugrkyenmnb'
+email = 
+password = 
 
 def send_email(address, path_to_json):
     # Тема письма
