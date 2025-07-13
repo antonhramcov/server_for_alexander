@@ -64,12 +64,7 @@ def get_list_companies(standarts:list[str], region:str='50'):
     list5 = list(filter(lambda x: x['Статус'] == 'Пассивный' and x not in list2, list_all))
     shuffle(list5)
 
-    #Балансировка количества
-    if len(list1)>len(list2+list3+list4+list5):
-        output_list =  list1[:len(list2+list3+list4+list5)+1] + list2 + list3 + list4 + list5
-    else:
-        second_list = list2 + list3 + list4 + list5
-        output_list = list1 + second_list[:len(list1)]
+    output_list = list1 + list2 + list3 + list4 + list5
     output_list2 = [f"{comp['Сокращенное наименование']}, {comp['Город']}" for comp in output_list]
     urls = get_urls([comp['Сокращенное наименование'] for comp in output_list])
     return [output_list2, urls]
