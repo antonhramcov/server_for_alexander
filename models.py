@@ -9,58 +9,6 @@ from email.mime.multipart import MIMEMultipart
 def find_standarts_from_str(s:str):
     return re.findall(r'[0-9]{4,5}',s)
 
-def get_list_regions() -> list:
-    with open('files/regions.txt', 'r', encoding="utf-8") as f:
-        return [i.strip() for i in f.readlines()]
-
-def make_correct_name(s:str) -> str:
-    return s.replace('"','').replace('  ', ' ')
-
-def search_companies(standarts:list) -> list:
-    companies = {}
-    for standart in standarts:
-        int_standart = int(standart)
-        with open(f'files/{int_standart}.csv', 'r') as f:
-            text = f.read()
-            if text.count(';')>text.count(','):
-                separator = ';'
-            else:
-                separator = ','
-        with open(f'files/{int_standart}.csv', 'r') as f:
-            comps = [(comp.split(separator)[0], comp.split(separator)[1].strip()) for comp in f.readlines()[1:]]
-        for comp in comps:
-            if comp[1] not in companies:
-                companies[comp[1]] = {'name':comp[0], 'standarts':[standart]}
-            else:
-                companies[comp[1]]['standarts'].append(standart)
-    filtered_companies = {}
-    for key, val in companies.items():
-        for std in standarts:
-            if std not in val['standarts']:
-                break
-        else:
-            if key not in filtered_companies:
-                filtered_companies[key] = val
-    return sorted(filtered_companies.items(), key=lambda items: len(items[1]['standarts']), reverse=True)
-
-
-def get_args_from_url(s) -> dict:
-    args = {}
-    for arg in s.split('?')[1].split('&'):
-        if arg.split('=')[0] not in args:
-            if arg.split('=')[0].startswith('standarts') or arg.split('=')[0].startswith('address') or arg.split('=')[0].startswith('number'):
-                args[arg.split('=')[0]] = [arg.split('=')[1]]
-            else:
-                args[arg.split('=')[0]] = arg.split('=')[1]
-        else:
-            args[arg.split('=')[0]].append(arg.split('=')[1])
-    return args
-
-def get_names_companies_for_request(l:list) -> list:
-    output_list = [i for i in [make_correct_name(comp[1]['name']) for comp in l] if i!=None]
-    shuffle(output_list)
-    return output_list
-
 def from_json_to_text(d:dict) -> str:
     text = ''
     if 'selectedStandarts' in d:
@@ -91,7 +39,7 @@ def from_json_to_text(d:dict) -> str:
     if 'Email' in d:
         text += f'Адрес электронной почты: {d["Email"]}\n'
     if 'ConnectionType' in d:
-        text += f'Предпочитаемый вид связи: {d["connectionType"]}\n'
+        text += f'Предпочитаемый вид связи: {d["ConnectionType"]}\n'
     if 'ConnectionTime' in d:
         if len(d['ConnectionTime'])>0:
             text += f'Примечание: {d["ConnectionTime"]}\n'
@@ -105,7 +53,6 @@ def save_request(d:dict, id:str):
     d['email_text'] = sample
     with open(f'requests/{id}.json', 'w') as f:
         json.dump(d, f)
-    return f'Заявка {id} сохранена'
 
 def load_requests(id:str) -> dict:
     with open(f'requests/{id}.json', 'r') as f:
@@ -141,12 +88,6 @@ def make_email_from_json(path_to_json):
     msg['Subject'] = 'Audit Advisor: Заявка на сертификацию системы менеджмента'
     msg.attach(MIMEText(sample, 'plain'))
     return msg
-
-def get_dict_names_and_email():
-    with open('files/Live_Status.csv', 'r') as f:
-        names = {i.split(',')[0].replace('"',''):i.split(',')[3] for i in f.readlines()[1:]}
-    return names
-
 
 def add_user(id, username):
     with open('files/users.txt', 'a') as f:
