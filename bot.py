@@ -12,14 +12,13 @@ from parser import add_count_current_month
 # Инициализируем хранилище (создаем экземпляр класса MemoryStorage)
 storage: MemoryStorage = MemoryStorage()
 
-token = '7502270744:AAEtjZy05XvH5NpQ2r8KoMqkjMhP-mDZjy8'
+token = 
 # Создаем объекты бота и диспетчера
 bot: Bot = Bot(token)
 dp: Dispatcher = Dispatcher(storage=storage)
 
 # Идентификатор администратора
-#id_moderator = 216501897 #Alexander
-id_moderator = 1114704281 #Anton
+id_moderator = 1111111111 
 status_email = False
 
 class Check_in_admin(Filter):
