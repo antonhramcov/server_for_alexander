@@ -1,18 +1,25 @@
 from aiogram import Bot, Dispatcher, F
-from aiogram.filters import Command, BaseFilter, Filter
+from aiogram.filters import Command, BaseFilter, Filter, StateFilter
+from aiogram.filters.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
+from aiogram.fsm.context import FSMContext
 from aiogram.types import (InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, Message, FSInputFile, ContentType, BotCommand)
-import os, email_sender, time, models
+import os, email_sender, time, models, json, parser
+import asyncio
+
+from parser import add_count_current_month
 
 # Инициализируем хранилище (создаем экземпляр класса MemoryStorage)
 storage: MemoryStorage = MemoryStorage()
 
+token = '7502270744:AAEtjZy05XvH5NpQ2r8KoMqkjMhP-mDZjy8'
 # Создаем объекты бота и диспетчера
-bot: Bot = Bot('')
+bot: Bot = Bot(token)
 dp: Dispatcher = Dispatcher(storage=storage)
 
 # Идентификатор администратора
-id_moderator = 1114704281
+#id_moderator = 216501897 #Alexander
+id_moderator = 1114704281 #Anton
 status_email = False
 
 class Check_in_admin(Filter):
@@ -32,6 +39,13 @@ class Dell_keyboard(BaseFilter):
     async def __call__(self, callback:CallbackQuery) -> bool:
         return callback.data.startswith('del')
 
+class Submit_text(BaseFilter):
+    async def __call__(self, callback:CallbackQuery) -> bool:
+        return callback.data.startswith('submit')
+
+class FSMFillForm(StatesGroup):
+    fill_submit = State()
+
 # Список доступных команд
 async def set_main_menu(bot: Bot):
     main_menu_commands = [
@@ -47,17 +61,56 @@ async def set_main_menu(bot: Bot):
 
 # Функция отправки уведомления о поступившей заявки
 async def send_request(text, uniqal_id):
-    new_keyboard = InlineKeyboardMarkup(inline_keyboard=[])
-    count = 0
-    for companie in text.split('Выбранные компании:')[-1].split('\n'):
-        if len(companie)>1:
+    async with asyncio.timeout(10):
+        new_keyboard = InlineKeyboardMarkup(inline_keyboard=[])
+        count = 0
+        with open(f'requests/{uniqal_id}.json') as f:
+            data = json.load(f)
+        for companie in data['selectedCompanies']:
             count += 1
-            new_button = InlineKeyboardButton(text=f'✅{companie}✅', callback_data=f'{count}-yes')
+            new_button = InlineKeyboardButton(text=f'✅{companie.split(", ")[0]}✅', callback_data=f'{count}-yes')
             new_keyboard.inline_keyboard.append([new_button])
-    send_button = InlineKeyboardButton(text='Отправить', callback_data=f'send_{uniqal_id}')
-    del_button = InlineKeyboardButton(text='Удалить', callback_data=f'del_{uniqal_id}')
-    new_keyboard.inline_keyboard.append([send_button,del_button])
-    await bot.send_message(chat_id=id_moderator, text=text, reply_markup=new_keyboard)
+        send_button = InlineKeyboardButton(text='Отправить', callback_data=f'send_{uniqal_id}')
+        del_button = InlineKeyboardButton(text='Удалить', callback_data=f'del_{uniqal_id}')
+        new_keyboard.inline_keyboard.append([send_button,del_button])
+        await bot.send_message(chat_id=id_moderator, text=text, reply_markup=new_keyboard)
+
+# Функция редактирования текста
+@dp.callback_query(Send_keyboard())
+async def change_text(callback: CallbackQuery, state: FSMContext):
+    list_buttons = callback.message.reply_markup.inline_keyboard[:-1]
+    list_companies = [button[0].text[1:-1] for button in list_buttons if '✅' in button[0].text]
+    uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
+    with open(f'requests/{uniqal_id}.json') as f:
+        data = json.load(f)
+    data['selectedCompanies'] = list_companies
+    with open(f'requests/{uniqal_id}.json', 'w') as f:
+        json.dump(data, f)
+    email = data['email_text']
+    new_keyboard = InlineKeyboardMarkup(inline_keyboard=[])
+    submit_button = InlineKeyboardButton(text='Подтвердить текст', callback_data=f'submit_{uniqal_id}')
+    new_keyboard.inline_keyboard.append([submit_button])
+    await bot.send_message(chat_id=id_moderator, text=email)
+    await bot.send_message(chat_id=id_moderator, text='Если необходимо исправить текст - просто пришли мне исправленный текст', reply_markup=new_keyboard)
+    await state.set_state(FSMFillForm.fill_submit)
+    await state.update_data(id=uniqal_id)
+
+# Замена текста
+@dp.message(StateFilter(FSMFillForm.fill_submit))
+async def change_text2(message: Message, state: FSMContext):
+    data = await state.get_data()
+    uniqal_id = data.get("id")
+    with open(f'requests/{uniqal_id}.json') as f:
+        data = json.load(f)
+    data['email_text'] = message.text
+    with open(f'requests/{uniqal_id}.json', 'w') as f:
+        json.dump(data, f)
+    new_keyboard = InlineKeyboardMarkup(inline_keyboard=[])
+    submit_button = InlineKeyboardButton(text='Подтвердить текст', callback_data=f'submit_{uniqal_id}')
+    new_keyboard.inline_keyboard.append([submit_button])
+    await bot.send_message(chat_id=id_moderator,
+                           text='Текст сохранен',
+                           reply_markup=new_keyboard)
 
 
 # Функция изменения статуса кнопок (обозначающих выбранные компании)
@@ -83,25 +136,32 @@ async def change_status_button(callback: CallbackQuery):
 # Функция удаления заявки
 @dp.callback_query(Dell_keyboard())
 async def dell_keyboard(callback: CallbackQuery):
-    uniqal_id = callback.data.split('_')[1]
+    uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
+    with open(f'requests/{uniqal_id}.json') as f:
+        text = json.load(f)
+    email = text['Email']
+    email_sender.send_bad_email(email)
     os.remove(f'requests/{uniqal_id}.json')
     await bot.delete_message(chat_id=callback.message.chat.id, message_id=callback.message.message_id)
 
 # Функция подтверждения заявки
-@dp.callback_query(Send_keyboard())
-async def send_button(callback: CallbackQuery):
+@dp.callback_query(Submit_text(), StateFilter(FSMFillForm.fill_submit))
+async def send_button(callback: CallbackQuery, state: FSMContext):
+    await state.clear()
     list_buttons = callback.message.reply_markup.inline_keyboard[:-1]
-    list_companies = [button[0].text[4:-1] for button in list_buttons if '✅' in button[0].text]
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
+    with open(f'requests/{uniqal_id}.json') as f:
+        data = json.load(f)
     caption = 'Этот документ будет отправлен в:\n'
-    for companie in list_companies:
+    for companie in data['selectedCompanies']:
         caption += f'{companie}\n'
     document = FSInputFile(f'requests/{uniqal_id}.json', filename='Заявка.json')
-
-    global status_email
     await bot.send_document(chat_id=callback.message.chat.id, document=document, caption=caption)
-    for email in models.get_list_emails(list_companies):
+    global status_email
+    for email in parser.get_list_emails(data['selectedCompanies']):
         if status_email:
+            for comp in data['selectedCompanies']:
+                add_count_current_month(comp)
             email_sender.send_email(email, f'requests/{uniqal_id}.json')
             await bot.send_message(chat_id=callback.message.chat.id, text=f'Отправлено в {email}')
         else:
@@ -116,13 +176,10 @@ async def send_button(callback: CallbackQuery):
 async def change_file(message: Message):
     document_id = message.document.file_id
     document_name = message.document.file_name
-    if os.path.isfile(f'files/{document_name}'):
-        file = await bot.get_file(document_id)
-        file_path = file.file_path
-        await bot.download_file(file_path, f"files/{document_name}")
-        await message.reply(text='Файл был успешно заменен на сервере')
-    else:
-        await message.reply(text=f'Файл с именем {document_name} не был найден на сервере')
+    file = await bot.get_file(document_id)
+    file_path = file.file_path
+    await bot.download_file(file_path, f"files/{document_name}")
+    await message.reply(text='Файл был успешно заменен на сервере')
 
 # Функция скачивания всех файлов
 @dp.message(Check_in_admin(), Command(commands='get_all_files'))

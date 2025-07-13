@@ -1,7 +1,9 @@
-import random, string, json
+import random, string, json, os
 from flask import Flask, request, jsonify, json
 from models import *
+from parser import *
 from flask_cors import CORS
+import bot, requests
 
 app = Flask(__name__)
 cors = CORS(
@@ -16,20 +18,16 @@ cors = CORS(
     }
 )
 
-@app.after_request
-def add_cors_headers(response):
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
-    return response
-
 # Дает список стандартов
-@app.route('/get_names_companies_from_standarts', methods=['GET','POST'])
-def hello_world():
-    if request.method == 'POST':
-        standarts = find_standarts_from_str(request.get_data(as_text=True))
-        return {"status": "ok", "options": get_names_companies_for_request(search_companies(standarts))}
-    elif request.method == 'GET':
-        return {"status": "ok", "options": get_names_companies_for_request(search_companies(request.form.getlist('standarts')))}
+@app.route('/get_names_companies_from_standarts', methods=['POST', 'OPTIONS'])
+def get_names():
+    if request.method == 'OPTIONS':
+        return '', 200
+    elif request.method == 'POST':
+        body = request.get_json(force=True)
+        standarts = body['standarts']
+        region = body['region']
+        return {"status": "ok", "options": get_list_companies(standarts, region)[0]}
 
 # Получение заявки
 @app.route('/send_request', methods=['POST', 'OPTIONS'])

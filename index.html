@@ -1,0 +1,1294 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поиск органов сертификации</title>
+  <style>
+    /* Используем уникальный префикс для всех классов, чтобы избежать конфликтов */
+    .cert-form-container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      font-size: 16px;
+      font-family: "Roboto", sans-serif;
+      max-width: 100%;
+    }
+    
+    .cert-form-wrapper {
+      width: 814px; /* Увеличено на 10% от изначальных 740px */
+      max-width: 100%;
+      padding: 55px 80px;
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .cert-form {
+      display: block;
+      margin-top: 0;
+      unicode-bidi: isolate;
+    }
+
+
+    .cert-step-indicator {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+
+    .cert-step {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      font-weight: bold;
+    }
+
+
+    .cert-step.active {
+      background-color: #3d9eff;
+      color: white;
+    }
+    
+    .cert-step-label {
+      visibility: visible !important;
+    }
+
+
+    .cert-step-label {
+      position: absolute;
+      top: 45px;
+      text-align: center;
+      width: 120px;
+      margin-left: -40px;
+      font-size: 12px;
+      z-index: 3;
+    }
+
+
+    .cert-step-line {
+      position: absolute;
+      top: 20px;
+      height: 2px;
+      background-color: #e0e0e0;
+      width: 100%;
+      z-index: 1;
+    }
+
+
+    .cert-section {
+      background-color: #f8f9fa;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 25px;
+      display: none;
+    }
+
+
+    .cert-section.active {
+      display: block;
+    }
+    
+    /* Корректировка отступов в таблице */
+    .cert-locations-table input {
+      margin: 0;
+      width: 96%; /* Уменьшено на 4% с 100% */
+      box-sizing: border-box;
+    }
+    
+    /* Фиксируем ширину колонок в таблице месторасположений */
+    .cert-locations-table th:nth-child(1), 
+    .cert-locations-table td:nth-child(1) {
+      width: 40px;
+      text-align: center;
+    }
+    
+    .cert-locations-table th:nth-child(2), 
+    .cert-locations-table td:nth-child(2) {
+      width: 50%;
+    }
+    
+    .cert-locations-table th:nth-child(3), 
+    .cert-locations-table td:nth-child(3) {
+      width: 30%;
+    }
+    
+    .cert-locations-table th:nth-child(4), 
+    .cert-locations-table td:nth-child(4) {
+      width: 100px;
+      text-align: center;
+    }
+
+
+    .cert-input-text, .cert-input-number, .cert-input-tel, .cert-input-email, .cert-select {
+      margin-bottom: 10px;
+      padding: 12px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 96%; /* Уменьшено на 4% с 100% */
+      display: block;
+      font-size: 16px;
+    }
+    
+    .cert-input-label {
+      display: flex;
+      align-items: center;
+    }
+    
+    .cert-input-label, .cert-radio-legend {
+      margin-bottom: 25px;
+    }
+    
+    .cert-label {
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+      font-weight: 500;
+    }
+    
+    .cert-form-container .cert-reset-box {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .cert-button {
+      background-color: #3d9eff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      font-size: 16px;
+    }
+    
+    .cert-button:hover {
+      background-color: #2b7fd1;
+    }
+
+
+    .cert-button.secondary {
+      background-color: #6c757d;
+    }
+
+
+    .cert-button.secondary:hover {
+      background-color: #5a6268;
+    }
+    
+    .cert-error-message {
+      color: #dc3545;
+      margin-top: 5px;
+      font-size: 14px;
+      display: none;
+    }
+    
+    .cert-paragraph {
+      margin-bottom: 15px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    
+    .cert-div {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    
+    .cert-section-header {
+      text-align: center;
+      color: #2b7fd1;
+      margin-bottom: 20px;
+    }
+
+
+    .cert-help-icon {
+      margin-left: 6px;
+      cursor: help;
+      color: #6c757d;
+      font-size: 16px;
+      position: relative;
+      display: inline-block;
+    }
+
+
+    .cert-tooltip {
+      display: none;
+      position: absolute;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 10px;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -120px;
+      width: 240px;
+      font-weight: normal;
+      font-size: 14px;
+    }
+
+
+    .cert-help-icon:hover .cert-tooltip {
+      display: block;
+    }
+
+
+    .cert-locations-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 15px;
+    }
+
+
+    .cert-locations-table th, .cert-locations-table td {
+      border: 1px solid #dee2e6;
+      padding: 8px;
+      text-align: left;
+    }
+
+
+    .cert-locations-table th {
+      background-color: #f8f9fa;
+    }
+
+
+    .cert-remove-btn {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 5px 10px;
+      cursor: pointer;
+      white-space: nowrap;
+      width: auto;
+    }
+
+
+    .cert-result-card {
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
+
+
+    .cert-result-card h3 {
+      margin-top: 0;
+      color: #2b7fd1;
+    }
+
+
+    .cert-checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+
+    .cert-checkbox-container input {
+      margin-right: 8px;
+    }
+
+
+    .cert-navigation-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+
+    .cert-info-block {
+      background-color: #e9f5fe;
+      border-left: 4px solid #3d9eff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 0 4px 4px 0;
+    }
+
+
+    .cert-loading {
+      display: none;
+      text-align: center;
+      padding: 20px;
+    }
+
+
+    .cert-loading-spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3d9eff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 2s linear infinite;
+      margin: 0 auto;
+    }
+
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+      .cert-form-wrapper {
+        padding: 30px 20px;
+        width: 100%;
+      }
+      
+      .cert-step-indicator {
+        overflow-x: auto;
+        padding-bottom: 30px;
+      }
+      
+      .cert-step {
+        min-width: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="cert-form-container">
+  <div class="cert-form-wrapper">
+    <!-- Индикатор прогресса -->
+    <div class="cert-step-indicator">
+      <div class="cert-step-line"></div>
+      <div class="cert-step active" id="certStep1">1
+        <div class="cert-step-label">Выбор стандартов</div>
+      </div>
+      <div class="cert-step" id="certStep2">2
+        <div class="cert-step-label">Данные компании</div>
+      </div>
+      <div class="cert-step" id="certStep3">3
+        <div class="cert-step-label">Контактные данные</div>
+      </div>
+      <div class="cert-step" id="certStep4">4
+        <div class="cert-step-label">Результаты</div>
+      </div>
+    </div>
+
+
+    <form id="certMyForm" class="cert-form">
+      <!-- Шаг 1: Выбор стандартов -->
+      <div class="cert-section active" id="certSection1">
+        <h2 class="cert-section-header">Выбор стандартов для поиска</h2>
+        
+        <div class="cert-info-block" style="text-align: left;">
+          Выберите один или несколько стандартов, соответствие которым вы хотите сертифицировать.
+          Для выбора нескольких стандартов удерживайте клавишу Ctrl (или Command на Mac).
+        </div>
+        
+        <div class="cert-div">
+          <label class="cert-label">Стандарты сертификации<span style="color: #dc3545;">*</span>
+            <span class="cert-help-icon">ⓘ
+              <span class="cert-tooltip">Выберите стандарты, по которым необходимо найти органы сертификации</span>
+            </span>
+          </label>
+          <div style="margin-bottom: 10px;">
+            <button type="button" class="cert-button secondary" style="padding: 5px 10px;" onclick="certClearAllStandards()">Очистить</button>
+          </div>
+          <select multiple size="8" name="standarts" id="certStandarts" class="cert-select" required>
+            <option value="9001">ГОСТ Р ИСО 9001-2015 - Система менеджмента качества</option>
+            <option value="14001">ГОСТ Р ИСО 14001-2016 - Система экологического менеджмента</option>
+            <option value="45001">ГОСТ Р ИСО 45001-2020 - Система менеджмента безопасности труда</option>
+            <option value="50001">ГОСТ Р ИСО 50001-2023 - Система энергетического менеджмента</option>
+            <option value="51705">ГОСТ Р 51705.1-2024 - СМК на основе принципов ХАССП</option>
+            <option value="22000">ГОСТ Р ИСО 22000-2019 - Система менеджмента безопасности пищевой продукции</option>
+            <option value="27001">ГОСТ Р ИСО/МЭК 27001-2021 - Система информационной безопасности</option>
+            <option value="56404">ГОСТ Р 56404-2021 - Бережливое производство</option>
+            <option value="13485">ГОСТ ISO 13485-2017 - СМК для производителей медицинских изделий</option>
+            <option value="20000">ГОСТ Р ИСО/МЭК 20000-1-2021 - Система менеджмента ИТ сервисов</option>
+            <option value="54762">ГОСТ Р 54762-2011 - Программы предварительных требований</option>
+            <option value="58876">ГОСТ Р 58876-2020 - СМК для производителей авиационной, космической и оборонной продукции</option>
+            <option value="58139">ГОСТ Р 58139-2018 - СМК для производителей автокомпонентов</option>
+            <option value="19443">ГОСТ Р ИСО 19443-2020 - СМК для цепи поставок ядерного сектора</option>
+          </select>
+          <div class="cert-error-message" id="certStandartsError">Пожалуйста, выберите хотя бы один стандарт</div>
+        </div>
+        
+        <div class="cert-navigation-buttons">
+          <div></div> <!-- Пустой div для выравнивания -->
+          <button type="button" class="cert-button" onclick="certNextStep(1)">Далее</button>
+        </div>
+      </div>
+      
+      <!-- Шаг 2: Данные о компании -->
+      <div class="cert-section" id="certSection2">
+        <h2 class="cert-section-header">Данные о компании</h2>
+        
+        <div class="cert-div">
+          <label class="cert-label">Наименование компании:<span style="color: #dc3545;">*</span></label>
+          <input name="name" id="certName" class="cert-input-text" type="text" required placeholder="ООО 'Компания'" autocomplete="organization">
+          <div class="cert-error-message" id="certNameError">Пожалуйста, введите название компании</div>
+        </div>
+        
+        <div class="cert-div">
+          <label class="cert-label">Регион:<span style="color: #dc3545;">*</span></label>
+          <select name="region" id="certRegion" class="cert-select" size="1" required>
+            <option value="" selected disabled>Выберите регион</option>
+            <option value="01">01 Республика Адыгея</option>
+            <option value="02">02 Республика Башкортостан</option>
+            <option value="03">03 Республика Бурятия</option>
+            <option value="04">04 Республика Алтай</option>
+            <option value="05">05 Республика Дагестан</option>
+            <option value="06">06 Республика Ингушетия</option>
+            <option value="07">07 Кабардино-Балкарская Республика</option>
+            <option value="08">08 Республика Калмыкия</option>
+            <option value="09">09 Карачаево-Черкесская Республика</option>
+            <option value="10">10 Республика Карелия</option>
+            <option value="11">11 Республика Коми</option>
+            <option value="12">12 Республика Марий Эл</option>
+            <option value="13">13 Республика Мордовия</option>
+            <option value="14">14 Республика Саха (Якутия)</option>
+            <option value="15">15 Республика Северная Осетия - Алания</option>
+            <option value="16">16 Республика Татарстан (Татарстан)</option>
+            <option value="17">17 Республика Тыва</option>
+            <option value="18">18 Удмуртская Республика</option>
+            <option value="19">19 Республика Хакасия</option>
+            <option value="20">20 Чеченская Республика</option>
+            <option value="21">21 Чувашская Республика - Чувашия</option>
+            <option value="22">22 Алтайский край</option>
+            <option value="23">23 Краснодарский край</option>
+            <option value="24">24 Красноярский край</option>
+            <option value="25">25 Приморский край</option>
+            <option value="26">26 Ставропольский край</option>
+            <option value="27">27 Хабаровский край</option>
+            <option value="28">28 Амурская область</option>
+            <option value="29">29 Архангельская область</option>
+            <option value="30">30 Астраханская область</option>
+            <option value="31">31 Белгородская область</option>
+            <option value="32">32 Брянская область</option>
+            <option value="33">33 Владимирская область</option>
+            <option value="34">34 Волгоградская область</option>
+            <option value="35">35 Вологодская область</option>
+            <option value="36">36 Воронежская область</option>
+            <option value="37">37 Ивановская область</option>
+            <option value="38">38 Иркутская область</option>
+            <option value="39">39 Калининградская область</option>
+            <option value="40">40 Калужская область</option>
+            <option value="41">41 Камчатский край</option>
+            <option value="42">42 Кемеровская область - Кузбасс</option>
+            <option value="43">43 Кировская область</option>
+            <option value="44">44 Костромская область</option>
+            <option value="45">45 Курганская область</option>
+            <option value="46">46 Курская область</option>
+            <option value="47">47 Ленинградская область</option>
+            <option value="48">48 Липецкая область</option>
+            <option value="49">49 Магаданская область</option>
+            <option value="50">50 Московская область</option>
+            <option value="51">51 Мурманская область</option>
+            <option value="52">52 Нижегородская область</option>
+            <option value="53">53 Новгородская область</option>
+            <option value="54">54 Новосибирская область</option>
+            <option value="55">55 Омская область</option>
+            <option value="56">56 Оренбургская область</option>
+            <option value="57">57 Орловская область</option>
+            <option value="58">58 Пензенская область</option>
+            <option value="59">59 Пермский край</option>
+            <option value="60">60 Псковская область</option>
+            <option value="61">61 Ростовская область</option>
+            <option value="62">62 Рязанская область</option>
+            <option value="63">63 Самарская область</option>
+            <option value="64">64 Саратовская область</option>
+            <option value="65">65 Сахалинская область</option>
+            <option value="66">66 Свердловская область</option>
+            <option value="67">67 Смоленская область</option>
+            <option value="68">68 Тамбовская область</option>
+            <option value="69">69 Тверская область</option>
+            <option value="70">70 Томская область</option>
+            <option value="71">71 Тульская область</option>
+            <option value="72">72 Тюменская область</option>
+            <option value="73">73 Ульяновская область</option>
+            <option value="74">74 Челябинская область</option>
+            <option value="75">75 Забайкальский край</option>
+            <option value="76">76 Ярославская область</option>
+            <option value="77">77 г. Москва</option>
+            <option value="78">78 г. Санкт-Петербург</option>
+            <option value="79">79 Еврейская автономная область</option>
+            <option value="83">83 Ненецкий автономный округ</option>
+            <option value="86">86 Ханты-Мансийский автономный округ - Югра</option>
+            <option value="87">87 Чукотский автономный округ</option>
+            <option value="89">89 Ямало-Ненецкий автономный округ</option>
+            <option value="91">91 Республика Крым</option>
+            <option value="92">92 г. Севастополь</option>
+            <option value="99">99 иные территории, включая город и космодром Байконур</option>
+          </select>
+          <div class="cert-error-message" id="certRegionError">Пожалуйста, выберите регион</div>
+        </div>
+        
+        <div class="cert-div">
+          <label class="cert-label">Месторасположения компании<span style="color: #dc3545;">*</span>
+            <span class="cert-help-icon">ⓘ
+              <span class="cert-tooltip">Укажите адреса всех объектов, которые будут проверяться в рамках сертификации</span>
+            </span>
+          </label>
+          
+          <table class="cert-locations-table" id="certLocationsTable" style="table-layout: fixed;">
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Адрес месторасположения</th>
+                <th>Численность</th>
+                <th>Действия</th>
+              </tr>
+            </thead>
+            <tbody id="certLocationsBody">
+              <tr>
+                <td>1</td>
+                <td><input name="address_0" id="certAddress_0" class="cert-input-text" type="text" required placeholder="Введите адрес" style="margin-bottom: 0; box-sizing: border-box;"></td>
+                <td><input name="number_0" id="certNumber_0" class="cert-input-number" type="number" min="1" required placeholder="Кол-во сотрудников" style="margin-bottom: 0; box-sizing: border-box;"></td>
+                <td style="text-align: center;"></td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" class="cert-button secondary" onclick="certAddLocation()" style="margin-top: 10px;">+ Добавить местоположение</button>
+          <div class="cert-error-message" id="certLocationsError">Заполните все адреса и численность сотрудников</div>
+        </div>
+        
+        <div class="cert-div">
+          <label class="cert-label">Укажите область сертификации - основной вид деятельности компании или код ОКВЭД<span style="color: #dc3545;">*</span>
+            <span class="cert-help-icon">ⓘ
+              <span class="cert-tooltip">Например: Производство мебели или код ОКВЭД 31.0</span>
+            </span>
+          </label>
+          <input name="activity" id="certActivity" class="cert-input-text" type="text" required placeholder="Например: Производство мебели или код ОКВЭД 31.0">
+          <div class="cert-error-message" id="certActivityError">Пожалуйста, укажите вид деятельности или код ОКВЭД</div>
+        </div>
+        
+        <div class="cert-div">
+          <label class="cert-label">Желаемые сроки для проведения аудита:</label>
+          <input name="date" id="certDate" class="cert-input-text" type="text" placeholder="Например: Июль 2025">
+          <div class="cert-error-message" id="certDateError">Пожалуйста, укажите желаемые сроки</div>
+        </div>
+        
+        <div class="cert-div">
+          <label class="cert-label">Примечания и пожелания:</label>
+          <textarea name="notes" id="certNotes" class="cert-input-text" style="min-height: 80px; font-family: inherit; font-size: inherit;" placeholder="Например: Дополнительная информация, которая может быть полезна..."></textarea>
+        </div>
+        
+        <div class="cert-navigation-buttons">
+          <button type="button" class="cert-button secondary" onclick="certPrevStep(2)">Назад</button>
+          <button type="button" class="cert-button" onclick="certNextStep(2)">Далее</button>
+        </div>
+      </div>
+      
+      <!-- Шаг 3: Контактные данные -->
+      <div class="cert-section" id="certSection3">
+        <h2 class="cert-section-header">Контактные данные</h2>
+        
+        <div class="cert-info-block">
+          Эти данные будут использованы для связи с вами и отправки коммерческих предложений.
+        </div>
+        
+        <div class="cert-div">
+          <label class="cert-label">ФИО контактного лица:<span style="color: #dc3545;">*</span></label>
+          <input name="fullname" id="certFullname" class="cert-input-text" type="text" required placeholder="Фамилия Имя Отчество" autocomplete="name">
+          <div class="cert-error-message" id="certFullnameError">Пожалуйста, укажите ФИО</div>
+        </div>
+        
+        <div class="cert-div">
+          <label class="cert-label">Телефон:<span style="color: #dc3545;">*</span></label>
+          <input name="phone" id="certPhone" class="cert-input-tel" type="tel" required placeholder="+7 (___) ___-__-__" autocomplete="tel">
+          <div class="cert-error-message" id="certPhoneError">Пожалуйста, укажите корректный номер телефона</div>
+        </div>
+        
+        <div class="cert-div">
+          <label class="cert-label">Адрес электронной почты:<span style="color: #dc3545;">*</span></label>
+          <input name="email" id="certEmail" class="cert-input-email" type="email" required placeholder="email@example.com" autocomplete="email">
+          <div class="cert-error-message" id="certEmailError">Пожалуйста, укажите корректный адрес эл. почты</div>
+        </div>
+        
+<div class="cert-div">
+  <label class="cert-label">Предпочитаемый вид связи и время для связи:</label>
+  <select name="connectionType" id="certConnectionType" class="cert-select" style="margin-bottom: 10px;">
+    <option value="email">По электронной почте</option>
+    <option value="phone">По телефону</option>
+    <option value="both">И то, и другое</option>
+  </select>
+  <input name="connectionTime" id="certConnectionTime" class="cert-input-text" type="text" placeholder="Например: Звонить в рабочее время с 9:00 до 18:00 // Добавочный номер 110">
+  <div class="cert-error-message" id="certConnectionError">Пожалуйста, укажите предпочтительное время для связи</div>
+</div>
+        
+        <div class="cert-navigation-buttons">
+          <button type="button" class="cert-button secondary" onclick="certPrevStep(3)">Назад</button>
+          <button type="button" class="cert-button" onclick="certFindOrganizations()">Найти органы сертификации</button>
+        </div>
+      </div>
+      
+      <!-- Шаг 4: Результаты поиска -->
+      <div class="cert-section" id="certSection4">
+        <h2 class="cert-section-header">Результаты поиска органов сертификации</h2>
+        
+        <div class="cert-loading" id="certLoading">
+          <div class="cert-loading-spinner"></div>
+          <p>Выполняется поиск органов сертификации...</p>
+        </div>
+        
+        <div id="certResult" class="cert-result">
+          <!-- Результаты поиска будут добавлены здесь -->
+        </div>
+        
+        <div id="certCompanyContainer" class="cert-div" style="display: none;">
+          <!-- Селект компаний будет добавлен сюда -->
+        </div>
+        
+        <div class="cert-navigation-buttons">
+          <button type="button" class="cert-button secondary" onclick="certPrevStep(4)">Назад</button>
+          <button type="button" id="certSend" class="cert-button">Отправить заявку</button>
+        </div>
+      </div>
+    </form>
+    
+    <!-- Модальное окно результата отправки -->
+    <div id="certResultModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+      <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 500px; border-radius: 5px;">
+        <h3 id="certModalTitle" style="margin-top: 0;"></h3>
+        <p id="certModalMessage"></p>
+        <button class="cert-button" onclick="document.getElementById('certResultModal').style.display='none'">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // Используем уникальные имена для наших функций
+  let certMaxBlocks = 100; // Максимальное количество офисов
+  let certCurrentBlocks = 1; // Текущее количество добавленных офисов
+  
+  // Функция для перехода к следующему шагу
+  function certNextStep(currentStep) {
+    // Валидация полей текущего шага
+    if (!certValidateStep(currentStep)) {
+      return;
+    }
+    
+    // Скрываем текущий шаг и показываем следующий
+    document.getElementById(`certSection${currentStep}`).classList.remove('active');
+    document.getElementById(`certSection${currentStep + 1}`).classList.add('active');
+    
+    // Обновляем индикатор прогресса
+    document.getElementById(`certStep${currentStep}`).classList.remove('active');
+    document.getElementById(`certStep${currentStep + 1}`).classList.add('active');
+    
+    // Прокрутка страницы вверх
+    window.scrollTo(0, 0);
+  }
+  
+  // Функция для перехода к предыдущему шагу
+  function certPrevStep(currentStep) {
+    // Скрываем текущий шаг и показываем предыдущий
+    document.getElementById(`certSection${currentStep}`).classList.remove('active');
+    document.getElementById(`certSection${currentStep - 1}`).classList.add('active');
+    
+    // Обновляем индикатор прогресса
+    document.getElementById(`certStep${currentStep}`).classList.remove('active');
+    document.getElementById(`certStep${currentStep - 1}`).classList.add('active');
+    
+    // Прокрутка страницы вверх
+    window.scrollTo(0, 0);
+  }
+  
+  // Валидация полей на каждом шаге
+  function certValidateStep(step) {
+    let isValid = true;
+    
+    // Сбрасываем все сообщения об ошибках
+    const errorMessages = document.querySelectorAll('.cert-error-message');
+    errorMessages.forEach(msg => msg.style.display = 'none');
+    
+    if (step === 1) {
+      // Проверка выбора стандартов
+      const standartSelect = document.getElementById('certStandarts');
+      if (standartSelect.selectedOptions.length === 0) {
+        document.getElementById('certStandartsError').style.display = 'block';
+        isValid = false;
+      }
+    }
+    else if (step === 2) {
+      // Проверка данных о компании
+      const name = document.getElementById('certName');
+      const region = document.getElementById('certRegion');
+      const activity = document.getElementById('certActivity');
+      const date = document.getElementById('certDate');
+      
+      if (!name.value.trim()) {
+        document.getElementById('certNameError').style.display = 'block';
+        isValid = false;
+      }
+      
+      if (region.value === "" || region.selectedIndex === 0) {
+        document.getElementById('certRegionError').style.display = 'block';
+        isValid = false;
+      }
+      
+      // Проверка адресов и численности
+      const addressInputs = document.querySelectorAll('[id^="certAddress_"]');
+      const numberInputs = document.querySelectorAll('[id^="certNumber_"]');
+      let hasLocationError = false;
+      
+      for (let i = 0; i < addressInputs.length; i++) {
+        if (!addressInputs[i].value.trim() || !numberInputs[i].value || numberInputs[i].value <= 0) {
+          hasLocationError = true;
+          break;
+        }
+      }
+      
+      if (hasLocationError) {
+        document.getElementById('certLocationsError').style.display = 'block';
+        isValid = false;
+      }
+      
+      if (!activity.value.trim()) {
+        document.getElementById('certActivityError').style.display = 'block';
+        isValid = false;
+      }
+      
+      // Проверка необязательных полей не требуется
+      // if (!date.value.trim()) {
+      //   document.getElementById('certDateError').style.display = 'block';
+      //   isValid = false;
+      // }
+    }
+    else if (step === 3) {
+      // Проверка контактных данных
+      const fullname = document.getElementById('certFullname');
+      const phone = document.getElementById('certPhone');
+      const email = document.getElementById('certEmail');
+      
+      if (!fullname.value.trim()) {
+        document.getElementById('certFullnameError').style.display = 'block';
+        isValid = false;
+      }
+      
+      if (!phone.value.trim() || !certValidatePhone(phone.value)) {
+        document.getElementById('certPhoneError').style.display = 'block';
+        isValid = false;
+      }
+      
+      if (!email.value.trim() || !certValidateEmail(email.value)) {
+        document.getElementById('certEmailError').style.display = 'block';
+        isValid = false;
+      }
+      
+      // Проверка необязательных полей не требуется
+      // if (!connectionTime.value.trim()) {
+      //   document.getElementById('certConnectionError').style.display = 'block';
+      //   isValid = false;
+      // }
+    }
+    
+    return isValid;
+  }
+  
+  // Валидация телефона
+  function certValidatePhone(phone) {
+    // Проверка на наличие как минимум 10 цифр
+    return phone.replace(/\D/g, '').length >= 11;
+  }
+  
+  // Валидация email
+  function certValidateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  }
+  
+  // Добавление нового местоположения
+  function certAddLocation() {
+    if (certCurrentBlocks >= certMaxBlocks) {
+      alert(`Вы достигли лимита! Можно добавить информацию максимум о ${certMaxBlocks} офисах!`);
+      return;
+    }
+    
+    const locationsBody = document.getElementById('certLocationsBody');
+    const newRow = document.createElement('tr');
+    
+    newRow.innerHTML = `
+      <td>${certCurrentBlocks + 1}</td>
+      <td><input name="address_${certCurrentBlocks}" id="certAddress_${certCurrentBlocks}" class="cert-input-text" type="text" required placeholder="Введите адрес" style="margin-bottom: 0; box-sizing: border-box;"></td>
+      <td><input name="number_${certCurrentBlocks}" id="certNumber_${certCurrentBlocks}" class="cert-input-number" type="number" min="1" required placeholder="Кол-во сотрудников" style="margin-bottom: 0; box-sizing: border-box;"></td>
+      <td style="text-align: center;"><button type="button" class="cert-remove-btn" onclick="certRemoveLocation(this)">Удалить</button></td>
+    `;
+    
+    locationsBody.appendChild(newRow);
+    certCurrentBlocks++;
+    certUpdateLocationNumbers();
+  }
+  
+  // Удаление местоположения
+  function certRemoveLocation(button) {
+    if (certCurrentBlocks <= 1) {
+      alert('Необходимо указать хотя бы одно местоположение!');
+      return;
+    }
+    
+    const row = button.closest('tr');
+    row.remove();
+    certCurrentBlocks--;
+    certUpdateLocationNumbers();
+  }
+  
+  // Обновление номеров местоположений
+  function certUpdateLocationNumbers() {
+    const rows = document.querySelectorAll('#certLocationsBody tr');
+    rows.forEach((row, index) => {
+      row.cells[0].textContent = index + 1;
+    });
+  }
+  
+  // Выбор всех стандартов
+  function certSelectAllStandards() {
+    const options = document.querySelectorAll('#certStandarts option');
+    options.forEach(option => option.selected = true);
+  }
+  
+  // Очистка выбора стандартов
+  function certClearAllStandards() {
+    const options = document.querySelectorAll('#certStandarts option');
+    options.forEach(option => option.selected = false);
+  }
+
+
+  // Поиск органов сертификации
+  function certFindOrganizations() {
+    if (!certValidateStep(3)) {
+      return;
+    }
+    
+    // Показываем четвертый шаг
+    document.getElementById('certSection3').classList.remove('active');
+    document.getElementById('certSection4').classList.add('active');
+    
+    // Обновляем индикатор прогресса
+    document.getElementById('certStep3').classList.remove('active');
+    document.getElementById('certStep4').classList.add('active');
+    
+    // Показываем индикатор загрузки
+    document.getElementById('certLoading').style.display = 'block';
+    document.getElementById('certResult').innerHTML = '';
+    document.getElementById('certCompanyContainer').style.display = 'none';
+    
+    // Получаем выбранные стандарты
+    const select = document.getElementById('certStandarts');
+    const selectedValues = Array.from(select.options)
+      .filter(option => option.selected)
+      .map(option => option.value);
+    
+    // Отправляем запрос на сервер
+    fetch('https://audit-advisor-server.ru/get_names_companies_from_standarts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ standarts: selectedValues, region: document.getElementById('certRegion').value})
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Скрываем индикатор загрузки
+      document.getElementById('certLoading').style.display = 'none';
+      
+      if (data.status === 'ok') {
+        // Отображаем результаты
+        certDisplayResults(data.options, data.urls);
+        // Создаем селект с компаниями
+        certCreateCompanySelect(data.options);
+      } else {
+        document.getElementById('certResult').innerHTML = `
+          <div class="cert-info-block" style="background-color: #f8d7da; border-color: #dc3545;">
+            Не удалось найти органы сертификации по выбранным стандартам. Пожалуйста, попробуйте изменить параметры поиска.
+          </div>
+        `;
+      }
+    })
+    .catch(error => {
+      console.error("Ошибка запроса:", error);
+      document.getElementById('certLoading').style.display = 'none';
+      document.getElementById('certResult').innerHTML = `
+        <div class="cert-info-block" style="background-color: #f8d7da; border-color: #dc3545;">
+          Произошла ошибка при обращении к серверу. Пожалуйста, попробуйте позже.
+        </div>
+      `;
+    });
+    
+    // Прокрутка страницы вверх
+    window.scrollTo(0, 0);
+  }
+  
+  // Отображение результатов поиска с автоматическим выбором первых 5 компаний
+  function certDisplayResults(companies, urls) {
+    const resultContainer = document.getElementById('certResult');
+    
+    if (companies.length === 0) {
+      resultContainer.innerHTML = `
+        <div class="cert-info-block" style="background-color: #f8d7da; border-color: #dc3545;">
+          По выбранным критериям не найдено ни одного органа сертификации.
+        </div>
+      `;
+      return;
+    }
+    
+// Получаем выбранные стандарты
+const standartsSelect = document.getElementById("certStandarts");
+const selectedStandarts = Array.from(standartsSelect.selectedOptions).map(option => option.text);
+// Создаем список стандартов, каждый с новой строки
+const standartsText = selectedStandarts.map(text => `<br>${text}`).join('');
+
+
+resultContainer.innerHTML = `
+  <div class="cert-info-block">
+    <p><strong>Выбранные стандарты для поиска:</strong>${standartsText}</p>
+    <br>
+    <p><strong>Найдено органов сертификации:</strong> ${companies.length}</p>
+    <p>Выберите компании ниже, чтобы получить коммерческое предложение.</p>
+    <p>Вы можете выбрать до 10 компаний для одновременной отправки заявки.</p>
+  </div>
+`;
+    
+    // Создаем контейнер для списка компаний с чекбоксами
+    const companiesContainer = document.createElement('div');
+    companiesContainer.id = 'certCompaniesCheckboxList';
+    companiesContainer.style.maxHeight = '400px';
+    companiesContainer.style.overflowY = 'auto';
+    companiesContainer.style.marginTop = '20px';
+    companiesContainer.style.padding = '10px';
+    companiesContainer.style.backgroundColor = '#fff';
+    companiesContainer.style.borderRadius = '4px';
+    companiesContainer.style.border = '1px solid #dee2e6';
+    
+    let selectedCount = 0;
+
+    companies.forEach((company, index) => {
+      const companyDiv = document.createElement('div');
+      companyDiv.className = 'cert-checkbox-container';
+      companyDiv.style.padding = '8px';
+      companyDiv.style.borderBottom = '1px solid #f0f0f0';
+
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = `certCompany-${company.replace(/\s+/g, '-')}`;
+      checkbox.name = 'certCompany';
+      checkbox.value = company;
+      checkbox.style.marginRight = '10px';
+
+      if (index < 5) {
+        checkbox.checked = true;
+        selectedCount++;
+      }
+
+      checkbox.addEventListener('change', function () {
+        if (this.checked) {
+          selectedCount++;
+          if (selectedCount > 10) {
+            this.checked = false;
+            selectedCount--;
+            alert("Вы можете выбрать не более 10 компаний!");
+          }
+        } else {
+          selectedCount--;
+        }
+
+        const counterDiv = document.getElementById('certSelectedCounter');
+        if (counterDiv) {
+          counterDiv.textContent = `Выбрано компаний: ${selectedCount} из 10`;
+        }
+      });
+
+      const label = document.createElement('label');
+      label.htmlFor = checkbox.id;
+
+      const link = document.createElement('a');
+      const url = urls[index];
+
+      // Проверяем, что ссылка начинается с http или https
+      if (url && /^https?:\/\//i.test(url)) {
+        link.href = url;
+      } else {
+        link.href = 'https://' + (url || '#');
+      }
+
+      link.innerText = company;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.style.textDecoration = 'none';
+      link.style.color = '#007bff';
+
+      label.appendChild(link);
+      companyDiv.appendChild(checkbox);
+      companyDiv.appendChild(label);
+      companiesContainer.appendChild(companyDiv);
+    });
+    resultContainer.appendChild(companiesContainer);
+    
+  // Добавляем счетчик выбранных компаний
+const counterDiv = document.createElement('div');
+counterDiv.id = 'certSelectedCounter';
+counterDiv.style.marginTop = '10px';
+counterDiv.style.fontWeight = 'bold';
+counterDiv.textContent = `Выбрано компаний: ${selectedCount} из 10`;
+
+
+resultContainer.appendChild(counterDiv);
+
+
+// Добавляем информацию о политике конфиденциальности
+const privacyDiv = document.createElement('div');
+privacyDiv.style.marginTop = '15px';
+privacyDiv.style.fontSize = '14px';
+privacyDiv.innerHTML = `Нажимая на кнопку "Отправить заявку" вы соглашаетесь с <a href="https://audit-advisor.com/russia/privacy" target="_blank">Политикой конфиденциальности</a>.`;
+
+
+resultContainer.appendChild(privacyDiv);
+  }
+  
+  // Эта функция больше не используется, но оставлена для совместимости
+  function certCreateCompanySelect(companies) {
+    // Вызываем только отображение результатов с чекбоксами
+    // Сам селект больше не создаем
+    
+    // Скрываем старый контейнер для селекта
+    const container = document.getElementById("certCompanyContainer");
+    container.style.display = 'none';
+  }
+
+
+  // Функция отправки данных на сервер
+  async function certSendToUrl(event) {
+    event.preventDefault(); // Отключаем стандартную отправку формы
+    
+    // Получаем выбранные компании из чекбоксов
+    const selectedCompanies = [];
+    const checkboxes = document.querySelectorAll('input[name="certCompany"]:checked');
+    
+    // Проверяем, выбрана ли хотя бы одна компания
+    if (checkboxes.length === 0) {
+      alert("Пожалуйста, выберите хотя бы одну компанию для отправки заявки!");
+      return;
+    }
+    
+    // Собираем значения выбранных компаний
+    checkboxes.forEach(checkbox => {
+      selectedCompanies.push(checkbox.value);
+    });
+    
+    // Показываем индикатор загрузки
+    document.getElementById('certLoading').style.display = 'block';
+    
+    const form = document.getElementById("certMyForm");
+    let formData = {};
+    
+    const inputs = form.querySelectorAll("input, select, textarea");
+    inputs.forEach(input => {
+      // Убираем префикс 'cert' из id для сервера
+      if (input.id && input.id.startsWith('cert')) {
+        const cleanId = input.id.replace('cert', '');
+        
+        if (input.type === "checkbox") {
+          formData[cleanId] = input.checked;
+        } else if (input.type === "radio") {
+          if (input.checked) {
+            formData[input.name] = input.value;
+          }
+        }
+        else {
+          formData[cleanId] = input.value;
+        }
+      }
+    });
+    
+    // Добавляем выбранные компании в formData
+    formData["selectedCompanies"] = selectedCompanies;
+
+    // Добавляем выбранные стандарты в formData
+    const standartsSelect = document.getElementById("certStandarts");
+    if (standartsSelect) {
+      formData["selectedStandarts"] = Array.from(standartsSelect.selectedOptions).map(option => option.value);
+    }
+    
+    // Получаем данные о местоположениях
+    formData["locations"] = [];
+    const addressInputs = document.querySelectorAll('[id^="certAddress_"]');
+    const numberInputs = document.querySelectorAll('[id^="certNumber_"]');
+    
+    for (let i = 0; i < addressInputs.length; i++) {
+      if (addressInputs[i].value.trim() && numberInputs[i].value) {
+        formData["locations"].push({
+          address: addressInputs[i].value.trim(),
+          number: numberInputs[i].value
+        });
+      }
+    }
+    
+    console.log("Отправляемые данные:", JSON.stringify(formData, null, 2)); // Вывод тела запроса в консоль
+    
+    try {
+      const response = await fetch("https://audit-advisor-server.ru/send_request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      document.getElementById('certLoading').style.display = 'none';
+      
+      if (!response.ok) {
+        throw new Error(`Ошибка HTTP: ${response.status}`);
+      }
+      
+      const result = await response.json();
+      console.log("✅ Ответ сервера:", result);
+      
+      // Показываем модальное окно с результатом
+      const modal = document.getElementById('certResultModal');
+      const modalTitle = document.getElementById('certModalTitle');
+      const modalMessage = document.getElementById('certModalMessage');
+      
+      if (result.status === "ok") {
+        modalTitle.textContent = "Заявка отправлена!";
+        modalTitle.style.color = "#28a745";
+        modalMessage.innerHTML = `
+          Ваша заявка успешно отправлена в выбранные органы сертификации.
+          <p>Ожидайте ответа в ближайшее время.</p>
+        `;
+        
+        // Добавляем обработчик для кнопки "Закрыть", чтобы сбросить форму
+        const closeButton = modal.querySelector('button');
+        closeButton.onclick = function() {
+          modal.style.display = "none";
+          resetForm();
+        };
+      } else {
+        modalTitle.textContent = "Ошибка отправки";
+        modalTitle.style.color = "#dc3545";
+        modalMessage.textContent = "Произошла ошибка при отправке данных. Пожалуйста, попробуйте позже.";
+      }
+      
+      modal.style.display = "block";
+      
+    } catch (error) {
+      document.getElementById('certLoading').style.display = 'none';
+      console.error("Ошибка при отправке данных:", error);
+      
+      // Показываем модальное окно с ошибкой
+      const modal = document.getElementById('certResultModal');
+      const modalTitle = document.getElementById('certModalTitle');
+      const modalMessage = document.getElementById('certModalMessage');
+      
+      modalTitle.textContent = "Ошибка отправки";
+      modalTitle.style.color = "#dc3545";
+      modalMessage.textContent = "Произошла ошибка при отправке данных: " + error.message;
+      
+      modal.style.display = "block";
+    }
+  }
+  
+  // Функция сброса формы
+  function resetForm() {
+    document.getElementById('certMyForm').reset();
+    
+    // Возвращаемся к первому шагу
+    for (let i = 1; i <= 4; i++) {
+      document.getElementById(`certSection${i}`).classList.remove('active');
+      document.getElementById(`certStep${i}`).classList.remove('active');
+    }
+    
+    document.getElementById('certSection1').classList.add('active');
+    document.getElementById('certStep1').classList.add('active');
+    
+    // Сбрасываем местоположения к одному
+    const locationsBody = document.getElementById('certLocationsBody');
+    locationsBody.innerHTML = `
+      <tr>
+        <td>1</td>
+        <td><input name="address_0" id="certAddress_0" class="cert-input-text" type="text" required placeholder="Введите адрес" style="margin-bottom: 0; box-sizing: border-box;"></td>
+        <td><input name="number_0" id="certNumber_0" class="cert-input-number" type="number" min="1" required placeholder="Кол-во сотрудников" style="margin-bottom: 0; box-sizing: border-box;"></td>
+        <td style="text-align: center;"></td>
+      </tr>
+    `;
+    certCurrentBlocks = 1;
+    
+    // Скрываем все сообщения об ошибках
+    const errorMessages = document.querySelectorAll('.cert-error-message');
+    errorMessages.forEach(msg => msg.style.display = 'none');
+  }
+
+
+  // Инициализация после загрузки DOM
+  document.addEventListener('DOMContentLoaded', function() {
+    // Новая маска для телефона (с фиксированной +7)
+    const phoneInput = document.getElementById('certPhone');
+    
+    // Функция для установки маски телефона
+    function setCursorPosition(pos, elem) {
+      elem.focus();
+      if (elem.setSelectionRange) {
+        elem.setSelectionRange(pos, pos);
+      } else if (elem.createTextRange) {
+        const range = elem.createTextRange();
+        range.collapse(true);
+        range.moveEnd("character", pos);
+        range.moveStart("character", pos);
+        range.select();
+      }
+    }
+    
+    function mask(event) {
+      const matrix = "+7 (___) ___-__-__";
+      let i = 0;
+      const def = matrix.replace(/\D/g, "");
+      let val = this.value.replace(/\D/g, "");
+      
+      if (def.length >= val.length) val = def;
+      
+      this.value = matrix.replace(/./g, function(a) {
+        return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a;
+      });
+      
+      if (event.type === "blur") {
+        if (this.value.length === 2) {
+          this.value = "";
+        }
+      } else {
+        setCursorPosition(this.value.length, this);
+      }
+    }
+    
+    phoneInput.addEventListener("input", mask);
+    phoneInput.addEventListener("focus", mask);
+    phoneInput.addEventListener("blur", mask);
+    
+    // Вызываем mask один раз для инициализации маски с +7
+    const event = new Event('focus');
+    phoneInput.dispatchEvent(event);
+    
+    // Инициализация обработчиков событий
+    document.getElementById('certSend').addEventListener("click", certSendToUrl);
+    
+    // Закрытие модального окна при клике вне его области
+    window.onclick = function(event) {
+      const modal = document.getElementById('certResultModal');
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  });
+</script>
+</body>
+</html>
