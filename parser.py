@@ -2,14 +2,22 @@ import gspread
 from random import shuffle, choice
 import datetime, string
 
-gc = gspread.service_account(filename="auth.json")
-sh = gc.open_by_url("https://docs.google.com/spreadsheets/d/1dxqQccvwSka_dkYyNkcQPXnKWlvIDkjb2qfBwuJ92dQ/edit?pli=1&gid=719798611#gid=719798611")
-worksheet1 = sh.get_worksheet(0)
-worksheet3 = sh.get_worksheet(2)
-data1 = worksheet1.get_all_records()
-data3 = worksheet3.get_all_records()
+def get_worksheets():
+    gc = gspread.service_account(filename="auth.json")
+    sh = gc.open_by_url(
+        "https://docs.google.com/spreadsheets/d/1dxqQccvwSka_dkYyNkcQPXnKWlvIDkjb2qfBwuJ92dQ/edit?pli=1&gid=719798611#gid=719798611")
+    worksheet1 = sh.get_worksheet(0)
+    worksheet3 = sh.get_worksheet(2)
+    return (worksheet1, worksheet3)
+
+def get_data():
+    worksheet1, worksheet3 = get_worksheets()
+    data1 = worksheet1.get_all_records()
+    data3 = worksheet3.get_all_records()
+    return (data1, data3)
 
 def check_count_current_month(inn:int):
+    data3 = get_data()[1]
     now = f'{str(datetime.datetime.now().month).rjust(2, "0")}.{datetime.datetime.now().year}'
     for comp in data3:
         if comp['Registration_number']==inn:
@@ -24,6 +32,8 @@ def check_count_current_month(inn:int):
         return False
 
 def add_count_current_month(companie:str):
+    data3 = get_data()[1]
+    worksheet3 = get_worksheets()[1]
     now = f'{str(datetime.datetime.now().month).rjust(2, "0")}.{datetime.datetime.now().year}'
     for i in range(len(data3)):
         if data3[i]['Certification_body'] == companie:
@@ -90,3 +100,4 @@ def get_url(companie:str):
 def get_urls(list_companies:list):
     return [get_url(comp) for comp in list_companies]
 
+print(get_list_companies(['9001']))
