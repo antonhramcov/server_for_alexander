@@ -6,7 +6,6 @@ from aiogram.fsm.context import FSMContext
 from aiogram.types import (InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, Message, FSInputFile, ContentType, BotCommand)
 import os, email_sender, time, models, json, parser
 import asyncio
-
 from parser import add_count_current_month
 
 # Инициализируем хранилище (создаем экземпляр класса MemoryStorage)
@@ -58,6 +57,8 @@ async def set_main_menu(bot: Bot):
 
     await bot.set_my_commands(main_menu_commands)
 
+
+
 # Функция отправки уведомления о поступившей заявки
 async def send_request(text, uniqal_id):
     async with asyncio.timeout(10):
@@ -73,6 +74,7 @@ async def send_request(text, uniqal_id):
         del_button = InlineKeyboardButton(text='Удалить', callback_data=f'del_{uniqal_id}')
         new_keyboard.inline_keyboard.append([send_button,del_button])
         await bot.send_message(chat_id=id_moderator, text=text, reply_markup=new_keyboard)
+
 
 # Функция редактирования текста
 @dp.callback_query(Send_keyboard())

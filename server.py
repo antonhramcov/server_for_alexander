@@ -1,7 +1,7 @@
 import random, string, json, os
 from flask import Flask, request, jsonify, json
 from models import *
-from parser import *
+from parser_old import *
 from flask_cors import CORS
 import bot, requests
 
