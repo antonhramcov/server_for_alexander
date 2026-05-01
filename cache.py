@@ -1,13 +1,12 @@
 import time
 
-import gspread
-
-from config import CACHE_RESTART_DELAY, GOOGLE_AUTH_PATH
+from config import CACHE_RESTART_DELAY
+from google_client import get_gspread_client
 from internal_api import sync_cache
 
 
 def refresh_cache():
-    gc = gspread.service_account(filename=str(GOOGLE_AUTH_PATH))
+    gc = get_gspread_client()
     sh = gc.open_by_url(
         "https://docs.google.com/spreadsheets/d/1dxqQccvwSka_dkYyNkcQPXnKWlvIDkjb2qfBwuJ92dQ/edit?pli=1&gid=719798611#gid=719798611"
     )

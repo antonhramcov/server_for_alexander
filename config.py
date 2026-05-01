@@ -1,5 +1,6 @@
 import os
 import base64
+import json
 from pathlib import Path
 
 
@@ -44,3 +45,15 @@ if GOOGLE_AUTH_JSON:
     GOOGLE_AUTH_PATH.write_text(GOOGLE_AUTH_JSON, encoding="utf-8")
 elif GOOGLE_AUTH_JSON_BASE64:
     GOOGLE_AUTH_PATH.write_bytes(base64.b64decode(GOOGLE_AUTH_JSON_BASE64))
+
+
+def get_google_auth_info() -> dict | None:
+    if GOOGLE_AUTH_JSON:
+        return json.loads(GOOGLE_AUTH_JSON)
+    if GOOGLE_AUTH_JSON_BASE64:
+        return json.loads(base64.b64decode(GOOGLE_AUTH_JSON_BASE64).decode("utf-8"))
+    if GOOGLE_AUTH_PATH.exists():
+        return None
+    raise RuntimeError(
+        "Google credentials are not configured. Set GOOGLE_AUTH_JSON or GOOGLE_AUTH_JSON_BASE64."
+    )

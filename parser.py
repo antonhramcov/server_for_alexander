@@ -4,9 +4,8 @@ import string
 import time
 from random import choice, shuffle
 
-import gspread
-
-from config import DATA1_PATH, DATA3_PATH, GOOGLE_AUTH_PATH
+from config import DATA1_PATH, DATA3_PATH
+from google_client import get_gspread_client
 
 
 limits = {"Продвинутый": 25, "Стандарт": 8, "Начальный": 4, "Пассивный": 9999}
@@ -56,7 +55,7 @@ def add_count_current_month(companie: str):
             row = i + 2
             cell = f"{column}{row}"
             time.sleep(1)
-            gc = gspread.service_account(filename=str(GOOGLE_AUTH_PATH))
+            gc = get_gspread_client()
             sh = gc.open_by_url(
                 "https://docs.google.com/spreadsheets/d/1dxqQccvwSka_dkYyNkcQPXnKWlvIDkjb2qfBwuJ92dQ/edit?pli=1&gid=719798611#gid=719798611"
             )
