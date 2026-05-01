@@ -672,6 +672,9 @@
   // Используем уникальные имена для наших функций
   let certMaxBlocks = 100; // Максимальное количество офисов
   let certCurrentBlocks = 1; // Текущее количество добавленных офисов
+  const certApiBase = window.location.protocol.startsWith('http')
+    ? window.location.origin
+    : 'https://audit-advisor-server.ru';
   
   // Функция для перехода к следующему шагу
   function certNextStep(currentStep) {
@@ -892,7 +895,7 @@
       .map(option => option.value);
     
     // Отправляем запрос на сервер
-    fetch('https://audit-advisor-server.ru/get_names_companies_from_standarts', {
+    fetch(`${certApiBase}/get_names_companies_from_standarts`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -1138,7 +1141,7 @@ resultContainer.appendChild(privacyDiv);
     console.log("Отправляемые данные:", JSON.stringify(formData, null, 2)); // Вывод тела запроса в консоль
     
     try {
-      const response = await fetch("https://audit-advisor-server.ru/send_request", {
+      const response = await fetch(`${certApiBase}/send_request`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

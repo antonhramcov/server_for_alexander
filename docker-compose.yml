@@ -1,0 +1,24 @@
+x-app-service: &app-service
+  build:
+    context: .
+  working_dir: /app
+  env_file:
+    - .env
+  volumes:
+    - .:/app
+  restart: unless-stopped
+
+services:
+  server:
+    <<: *app-service
+    command: python server.py
+    ports:
+      - "${FLASK_PORT:-5000}:5000"
+
+  bot:
+    <<: *app-service
+    command: python bot.py
+
+  cache:
+    <<: *app-service
+    command: /bin/sh /app/docker/cache-cycle.sh

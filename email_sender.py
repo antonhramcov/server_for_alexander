@@ -1,17 +1,21 @@
-import smtplib, models
-from email.mime.text import MIMEText
+import smtplib
 from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
-email = 
-password = 
+import models
+from config import SMTP_EMAIL, SMTP_HOST, SMTP_PASSWORD, SMTP_PORT
+
+
+email = SMTP_EMAIL
+password = SMTP_PASSWORD
+
 
 def send_email(address, path_to_json):
-    # Тема письма
     msg = models.make_email_from_json(path_to_json)
     msg['From'] = email
     msg['To'] = address
     try:
-        server = smtplib.SMTP('smtp.yandex.ru', 587)
+        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
         server.starttls()
         server.login(email, password)
         server.sendmail(email, address, msg.as_string())
@@ -20,6 +24,7 @@ def send_email(address, path_to_json):
         return f'Обнаружена ошибка {e}'
     else:
         return f'Письмо было отправлено на {address}'
+
 
 def send_bad_email(address):
     msg = MIMEMultipart()
@@ -30,7 +35,7 @@ def send_bad_email(address):
     msg['From'] = email
     msg['To'] = address
     try:
-        server = smtplib.SMTP('smtp.yandex.ru', 587)
+        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
         server.starttls()
         server.login(email, password)
         server.sendmail(email, address, msg.as_string())
@@ -39,6 +44,7 @@ def send_bad_email(address):
         return f'Обнаружена ошибка {e}'
     else:
         return f'Письмо было отправлено на {address}'
+
 
 def send_answer(address):
     msg = MIMEMultipart()
@@ -49,7 +55,7 @@ def send_answer(address):
     msg['From'] = email
     msg['To'] = address
     try:
-        server = smtplib.SMTP('smtp.yandex.ru', 587)
+        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
         server.starttls()
         server.login(email, password)
         server.sendmail(email, address, msg.as_string())

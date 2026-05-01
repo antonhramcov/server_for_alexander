@@ -1,12 +1,24 @@
+import datetime
+import json
+import string
+import time
+from random import choice, shuffle
+
 import gspread
-from random import shuffle, choice
-import datetime, string, json, time
+
+from config import DATA1_PATH, DATA3_PATH, GOOGLE_AUTH_PATH
+
 
 limits = {"Продвинутый": 25, "Стандарт": 8, "Начальный": 4, "Пассивный": 9999}
 
+
+def load_json(path):
+    with open(path) as f:
+        return json.load(f)
+
+
 def check_count_current_month(inn: int):
-    with open('data3.json') as f:
-        data3 = json.load(f)
+    data3 = load_json(DATA3_PATH)
     now = f'{str(datetime.datetime.now().month).rjust(2, "0")}.{datetime.datetime.now().year}'
     company = next((comp for comp in data3 if comp["Registration_number"] == inn), None)
 
@@ -19,23 +31,19 @@ def check_count_current_month(inn: int):
         return True
     return False
 
+
 def get_list_inn_companies_with_check_count():
-    with open('data3.json') as f:
-        data3 = json.load(f)
+    data3 = load_json(DATA3_PATH)
     output_list = []
     now = f'{str(datetime.datetime.now().month).rjust(2, "0")}.{datetime.datetime.now().year}'
     for comp in data3:
-        if now in comp:
-            if comp["Status"] in limits:
-                if comp[now] < limits[comp["Status"]]:
-                    output_list.append(comp['Registration_number'])
+        if now in comp and comp["Status"] in limits and comp[now] < limits[comp["Status"]]:
+            output_list.append(comp['Registration_number'])
     return output_list
 
 
-
 def add_count_current_month(companie: str):
-    with open('data3.json') as f:
-        data3 = json.load(f)
+    data3 = load_json(DATA3_PATH)
     now = f'{str(datetime.datetime.now().month).rjust(2, "0")}.{datetime.datetime.now().year}'
     for i, comp in enumerate(data3):
         if comp["Certification_body"] == companie and now in comp:
@@ -48,7 +56,7 @@ def add_count_current_month(companie: str):
             row = i + 2
             cell = f"{column}{row}"
             time.sleep(1)
-            gc = gspread.service_account(filename="auth.json")
+            gc = gspread.service_account(filename=str(GOOGLE_AUTH_PATH))
             sh = gc.open_by_url(
                 "https://docs.google.com/spreadsheets/d/1dxqQccvwSka_dkYyNkcQPXnKWlvIDkjb2qfBwuJ92dQ/edit?pli=1&gid=719798611#gid=719798611"
             )
@@ -58,21 +66,17 @@ def add_count_current_month(companie: str):
 
 
 def get_list_companies(standarts: list[str], region: str = "50"):
-    with open('data3.json') as f:
-        data3 = json.load(f)
-    with open('data1.json') as f:
-        data1 = json.load(f)
+    data1 = load_json(DATA1_PATH)
     list_inn_check_count = get_list_inn_companies_with_check_count()
 
-    # Общий отбор
     list_all = [
         comp
         for comp in data1
         if all(comp.get(st) == "+" for st in standarts)
-        and comp["Статус"].lower() != "бан" and comp["ИНН"] in list_inn_check_count
+        and comp["Статус"].lower() != "бан"
+        and comp["ИНН"] in list_inn_check_count
     ]
 
-    # Отбор одной региональной компании
     list2 = [
         comp
         for comp in list_all
@@ -81,7 +85,6 @@ def get_list_companies(standarts: list[str], region: str = "50"):
     if list2:
         list2 = [choice(list2)]
 
-    # Группы по статусу
     list1, list3, list4, list5 = [], [], [], []
 
     for comp in list_all:
@@ -100,23 +103,22 @@ def get_list_companies(standarts: list[str], region: str = "50"):
         except Exception as e:
             print(f"ERROR {comp.get('Сокращенное наименование')}: {e}")
 
-    # Перемешиваем списки
-    for l in (list1, list3, list4, list5):
-        shuffle(l)
+    for current_list in (list1, list3, list4, list5):
+        shuffle(current_list)
 
     output_list = list1 + list2 + list3 + list4 + list5
-    output_list2 = [f"{comp['Сокращенное наименование']}, {comp['Город']}" for comp in output_list]
+    output_names = [f"{comp['Сокращенное наименование']}, {comp['Город']}" for comp in output_list]
     urls = get_urls([comp["Сокращенное наименование"] for comp in output_list])
-    return [output_list2, urls]
+    return [output_names, urls]
 
 
 def get_list_emails(list_companies):
-    with open('data1.json') as f:
-        data1 = json.load(f)
+    data1 = load_json(DATA1_PATH)
     list_emails = []
     for name in list_companies:
+        clean_name = name.split(", ")[0]
         for comp in data1:
-            if comp["Сокращенное наименование"] == name:
+            if comp["Сокращенное наименование"] == clean_name:
                 if ", " not in comp["Адрес эл. почты"]:
                     list_emails.append(comp["Адрес эл. почты"])
                 else:
@@ -126,16 +128,12 @@ def get_list_emails(list_companies):
 
 
 def get_url(companie: str):
-    with open('data1.json') as f:
-        data1 = json.load(f)
+    data1 = load_json(DATA1_PATH)
     for comp in data1:
         if comp["Сокращенное наименование"] == companie:
             return comp["Ссылка на сайт"]
+    return None
 
 
 def get_urls(list_companies: list):
     return [get_url(comp) for comp in list_companies]
-
-l = get_list_companies(['9001'], '50')
-print(len(l[0]))
-print(*l[0], sep='\n')

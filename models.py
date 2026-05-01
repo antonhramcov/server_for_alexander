@@ -1,95 +1,114 @@
-import json, re, requests
-from random import shuffle
-from re import findall
-import bot, keywords
-import asyncio, threading
-from email.mime.text import MIMEText
+import json
+import re
 from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
-def find_standarts_from_str(s:str):
-    return re.findall(r'[0-9]{4,5}',s)
+from config import FILES_DIR, REQUESTS_DIR
 
-def from_json_to_text(d:dict) -> str:
+
+def find_standarts_from_str(s: str):
+    return re.findall(r'[0-9]{4,5}', s)
+
+
+def get_field(data: dict, *keys: str):
+    for key in keys:
+        if key in data:
+            return data[key]
+    return None
+
+
+def from_json_to_text(d: dict) -> str:
     text = ''
-    if 'selectedStandarts' in d:
-        text += f'Выбранные стандарты:\n'
-        for i in range(len(d['selectedStandarts'])):
-            text += f'{i + 1}. {d["selectedStandarts"][i]}\n'
-    if 'Name' in d:
-        text += f'Наименование компании: {d["Name"]}\n'
-    if 'Region' in d:
-        text += f'Регион: {d["Region"]}\n'
+
+    selected_standarts = get_field(d, 'selectedStandarts', 'selectedStandards') or []
+    if selected_standarts:
+        text += 'Выбранные стандарты:\n'
+        for i, standart in enumerate(selected_standarts, start=1):
+            text += f'{i}. {standart}\n'
+
+    name = get_field(d, 'Name', 'name')
+    if name:
+        text += f'Наименование компании: {name}\n'
+
+    region = get_field(d, 'Region', 'region')
+    if region:
+        text += f'Регион: {region}\n'
+
     for i in range(21):
-        if f'Address_{i}' in d and f'Number_{i}' in d:
+        address = get_field(d, f'Address_{i}', f'address_{i}')
+        number = get_field(d, f'Number_{i}', f'number_{i}')
+        if address is not None and number is not None:
             text += f'Информация об офисе №{i+1}:\n'
-            text += f'  Адрес компании: {d[f"Address_{i}"]}\n'
-            text += f'  Общая численность: {d[f"Number_{i}"]}\n'
-    if 'Activity' in d:
-        text += f'Область сертификации (основной ОКВЭД или вид деятельности компании): {d["Activity"]}\n'
-    if 'Date' in d:
-        text += f'Желаемые сроки для проведения аудита: {d["Date"]}\n'
-    if 'Notes' in d:
-        text += f'Примечания и пожелания: {d["Notes"]}\n'
-    if 'Fullname' in d or 'Phone' in d:
-        text += f'Контактные данные:\n'
-    if 'Fullname' in d:
-        text += f'ФИО: {d["Fullname"]}\n'
-    if 'Phone' in d:
-        text += f'Телефон: {d["Phone"]}\n'
-    if 'Email' in d:
-        text += f'Адрес электронной почты: {d["Email"]}\n'
-    if 'ConnectionType' in d:
-        text += f'Предпочитаемый вид связи: {d["ConnectionType"]}\n'
-    if 'ConnectionTime' in d:
-        if len(d['ConnectionTime'])>0:
-            text += f'Примечание: {d["ConnectionTime"]}\n'
+            text += f'  Адрес компании: {address}\n'
+            text += f'  Общая численность: {number}\n'
+
+    activity = get_field(d, 'Activity', 'activity')
+    if activity:
+        text += f'Область сертификации (основной ОКВЭД или вид деятельности компании): {activity}\n'
+
+    date_value = get_field(d, 'Date', 'date')
+    if date_value:
+        text += f'Желаемые сроки для проведения аудита: {date_value}\n'
+
+    notes = get_field(d, 'Notes', 'notes')
+    if notes is not None:
+        text += f'Примечания и пожелания: {notes}\n'
+
+    fullname = get_field(d, 'Fullname', 'fullname')
+    phone = get_field(d, 'Phone', 'phone')
+    email = get_field(d, 'Email', 'email')
+    connection_type = get_field(d, 'ConnectionType', 'connection')
+    connection_time = get_field(d, 'ConnectionTime', 'connectionTime')
+
+    if fullname or phone:
+        text += 'Контактные данные:\n'
+
+    if fullname:
+        text += f'ФИО: {fullname}\n'
+    if phone:
+        text += f'Телефон: {phone}\n'
+    if email:
+        text += f'Адрес электронной почты: {email}\n'
+    if connection_type:
+        text += f'Предпочитаемый вид связи: {connection_type}\n'
+    if connection_time:
+        text += f'Примечание: {connection_time}\n'
+
+    selected_companies = d.get('selectedCompanies', [])
+    if selected_companies:
+        text += 'Выбранные компании:\n'
+        for i, company in enumerate(selected_companies, start=1):
+            text += f'{i}. {company}\n'
+
     return text
 
-def save_request(d:dict, id:str):
+
+def save_request(d: dict, request_id: str):
     email_text = from_json_to_text(d)
     with open('email_sample.txt', 'r') as f:
         sample = f.read()
     sample = sample.replace('<ТЕКСТ ЗАПРОСА>', email_text)
     d['email_text'] = sample
-    with open(f'requests/{id}.json', 'w') as f:
+    with open(REQUESTS_DIR / f'{request_id}.json', 'w') as f:
         json.dump(d, f)
 
-def load_requests(id:str) -> dict:
-    with open(f'requests/{id}.json', 'r') as f:
-        d = json.load(f)
-    return d
 
-def bot_send_message(text:str, unical_id):
-    url = f'https://api.telegram.org/bot{bot.token}/sendMessage'
-    count = 0
-    keyboard = []
-    for companie in text.split('Выбранные компании:')[-1].split('\n'):
-        if len(companie) > 1:
-            count += 1
-            new_button = {'text':f'{keywords.smile1}{companie}{keywords.smile1}', 'callback_data':f'{count}-yes'}
-            keyboard.append([new_button])
-    send_button = {'text':keywords.word1, 'callback_data':f'send_{unical_id}'}
-    del_button = {'text':keywords.word2, 'callback_data':f'del_{unical_id}'}
-    keyboard.append([send_button, del_button])
-    data = {
-        'chat_id': bot.id_moderator,
-        'text': text,
-        'reply_markup': {
-        'inline_keyboard': keyboard
-    }}
-    response = requests.post(url, json=data)
+def load_request(request_id: str) -> dict:
+    with open(REQUESTS_DIR / f'{request_id}.json', 'r') as f:
+        return json.load(f)
+
 
 def make_email_from_json(path_to_json):
     with open(path_to_json, 'r') as f:
-        d = json.load(f)
-    del d['selectedCompanies']
-    sample = d['email_text']
+        data = json.load(f)
+    data.pop('selectedCompanies', None)
+    sample = data['email_text']
     msg = MIMEMultipart()
     msg['Subject'] = 'Audit Advisor: Заявка на сертификацию системы менеджмента'
     msg.attach(MIMEText(sample, 'plain'))
     return msg
 
-def add_user(id, username):
-    with open('files/users.txt', 'a') as f:
-        f.write(f'{id}:{username}\n')
 
+def add_user(user_id, username):
+    with open(FILES_DIR / 'users.txt', 'a') as f:
+        f.write(f'{user_id}:{username}\n')
