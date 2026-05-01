@@ -1,6 +1,4 @@
 import os
-import base64
-import json
 from pathlib import Path
 
 
@@ -19,7 +17,7 @@ FILES_DIR = Path(get_env("FILES_DIR", default=str(BASE_DIR / "files")))
 REQUESTS_DIR = Path(get_env("REQUESTS_DIR", default=str(BASE_DIR / "requests")))
 DATA1_PATH = Path(get_env("DATA1_PATH", default=str(BASE_DIR / "data1.json")))
 DATA3_PATH = Path(get_env("DATA3_PATH", default=str(BASE_DIR / "data3.json")))
-GOOGLE_AUTH_PATH = Path(get_env("GOOGLE_AUTH_PATH", default=str(BASE_DIR / "auth.json")))
+GOOGLE_AUTH_PATH = Path(get_env("GOOGLE_AUTH_PATH", default=str(FILES_DIR / "auth.json")))
 GOOGLE_AUTH_JSON = get_env("GOOGLE_AUTH_JSON")
 GOOGLE_AUTH_JSON_BASE64 = get_env("GOOGLE_AUTH_JSON_BASE64")
 
@@ -40,20 +38,3 @@ CACHE_RESTART_DELAY = int(get_env("CACHE_RESTART_DELAY", default="300"))
 
 FILES_DIR.mkdir(parents=True, exist_ok=True)
 REQUESTS_DIR.mkdir(parents=True, exist_ok=True)
-
-if GOOGLE_AUTH_JSON:
-    GOOGLE_AUTH_PATH.write_text(GOOGLE_AUTH_JSON, encoding="utf-8")
-elif GOOGLE_AUTH_JSON_BASE64:
-    GOOGLE_AUTH_PATH.write_bytes(base64.b64decode(GOOGLE_AUTH_JSON_BASE64))
-
-
-def get_google_auth_info() -> dict | None:
-    if GOOGLE_AUTH_JSON:
-        return json.loads(GOOGLE_AUTH_JSON)
-    if GOOGLE_AUTH_JSON_BASE64:
-        return json.loads(base64.b64decode(GOOGLE_AUTH_JSON_BASE64).decode("utf-8"))
-    if GOOGLE_AUTH_PATH.exists():
-        return None
-    raise RuntimeError(
-        "Google credentials are not configured. Set GOOGLE_AUTH_JSON or GOOGLE_AUTH_JSON_BASE64."
-    )
