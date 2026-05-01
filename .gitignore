@@ -2,5 +2,5 @@ __pycache__/
 *.pyc
 
 auth.json
-files/auth.json
+!files/auth.json
 files/users.txt
