@@ -1,9 +1,7 @@
 import asyncio
-import json
-import os
+from io import BytesIO
 
 import email_sender
-import parser
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters import BaseFilter, Command, Filter, StateFilter
 from aiogram.filters.state import State, StatesGroup
@@ -18,10 +16,21 @@ from aiogram.types import (
     InlineKeyboardMarkup,
     Message,
 )
+from aiogram.types.input_file import BufferedInputFile
 
-from config import BOT_MODERATOR_ID, BOT_TOKEN, FILES_DIR, REQUESTS_DIR
-from models import add_user
-from parser import add_count_current_month
+from config import BOT_MODERATOR_ID, BOT_TOKEN
+from internal_api import (
+    create_user,
+    delete_request,
+    download_file,
+    get_company_emails,
+    get_request,
+    get_request_document,
+    increment_company_counts,
+    list_files,
+    update_request,
+    upload_file,
+)
 
 
 storage: MemoryStorage = MemoryStorage()
@@ -89,12 +98,9 @@ async def change_text(callback: CallbackQuery, state: FSMContext):
     list_buttons = callback.message.reply_markup.inline_keyboard[:-1]
     list_companies = [button[0].text[1:-1] for button in list_buttons if '✅' in button[0].text]
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
-    request_path = REQUESTS_DIR / f'{uniqal_id}.json'
-    with open(request_path) as f:
-        data = json.load(f)
+    data = get_request(uniqal_id)
     data['selectedCompanies'] = list_companies
-    with open(request_path, 'w') as f:
-        json.dump(data, f)
+    update_request(uniqal_id, data)
     email = data['email_text']
     new_keyboard = InlineKeyboardMarkup(inline_keyboard=[])
     submit_button = InlineKeyboardButton(text='Подтвердить текст', callback_data=f'submit_{uniqal_id}')
@@ -113,12 +119,9 @@ async def change_text(callback: CallbackQuery, state: FSMContext):
 async def change_text2(message: Message, state: FSMContext):
     data = await state.get_data()
     uniqal_id = data.get("id")
-    request_path = REQUESTS_DIR / f'{uniqal_id}.json'
-    with open(request_path) as f:
-        request_data = json.load(f)
+    request_data = get_request(uniqal_id)
     request_data['email_text'] = message.text
-    with open(request_path, 'w') as f:
-        json.dump(request_data, f)
+    update_request(uniqal_id, request_data)
     new_keyboard = InlineKeyboardMarkup(inline_keyboard=[])
     submit_button = InlineKeyboardButton(text='Подтвердить текст', callback_data=f'submit_{uniqal_id}')
     new_keyboard.inline_keyboard.append([submit_button])
@@ -152,13 +155,11 @@ async def change_status_button(callback: CallbackQuery):
 @dp.callback_query(Dell_keyboard())
 async def dell_keyboard(callback: CallbackQuery):
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
-    request_path = REQUESTS_DIR / f'{uniqal_id}.json'
-    with open(request_path) as f:
-        text = json.load(f)
+    text = get_request(uniqal_id)
     email = text.get('Email') or text.get('email')
     if email:
         email_sender.send_bad_email(email)
-    os.remove(request_path)
+    delete_request(uniqal_id)
     await bot.delete_message(chat_id=callback.message.chat.id, message_id=callback.message.message_id)
 
 
@@ -166,21 +167,18 @@ async def dell_keyboard(callback: CallbackQuery):
 async def send_button(callback: CallbackQuery, state: FSMContext):
     await state.clear()
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
-    request_path = REQUESTS_DIR / f'{uniqal_id}.json'
-    with open(request_path) as f:
-        data = json.load(f)
+    data = get_request(uniqal_id)
     caption = 'Этот документ будет отправлен в:\n'
     for companie in data['selectedCompanies']:
         caption += f'{companie}\n'
-    document = FSInputFile(request_path, filename='Заявка.json')
+    document = BufferedInputFile(get_request_document(uniqal_id), filename='Заявка.json')
     await bot.send_document(chat_id=callback.message.chat.id, document=document, caption=caption)
     global status_email
     if status_email:
-        for comp in data['selectedCompanies']:
-            add_count_current_month(comp)
-    for email in parser.get_list_emails(data['selectedCompanies']):
+        increment_company_counts(data['selectedCompanies'])
+    for email in get_company_emails(data['selectedCompanies']):
         if status_email:
-            email_sender.send_email(email, request_path)
+            email_sender.send_email(email, BufferedInputFile(get_request_document(uniqal_id), filename='request.json'))
             await bot.send_message(chat_id=callback.message.chat.id, text=f'Отправлено в {email}')
         else:
             await bot.send_message(
@@ -197,16 +195,16 @@ async def change_file(message: Message):
     document_name = message.document.file_name
     file = await bot.get_file(document_id)
     file_path = file.file_path
-    await bot.download_file(file_path, FILES_DIR / document_name)
+    file_bytes = BytesIO()
+    await bot.download_file(file_path, destination=file_bytes)
+    upload_file(document_name, file_bytes.getvalue())
     await message.reply(text='Файл был успешно заменен на сервере')
 
 
 @dp.message(Check_in_admin(), Command(commands='get_all_files'))
 async def send_files(message: Message):
-    for file in os.listdir(FILES_DIR):
-        if file.startswith('.'):
-            continue
-        document = FSInputFile(path=FILES_DIR / file, filename=f'{file}')
+    for file in list_files():
+        document = BufferedInputFile(download_file(file), filename=file)
         await bot.send_document(chat_id=message.chat.id, document=document)
 
 
@@ -226,7 +224,7 @@ async def status_email_false(message: Message):
 
 @dp.message(Command(commands='start'))
 async def start(message: Message):
-    add_user(message.from_user.id, message.from_user.username)
+    create_user(message.from_user.id, message.from_user.username)
 
 
 if __name__ == '__main__':

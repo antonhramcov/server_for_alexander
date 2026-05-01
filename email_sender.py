@@ -1,4 +1,6 @@
 import smtplib
+from pathlib import Path
+from tempfile import NamedTemporaryFile
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
@@ -11,7 +13,13 @@ password = SMTP_PASSWORD
 
 
 def send_email(address, path_to_json):
-    msg = models.make_email_from_json(path_to_json)
+    if not isinstance(path_to_json, (str, Path)):
+        with NamedTemporaryFile(mode='wb', suffix='.json', delete=True) as temp_file:
+            temp_file.write(path_to_json.data)
+            temp_file.flush()
+            msg = models.make_email_from_json(temp_file.name)
+    else:
+        msg = models.make_email_from_json(path_to_json)
     msg['From'] = email
     msg['To'] = address
     try:

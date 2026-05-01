@@ -29,6 +29,9 @@ SMTP_PORT = int(get_env("SMTP_PORT", default="587"))
 
 FLASK_HOST = get_env("FLASK_HOST", default="0.0.0.0")
 FLASK_PORT = int(get_env("FLASK_PORT", default="5000"))
+INTERNAL_API_URL = get_env("INTERNAL_API_URL", default="http://server:5000")
+INTERNAL_API_TIMEOUT = int(get_env("INTERNAL_API_TIMEOUT", default="30"))
+CACHE_RESTART_DELAY = int(get_env("CACHE_RESTART_DELAY", default="300"))
 
 
 FILES_DIR.mkdir(parents=True, exist_ok=True)

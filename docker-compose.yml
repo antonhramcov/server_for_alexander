@@ -4,8 +4,6 @@ x-app-service: &app-service
   working_dir: /app
   env_file:
     - .env
-  volumes:
-    - .:/app
   restart: unless-stopped
 
 services:
@@ -18,7 +16,11 @@ services:
   bot:
     <<: *app-service
     command: python bot.py
+    depends_on:
+      - server
 
   cache:
     <<: *app-service
     command: /bin/sh /app/docker/cache-cycle.sh
+    depends_on:
+      - server

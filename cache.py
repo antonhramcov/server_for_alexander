@@ -1,8 +1,9 @@
-import json
+import time
 
 import gspread
 
-from config import DATA1_PATH, DATA3_PATH, GOOGLE_AUTH_PATH
+from config import CACHE_RESTART_DELAY, GOOGLE_AUTH_PATH
+from internal_api import sync_cache
 
 
 def refresh_cache():
@@ -14,12 +15,11 @@ def refresh_cache():
     worksheet3 = sh.get_worksheet(2)
     data1 = worksheet1.get_all_records()
     data3 = worksheet3.get_all_records()
-    with open(DATA1_PATH, 'w') as f:
-        json.dump(data1, f)
-    with open(DATA3_PATH, 'w') as f:
-        json.dump(data3, f)
+    sync_cache(data1, data3)
     print('Cache updated successfully')
 
 
 if __name__ == '__main__':
-    refresh_cache()
+    while True:
+        refresh_cache()
+        time.sleep(CACHE_RESTART_DELAY)

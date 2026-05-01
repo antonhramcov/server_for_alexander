@@ -3,7 +3,7 @@ import re
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from config import FILES_DIR, REQUESTS_DIR
+from config import DATA1_PATH, DATA3_PATH, FILES_DIR, REQUESTS_DIR
 
 
 def find_standarts_from_str(s: str):
@@ -89,6 +89,10 @@ def save_request(d: dict, request_id: str):
         sample = f.read()
     sample = sample.replace('<ТЕКСТ ЗАПРОСА>', email_text)
     d['email_text'] = sample
+    write_request(d, request_id)
+
+
+def write_request(d: dict, request_id: str):
     with open(REQUESTS_DIR / f'{request_id}.json', 'w') as f:
         json.dump(d, f)
 
@@ -112,3 +116,24 @@ def make_email_from_json(path_to_json):
 def add_user(user_id, username):
     with open(FILES_DIR / 'users.txt', 'a') as f:
         f.write(f'{user_id}:{username}\n')
+
+
+def save_binary_file(filename: str, content: bytes):
+    with open(FILES_DIR / filename, 'wb') as f:
+        f.write(content)
+
+
+def load_binary_file(filename: str) -> bytes:
+    with open(FILES_DIR / filename, 'rb') as f:
+        return f.read()
+
+
+def list_binary_files() -> list[str]:
+    return sorted([path.name for path in FILES_DIR.iterdir() if path.is_file() and not path.name.startswith('.')])
+
+
+def save_cache_data(data1: list[dict], data3: list[dict]):
+    with open(DATA1_PATH, 'w') as f:
+        json.dump(data1, f)
+    with open(DATA3_PATH, 'w') as f:
+        json.dump(data3, f)
