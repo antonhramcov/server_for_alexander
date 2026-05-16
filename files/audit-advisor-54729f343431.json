@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "audit-advisor",
+  "private_key_id": "54729f343431a7c5869b5823e75a3b8a89dfee1f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDWds8iH9SrXaJT\nSOI4NMD60I5Fri/AfHFXfeXy9ZrSBF7Af8JRSJmbFScqCJZi0pjhRx05tQ43VqPK\nBqZ29nABLtkrSHN/0Ag1tvn4qVlrCGMpgVKptE3P/97IlOrneeJLohTcf4M6rbil\n6FjMecjiD/AI8wGWFx+lyPUHfbOo48lmgQwl3o0KAKHQn+CuTtmn/PnGuGzZDmFk\nLHQolyqpBEUZt5rDZly4xqAI19T3gxl2KA+XIUTAZI6ktXNMvRuAkPI1yRGnVwyK\nYvu23LV/XayL/xJrxIWXDty7EMge/nnAC8a6VwogSbfybhv01y/l4urFxZT5/UzB\ns8etRSOVAgMBAAECggEACVTyybWq3P4JByi1DI8Map19OKj4qPPWlrZYCsyxvOZg\ncm3cuF65WFcrn2zvkO3q+w/Lb2xiaaQFInr27qw7JBdexGm1pN/Ey67iN6C0JFp2\nviKYxIufldJjZkTx57qU+dzb8trq4eMXQBjZFvn29LyOzETj/Rzqd/NDk4eJCWsz\ngbPqPyRk178gRYUtALwJHO1DNVQrfd3ag5tQCG+fMmC6fMTOwuLudsr2/+R9bbFN\nzJzvDvWdKT+8SXKIRbh1/e+5nLz1BsZEq1B2PvV53H7VS1niFFf7cngnSAGTHAuQ\nxB77acaf2f70aksS80dHlzQoMOnNdjlFDXMmSiRi7QKBgQD/AeHmlFvWpeK7TUPJ\nSI3Tah/p4KAP592kjGdggniHlBiCx7MuDOJWOsxZs2plgliC1NPw7fuCOr4Zi9b5\nf4rElvrVPCjMXGKSKJNSUIRFbFeRtUHcPDM3pfZWWAjiss9zBwLVDjWXVvtAZG4/\nKCIz2taLERoygYNQxTE33r8A8wKBgQDXTIZfy6AZZaVOFP1dZdcfO0lJACerm++P\nE99xNsYBT/9mvPgbtMcdDLTmSldxPJqjvo7zMNKPbJVK8pzJrQ1hFLPO85cTQQYQ\nP8aaswF+pl4CtBngrCpqHp29OSZwLzpLbTM9Ep33O/Z7wG/3R9qFYYWAMmkotwMK\nnU21msErVwKBgH5Cr1gcgvBfiEiW9AY4b0iLVivVtUrK0hpEDndhgk4WzKAMQrJ9\nXJ+3UzDivb5u8GYu/JVhL9OGRFOfwpwcQ1gdLSrhM44j/AZEItVx2lwJTb5uUaK7\nB9z4xmRwCE4+nKpmgUd+VpiNT6/NSizpMS4dn3aRzDfPmnYmfL0eA9JzAoGBANFg\nNFW4+wt31FipBPTtc1WGHHEH24yCa2hjVSsOr2TbXW+WWlrnZbQUhWBn773JyEFx\nsidC1aJxYIawhlWDG73LmkmqjsNEuxbWTthnOQ7n0AklCP17sQvellxM1drHsxNj\nMS81ibXD9KLItJpwoEySWHghji7wO974t3fi9fSlAoGAXRrDtq5CMspOCI2jiHbN\niKTe2K2TXUKoFfyzMSi7EUYX0aEq9oNKroTU+PmUQEVDuvkNGZRP2nDtvZ0TGC0A\nKFdmjcnR31ZtRi+/a4rToBJ/hKhxrIaVrsVFEOAuKO4szaZ7OPPgX9A1MNy5fcMp\nfDQZlLXzwYKT4MsqYv7XyOc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bot-398@audit-advisor.iam.gserviceaccount.com",
+  "client_id": "100825678442678978307",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bot-398%40audit-advisor.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

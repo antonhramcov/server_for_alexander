@@ -20,7 +20,7 @@ DATA3_PATH = Path(get_env("DATA3_PATH", default=str(BASE_DIR / "data3.json")))
 GOOGLE_AUTH_PATH = Path(
     get_env(
         "GOOGLE_AUTH_PATH",
-        default=str(FILES_DIR / "audit-advisor-6f620e315727.json"),
+        default=str(FILES_DIR / "audit-advisor-54729f343431.json"),
     )
 )
 GOOGLE_AUTH_JSON = get_env("GOOGLE_AUTH_JSON")

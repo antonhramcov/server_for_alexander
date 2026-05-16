@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-GOOGLE_AUTH_PATH="${GOOGLE_AUTH_PATH:-/app/files/audit-advisor-6f620e315727.json}"
+GOOGLE_AUTH_PATH="${GOOGLE_AUTH_PATH:-/app/files/audit-advisor-54729f343431.json}"
 GOOGLE_AUTH_DIR="$(dirname "$GOOGLE_AUTH_PATH")"
 
 mkdir -p "$GOOGLE_AUTH_DIR" /app/files /app/requests

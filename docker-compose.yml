@@ -11,7 +11,7 @@ x-app-service: &app-service
     CACHE_RESTART_DELAY: ${CACHE_RESTART_DELAY:-300}
     GOOGLE_AUTH_JSON: ${GOOGLE_AUTH_JSON:-}
     GOOGLE_AUTH_JSON_BASE64: ${GOOGLE_AUTH_JSON_BASE64:-}
-    GOOGLE_AUTH_PATH: ${GOOGLE_AUTH_PATH:-/app/files/audit-advisor-6f620e315727.json}
+    GOOGLE_AUTH_PATH: ${GOOGLE_AUTH_PATH:-/app/files/audit-advisor-54729f343431.json}
   restart: unless-stopped
 
 services:
