@@ -2,8 +2,16 @@ x-app-service: &app-service
   build:
     context: .
   working_dir: /app
-  env_file:
-    - .env
+  environment:
+    BOT_TOKEN: ${BOT_TOKEN}
+    BOT_MODERATOR_ID: ${BOT_MODERATOR_ID:-1111111111}
+    SMTP_EMAIL: ${SMTP_EMAIL}
+    SMTP_PASSWORD: ${SMTP_PASSWORD}
+    INTERNAL_API_URL: ${INTERNAL_API_URL:-http://server:5000}
+    CACHE_RESTART_DELAY: ${CACHE_RESTART_DELAY:-300}
+    GOOGLE_AUTH_JSON: ${GOOGLE_AUTH_JSON:-}
+    GOOGLE_AUTH_JSON_BASE64: ${GOOGLE_AUTH_JSON_BASE64:-}
+    GOOGLE_AUTH_PATH: ${GOOGLE_AUTH_PATH:-/app/files/audit-advisor-6f620e315727.json}
   restart: unless-stopped
 
 services:
