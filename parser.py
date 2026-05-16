@@ -1,12 +1,8 @@
 import datetime
 import json
-import string
 from random import choice, shuffle
 
 from config import DATA1_PATH, DATA3_PATH
-
-
-limits = {"Продвинутый": 25, "Стандарт": 8, "Начальный": 4, "Пассивный": 9999}
 
 
 def load_json(path):
@@ -14,37 +10,12 @@ def load_json(path):
         return json.load(f)
 
 
-def check_count_current_month(inn: int):
-    data3 = load_json(DATA3_PATH)
-    now = f'{str(datetime.datetime.now().month).rjust(2, "0")}.{datetime.datetime.now().year}'
-    company = next((comp for comp in data3 if comp["Registration_number"] == inn), None)
-
-    if not company:
-        return False
-
-    if now in company:
-        if company["Status"] in limits:
-            return company[now] < limits[company["Status"]]
-        return True
-    return False
-
-
-def get_list_inn_companies_with_check_count():
-    data3 = load_json(DATA3_PATH)
-    output_list = []
-    now = f'{str(datetime.datetime.now().month).rjust(2, "0")}.{datetime.datetime.now().year}'
-    for comp in data3:
-        if now in comp and comp["Status"] in limits and comp[now] < limits[comp["Status"]]:
-            output_list.append(comp['Registration_number'])
-    return output_list
-
-
 def add_count_current_month(companie: str):
     data3 = load_json(DATA3_PATH)
     now = f'{str(datetime.datetime.now().month).rjust(2, "0")}.{datetime.datetime.now().year}'
     for comp in data3:
-        if comp["Certification_body"] == companie and now in comp:
-            comp[now] = int(comp[now]) + 1
+        if comp["Certification_body"] == companie:
+            comp[now] = int(comp.get(now, 0)) + 1
             with open(DATA3_PATH, 'w') as f:
                 json.dump(data3, f)
             break
@@ -52,14 +23,12 @@ def add_count_current_month(companie: str):
 
 def get_list_companies(standarts: list[str], region: str = "50"):
     data1 = load_json(DATA1_PATH)
-    list_inn_check_count = get_list_inn_companies_with_check_count()
 
     list_all = [
         comp
         for comp in data1
         if all(comp.get(st) == "+" for st in standarts)
         and comp["Статус"].lower() != "бан"
-        and comp["ИНН"] in list_inn_check_count
     ]
 
     list2 = [
