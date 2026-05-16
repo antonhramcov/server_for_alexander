@@ -15,6 +15,7 @@ def get_env(*names: str, default: str = "") -> str:
 
 FILES_DIR = Path(get_env("FILES_DIR", default=str(BASE_DIR / "files")))
 REQUESTS_DIR = Path(get_env("REQUESTS_DIR", default=str(BASE_DIR / "requests")))
+TEMPLATES_DIR = Path(get_env("TEMPLATES_DIR", default=str(BASE_DIR / "templates")))
 DATA1_PATH = Path(get_env("DATA1_PATH", default=str(BASE_DIR / "data1.json")))
 DATA3_PATH = Path(get_env("DATA3_PATH", default=str(BASE_DIR / "data3.json")))
 DATA_US_PATH = Path(get_env("DATA_US_PATH", default=str(BASE_DIR / "data_us.json")))
@@ -42,3 +43,4 @@ CACHE_RESTART_DELAY = int(get_env("CACHE_RESTART_DELAY", default="300"))
 
 FILES_DIR.mkdir(parents=True, exist_ok=True)
 REQUESTS_DIR.mkdir(parents=True, exist_ok=True)
+TEMPLATES_DIR.mkdir(parents=True, exist_ok=True)

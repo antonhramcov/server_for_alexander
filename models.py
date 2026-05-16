@@ -2,8 +2,9 @@ import json
 import re
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from pathlib import Path
 
-from config import DATA1_PATH, DATA3_PATH, FILES_DIR, REQUESTS_DIR
+from config import DATA1_PATH, DATA3_PATH, FILES_DIR, REQUESTS_DIR, TEMPLATES_DIR
 
 
 def find_standarts_from_str(s: str):
@@ -17,46 +18,115 @@ def get_field(data: dict, *keys: str):
     return None
 
 
+def normalize_country(country: str | None) -> str:
+    normalized = (country or "russia").strip().lower()
+    if normalized in {"usa", "us", "united states", "america"}:
+        return "usa"
+    if normalized in {"uk", "united kingdom", "great britain", "britain"}:
+        return "uk"
+    return "russia"
+
+
+def get_template_path(template_kind: str, country: str | None) -> Path:
+    normalized_country = normalize_country(country)
+    template_map = {
+        "company": {
+            "russia": Path("email_sample.txt"),
+            "usa": TEMPLATES_DIR / "usa_company.txt",
+            "uk": TEMPLATES_DIR / "uk_company.txt",
+        },
+        "success": {
+            "russia": Path("answer.txt"),
+            "usa": TEMPLATES_DIR / "usa_success.txt",
+            "uk": TEMPLATES_DIR / "uk_success.txt",
+        },
+        "bad": {
+            "russia": Path("bad_answer.txt"),
+            "usa": TEMPLATES_DIR / "usa_bad.txt",
+            "uk": TEMPLATES_DIR / "uk_bad.txt",
+        },
+    }
+    return template_map[template_kind].get(normalized_country, template_map[template_kind]["russia"])
+
+
+def load_template(template_kind: str, country: str | None) -> str:
+    with open(get_template_path(template_kind, country), 'r') as f:
+        return f.read()
+
+
+def split_subject_and_body(template_text: str, fallback_subject: str) -> tuple[str, str]:
+    lines = template_text.splitlines()
+    while lines and not lines[0].strip():
+        lines.pop(0)
+
+    if lines and lines[0].strip().startswith("Audit Advisor:"):
+        subject = lines[0].strip()
+        body = "\n".join(lines[1:]).lstrip("\n")
+        return subject, body
+
+    return fallback_subject, template_text.strip()
+
+
 def from_json_to_text(d: dict) -> str:
+    country = normalize_country(get_field(d, 'Country', 'country'))
     text = ''
 
     selected_standarts = get_field(d, 'selectedStandarts', 'selectedStandards') or []
     if selected_standarts:
-        text += 'Выбранные стандарты:\n'
+        text += 'Selected standards:\n' if country in {"usa", "uk"} else 'Выбранные стандарты:\n'
         for i, standart in enumerate(selected_standarts, start=1):
             text += f'{i}. {standart}\n'
 
     name = get_field(d, 'Name', 'name')
     if name:
-        text += f'Наименование компании: {name}\n'
+        if country in {"usa", "uk"}:
+            text += f'Company name: {name}\n'
+        else:
+            text += f'Наименование компании: {name}\n'
 
     region = get_field(d, 'Region', 'region')
     if region:
-        text += f'Регион: {region}\n'
+        if country == "usa":
+            text += f'State: {region}\n'
+        elif country == "uk":
+            text += f'Region: {region}\n'
+        else:
+            text += f'Регион: {region}\n'
 
     country = get_field(d, 'Country', 'country')
     if country:
-        text += f'Страна: {country}\n'
+        text += f'Country: {country}\n' if normalize_country(country) in {"usa", "uk"} else f'Страна: {country}\n'
 
     for i in range(21):
         address = get_field(d, f'Address_{i}', f'address_{i}')
         number = get_field(d, f'Number_{i}', f'number_{i}')
         if address is not None and number is not None:
-            text += f'Информация об офисе №{i+1}:\n'
-            text += f'  Адрес компании: {address}\n'
-            text += f'  Общая численность: {number}\n'
+            if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"}:
+                text += f'Location #{i+1}:\n'
+                text += f'  Address: {address}\n'
+                text += f'  Number of employees: {number}\n'
+            else:
+                text += f'Информация об офисе №{i+1}:\n'
+                text += f'  Адрес компании: {address}\n'
+                text += f'  Общая численность: {number}\n'
 
     activity = get_field(d, 'Activity', 'activity')
     if activity:
-        text += f'Область сертификации (основной ОКВЭД или вид деятельности компании): {activity}\n'
+        if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"}:
+            text += f'Certification scope or primary business activity: {activity}\n'
+        else:
+            text += f'Область сертификации (основной ОКВЭД или вид деятельности компании): {activity}\n'
 
     date_value = get_field(d, 'Date', 'date')
     if date_value:
-        text += f'Желаемые сроки для проведения аудита: {date_value}\n'
+        if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"}:
+            text += f'Preferred audit timeline: {date_value}\n'
+        else:
+            text += f'Желаемые сроки для проведения аудита: {date_value}\n'
 
     notes = get_field(d, 'Notes', 'notes')
     if notes is not None:
-        text += f'Примечания и пожелания: {notes}\n'
+        text += f'Notes: {notes}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Примечания и пожелания: {notes}\n'
 
     fullname = get_field(d, 'Fullname', 'fullname')
     phone = get_field(d, 'Phone', 'phone')
@@ -65,22 +135,22 @@ def from_json_to_text(d: dict) -> str:
     connection_time = get_field(d, 'ConnectionTime', 'connectionTime')
 
     if fullname or phone:
-        text += 'Контактные данные:\n'
+        text += 'Contact details:\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else 'Контактные данные:\n'
 
     if fullname:
-        text += f'ФИО: {fullname}\n'
+        text += f'Contact person: {fullname}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'ФИО: {fullname}\n'
     if phone:
-        text += f'Телефон: {phone}\n'
+        text += f'Phone: {phone}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Телефон: {phone}\n'
     if email:
-        text += f'Адрес электронной почты: {email}\n'
+        text += f'Email: {email}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Адрес электронной почты: {email}\n'
     if connection_type:
-        text += f'Предпочитаемый вид связи: {connection_type}\n'
+        text += f'Preferred contact method: {connection_type}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Предпочитаемый вид связи: {connection_type}\n'
     if connection_time:
-        text += f'Примечание: {connection_time}\n'
+        text += f'Preferred contact time or note: {connection_time}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Примечание: {connection_time}\n'
 
     selected_companies = d.get('selectedCompanies', [])
     if selected_companies:
-        text += 'Выбранные компании:\n'
+        text += 'Selected certification bodies:\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else 'Выбранные компании:\n'
         for i, company in enumerate(selected_companies, start=1):
             text += f'{i}. {company}\n'
 
@@ -88,10 +158,10 @@ def from_json_to_text(d: dict) -> str:
 
 
 def save_request(d: dict, request_id: str):
+    country = normalize_country(get_field(d, 'Country', 'country'))
     email_text = from_json_to_text(d)
-    with open('email_sample.txt', 'r') as f:
-        sample = f.read()
-    sample = sample.replace('<ТЕКСТ ЗАПРОСА>', email_text)
+    sample = load_template('company', country)
+    sample = sample.replace('<ТЕКСТ ЗАПРОСА>', email_text).replace('<ДЕТАЛИ ЗАПРОСА>', email_text)
     d['email_text'] = sample
     write_request(d, request_id)
 
@@ -112,8 +182,15 @@ def make_email_from_json(path_to_json):
     data.pop('selectedCompanies', None)
     sample = data['email_text']
     msg = MIMEMultipart()
-    msg['Subject'] = 'Audit Advisor: Заявка на сертификацию системы менеджмента'
-    msg.attach(MIMEText(sample, 'plain'))
+    fallback_subjects = {
+        "russia": 'Audit Advisor: Заявка на сертификацию системы менеджмента',
+        "usa": 'Audit Advisor: New Client Inquiry — Certification Request Ready for Your Proposal',
+        "uk": 'Audit Advisor: New Client Inquiry — Certification Request Ready for Your Proposal',
+    }
+    country = normalize_country(get_field(data, 'Country', 'country'))
+    subject, body = split_subject_and_body(sample, fallback_subjects[country])
+    msg['Subject'] = subject
+    msg.attach(MIMEText(body, 'plain'))
     return msg
 
 

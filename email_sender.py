@@ -34,12 +34,18 @@ def send_email(address, path_to_json):
         return f'Письмо было отправлено на {address}'
 
 
-def send_bad_email(address):
+def send_bad_email(address, country="russia"):
     msg = MIMEMultipart()
-    with open('bad_answer.txt', 'r') as f:
-        sample = f.read()
-    msg['Subject'] = 'Audit Advisor: Ваш запрос на сертификацию отклонён'
-    msg.attach(MIMEText(sample, 'plain'))
+    sample = models.load_template('bad', country)
+    fallback_subjects = {
+        "russia": 'Audit Advisor: Ваш запрос на сертификацию отклонён',
+        "usa": 'Audit Advisor: Your Certification Request Was Not Approved',
+        "uk": 'Audit Advisor: Your Certification Request Was Not Approved',
+    }
+    normalized_country = models.normalize_country(country)
+    subject, body = models.split_subject_and_body(sample, fallback_subjects[normalized_country])
+    msg['Subject'] = subject
+    msg.attach(MIMEText(body, 'plain'))
     msg['From'] = email
     msg['To'] = address
     try:
@@ -54,12 +60,18 @@ def send_bad_email(address):
         return f'Письмо было отправлено на {address}'
 
 
-def send_answer(address):
+def send_answer(address, country="russia"):
     msg = MIMEMultipart()
-    with open('answer.txt', 'r') as f:
-        sample = f.read()
-    msg['Subject'] = '​Audit Advisor: Подтверждение успешной отправки запроса на сертификациюн'
-    msg.attach(MIMEText(sample, 'plain'))
+    sample = models.load_template('success', country)
+    fallback_subjects = {
+        "russia": 'Audit Advisor: Подтверждение успешной отправки запроса на сертификацию',
+        "usa": 'Audit Advisor: Your Certification Request Has Been Successfully Submitted',
+        "uk": 'Audit Advisor: Your Certification Request Has Been Successfully Submitted',
+    }
+    normalized_country = models.normalize_country(country)
+    subject, body = models.split_subject_and_body(sample, fallback_subjects[normalized_country])
+    msg['Subject'] = subject
+    msg.attach(MIMEText(body, 'plain'))
     msg['From'] = email
     msg['To'] = address
     try:

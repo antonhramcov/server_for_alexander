@@ -98,6 +98,7 @@ async def change_text(callback: CallbackQuery, state: FSMContext):
     list_buttons = callback.message.reply_markup.inline_keyboard[:-1]
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
     data = get_request(uniqal_id)
+    country = data.get('country', 'russia')
     initial_companies = data.get('selectedCompanies', [])
     list_companies = []
     for button in list_buttons:
@@ -115,7 +116,11 @@ async def change_text(callback: CallbackQuery, state: FSMContext):
     await bot.send_message(chat_id=id_moderator, text=email)
     await bot.send_message(
         chat_id=id_moderator,
-        text='Если необходимо исправить текст - просто пришли мне исправленный текст',
+        text=(
+            'If you need to edit the message text, just send me the corrected English version.'
+            if country in {'usa', 'uk'}
+            else 'Если необходимо исправить текст - просто пришли мне исправленный текст'
+        ),
         reply_markup=new_keyboard,
     )
     await state.set_state(FSMFillForm.fill_submit)
@@ -127,6 +132,7 @@ async def change_text2(message: Message, state: FSMContext):
     data = await state.get_data()
     uniqal_id = data.get("id")
     request_data = get_request(uniqal_id)
+    country = request_data.get('country', 'russia')
     request_data['email_text'] = message.text
     update_request(uniqal_id, request_data)
     new_keyboard = InlineKeyboardMarkup(inline_keyboard=[])
@@ -134,7 +140,7 @@ async def change_text2(message: Message, state: FSMContext):
     new_keyboard.inline_keyboard.append([submit_button])
     await bot.send_message(
         chat_id=id_moderator,
-        text='Текст сохранен',
+        text='Message text saved' if country in {'usa', 'uk'} else 'Текст сохранен',
         reply_markup=new_keyboard,
     )
 
@@ -164,8 +170,9 @@ async def dell_keyboard(callback: CallbackQuery):
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
     text = get_request(uniqal_id)
     email = text.get('Email') or text.get('email')
+    country = text.get('country', 'russia')
     if email:
-        email_sender.send_bad_email(email)
+        email_sender.send_bad_email(email, country)
     delete_request(uniqal_id)
     await bot.delete_message(chat_id=callback.message.chat.id, message_id=callback.message.message_id)
 
@@ -176,7 +183,7 @@ async def send_button(callback: CallbackQuery, state: FSMContext):
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
     data = get_request(uniqal_id)
     country = data.get('country', 'russia')
-    caption = 'Этот документ будет отправлен в:\n'
+    caption = 'This document will be sent to:\n' if country in {'usa', 'uk'} else 'Этот документ будет отправлен в:\n'
     for companie in data['selectedCompanies']:
         caption += f'{companie}\n'
     document = BufferedInputFile(get_request_document(uniqal_id), filename='Заявка.json')
@@ -187,14 +194,24 @@ async def send_button(callback: CallbackQuery, state: FSMContext):
     for email in get_company_emails(data['selectedCompanies'], country):
         if status_email:
             email_sender.send_email(email, BufferedInputFile(get_request_document(uniqal_id), filename='request.json'))
-            await bot.send_message(chat_id=callback.message.chat.id, text=f'Отправлено в {email}')
+            await bot.send_message(
+                chat_id=callback.message.chat.id,
+                text=f'Sent to {email}' if country in {'usa', 'uk'} else f'Отправлено в {email}',
+            )
         else:
             await bot.send_message(
                 chat_id=callback.message.chat.id,
-                text=f'Я должен отправить в {email}, но статус отправки писем выключен',
+                text=(
+                    f'I should send the request to {email}, but email sending is currently disabled'
+                    if country in {'usa', 'uk'}
+                    else f'Я должен отправить в {email}, но статус отправки писем выключен'
+                ),
             )
         await asyncio.sleep(5)
-    await bot.send_message(chat_id=callback.message.chat.id, text='Рассылка окончена')
+    await bot.send_message(
+        chat_id=callback.message.chat.id,
+        text='Mailing complete' if country in {'usa', 'uk'} else 'Рассылка окончена',
+    )
 
 
 @dp.message(Check_in_admin(), F.content_type.in_({ContentType.DOCUMENT}))
