@@ -17,7 +17,12 @@ FILES_DIR = Path(get_env("FILES_DIR", default=str(BASE_DIR / "files")))
 REQUESTS_DIR = Path(get_env("REQUESTS_DIR", default=str(BASE_DIR / "requests")))
 DATA1_PATH = Path(get_env("DATA1_PATH", default=str(BASE_DIR / "data1.json")))
 DATA3_PATH = Path(get_env("DATA3_PATH", default=str(BASE_DIR / "data3.json")))
-GOOGLE_AUTH_PATH = Path(get_env("GOOGLE_AUTH_PATH", default=str(FILES_DIR / "auth.json")))
+GOOGLE_AUTH_PATH = Path(
+    get_env(
+        "GOOGLE_AUTH_PATH",
+        default=str(FILES_DIR / "audit-advisor-6f620e315727.json"),
+    )
+)
 GOOGLE_AUTH_JSON = get_env("GOOGLE_AUTH_JSON")
 GOOGLE_AUTH_JSON_BASE64 = get_env("GOOGLE_AUTH_JSON_BASE64")
 
