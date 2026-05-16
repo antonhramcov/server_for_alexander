@@ -74,7 +74,7 @@ class FSMFillForm(StatesGroup):
     fill_submit = State()
 
 
-async def set_main_menu(current_bot: Bot):
+async def set_main_menu(bot: Bot):
     main_menu_commands = [
         BotCommand(
             command='/get_all_files',
@@ -90,7 +90,7 @@ async def set_main_menu(current_bot: Bot):
         ),
     ]
 
-    await current_bot.set_my_commands(main_menu_commands)
+    await bot.set_my_commands(main_menu_commands)
 
 
 @dp.callback_query(Send_keyboard())
