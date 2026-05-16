@@ -44,9 +44,12 @@ jobs:
           from pathlib import Path
 
           value = os.environ["GOOGLE_AUTH_JSON_BASE64"]
+          print(f"GOOGLE_AUTH_JSON_BASE64 length: {len(value)}")
           if not value:
               raise RuntimeError("GOOGLE_AUTH_JSON_BASE64 secret is empty or missing")
-          Path("auth.json").write_bytes(base64.b64decode(value))
+          decoded = base64.b64decode(value)
+          Path("auth.json").write_bytes(decoded)
+          print(f"auth.json size: {len(decoded)} bytes")
           PY
 
       - name: Refresh cache files
