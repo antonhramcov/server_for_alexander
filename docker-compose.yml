@@ -9,9 +9,6 @@ x-app-service: &app-service
     SMTP_PASSWORD: ${SMTP_PASSWORD}
     INTERNAL_API_URL: ${INTERNAL_API_URL:-http://server:5000}
     CACHE_RESTART_DELAY: ${CACHE_RESTART_DELAY:-300}
-    GOOGLE_AUTH_JSON: ${GOOGLE_AUTH_JSON:-}
-    GOOGLE_AUTH_JSON_BASE64: ${GOOGLE_AUTH_JSON_BASE64:-}
-    GOOGLE_AUTH_PATH: ${GOOGLE_AUTH_PATH:-/app/files/audit-advisor-54729f343431.json}
   restart: unless-stopped
 
 services:
@@ -24,11 +21,5 @@ services:
   bot:
     <<: *app-service
     command: python bot.py
-    depends_on:
-      - server
-
-  cache:
-    <<: *app-service
-    command: /bin/sh /app/docker/cache-cycle.sh
     depends_on:
       - server

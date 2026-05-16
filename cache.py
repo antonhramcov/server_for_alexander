@@ -2,7 +2,7 @@ import time
 
 from config import CACHE_RESTART_DELAY
 from google_client import get_gspread_client
-from internal_api import sync_cache
+from models import save_cache_data
 
 
 def refresh_cache():
@@ -14,11 +14,9 @@ def refresh_cache():
     worksheet3 = sh.get_worksheet(2)
     data1 = worksheet1.get_all_records()
     data3 = worksheet3.get_all_records()
-    sync_cache(data1, data3)
+    save_cache_data(data1, data3)
     print('Cache updated successfully')
 
 
 if __name__ == '__main__':
-    while True:
-        refresh_cache()
-        time.sleep(CACHE_RESTART_DELAY)
+    refresh_cache()

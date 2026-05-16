@@ -1,11 +1,9 @@
 import datetime
 import json
 import string
-import time
 from random import choice, shuffle
 
 from config import DATA1_PATH, DATA3_PATH
-from google_client import get_gspread_client
 
 
 limits = {"Продвинутый": 25, "Стандарт": 8, "Начальный": 4, "Пассивный": 9999}
@@ -44,23 +42,11 @@ def get_list_inn_companies_with_check_count():
 def add_count_current_month(companie: str):
     data3 = load_json(DATA3_PATH)
     now = f'{str(datetime.datetime.now().month).rjust(2, "0")}.{datetime.datetime.now().year}'
-    for i, comp in enumerate(data3):
+    for comp in data3:
         if comp["Certification_body"] == companie and now in comp:
-            string_letters = list(string.ascii_uppercase)
-            for prefix in ["A", "B", "C", "D", "E", "F"]:
-                string_letters.extend([f"{prefix}{letter}" for letter in string.ascii_uppercase])
-
-            count = int(comp[now])
-            column = string_letters[list(comp.keys()).index(now)]
-            row = i + 2
-            cell = f"{column}{row}"
-            time.sleep(1)
-            gc = get_gspread_client()
-            sh = gc.open_by_url(
-                "https://docs.google.com/spreadsheets/d/1dxqQccvwSka_dkYyNkcQPXnKWlvIDkjb2qfBwuJ92dQ/edit?pli=1&gid=719798611#gid=719798611"
-            )
-            worksheet3 = sh.get_worksheet(2)
-            worksheet3.update_acell(cell, count + 1)
+            comp[now] = int(comp[now]) + 1
+            with open(DATA3_PATH, 'w') as f:
+                json.dump(data3, f)
             break
 
 
