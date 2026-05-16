@@ -2,6 +2,11 @@ name: Refresh Cache Data
 
 on:
   workflow_dispatch:
+    inputs:
+      target_branch:
+        description: Branch to refresh cache files in
+        required: false
+        default: codex/work-20260501
   schedule:
     - cron: "*/15 * * * *"
 
@@ -11,10 +16,15 @@ permissions:
 jobs:
   refresh-cache:
     runs-on: ubuntu-latest
+    env:
+      TARGET_BRANCH: ${{ github.event.inputs.target_branch || vars.CACHE_UPDATE_BRANCH || 'codex/work-20260501' }}
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.target_branch || vars.CACHE_UPDATE_BRANCH || 'codex/work-20260501' }}
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,6 +44,8 @@ jobs:
           from pathlib import Path
 
           value = os.environ["GOOGLE_AUTH_JSON_BASE64"]
+          if not value:
+              raise RuntimeError("GOOGLE_AUTH_JSON_BASE64 secret is empty or missing")
           Path("auth.json").write_bytes(base64.b64decode(value))
           PY
 
@@ -44,9 +56,10 @@ jobs:
 
       - name: Commit updated cache
         run: |
+          echo "Refreshing cache in branch: ${TARGET_BRANCH}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data1.json data3.json
           git diff --cached --quiet && exit 0
           git commit -m "chore: refresh cache data"
-          git push
+          git push origin "HEAD:${TARGET_BRANCH}"
