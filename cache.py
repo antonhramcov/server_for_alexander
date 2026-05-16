@@ -1,21 +1,107 @@
-import time
+import json
 
-from config import CACHE_RESTART_DELAY
+from config import (
+    CACHE_RUSSIA_COMPANIES_SHEET,
+    CACHE_RUSSIA_LIMITS_SHEET,
+    CACHE_SPREADSHEET_URL,
+    CACHE_USA_SHEET,
+    DATA_US_PATH,
+)
 from google_client import get_gspread_client
 from models import save_cache_data
 
 
+RUSSIA_COMPANY_HEADERS = {"Номер записи в РАЛ (1)", "Сокращенное наименование", "Код региона"}
+RUSSIA_LIMIT_HEADERS = {"Certification_body", "Registration_number", "cb_region_number"}
+USA_COMPANY_HEADERS = {"Company_name", "Region_short", "Accreditation_link"}
+
+
+def compact_rows(rows: list[dict], primary_key: str | None = None) -> list[dict]:
+    compacted: list[dict] = []
+    for row in rows:
+        if not any(str(value).strip() for value in row.values()):
+            continue
+        if primary_key and not str(row.get(primary_key, "")).strip():
+            continue
+        compacted.append(row)
+    return compacted
+
+
+def load_existing_us_cache() -> list[dict]:
+    if not DATA_US_PATH.exists():
+        return []
+    with open(DATA_US_PATH) as f:
+        return json.load(f)
+
+
+def classify_sheet(title: str, rows: list[dict]) -> str | None:
+    headers = set(rows[0].keys()) if rows else set()
+    title_normalized = title.strip().lower()
+
+    if RUSSIA_COMPANY_HEADERS.issubset(headers):
+        return "russia_companies"
+    if RUSSIA_LIMIT_HEADERS.issubset(headers):
+        return "russia_limits"
+    if USA_COMPANY_HEADERS.issubset(headers):
+        return "usa_companies"
+    if "usa" in title_normalized and "company_name" in {header.lower() for header in headers}:
+        return "usa_companies"
+    return None
+
+
+def get_rows(worksheet, primary_key: str | None = None) -> list[dict]:
+    return compact_rows(worksheet.get_all_records(), primary_key=primary_key)
+
+
+def find_sheets(sh) -> dict[str, list[dict]]:
+    sheets: dict[str, list[dict]] = {}
+    manual_titles = {
+        "russia_companies": (CACHE_RUSSIA_COMPANIES_SHEET, "Номер записи в РАЛ (1)"),
+        "russia_limits": (CACHE_RUSSIA_LIMITS_SHEET, "Certification_body"),
+        "usa_companies": (CACHE_USA_SHEET, "Company_name"),
+    }
+
+    for sheet_key, (sheet_title, primary_key) in manual_titles.items():
+        if not sheet_title:
+            continue
+        rows = get_rows(sh.worksheet(sheet_title), primary_key=primary_key)
+        sheets[sheet_key] = rows
+        print(f"Loaded {sheet_key} from worksheet '{sheet_title}' with {len(rows)} rows")
+
+    for worksheet in sh.worksheets():
+        rows = compact_rows(worksheet.get_all_records())
+        sheet_key = classify_sheet(worksheet.title, rows)
+        if not sheet_key or sheet_key in sheets:
+            continue
+
+        primary_key = {
+            "russia_companies": "Номер записи в РАЛ (1)",
+            "russia_limits": "Certification_body",
+            "usa_companies": "Company_name",
+        }[sheet_key]
+        rows = compact_rows(rows, primary_key=primary_key)
+        sheets[sheet_key] = rows
+        print(f"Detected {sheet_key} from worksheet '{worksheet.title}' with {len(rows)} rows")
+
+    return sheets
+
+
 def refresh_cache():
     gc = get_gspread_client()
-    sh = gc.open_by_url(
-        "https://docs.google.com/spreadsheets/d/1dxqQccvwSka_dkYyNkcQPXnKWlvIDkjb2qfBwuJ92dQ/edit?pli=1&gid=719798611#gid=719798611"
-    )
-    worksheet1 = sh.get_worksheet(0)
-    worksheet3 = sh.get_worksheet(2)
-    data1 = worksheet1.get_all_records()
-    data3 = worksheet3.get_all_records()
-    save_cache_data(data1, data3)
-    print('Cache updated successfully')
+    sh = gc.open_by_url(CACHE_SPREADSHEET_URL)
+    sheets = find_sheets(sh)
+
+    missing_required = [key for key in ("russia_companies", "russia_limits") if key not in sheets]
+    if missing_required:
+        raise RuntimeError(f"Required worksheets were not detected: {', '.join(missing_required)}")
+
+    data_us = sheets.get("usa_companies")
+    if data_us is None:
+        data_us = load_existing_us_cache()
+        print(f"USA worksheet not detected, keeping existing data_us.json with {len(data_us)} rows")
+
+    save_cache_data(sheets["russia_companies"], sheets["russia_limits"], data_us)
+    print("Cache updated successfully")
 
 
 if __name__ == '__main__':

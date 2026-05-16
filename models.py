@@ -248,8 +248,11 @@ def list_binary_files() -> list[str]:
     return sorted([path.name for path in FILES_DIR.iterdir() if path.is_file() and not path.name.startswith('.')])
 
 
-def save_cache_data(data1: list[dict], data3: list[dict]):
+def save_cache_data(data1: list[dict], data3: list[dict], data_us: list[dict] | None = None):
     with open(DATA1_PATH, 'w') as f:
         json.dump(data1, f)
     with open(DATA3_PATH, 'w') as f:
         json.dump(data3, f)
+    if data_us is not None:
+        with open(DATA_US_PATH, 'w') as f:
+            json.dump(data_us, f)
