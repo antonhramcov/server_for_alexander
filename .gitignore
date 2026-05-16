@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+
+auth.json
+files/*.json
+!files/.gitkeep
+files/users.txt

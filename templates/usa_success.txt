@@ -1,0 +1,21 @@
+Audit Advisor: Your Certification Request Has Been Successfully Submitted
+
+Hello,
+
+Thank you for using Audit Advisor. Your request has successfully passed moderation and has been forwarded to the certification bodies you selected. You can expect to receive proposals within two business days. If they need any additional details, they will contact you directly. To help you make the most informed decision, here are a few practical tips when evaluating certification providers:
+
+1. What to consider when selecting a certification body
+ * Total cost of services. Compare proposals carefully and confirm what is included. Make sure the quote covers all potential expenses such as auditor travel and lodging, registration fees, certificate issuance, follow-up audits, and any corrective action reviews.
+ * Reputation and experience. Ask for client references, case studies, or industry experience relevant to your organization.
+ * Responsiveness and service quality. Pay attention to communication speed, clarity, and professionalism. A responsive certification body typically leads to a smoother certification process.
+
+2. What to verify once you choose a certification body
+ * Accreditation credentials. Request a copy of the accreditation certificate and scope. Confirm the accreditation covers the specific standard and industry scope relevant to your organization.
+ * Contract details. Ensure the agreement is signed with the same legal entity listed on the accreditation certificate. The contract should clearly state that the provider must maintain accreditation throughout the engagement and notify you immediately of any status changes.
+ * Certificate validity and listing. Verify that the issued certificate includes the certification body’s accreditation ID. Also confirm your certificate is publicly listed and verifiable both on the certification body’s website and in the IAF CertSearch database maintained by the International Accreditation Forum.
+
+If you have any questions or need assistance comparing proposals, feel free to reply to this email — we’re happy to help.
+
+---
+Best regards,
+The Audit Advisor Team

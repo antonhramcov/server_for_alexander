@@ -1,0 +1,16 @@
+Audit Advisor: Your Certification Request Was Not Approved
+
+Dear Sir or Madam,
+
+Thank you for your interest in and use of Audit Advisor. We regret to inform you that your certification request did not pass our moderation review and therefore has not been forwarded to the certification bodies you selected.
+
+We appreciate that this may be disappointing. To assist you with a successful submission next time, we would kindly suggest the following:
+ * Ensure all required fields are completed. Please check that all information provided is accurate, complete, and up to date.
+ * Use a business email address and contact number. Requests submitted from personal email accounts may be declined. Wherever possible, please provide your company email address and telephone number.
+ * Avoid multiple repeat submissions. We recommend not submitting the same certification request more than twice, as repeated submissions may be automatically rejected.
+
+Should you wish to understand the reason for the decision or would like assistance in correcting the information before resubmitting, please feel free to reply to this email. We will be pleased to help.
+
+---
+Yours faithfully,
+The Audit Advisor Team

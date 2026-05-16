@@ -1,0 +1,25 @@
+x-app-service: &app-service
+  build:
+    context: .
+  working_dir: /app
+  environment:
+    BOT_TOKEN: ${BOT_TOKEN}
+    BOT_MODERATOR_ID: ${BOT_MODERATOR_ID:-1111111111}
+    SMTP_EMAIL: ${SMTP_EMAIL}
+    SMTP_PASSWORD: ${SMTP_PASSWORD}
+    INTERNAL_API_URL: ${INTERNAL_API_URL:-http://server:5000}
+    CACHE_RESTART_DELAY: ${CACHE_RESTART_DELAY:-300}
+  restart: unless-stopped
+
+services:
+  server:
+    <<: *app-service
+    command: python server.py
+    ports:
+      - "${FLASK_PORT:-5000}:5000"
+
+  bot:
+    <<: *app-service
+    command: python bot.py
+    depends_on:
+      - server
