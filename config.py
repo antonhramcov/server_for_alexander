@@ -17,6 +17,7 @@ FILES_DIR = Path(get_env("FILES_DIR", default=str(BASE_DIR / "files")))
 REQUESTS_DIR = Path(get_env("REQUESTS_DIR", default=str(BASE_DIR / "requests")))
 DATA1_PATH = Path(get_env("DATA1_PATH", default=str(BASE_DIR / "data1.json")))
 DATA3_PATH = Path(get_env("DATA3_PATH", default=str(BASE_DIR / "data3.json")))
+DATA_US_PATH = Path(get_env("DATA_US_PATH", default=str(BASE_DIR / "data_us.json")))
 GOOGLE_AUTH_PATH = Path(
     get_env(
         "GOOGLE_AUTH_PATH",

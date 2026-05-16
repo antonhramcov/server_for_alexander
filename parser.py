@@ -2,7 +2,7 @@ import datetime
 import json
 from random import choice, shuffle
 
-from config import DATA1_PATH, DATA3_PATH
+from config import DATA1_PATH, DATA3_PATH, DATA_US_PATH
 
 
 def load_json(path):
@@ -10,7 +10,77 @@ def load_json(path):
         return json.load(f)
 
 
-def add_count_current_month(companie: str):
+def normalize_country(country: str | None) -> str:
+    normalized = (country or "russia").strip().lower()
+    if normalized in {"usa", "us", "united states", "america"}:
+        return "usa"
+    return "russia"
+
+
+def load_company_dataset(country: str) -> list[dict]:
+    if country == "usa":
+        data_us = load_json(DATA_US_PATH)
+        return [company for company in data_us if company.get("Company_name") and company.get("Status")]
+    return load_json(DATA1_PATH)
+
+
+def get_company_display_name(company: dict, country: str) -> str:
+    if country == "usa":
+        return f"{company['Company_name']}, {company['City_and_Region']}"
+    return f"{company['Сокращенное наименование']}, {company['Город']}"
+
+
+def get_company_name(company: dict, country: str) -> str:
+    if country == "usa":
+        return company["Company_name"]
+    return company["Сокращенное наименование"]
+
+
+def get_company_status(company: dict, country: str) -> str:
+    if country == "usa":
+        return company.get("Status", "")
+    return company.get("Статус", "")
+
+
+def get_company_region_number(company: dict, country: str) -> int | None:
+    field = "Region_number" if country == "usa" else "Код региона"
+    value = company.get(field)
+    if value in ("", None):
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def get_company_url_value(company: dict, country: str) -> str | None:
+    if country == "usa":
+        return company.get("Website") or company.get("Accreditation_link") or None
+    return company.get("Ссылка на сайт")
+
+
+def get_company_email_value(company: dict, country: str) -> str:
+    if country == "usa":
+        return (company.get("Email") or "").strip()
+    return (company.get("Адрес эл. почты") or "").strip()
+
+
+def find_company_by_selection(companies: list[dict], selection: str, country: str) -> dict | None:
+    for company in companies:
+        if get_company_display_name(company, country) == selection:
+            return company
+
+    if country == "russia":
+        clean_name = selection.split(", ")[0]
+        return next((company for company in companies if get_company_name(company, country) == clean_name), None)
+
+    return next((company for company in companies if get_company_name(company, country) == selection), None)
+
+
+def add_count_current_month(companie: str, country: str = "russia"):
+    if normalize_country(country) != "russia":
+        return
+
     data3 = load_json(DATA3_PATH)
     now = f'{str(datetime.datetime.now().month).rjust(2, "0")}.{datetime.datetime.now().year}'
     for comp in data3:
@@ -21,73 +91,109 @@ def add_count_current_month(companie: str):
             break
 
 
-def get_list_companies(standarts: list[str], region: str = "50"):
-    data1 = load_json(DATA1_PATH)
-
-    list_all = [
-        comp
-        for comp in data1
-        if all(comp.get(st) == "+" for st in standarts)
-        and comp["Статус"].lower() != "бан"
-    ]
-
-    list2 = [
-        comp
-        for comp in list_all
-        if comp["Код региона"] == int(region)
-    ]
-    if list2:
-        list2 = [choice(list2)]
-
-    list1, list3, list4, list5 = [], [], [], []
-
-    for comp in list_all:
-        try:
-            if comp in list2:
+def order_companies(companies: list[dict], selected_region_company: list[dict], country: str) -> list[dict]:
+    if country == "usa":
+        initial, passive, other = [], [], []
+        for company in companies:
+            if company in selected_region_company:
                 continue
-            status = comp["Статус"]
-            if status == "Продвинутый":
-                list1.append(comp)
-            elif status == "Стандарт":
-                list3.append(comp)
-            elif status == "Начальный":
-                list4.append(comp)
-            elif status == "Пассивный":
-                list5.append(comp)
-        except Exception as e:
-            print(f"ERROR {comp.get('Сокращенное наименование')}: {e}")
+            status = get_company_status(company, country)
+            if status == "Initial":
+                initial.append(company)
+            elif status == "Passive":
+                passive.append(company)
+            else:
+                other.append(company)
 
-    for current_list in (list1, list3, list4, list5):
+        for current_list in (initial, passive, other):
+            shuffle(current_list)
+
+        return initial + selected_region_company + passive + other
+
+    advanced, standard, initial, passive = [], [], [], []
+    for company in companies:
+        if company in selected_region_company:
+            continue
+        status = get_company_status(company, country)
+        if status == "Продвинутый":
+            advanced.append(company)
+        elif status == "Стандарт":
+            standard.append(company)
+        elif status == "Начальный":
+            initial.append(company)
+        elif status == "Пассивный":
+            passive.append(company)
+
+    for current_list in (advanced, standard, initial, passive):
         shuffle(current_list)
 
-    output_list = list1 + list2 + list3 + list4 + list5
-    output_names = [f"{comp['Сокращенное наименование']}, {comp['Город']}" for comp in output_list]
-    urls = get_urls([comp["Сокращенное наименование"] for comp in output_list])
+    return advanced + selected_region_company + standard + initial + passive
+
+
+def get_list_companies(standarts: list[str], region: str = "50", country: str = "russia"):
+    normalized_country = normalize_country(country)
+    companies = load_company_dataset(normalized_country)
+
+    filtered_companies = []
+    for company in companies:
+        status = get_company_status(company, normalized_country)
+        if normalized_country == "russia" and status.lower() == "бан":
+            continue
+        if all(company.get(standart) == "+" for standart in standarts):
+            filtered_companies.append(company)
+
+    region_number = None
+    try:
+        region_number = int(region)
+    except (TypeError, ValueError):
+        pass
+
+    regional_companies = []
+    if region_number is not None:
+        regional_companies = [
+            company
+            for company in filtered_companies
+            if get_company_region_number(company, normalized_country) == region_number
+        ]
+    if regional_companies:
+        regional_companies = [choice(regional_companies)]
+
+    output_companies = order_companies(filtered_companies, regional_companies, normalized_country)
+    output_names = [get_company_display_name(company, normalized_country) for company in output_companies]
+    urls = [get_company_url_value(company, normalized_country) for company in output_companies]
     return [output_names, urls]
 
 
-def get_list_emails(list_companies):
-    data1 = load_json(DATA1_PATH)
-    list_emails = []
-    for name in list_companies:
-        clean_name = name.split(", ")[0]
-        for comp in data1:
-            if comp["Сокращенное наименование"] == clean_name:
-                if ", " not in comp["Адрес эл. почты"]:
-                    list_emails.append(comp["Адрес эл. почты"])
-                else:
-                    list_emails.extend(comp["Адрес эл. почты"].split(", "))
-                break
-    return list_emails
+def get_list_emails(list_companies: list[str], country: str = "russia"):
+    normalized_country = normalize_country(country)
+    companies = load_company_dataset(normalized_country)
+    emails = []
+
+    for selection in list_companies:
+        company = find_company_by_selection(companies, selection, normalized_country)
+        if not company:
+            continue
+
+        raw_email = get_company_email_value(company, normalized_country)
+        if not raw_email or raw_email.lower() == "no":
+            continue
+
+        if ", " in raw_email:
+            emails.extend([email for email in raw_email.split(", ") if email])
+        else:
+            emails.append(raw_email)
+
+    return emails
 
 
-def get_url(companie: str):
-    data1 = load_json(DATA1_PATH)
-    for comp in data1:
-        if comp["Сокращенное наименование"] == companie:
-            return comp["Ссылка на сайт"]
-    return None
+def get_url(companie: str, country: str = "russia"):
+    normalized_country = normalize_country(country)
+    companies = load_company_dataset(normalized_country)
+    company = find_company_by_selection(companies, companie, normalized_country)
+    if not company:
+        return None
+    return get_company_url_value(company, normalized_country)
 
 
-def get_urls(list_companies: list):
-    return [get_url(comp) for comp in list_companies]
+def get_urls(list_companies: list[str], country: str = "russia"):
+    return [get_url(company, country) for company in list_companies]

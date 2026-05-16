@@ -34,6 +34,10 @@ def from_json_to_text(d: dict) -> str:
     if region:
         text += f'Регион: {region}\n'
 
+    country = get_field(d, 'Country', 'country')
+    if country:
+        text += f'Страна: {country}\n'
+
     for i in range(21):
         address = get_field(d, f'Address_{i}', f'address_{i}')
         number = get_field(d, f'Number_{i}', f'number_{i}')

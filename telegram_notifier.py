@@ -9,9 +9,8 @@ def send_request_notification(text: str, request_id: str, selected_companies: li
 
     keyboard = []
     for index, company in enumerate(selected_companies, start=1):
-        short_name = company.split(", ")[0]
         keyboard.append(
-            [{"text": f"✅{short_name}✅", "callback_data": f"{index}-yes"}]
+            [{"text": f"✅{company}✅", "callback_data": f"{index}-yes"}]
         )
 
     keyboard.append(

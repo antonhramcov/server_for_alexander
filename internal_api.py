@@ -71,20 +71,20 @@ def create_user(user_id: int, username: str | None) -> None:
     response.raise_for_status()
 
 
-def get_company_emails(companies: list[str]) -> list[str]:
+def get_company_emails(companies: list[str], country: str = "russia") -> list[str]:
     response = requests.post(
         _url("/internal/companies/emails"),
-        json={"companies": companies},
+        json={"companies": companies, "country": country},
         timeout=INTERNAL_API_TIMEOUT,
     )
     response.raise_for_status()
     return response.json()["emails"]
 
 
-def increment_company_counts(companies: list[str]) -> None:
+def increment_company_counts(companies: list[str], country: str = "russia") -> None:
     response = requests.post(
         _url("/internal/companies/increment"),
-        json={"companies": companies},
+        json={"companies": companies, "country": country},
         timeout=INTERNAL_API_TIMEOUT,
     )
     response.raise_for_status()

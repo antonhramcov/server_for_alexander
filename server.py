@@ -42,8 +42,9 @@ def get_names():
 
     body = request.get_json(force=True)
     standarts = body['standarts']
-    region = body['region']
-    options, urls = get_list_companies(standarts, region)
+    region = body.get('region', '50')
+    country = body.get('country', 'russia')
+    options, urls = get_list_companies(standarts, region, country)
     return {"status": "ok", "options": options, "urls": urls}
 
 
@@ -123,14 +124,14 @@ def internal_users():
 @app.route('/internal/companies/emails', methods=['POST'])
 def internal_company_emails():
     payload = request.get_json(force=True)
-    return {"emails": get_list_emails(payload["companies"])}
+    return {"emails": get_list_emails(payload["companies"], payload.get("country", "russia"))}
 
 
 @app.route('/internal/companies/increment', methods=['POST'])
 def internal_company_increment():
     payload = request.get_json(force=True)
     for company in payload["companies"]:
-        add_count_current_month(company)
+        add_count_current_month(company, payload.get("country", "russia"))
     return {"status": "ok"}
 
 

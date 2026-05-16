@@ -96,9 +96,16 @@ async def set_main_menu(bot: Bot):
 @dp.callback_query(Send_keyboard())
 async def change_text(callback: CallbackQuery, state: FSMContext):
     list_buttons = callback.message.reply_markup.inline_keyboard[:-1]
-    list_companies = [button[0].text[1:-1] for button in list_buttons if '✅' in button[0].text]
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
     data = get_request(uniqal_id)
+    initial_companies = data.get('selectedCompanies', [])
+    list_companies = []
+    for button in list_buttons:
+        if '✅' not in button[0].text:
+            continue
+        company_index = int(button[0].callback_data.split('-')[0]) - 1
+        if 0 <= company_index < len(initial_companies):
+            list_companies.append(initial_companies[company_index])
     data['selectedCompanies'] = list_companies
     update_request(uniqal_id, data)
     email = data['email_text']
@@ -168,6 +175,7 @@ async def send_button(callback: CallbackQuery, state: FSMContext):
     await state.clear()
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
     data = get_request(uniqal_id)
+    country = data.get('country', 'russia')
     caption = 'Этот документ будет отправлен в:\n'
     for companie in data['selectedCompanies']:
         caption += f'{companie}\n'
@@ -175,8 +183,8 @@ async def send_button(callback: CallbackQuery, state: FSMContext):
     await bot.send_document(chat_id=callback.message.chat.id, document=document, caption=caption)
     global status_email
     if status_email:
-        increment_company_counts(data['selectedCompanies'])
-    for email in get_company_emails(data['selectedCompanies']):
+        increment_company_counts(data['selectedCompanies'], country)
+    for email in get_company_emails(data['selectedCompanies'], country):
         if status_email:
             email_sender.send_email(email, BufferedInputFile(get_request_document(uniqal_id), filename='request.json'))
             await bot.send_message(chat_id=callback.message.chat.id, text=f'Отправлено в {email}')
