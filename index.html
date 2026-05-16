@@ -675,6 +675,27 @@
   const certApiBase = window.location.protocol.startsWith('http')
     ? window.location.origin
     : 'https://audit-advisor-server.ru';
+
+  function certGetCountry() {
+    const countrySelect = document.getElementById('certCountry');
+    if (countrySelect && countrySelect.value) {
+      return countrySelect.value.toLowerCase();
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const queryCountry = params.get('country');
+    if (queryCountry) {
+      return queryCountry.toLowerCase();
+    }
+
+    const locationPath = window.location.pathname.toLowerCase();
+    const locationHost = window.location.hostname.toLowerCase();
+    if (locationPath.includes('/usa') || locationHost.includes('usa')) {
+      return 'usa';
+    }
+
+    return 'russia';
+  }
   
   // Функция для перехода к следующему шагу
   function certNextStep(currentStep) {
@@ -900,7 +921,11 @@
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ standarts: selectedValues, region: document.getElementById('certRegion').value})
+      body: JSON.stringify({
+        standarts: selectedValues,
+        region: document.getElementById('certRegion').value,
+        country: certGetCountry()
+      })
     })
     .then(response => response.json())
     .then(data => {
@@ -1117,6 +1142,8 @@ resultContainer.appendChild(privacyDiv);
     
     // Добавляем выбранные компании в formData
     formData["selectedCompanies"] = selectedCompanies;
+    formData["country"] = certGetCountry();
+    formData["region"] = document.getElementById("certRegion").value;
 
     // Добавляем выбранные стандарты в formData
     const standartsSelect = document.getElementById("certStandarts");
