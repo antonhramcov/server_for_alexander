@@ -41,9 +41,9 @@ def get_names():
         return '', 200
 
     body = request.get_json(force=True)
-    standarts = body['standarts']
-    region = body.get('region', '50')
-    country = body.get('country', 'russia')
+    standarts = body.get('standarts') or body.get('standards') or []
+    region = body.get('region') or body.get('Region') or '50'
+    country = body.get('country') or body.get('Country') or 'russia'
     options, urls = get_list_companies(standarts, region, country)
     return {"status": "ok", "options": options, "urls": urls}
 

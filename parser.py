@@ -1,5 +1,6 @@
 import datetime
 import json
+import re
 from random import choice, shuffle
 
 from config import DATA1_PATH, DATA3_PATH, DATA_US_PATH
@@ -22,6 +23,34 @@ def load_company_dataset(country: str) -> list[dict]:
         data_us = load_json(DATA_US_PATH)
         return [company for company in data_us if company.get("Company_name") and company.get("Status")]
     return load_json(DATA1_PATH)
+
+
+def normalize_standard_keys(standarts: list[str], companies: list[dict]) -> list[str]:
+    available_standarts = {
+        key
+        for company in companies
+        for key, value in company.items()
+        if key.isdigit() and value in {"+", "-"}
+    }
+
+    normalized_standarts = []
+    for standart in standarts:
+        raw_standart = str(standart).strip()
+        if raw_standart in available_standarts:
+            normalized_standarts.append(raw_standart)
+            continue
+
+        matched_standart = next(
+            (
+                code
+                for code in re.findall(r"\d{4,5}", raw_standart)
+                if code in available_standarts
+            ),
+            None,
+        )
+        normalized_standarts.append(matched_standart or raw_standart)
+
+    return list(dict.fromkeys(normalized_standarts))
 
 
 def get_company_display_name(company: dict, country: str) -> str:
@@ -133,6 +162,7 @@ def order_companies(companies: list[dict], selected_region_company: list[dict], 
 def get_list_companies(standarts: list[str], region: str = "50", country: str = "russia"):
     normalized_country = normalize_country(country)
     companies = load_company_dataset(normalized_country)
+    standarts = normalize_standard_keys(standarts, companies)
 
     filtered_companies = []
     for company in companies:
