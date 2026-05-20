@@ -37,27 +37,16 @@ BOT_TOKEN = get_env("BOT_TOKEN", "bot_token")
 SMTP_EMAIL = get_env("SMTP_EMAIL", "EMAIL_LOGIN", "email")
 SMTP_PASSWORD = get_env("SMTP_PASSWORD", "email_pass")
 
-BOT_MODERATOR_ID = int(get_env("BOT_MODERATOR_ID", default="1111111111"))
-
-
 def parse_moderator_ids() -> tuple[int, ...]:
-    raw_ids = get_env("BOT_MODERATOR_IDS")
-    raw_second_id = get_env("BOT_MODERATOR_ID_2")
-
-    if not raw_ids:
-        raw_ids = str(BOT_MODERATOR_ID)
-
+    raw_ids = get_env("BOT_MODERATOR_IDS", default="1111111111")
     moderator_ids = []
     for raw_id in raw_ids.split(","):
         raw_id = raw_id.strip()
         if raw_id:
             moderator_ids.append(int(raw_id))
 
-    if raw_second_id:
-        moderator_ids.append(int(raw_second_id))
-
     moderator_ids = list(dict.fromkeys(moderator_ids))
-    return tuple(moderator_ids) or (BOT_MODERATOR_ID,)
+    return tuple(moderator_ids)
 
 
 BOT_MODERATOR_IDS = parse_moderator_ids()
