@@ -18,7 +18,7 @@ from aiogram.types import (
 )
 from aiogram.types.input_file import BufferedInputFile
 
-from config import BOT_MODERATOR_ID, BOT_TOKEN
+from config import BOT_MODERATOR_IDS, BOT_TOKEN
 from internal_api import (
     create_user,
     delete_request,
@@ -41,13 +41,13 @@ if not BOT_TOKEN:
 bot: Bot = Bot(BOT_TOKEN)
 dp: Dispatcher = Dispatcher(storage=storage)
 
-id_moderator = BOT_MODERATOR_ID
+id_moderators = set(BOT_MODERATOR_IDS)
 status_email = False
 
 
 class Check_in_admin(Filter):
     async def __call__(self, message: Message) -> bool:
-        return message.from_user.id == id_moderator
+        return message.from_user.id in id_moderators
 
 
 class Status_button(BaseFilter):
@@ -113,9 +113,9 @@ async def change_text(callback: CallbackQuery, state: FSMContext):
     new_keyboard = InlineKeyboardMarkup(inline_keyboard=[])
     submit_button = InlineKeyboardButton(text='Подтвердить текст', callback_data=f'submit_{uniqal_id}')
     new_keyboard.inline_keyboard.append([submit_button])
-    await bot.send_message(chat_id=id_moderator, text=email)
+    await bot.send_message(chat_id=callback.message.chat.id, text=email)
     await bot.send_message(
-        chat_id=id_moderator,
+        chat_id=callback.message.chat.id,
         text=(
             'If you need to edit the message text, just send me the corrected English version.'
             if country in {'usa', 'uk'}
@@ -139,7 +139,7 @@ async def change_text2(message: Message, state: FSMContext):
     submit_button = InlineKeyboardButton(text='Подтвердить текст', callback_data=f'submit_{uniqal_id}')
     new_keyboard.inline_keyboard.append([submit_button])
     await bot.send_message(
-        chat_id=id_moderator,
+        chat_id=message.chat.id,
         text='Message text saved' if country in {'usa', 'uk'} else 'Текст сохранен',
         reply_markup=new_keyboard,
     )

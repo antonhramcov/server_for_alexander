@@ -1,6 +1,6 @@
 import requests
 
-from config import BOT_MODERATOR_ID, BOT_TOKEN
+from config import BOT_MODERATOR_IDS, BOT_TOKEN
 
 
 def send_request_notification(text: str, request_id: str, selected_companies: list[str]) -> bool:
@@ -20,17 +20,20 @@ def send_request_notification(text: str, request_id: str, selected_companies: li
         ]
     )
 
-    try:
-        response = requests.post(
-            f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-            json={
-                "chat_id": BOT_MODERATOR_ID,
-                "text": text,
-                "reply_markup": {"inline_keyboard": keyboard},
-            },
-            timeout=10,
-        )
-        response.raise_for_status()
-    except requests.RequestException:
-        return False
-    return True
+    sent = False
+    for moderator_id in BOT_MODERATOR_IDS:
+        try:
+            response = requests.post(
+                f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
+                json={
+                    "chat_id": moderator_id,
+                    "text": text,
+                    "reply_markup": {"inline_keyboard": keyboard},
+                },
+                timeout=10,
+            )
+            response.raise_for_status()
+            sent = True
+        except requests.RequestException:
+            continue
+    return sent
