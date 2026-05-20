@@ -102,6 +102,22 @@ def split_subject_and_body(template_text: str, fallback_subject: str) -> tuple[s
     return fallback_subject, template_text.strip()
 
 
+def localize_connection_type(connection_type: str | None, country: str | None) -> str | None:
+    if not connection_type:
+        return connection_type
+
+    normalized_country = normalize_country(country)
+    if normalized_country in {"usa", "uk"}:
+        return connection_type
+
+    connection_type_map = {
+        "email": "По электронной почте",
+        "phone": "По телефону",
+        "both": "И то, и другое",
+    }
+    return connection_type_map.get(connection_type, connection_type)
+
+
 def from_json_to_text(d: dict) -> str:
     country = normalize_country(get_field(d, 'Country', 'country'))
     text = ''
@@ -168,6 +184,7 @@ def from_json_to_text(d: dict) -> str:
     email = get_field(d, 'Email', 'email')
     connection_type = get_field(d, 'ConnectionType', 'connection')
     connection_time = get_field(d, 'ConnectionTime', 'connectionTime')
+    localized_connection_type = localize_connection_type(connection_type, get_field(d, 'Country', 'country'))
 
     if fullname or phone:
         text += 'Contact details:\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else 'Контактные данные:\n'
@@ -178,8 +195,8 @@ def from_json_to_text(d: dict) -> str:
         text += f'Phone: {phone}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Телефон: {phone}\n'
     if email:
         text += f'Email: {email}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Адрес электронной почты: {email}\n'
-    if connection_type:
-        text += f'Preferred contact method: {connection_type}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Предпочитаемый вид связи: {connection_type}\n'
+    if localized_connection_type:
+        text += f'Preferred contact method: {localized_connection_type}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Предпочитаемый вид связи: {localized_connection_type}\n'
     if connection_time:
         text += f'Preferred contact time or note: {connection_time}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Примечание: {connection_time}\n'
 
