@@ -41,19 +41,25 @@ jobs:
       - name: Write Google credentials
         env:
           GOOGLE_AUTH_JSON_BASE64: ${{ secrets.GOOGLE_AUTH_JSON_BASE64 }}
+          GOOGLE_AUTH_JSON: ${{ secrets.GOOGLE_AUTH_JSON }}
         run: |
           python - <<'PY'
           import base64
           import os
           from pathlib import Path
 
-          value = os.environ["GOOGLE_AUTH_JSON_BASE64"]
-          print(f"GOOGLE_AUTH_JSON_BASE64 length: {len(value)}")
-          if not value:
-              raise RuntimeError("GOOGLE_AUTH_JSON_BASE64 secret is empty or missing")
-          decoded = base64.b64decode(value)
-          Path("auth.json").write_bytes(decoded)
-          print(f"auth.json size: {len(decoded)} bytes")
+          value_base64 = os.environ.get("GOOGLE_AUTH_JSON_BASE64", "").strip()
+          value_json = os.environ.get("GOOGLE_AUTH_JSON", "").strip()
+
+          if value_base64:
+              decoded = base64.b64decode(value_base64)
+              Path("auth.json").write_bytes(decoded)
+          elif value_json:
+              Path("auth.json").write_text(value_json)
+          else:
+              raise RuntimeError("Set GOOGLE_AUTH_JSON_BASE64 or GOOGLE_AUTH_JSON secret")
+
+          print(f"auth.json size: {Path('auth.json').stat().st_size} bytes")
           PY
 
       - name: Refresh cache files
