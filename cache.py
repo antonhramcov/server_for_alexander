@@ -1,5 +1,7 @@
 import json
 
+from gspread.exceptions import GSpreadException
+
 from config import (
     CACHE_RUSSIA_COMPANIES_SHEET,
     CACHE_RUSSIA_LIMITS_SHEET,
@@ -53,6 +55,14 @@ def get_rows(worksheet, primary_key: str | None = None) -> list[dict]:
     return compact_rows(worksheet.get_all_records(), primary_key=primary_key)
 
 
+def get_detectable_rows(worksheet) -> list[dict]:
+    try:
+        return compact_rows(worksheet.get_all_records())
+    except GSpreadException as exc:
+        print(f"Skipping worksheet '{worksheet.title}': {exc}")
+        return []
+
+
 def find_sheets(sh) -> dict[str, list[dict]]:
     sheets: dict[str, list[dict]] = {}
     manual_titles = {
@@ -69,7 +79,7 @@ def find_sheets(sh) -> dict[str, list[dict]]:
         print(f"Loaded {sheet_key} from worksheet '{sheet_title}' with {len(rows)} rows")
 
     for worksheet in sh.worksheets():
-        rows = compact_rows(worksheet.get_all_records())
+        rows = get_detectable_rows(worksheet)
         sheet_key = classify_sheet(worksheet.title, rows)
         if not sheet_key or sheet_key in sheets:
             continue
