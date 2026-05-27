@@ -24,11 +24,14 @@ from telegram_notifier import send_request_notification
 app = Flask(__name__)
 cors = CORS(
     app,
-    resource={
+    resources={
         r"/*": {
-            "origins": "*",
-            "supports_credentials": True,
-            "allow_headers": ["Content-Type"],
+            "origins": [
+                "https://audit-advisor.com",
+                "https://www.audit-advisor.com",
+            ],
+            "allow_headers": ["Content-Type", "Authorization"],
+            "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
             "expose_headers": ["Content-Type"],
         }
     },
