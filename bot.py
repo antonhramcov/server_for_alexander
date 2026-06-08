@@ -1,4 +1,5 @@
 import asyncio
+import socket
 from io import BytesIO
 
 import email_sender
@@ -72,6 +73,24 @@ class Submit_text(BaseFilter):
 
 class FSMFillForm(StatesGroup):
     fill_submit = State()
+
+
+def log_smtp_network_check():
+    host = email_sender.SMTP_HOST
+    port = email_sender.SMTP_PORT
+
+    try:
+        ip = socket.gethostbyname(host)
+        print(f"[SMTP CHECK] DNS OK: {host} -> {ip}")
+    except OSError as exc:
+        print(f"[SMTP CHECK] DNS ERROR: {exc!r}")
+        return
+
+    try:
+        with socket.create_connection((host, port), timeout=10):
+            print(f"[SMTP CHECK] TCP OK: {host}:{port}")
+    except OSError as exc:
+        print(f"[SMTP CHECK] TCP ERROR: {exc!r}")
 
 
 async def set_main_menu(bot: Bot):
@@ -259,5 +278,6 @@ async def start(message: Message):
 
 
 if __name__ == '__main__':
+    log_smtp_network_check()
     dp.startup.register(set_main_menu)
     dp.run_polling(bot, skip_updates=False)
