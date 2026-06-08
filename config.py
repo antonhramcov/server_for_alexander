@@ -52,6 +52,7 @@ def parse_moderator_ids() -> tuple[int, ...]:
 BOT_MODERATOR_IDS = parse_moderator_ids()
 SMTP_HOST = get_env("SMTP_HOST", default="smtp.yandex.ru")
 SMTP_PORT = int(get_env("SMTP_PORT", default="587"))
+SMTP_TIMEOUT = int(get_env("SMTP_TIMEOUT", default="30"))
 
 FLASK_HOST = get_env("FLASK_HOST", default="0.0.0.0")
 FLASK_PORT = int(get_env("FLASK_PORT", default="5000"))

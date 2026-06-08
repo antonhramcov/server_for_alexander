@@ -5,11 +5,25 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 import models
-from config import SMTP_EMAIL, SMTP_HOST, SMTP_PASSWORD, SMTP_PORT
+from config import SMTP_EMAIL, SMTP_HOST, SMTP_PASSWORD, SMTP_PORT, SMTP_TIMEOUT
 
 
 email = SMTP_EMAIL
 password = SMTP_PASSWORD
+
+
+def _deliver_message(address: str, msg: MIMEMultipart) -> str:
+    msg['From'] = email
+    msg['To'] = address
+    try:
+        with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=SMTP_TIMEOUT) as server:
+            server.starttls()
+            server.login(email, password)
+            server.sendmail(email, address, msg.as_string())
+    except Exception as e:
+        return f'Обнаружена ошибка {e}'
+    else:
+        return f'Письмо было отправлено на {address}'
 
 
 def send_email(address, path_to_json):
@@ -20,18 +34,7 @@ def send_email(address, path_to_json):
             msg = models.make_email_from_json(temp_file.name)
     else:
         msg = models.make_email_from_json(path_to_json)
-    msg['From'] = email
-    msg['To'] = address
-    try:
-        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
-        server.starttls()
-        server.login(email, password)
-        server.sendmail(email, address, msg.as_string())
-        server.quit()
-    except Exception as e:
-        return f'Обнаружена ошибка {e}'
-    else:
-        return f'Письмо было отправлено на {address}'
+    return _deliver_message(address, msg)
 
 
 def send_bad_email(address, country="russia"):
@@ -46,18 +49,7 @@ def send_bad_email(address, country="russia"):
     subject, body = models.split_subject_and_body(sample, fallback_subjects[normalized_country])
     msg['Subject'] = subject
     msg.attach(MIMEText(body, 'plain'))
-    msg['From'] = email
-    msg['To'] = address
-    try:
-        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
-        server.starttls()
-        server.login(email, password)
-        server.sendmail(email, address, msg.as_string())
-        server.quit()
-    except Exception as e:
-        return f'Обнаружена ошибка {e}'
-    else:
-        return f'Письмо было отправлено на {address}'
+    return _deliver_message(address, msg)
 
 
 def send_answer(address, country="russia"):
@@ -72,15 +64,4 @@ def send_answer(address, country="russia"):
     subject, body = models.split_subject_and_body(sample, fallback_subjects[normalized_country])
     msg['Subject'] = subject
     msg.attach(MIMEText(body, 'plain'))
-    msg['From'] = email
-    msg['To'] = address
-    try:
-        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
-        server.starttls()
-        server.login(email, password)
-        server.sendmail(email, address, msg.as_string())
-        server.quit()
-    except Exception as e:
-        return f'Обнаружена ошибка {e}'
-    else:
-        return f'Письмо было отправлено на {address}'
+    return _deliver_message(address, msg)

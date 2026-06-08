@@ -172,7 +172,7 @@ async def dell_keyboard(callback: CallbackQuery):
     email = text.get('Email') or text.get('email')
     country = text.get('country', 'russia')
     if email:
-        email_sender.send_bad_email(email, country)
+        await asyncio.to_thread(email_sender.send_bad_email, email, country)
     delete_request(uniqal_id)
     await bot.delete_message(chat_id=callback.message.chat.id, message_id=callback.message.message_id)
 
@@ -193,10 +193,16 @@ async def send_button(callback: CallbackQuery, state: FSMContext):
         increment_company_counts(data['selectedCompanies'], country)
     for email in get_company_emails(data['selectedCompanies'], country):
         if status_email:
-            email_sender.send_email(email, BufferedInputFile(get_request_document(uniqal_id), filename='request.json'))
+            result = await asyncio.to_thread(
+                email_sender.send_email,
+                email,
+                BufferedInputFile(get_request_document(uniqal_id), filename='request.json'),
+            )
             await bot.send_message(
                 chat_id=callback.message.chat.id,
-                text=f'Sent to {email}' if country in {'usa', 'uk'} else f'Отправлено в {email}',
+                text=result if country not in {'usa', 'uk'} else (
+                    f'Sent to {email}' if 'ошибка' not in result.lower() else f'Error while sending to {email}: {result}'
+                ),
             )
         else:
             await bot.send_message(
