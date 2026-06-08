@@ -1,25 +1,68 @@
-import smtplib
 from pathlib import Path
 from tempfile import NamedTemporaryFile
+from urllib.parse import urlparse
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from html import escape
+
+import requests
 
 import models
-from config import SMTP_EMAIL, SMTP_HOST, SMTP_PASSWORD, SMTP_PORT, SMTP_TIMEOUT
+from config import EMAIL_API_TIMEOUT, EMAIL_SENDER_NAME, MAILINFRA_API_KEY, MAILINFRA_API_URL, SMTP_EMAIL
 
 
-email = SMTP_EMAIL
-password = SMTP_PASSWORD
+NETWORK_CHECK_URL = urlparse(MAILINFRA_API_URL)
+NETWORK_CHECK_HOST = NETWORK_CHECK_URL.hostname or "api.mailinfra.ru"
+NETWORK_CHECK_PORT = NETWORK_CHECK_URL.port or (443 if NETWORK_CHECK_URL.scheme == "https" else 80)
+sender_email = SMTP_EMAIL
+
+
+def _extract_text_body(msg: MIMEMultipart) -> str:
+    if msg.is_multipart():
+        for part in msg.walk():
+            if part.get_content_type() != 'text/plain':
+                continue
+            payload = part.get_payload(decode=True)
+            charset = part.get_content_charset() or 'utf-8'
+            if payload is None:
+                return str(part.get_payload())
+            return payload.decode(charset, errors='replace')
+        return ""
+
+    payload = msg.get_payload(decode=True)
+    charset = msg.get_content_charset() or 'utf-8'
+    if payload is None:
+        return str(msg.get_payload())
+    return payload.decode(charset, errors='replace')
 
 
 def _deliver_message(address: str, msg: MIMEMultipart) -> str:
-    msg['From'] = email
-    msg['To'] = address
+    if not MAILINFRA_API_KEY:
+        return 'Обнаружена ошибка: не задан MAILINFRA_API_KEY'
+    if not sender_email:
+        return 'Обнаружена ошибка: не задан SMTP_EMAIL для отправителя'
+
+    text_content = _extract_text_body(msg)
+    sender = sender_email if not EMAIL_SENDER_NAME else f"{EMAIL_SENDER_NAME} <{sender_email}>"
+    payload = {
+        "from": sender,
+        "to": [address],
+        "subject": msg.get('Subject', ''),
+        "html": "<pre style=\"font-family:inherit;white-space:pre-wrap\">" + escape(text_content) + "</pre>",
+    }
+
     try:
-        with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=SMTP_TIMEOUT) as server:
-            server.starttls()
-            server.login(email, password)
-            server.sendmail(email, address, msg.as_string())
+        response = requests.post(
+            MAILINFRA_API_URL,
+            json=payload,
+            headers={
+                "accept": "application/json",
+                "Authorization": f"Bearer {MAILINFRA_API_KEY}",
+                "content-type": "application/json",
+            },
+            timeout=EMAIL_API_TIMEOUT,
+        )
+        response.raise_for_status()
     except Exception as e:
         return f'Обнаружена ошибка {e}'
     else:

@@ -76,21 +76,21 @@ class FSMFillForm(StatesGroup):
 
 
 def log_smtp_network_check():
-    host = email_sender.SMTP_HOST
-    port = email_sender.SMTP_PORT
+    host = email_sender.NETWORK_CHECK_HOST
+    port = email_sender.NETWORK_CHECK_PORT
 
     try:
         ip = socket.gethostbyname(host)
-        print(f"[SMTP CHECK] DNS OK: {host} -> {ip}")
+        print(f"[EMAIL CHECK] DNS OK: {host} -> {ip}")
     except OSError as exc:
-        print(f"[SMTP CHECK] DNS ERROR: {exc!r}")
+        print(f"[EMAIL CHECK] DNS ERROR: {exc!r}")
         return
 
     try:
         with socket.create_connection((host, port), timeout=10):
-            print(f"[SMTP CHECK] TCP OK: {host}:{port}")
+            print(f"[EMAIL CHECK] TCP OK: {host}:{port}")
     except OSError as exc:
-        print(f"[SMTP CHECK] TCP ERROR: {exc!r}")
+        print(f"[EMAIL CHECK] TCP ERROR: {exc!r}")
 
 
 async def set_main_menu(bot: Bot):
