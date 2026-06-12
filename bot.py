@@ -3,6 +3,7 @@ import socket
 from io import BytesIO
 
 import email_sender
+import requests
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters import BaseFilter, Command, Filter, StateFilter
 from aiogram.filters.state import State, StatesGroup
@@ -78,6 +79,7 @@ class FSMFillForm(StatesGroup):
 def log_smtp_network_check():
     host = email_sender.NETWORK_CHECK_HOST
     port = email_sender.NETWORK_CHECK_PORT
+    healthcheck_url = f"{email_sender.NETWORK_CHECK_SCHEME}://{host}"
 
     try:
         ip = socket.gethostbyname(host)
@@ -91,6 +93,13 @@ def log_smtp_network_check():
             print(f"[EMAIL CHECK] TCP OK: {host}:{port}")
     except OSError as exc:
         print(f"[EMAIL CHECK] TCP ERROR: {exc!r}")
+        return
+
+    try:
+        response = requests.get(healthcheck_url, timeout=10)
+        print(f"[EMAIL CHECK] HTTPS OK: {healthcheck_url} -> {response.status_code}")
+    except requests.RequestException as exc:
+        print(f"[EMAIL CHECK] HTTPS ERROR: {exc!r}")
 
 
 async def set_main_menu(bot: Bot):
