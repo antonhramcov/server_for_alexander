@@ -70,7 +70,8 @@ jobs:
           echo "Refreshing cache in branch: ${TARGET_BRANCH}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data1.json data3.json
+          git add data1.json data3.json data_us.json
+          git status --short
           git diff --cached --quiet && exit 0
           git commit -m "chore: refresh cache data"
           git push origin "HEAD:${TARGET_BRANCH}"
