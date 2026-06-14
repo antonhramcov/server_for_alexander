@@ -211,25 +211,31 @@ async def send_button(callback: CallbackQuery, state: FSMContext):
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
     data = get_request(uniqal_id)
     country = data.get('country', 'russia')
+    client_email = data.get('Email') or data.get('email')
     caption = 'This document will be sent to:\n' if country in {'usa', 'uk'} else 'Этот документ будет отправлен в:\n'
     for companie in data['selectedCompanies']:
         caption += f'{companie}\n'
     document = BufferedInputFile(get_request_document(uniqal_id), filename='Заявка.json')
     await bot.send_document(chat_id=callback.message.chat.id, document=document, caption=caption)
     global status_email
+    recipient_emails = get_company_emails(data['selectedCompanies'], country)
+    send_errors: list[str] = []
     if status_email:
         increment_company_counts(data['selectedCompanies'], country)
-    for email in get_company_emails(data['selectedCompanies'], country):
+    for email in recipient_emails:
         if status_email:
             result = await asyncio.to_thread(
                 email_sender.send_email,
                 email,
                 BufferedInputFile(get_request_document(uniqal_id), filename='request.json'),
             )
+            is_error = 'ошибка' in result.lower() or 'error' in result.lower()
+            if is_error:
+                send_errors.append(result)
             await bot.send_message(
                 chat_id=callback.message.chat.id,
                 text=result if country not in {'usa', 'uk'} else (
-                    f'Sent to {email}' if 'ошибка' not in result.lower() else f'Error while sending to {email}: {result}'
+                    f'Sent to {email}' if not is_error else f'Error while sending to {email}: {result}'
                 ),
             )
         else:
@@ -242,6 +248,20 @@ async def send_button(callback: CallbackQuery, state: FSMContext):
                 ),
             )
         await asyncio.sleep(5)
+    if status_email and client_email and recipient_emails and not send_errors:
+        client_result = await asyncio.to_thread(email_sender.send_answer, client_email, country)
+        await bot.send_message(
+            chat_id=callback.message.chat.id,
+            text=(
+                f'Success message sent to client: {client_email}'
+                if country in {'usa', 'uk'}
+                else f'Клиенту отправлено письмо об успешной отправке заявки: {client_email}'
+            ) if 'ошибка' not in client_result.lower() and 'error' not in client_result.lower() else (
+                f'Failed to send success message to client {client_email}: {client_result}'
+                if country in {'usa', 'uk'}
+                else f'Не удалось отправить клиенту письмо об успешной отправке заявки ({client_email}): {client_result}'
+            ),
+        )
     await bot.send_message(
         chat_id=callback.message.chat.id,
         text='Mailing complete' if country in {'usa', 'uk'} else 'Рассылка окончена',
