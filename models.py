@@ -127,6 +127,42 @@ def localize_connection_type(connection_type: str | None, country: str | None) -
     return connection_type_map.get(connection_type, connection_type)
 
 
+STANDARD_LABELS = {
+    "russia": {
+        "9001": "ГОСТ Р ИСО 9001-2015 - Система менеджмента качества",
+        "14001": "ГОСТ Р ИСО 14001-2016 - Система экологического менеджмента",
+        "45001": "ГОСТ Р ИСО 45001-2020 - Система менеджмента безопасности труда",
+        "50001": "ГОСТ Р ИСО 50001-2023 - Система энергетического менеджмента",
+        "51705": "ГОСТ Р 51705.1-2024 - СМК на основе принципов ХАССП",
+        "22000": "ГОСТ Р ИСО 22000-2019 - Система менеджмента безопасности пищевой продукции",
+        "27001": "ГОСТ Р ИСО/МЭК 27001-2021 - Система информационной безопасности",
+        "13485": "ГОСТ ISO 13485-2017 - СМК для производителей медицинских изделий",
+    },
+    "international": {
+        "9001": "ISO 9001 - Quality management system",
+        "14001": "ISO 14001 - Environmental management system",
+        "45001": "ISO 45001 - Occupational health and safety management system",
+        "50001": "ISO 50001 - Energy management system",
+        "51705": "GOST R 51705.1 - HACCP-based management system",
+        "22000": "ISO 22000 - Food safety management system",
+        "27001": "ISO/IEC 27001 - Information security management system",
+        "13485": "ISO 13485 - Quality management system for medical devices",
+        "16949": "IATF 16949 - Automotive quality management system",
+        "9100": "AS 9100 - Aerospace quality management system",
+        "9110": "AS 9110 - Aerospace maintenance quality management system",
+        "9120": "AS 9120 - Aerospace distributors quality management system",
+        "27701": "ISO/IEC 27701 - Privacy information management system",
+        "22301": "ISO 22301 - Business continuity management system",
+    },
+}
+
+
+def format_standard_label(standard: str, country: str) -> str:
+    standard_code = str(standard).strip()
+    labels = STANDARD_LABELS["international"] if country in {"usa", "uk"} else STANDARD_LABELS["russia"]
+    return labels.get(standard_code, standard_code)
+
+
 def from_json_to_text(d: dict) -> str:
     country = normalize_country(get_field(d, 'Country', 'country'))
     text = ''
@@ -135,7 +171,7 @@ def from_json_to_text(d: dict) -> str:
     if selected_standarts:
         text += 'Selected standards:\n' if country in {"usa", "uk"} else 'Выбранные стандарты:\n'
         for i, standart in enumerate(selected_standarts, start=1):
-            text += f'{i}. {standart}\n'
+            text += f'{i}. {format_standard_label(standart, country)}\n'
 
     name = get_field(d, 'Name', 'name')
     if name:
