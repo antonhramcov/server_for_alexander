@@ -19,6 +19,7 @@ TEMPLATES_DIR = Path(get_env("TEMPLATES_DIR", default=str(BASE_DIR / "templates"
 DATA1_PATH = Path(get_env("DATA1_PATH", default=str(BASE_DIR / "data1.json")))
 DATA3_PATH = Path(get_env("DATA3_PATH", default=str(BASE_DIR / "data3.json")))
 DATA_US_PATH = Path(get_env("DATA_US_PATH", default=str(BASE_DIR / "data_us.json")))
+DATA_UK_PATH = Path(get_env("DATA_UK_PATH", default=str(BASE_DIR / "data_uk.json")))
 CACHE_SPREADSHEET_URL = get_env(
     "CACHE_SPREADSHEET_URL",
     default="https://docs.google.com/spreadsheets/d/1dxqQccvwSka_dkYyNkcQPXnKWlvIDkjb2qfBwuJ92dQ/edit?pli=1&gid=719798611#gid=719798611",
@@ -26,6 +27,7 @@ CACHE_SPREADSHEET_URL = get_env(
 CACHE_RUSSIA_COMPANIES_SHEET = get_env("CACHE_RUSSIA_COMPANIES_SHEET")
 CACHE_RUSSIA_LIMITS_SHEET = get_env("CACHE_RUSSIA_LIMITS_SHEET")
 CACHE_USA_SHEET = get_env("CACHE_USA_SHEET")
+CACHE_UK_SHEET = get_env("CACHE_UK_SHEET")
 GOOGLE_AUTH_PATH = Path(
     get_env(
         "GOOGLE_AUTH_PATH",

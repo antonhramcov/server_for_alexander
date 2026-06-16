@@ -3,7 +3,7 @@ import json
 import re
 from random import choice, shuffle
 
-from config import DATA1_PATH, DATA3_PATH, DATA_US_PATH
+from config import DATA1_PATH, DATA3_PATH, DATA_UK_PATH, DATA_US_PATH
 
 
 def load_json(path):
@@ -15,6 +15,8 @@ def normalize_country(country: str | None) -> str:
     normalized = (country or "russia").strip().lower()
     if normalized in {"usa", "us", "united states", "america"}:
         return "usa"
+    if normalized in {"uk", "united kingdom", "great britain", "britain"}:
+        return "uk"
     return "russia"
 
 
@@ -22,6 +24,9 @@ def load_company_dataset(country: str) -> list[dict]:
     if country == "usa":
         data_us = load_json(DATA_US_PATH)
         return [company for company in data_us if company.get("Company_name") and company.get("Status")]
+    if country == "uk":
+        data_uk = load_json(DATA_UK_PATH)
+        return [company for company in data_uk if company.get("Company_name") and company.get("Status")]
     return load_json(DATA1_PATH)
 
 
@@ -54,25 +59,25 @@ def normalize_standard_keys(standarts: list[str], companies: list[dict]) -> list
 
 
 def get_company_display_name(company: dict, country: str) -> str:
-    if country == "usa":
+    if country in {"usa", "uk"}:
         return f"{company['Company_name']}, {company['City_and_Region']}"
     return f"{company['Сокращенное наименование']}, {company['Город']}"
 
 
 def get_company_name(company: dict, country: str) -> str:
-    if country == "usa":
+    if country in {"usa", "uk"}:
         return company["Company_name"]
     return company["Сокращенное наименование"]
 
 
 def get_company_status(company: dict, country: str) -> str:
-    if country == "usa":
+    if country in {"usa", "uk"}:
         return company.get("Status", "")
     return company.get("Статус", "")
 
 
 def get_company_region_number(company: dict, country: str) -> int | None:
-    field = "Region_number" if country == "usa" else "Код региона"
+    field = "Region_number" if country in {"usa", "uk"} else "Код региона"
     value = company.get(field)
     if value in ("", None):
         return None
@@ -83,13 +88,13 @@ def get_company_region_number(company: dict, country: str) -> int | None:
 
 
 def get_company_url_value(company: dict, country: str) -> str | None:
-    if country == "usa":
+    if country in {"usa", "uk"}:
         return company.get("Website") or company.get("Accreditation_link") or None
     return company.get("Ссылка на сайт")
 
 
 def get_company_email_value(company: dict, country: str) -> str:
-    if country == "usa":
+    if country in {"usa", "uk"}:
         return (company.get("Email") or "").strip()
     return (company.get("Адрес эл. почты") or "").strip()
 
@@ -121,7 +126,7 @@ def add_count_current_month(companie: str, country: str = "russia"):
 
 
 def order_companies(companies: list[dict], selected_region_company: list[dict], country: str) -> list[dict]:
-    if country == "usa":
+    if country in {"usa", "uk"}:
         initial, passive, other = [], [], []
         for company in companies:
             if company in selected_region_company:

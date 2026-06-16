@@ -4,7 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
 
-from config import DATA1_PATH, DATA3_PATH, DATA_US_PATH, FILES_DIR, REQUESTS_DIR, TEMPLATES_DIR
+from config import DATA1_PATH, DATA3_PATH, DATA_UK_PATH, DATA_US_PATH, FILES_DIR, REQUESTS_DIR, TEMPLATES_DIR
 
 
 def find_standarts_from_str(s: str):
@@ -71,6 +71,15 @@ def get_region_name(region_value: str | int | None, country: str | None) -> str 
 
     if normalized_country == "usa":
         for company in load_json(DATA_US_PATH):
+            try:
+                if int(company.get("Region_number")) == region_number and company.get("Region"):
+                    return company["Region"]
+            except (TypeError, ValueError):
+                continue
+        return str(region_value)
+
+    if normalized_country == "uk":
+        for company in load_json(DATA_UK_PATH):
             try:
                 if int(company.get("Region_number")) == region_number and company.get("Region"):
                     return company["Region"]
@@ -259,7 +268,12 @@ def list_binary_files() -> list[str]:
     return sorted([path.name for path in FILES_DIR.iterdir() if path.is_file() and not path.name.startswith('.')])
 
 
-def save_cache_data(data1: list[dict], data3: list[dict], data_us: list[dict] | None = None):
+def save_cache_data(
+    data1: list[dict],
+    data3: list[dict],
+    data_us: list[dict] | None = None,
+    data_uk: list[dict] | None = None,
+):
     with open(DATA1_PATH, 'w') as f:
         json.dump(data1, f)
     with open(DATA3_PATH, 'w') as f:
@@ -267,3 +281,6 @@ def save_cache_data(data1: list[dict], data3: list[dict], data_us: list[dict] | 
     if data_us is not None:
         with open(DATA_US_PATH, 'w') as f:
             json.dump(data_us, f)
+    if data_uk is not None:
+        with open(DATA_UK_PATH, 'w') as f:
+            json.dump(data_uk, f)
