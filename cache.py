@@ -1,6 +1,6 @@
 import json
 
-from gspread.exceptions import GSpreadException
+from gspread.exceptions import GSpreadException, WorksheetNotFound
 
 from config import (
     CACHE_RUSSIA_COMPANIES_SHEET,
@@ -123,7 +123,12 @@ def find_sheets(sh) -> dict[str, list[dict]]:
     for sheet_key, (sheet_title, primary_key) in manual_titles.items():
         if not sheet_title:
             continue
-        rows = get_rows(sh.worksheet(sheet_title), primary_key=primary_key)
+        try:
+            worksheet = sh.worksheet(sheet_title)
+        except WorksheetNotFound:
+            print(f"Worksheet '{sheet_title}' for {sheet_key} was not found, falling back to auto-detection")
+            continue
+        rows = get_rows(worksheet, primary_key=primary_key)
         sheets[sheet_key] = rows
         print(f"Loaded {sheet_key} from worksheet '{sheet_title}' with {len(rows)} rows")
         if sheet_key == "usa_companies":
