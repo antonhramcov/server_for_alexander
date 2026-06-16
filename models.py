@@ -200,12 +200,6 @@ def from_json_to_text(d: dict) -> str:
     if connection_time:
         text += f'Preferred contact time or note: {connection_time}\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else f'Примечание: {connection_time}\n'
 
-    selected_companies = d.get('selectedCompanies', [])
-    if selected_companies:
-        text += 'Selected certification bodies:\n' if normalize_country(get_field(d, 'Country', 'country')) in {"usa", "uk"} else 'Выбранные компании:\n'
-        for i, company in enumerate(selected_companies, start=1):
-            text += f'{i}. {company}\n'
-
     return text
 
 
