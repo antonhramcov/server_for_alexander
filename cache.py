@@ -63,6 +63,23 @@ def get_detectable_rows(worksheet) -> list[dict]:
         return []
 
 
+def log_usa_diagnostics(rows: list[dict]) -> None:
+    companies = [
+        {
+            "Company_name": str(row.get("Company_name", "")).strip(),
+            "Email": str(row.get("Email", "")).strip(),
+        }
+        for row in rows
+    ]
+    companies = [row for row in companies if row["Company_name"]]
+    with_email = sum(1 for row in companies if row["Email"])
+    preview = companies[:5]
+    print(
+        f"USA diagnostics: rows={len(companies)}, rows_with_email={with_email}, "
+        f"preview={preview}"
+    )
+
+
 def find_sheets(sh) -> dict[str, list[dict]]:
     sheets: dict[str, list[dict]] = {}
     manual_titles = {
@@ -77,6 +94,8 @@ def find_sheets(sh) -> dict[str, list[dict]]:
         rows = get_rows(sh.worksheet(sheet_title), primary_key=primary_key)
         sheets[sheet_key] = rows
         print(f"Loaded {sheet_key} from worksheet '{sheet_title}' with {len(rows)} rows")
+        if sheet_key == "usa_companies":
+            log_usa_diagnostics(rows)
 
     for worksheet in sh.worksheets():
         rows = get_detectable_rows(worksheet)
@@ -92,6 +111,8 @@ def find_sheets(sh) -> dict[str, list[dict]]:
         rows = compact_rows(rows, primary_key=primary_key)
         sheets[sheet_key] = rows
         print(f"Detected {sheet_key} from worksheet '{worksheet.title}' with {len(rows)} rows")
+        if sheet_key == "usa_companies":
+            log_usa_diagnostics(rows)
 
     return sheets
 
