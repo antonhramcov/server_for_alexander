@@ -31,6 +31,11 @@ def load_company_dataset(country: str) -> list[dict]:
 
 
 def normalize_standard_keys(standarts: list[str], companies: list[dict]) -> list[str]:
+    if isinstance(standarts, str):
+        standarts = [standarts]
+    elif not isinstance(standarts, (list, tuple, set)):
+        standarts = [str(standarts)]
+
     available_standarts = {
         key
         for company in companies

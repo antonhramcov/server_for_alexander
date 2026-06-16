@@ -44,7 +44,11 @@ bot: Bot = Bot(BOT_TOKEN)
 dp: Dispatcher = Dispatcher(storage=storage)
 
 id_moderators = set(BOT_MODERATOR_IDS)
-status_email = False
+status_email = True
+
+
+def get_request_country(data: dict) -> str:
+    return data.get('country') or data.get('Country') or 'russia'
 
 
 class Check_in_admin(Filter):
@@ -126,7 +130,7 @@ async def change_text(callback: CallbackQuery, state: FSMContext):
     list_buttons = callback.message.reply_markup.inline_keyboard[:-1]
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
     data = get_request(uniqal_id)
-    country = data.get('country', 'russia')
+    country = get_request_country(data)
     initial_companies = data.get('selectedCompanies', [])
     list_companies = []
     for button in list_buttons:
@@ -160,7 +164,7 @@ async def change_text2(message: Message, state: FSMContext):
     data = await state.get_data()
     uniqal_id = data.get("id")
     request_data = get_request(uniqal_id)
-    country = request_data.get('country', 'russia')
+    country = get_request_country(request_data)
     request_data['email_text'] = message.text
     update_request(uniqal_id, request_data)
     new_keyboard = InlineKeyboardMarkup(inline_keyboard=[])
@@ -198,7 +202,7 @@ async def dell_keyboard(callback: CallbackQuery):
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
     text = get_request(uniqal_id)
     email = text.get('Email') or text.get('email')
-    country = text.get('country', 'russia')
+    country = get_request_country(text)
     if email:
         await asyncio.to_thread(email_sender.send_bad_email, email, country)
     delete_request(uniqal_id)
@@ -210,7 +214,7 @@ async def send_button(callback: CallbackQuery, state: FSMContext):
     await state.clear()
     uniqal_id = callback.message.reply_markup.inline_keyboard[-1][0].callback_data.split('_')[-1]
     data = get_request(uniqal_id)
-    country = data.get('country', 'russia')
+    country = get_request_country(data)
     client_email = data.get('Email') or data.get('email')
     caption = 'This document will be sent to:\n' if country in {'usa', 'uk'} else 'Этот документ будет отправлен в:\n'
     for companie in data['selectedCompanies']:
