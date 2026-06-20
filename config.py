@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import re
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -42,7 +43,7 @@ SMTP_PASSWORD = get_env("SMTP_PASSWORD", "email_pass")
 def parse_moderator_ids() -> tuple[int, ...]:
     raw_ids = get_env("BOT_MODERATOR_IDS", default="1111111111")
     moderator_ids = []
-    for raw_id in raw_ids.split(","):
+    for raw_id in re.split(r"[\s,;]+", raw_ids):
         raw_id = raw_id.strip()
         if raw_id:
             moderator_ids.append(int(raw_id))
