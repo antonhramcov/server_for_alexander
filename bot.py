@@ -5,6 +5,8 @@ from io import BytesIO
 import email_sender
 import requests
 from aiogram import Bot, Dispatcher, F
+from aiogram.client.session.aiohttp import AiohttpSession
+from aiogram.exceptions import TelegramAPIError, TelegramNetworkError
 from aiogram.filters import BaseFilter, Command, Filter, StateFilter
 from aiogram.filters.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
@@ -20,7 +22,13 @@ from aiogram.types import (
 )
 from aiogram.types.input_file import BufferedInputFile
 
-from config import BOT_MODERATOR_IDS, BOT_TOKEN
+from config import (
+    BOT_MODERATOR_IDS,
+    BOT_TOKEN,
+    TELEGRAM_PROXY_URL,
+    TELEGRAM_REQUEST_TIMEOUT,
+    TELEGRAM_RETRY_DELAY,
+)
 from internal_api import (
     create_user,
     delete_request,
@@ -40,7 +48,11 @@ storage: MemoryStorage = MemoryStorage()
 if not BOT_TOKEN:
     raise RuntimeError('BOT_TOKEN is not configured')
 
-bot: Bot = Bot(BOT_TOKEN)
+telegram_session = AiohttpSession(
+    proxy=TELEGRAM_PROXY_URL or None,
+    timeout=TELEGRAM_REQUEST_TIMEOUT,
+)
+bot: Bot = Bot(BOT_TOKEN, session=telegram_session)
 dp: Dispatcher = Dispatcher(storage=storage)
 
 id_moderators = set(BOT_MODERATOR_IDS)
@@ -106,6 +118,54 @@ def log_smtp_network_check():
         print(f"[EMAIL CHECK] HTTPS ERROR: {exc!r}")
 
 
+def get_telegram_proxies() -> dict[str, str] | None:
+    if not TELEGRAM_PROXY_URL:
+        return None
+
+    return {
+        "http": TELEGRAM_PROXY_URL,
+        "https": TELEGRAM_PROXY_URL,
+    }
+
+
+def log_telegram_network_check():
+    host = "api.telegram.org"
+    healthcheck_url = f"https://{host}/bot{BOT_TOKEN}/getMe"
+
+    if TELEGRAM_PROXY_URL:
+        print("[TELEGRAM CHECK] Proxy configured")
+    else:
+        try:
+            ip = socket.gethostbyname(host)
+            print(f"[TELEGRAM CHECK] DNS OK: {host} -> {ip}")
+        except OSError as exc:
+            print(f"[TELEGRAM CHECK] DNS ERROR: {exc!r}")
+            return
+
+        try:
+            with socket.create_connection((host, 443), timeout=10):
+                print(f"[TELEGRAM CHECK] TCP OK: {host}:443")
+        except OSError as exc:
+            print(f"[TELEGRAM CHECK] TCP ERROR: {exc!r}")
+            return
+
+    try:
+        response = requests.get(
+            healthcheck_url,
+            proxies=get_telegram_proxies(),
+            timeout=min(15, TELEGRAM_REQUEST_TIMEOUT),
+        )
+        if response.ok:
+            print(f"[TELEGRAM CHECK] Bot API OK: getMe -> {response.status_code}")
+        else:
+            print(
+                "[TELEGRAM CHECK] Bot API ERROR: "
+                f"getMe -> {response.status_code}: {response.text[:200]}"
+            )
+    except requests.RequestException as exc:
+        print(f"[TELEGRAM CHECK] Bot API ERROR: {exc!r}")
+
+
 async def set_main_menu(bot: Bot):
     main_menu_commands = [
         BotCommand(
@@ -122,7 +182,11 @@ async def set_main_menu(bot: Bot):
         ),
     ]
 
-    await bot.set_my_commands(main_menu_commands)
+    try:
+        await bot.set_my_commands(main_menu_commands, request_timeout=30)
+        print('[BOT] Main menu commands configured')
+    except TelegramAPIError as exc:
+        print(f'[BOT] Main menu setup skipped: {exc!r}')
 
 
 @dp.callback_query(Send_keyboard())
@@ -310,7 +374,22 @@ async def start(message: Message):
     create_user(message.from_user.id, message.from_user.username)
 
 
+async def run_bot():
+    dp.startup.register(set_main_menu)
+
+    while True:
+        try:
+            await dp.start_polling(bot, polling_timeout=30, skip_updates=False)
+            return
+        except TelegramNetworkError as exc:
+            print(
+                f'[BOT] Telegram connection failed: {exc!r}. '
+                f'Retrying in {TELEGRAM_RETRY_DELAY} seconds'
+            )
+            await asyncio.sleep(TELEGRAM_RETRY_DELAY)
+
+
 if __name__ == '__main__':
     log_smtp_network_check()
-    dp.startup.register(set_main_menu)
-    dp.run_polling(bot, skip_updates=False)
+    log_telegram_network_check()
+    asyncio.run(run_bot())

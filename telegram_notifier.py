@@ -1,6 +1,16 @@
 import requests
 
-from config import BOT_MODERATOR_IDS, BOT_TOKEN
+from config import BOT_MODERATOR_IDS, BOT_TOKEN, TELEGRAM_PROXY_URL, TELEGRAM_REQUEST_TIMEOUT
+
+
+def get_telegram_proxies() -> dict[str, str] | None:
+    if not TELEGRAM_PROXY_URL:
+        return None
+
+    return {
+        "http": TELEGRAM_PROXY_URL,
+        "https": TELEGRAM_PROXY_URL,
+    }
 
 
 def send_request_notification(text: str, request_id: str, selected_companies: list[str]) -> bool:
@@ -30,10 +40,12 @@ def send_request_notification(text: str, request_id: str, selected_companies: li
                     "text": text,
                     "reply_markup": {"inline_keyboard": keyboard},
                 },
-                timeout=10,
+                proxies=get_telegram_proxies(),
+                timeout=TELEGRAM_REQUEST_TIMEOUT,
             )
             response.raise_for_status()
             sent = True
-        except requests.RequestException:
+        except requests.RequestException as exc:
+            print(f"[TELEGRAM] Notification failed for {moderator_id}: {exc!r}")
             continue
     return sent

@@ -66,6 +66,9 @@ FLASK_PORT = int(get_env("FLASK_PORT", default="5000"))
 INTERNAL_API_URL = get_env("INTERNAL_API_URL", default="http://server:5000")
 INTERNAL_API_TIMEOUT = int(get_env("INTERNAL_API_TIMEOUT", default="30"))
 CACHE_RESTART_DELAY = int(get_env("CACHE_RESTART_DELAY", default="300"))
+TELEGRAM_REQUEST_TIMEOUT = int(get_env("TELEGRAM_REQUEST_TIMEOUT", default="60"))
+TELEGRAM_RETRY_DELAY = int(get_env("TELEGRAM_RETRY_DELAY", default="30"))
+TELEGRAM_PROXY_URL = get_env("TELEGRAM_PROXY_URL")
 
 
 FILES_DIR.mkdir(parents=True, exist_ok=True)

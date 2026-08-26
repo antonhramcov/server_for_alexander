@@ -3,13 +3,19 @@ x-app-service: &app-service
     context: .
   working_dir: /app
   environment:
-    BOT_TOKEN: ${BOT_TOKEN}
+    BOT_TOKEN: ${BOT_TOKEN:-}
+    bot_token: ${bot_token:-}
     BOT_MODERATOR_IDS: ${BOT_MODERATOR_IDS:-1111111111}
-    SMTP_EMAIL: ${SMTP_EMAIL}
-    RESEND_API_KEY: ${RESEND_API_KEY}
+    SMTP_EMAIL: ${SMTP_EMAIL:-}
+    SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+    email_pass: ${email_pass:-}
+    RESEND_API_KEY: ${RESEND_API_KEY:-}
     EMAIL_SENDER_NAME: ${EMAIL_SENDER_NAME:-Audit Advisor}
     INTERNAL_API_URL: ${INTERNAL_API_URL:-http://server:5000}
     CACHE_RESTART_DELAY: ${CACHE_RESTART_DELAY:-300}
+    TELEGRAM_REQUEST_TIMEOUT: ${TELEGRAM_REQUEST_TIMEOUT:-60}
+    TELEGRAM_RETRY_DELAY: ${TELEGRAM_RETRY_DELAY:-30}
+    TELEGRAM_PROXY_URL: ${TELEGRAM_PROXY_URL:-}
   restart: unless-stopped
 
 services:
