@@ -183,6 +183,12 @@ async def set_main_menu(bot: Bot):
     ]
 
     try:
+        await bot.delete_webhook(drop_pending_updates=False, request_timeout=30)
+        print('[BOT] Webhook disabled for polling')
+    except TelegramAPIError as exc:
+        print(f'[BOT] Webhook cleanup skipped: {exc!r}')
+
+    try:
         await bot.set_my_commands(main_menu_commands, request_timeout=30)
         print('[BOT] Main menu commands configured')
     except TelegramAPIError as exc:
