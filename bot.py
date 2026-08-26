@@ -59,6 +59,10 @@ id_moderators = set(BOT_MODERATOR_IDS)
 status_email = True
 
 
+def redact_bot_token(value: object) -> str:
+    return str(value).replace(BOT_TOKEN, '<hidden_bot_token>')
+
+
 def get_request_country(data: dict) -> str:
     return data.get('country') or data.get('Country') or 'russia'
 
@@ -163,7 +167,7 @@ def log_telegram_network_check():
                 f"getMe -> {response.status_code}: {response.text[:200]}"
             )
     except requests.RequestException as exc:
-        print(f"[TELEGRAM CHECK] Bot API ERROR: {exc!r}")
+        print(f"[TELEGRAM CHECK] Bot API ERROR: {redact_bot_token(repr(exc))}")
 
 
 async def set_main_menu(bot: Bot):
@@ -186,13 +190,13 @@ async def set_main_menu(bot: Bot):
         await bot.delete_webhook(drop_pending_updates=False, request_timeout=30)
         print('[BOT] Webhook disabled for polling')
     except TelegramAPIError as exc:
-        print(f'[BOT] Webhook cleanup skipped: {exc!r}')
+        print(f'[BOT] Webhook cleanup skipped: {redact_bot_token(repr(exc))}')
 
     try:
         await bot.set_my_commands(main_menu_commands, request_timeout=30)
         print('[BOT] Main menu commands configured')
     except TelegramAPIError as exc:
-        print(f'[BOT] Main menu setup skipped: {exc!r}')
+        print(f'[BOT] Main menu setup skipped: {redact_bot_token(repr(exc))}')
 
 
 @dp.callback_query(Send_keyboard())
@@ -389,7 +393,7 @@ async def run_bot():
             return
         except TelegramNetworkError as exc:
             print(
-                f'[BOT] Telegram connection failed: {exc!r}. '
+                f'[BOT] Telegram connection failed: {redact_bot_token(repr(exc))}. '
                 f'Retrying in {TELEGRAM_RETRY_DELAY} seconds'
             )
             await asyncio.sleep(TELEGRAM_RETRY_DELAY)
