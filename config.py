@@ -39,6 +39,7 @@ GOOGLE_AUTH_PATH = Path(
 BOT_TOKEN = get_env("BOT_TOKEN", "bot_token")
 SMTP_EMAIL = get_env("SMTP_EMAIL", "EMAIL_LOGIN", "email")
 SMTP_PASSWORD = get_env("SMTP_PASSWORD", "email_pass")
+REQUEST_NOTIFICATION_EMAIL = get_env("REQUEST_NOTIFICATION_EMAIL")
 
 def parse_moderator_ids() -> tuple[int, ...]:
     raw_ids = get_env("BOT_MODERATOR_IDS", default="1111111111")

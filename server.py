@@ -5,7 +5,8 @@ from io import BytesIO
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 
-from config import FLASK_HOST, FLASK_PORT
+from config import FLASK_HOST, FLASK_PORT, REQUEST_NOTIFICATION_EMAIL
+from email_sender import send_request_notification as send_request_email_notification
 from models import (
     add_user,
     from_json_to_text,
@@ -60,11 +61,20 @@ def send_request():
     json_data = request.json
     unical_id = ''.join([random.choice(string.hexdigits) for _ in range(32)])
     save_request(json_data, unical_id)
+    notification_text = from_json_to_text(json_data)
     send_request_notification(
-        from_json_to_text(json_data),
+        notification_text,
         unical_id,
         json_data.get("selectedCompanies", []),
     )
+    if REQUEST_NOTIFICATION_EMAIL:
+        result = send_request_email_notification(
+            REQUEST_NOTIFICATION_EMAIL,
+            notification_text,
+            json_data.get("Country") or json_data.get("country") or "russia",
+        )
+        if result.startswith("Обнаружена ошибка"):
+            print(f"[EMAIL] Request notification failed: {result}")
     return {'status': 'ok'}
 
 

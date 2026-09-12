@@ -92,6 +92,20 @@ def send_email(address, path_to_json):
     return _deliver_message(address, msg)
 
 
+def send_request_notification(address: str, text: str, country: str = "russia") -> str:
+    """Send a copy of the website request shown to Telegram moderators."""
+    normalized_country = models.normalize_country(country)
+    subjects = {
+        "russia": "Audit Advisor: Новая заявка с сайта",
+        "usa": "Audit Advisor: New Website Request (USA)",
+        "uk": "Audit Advisor: New Website Request (UK)",
+    }
+    msg = MIMEMultipart()
+    msg['Subject'] = subjects[normalized_country]
+    msg.attach(MIMEText(text, 'plain', 'utf-8'))
+    return _deliver_message(address, msg)
+
+
 def send_bad_email(address, country="russia"):
     msg = MIMEMultipart()
     sample = models.load_template('bad', country)
