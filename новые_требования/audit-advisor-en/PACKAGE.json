@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-05",
+  "language": "en",
+  "locale": "en-GB",
+  "standards": 7,
+  "questions": 325,
+  "examples": 650,
+  "contentRevision": "2026-10-30.en.1",
+  "hostingConfigured": false,
+  "runtime": "static files / browser JavaScript",
+  "applicationSHA256": "1ac82ae42adab17c067ecace28dec103cdd373a2fff4c3747590496a6fee5dd2",
+  "uploadDirectory": "server/",
+  "tildaBlock": "frontend/tilda-t123.txt"
+}

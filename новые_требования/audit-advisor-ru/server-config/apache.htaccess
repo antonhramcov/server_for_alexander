@@ -1,0 +1,7 @@
+# Requires Apache mod_headers and mod_mime, with the applicable AllowOverride.
+Header always set Access-Control-Allow-Origin "*"
+Header always set Cache-Control "no-cache"
+Header always set X-Content-Type-Options "nosniff"
+AddType application/javascript .js
+AddType application/json .json
+DirectoryIndex index.html

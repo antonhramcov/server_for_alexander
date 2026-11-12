@@ -1,0 +1,2110 @@
+{
+  "schemaVersion": 1,
+  "standard": {
+    "label": "ISO 22301:2019",
+    "basis": "ISO 22301:2019 with Amendment 1:2024",
+    "note": "Questionnaire source: the approved US and England edition of 30 October 2026. Reference edition: ISO 22301:2019 with Amendment 1:2024. Questions and explanations are practical paraphrases, not quotations. Regional guidance was reviewed on 29–30 October 2026. This import is not a new full clause-by-clause verification against all licensed final standard texts. Determine the duties that apply to your actual activities, role, products and market."
+  },
+  "page": {
+    "heading": "Check your management system’s readiness for a certification audit",
+    "description": "If you already keep emergency contacts, protect key information and make cover arrangements, you have part of the foundation of business continuity. These questions help you decide what must keep running, how quickly it must recover and whether the people, plans and resources can deliver that result.",
+    "duration": "About 25–40 minutes"
+  },
+  "questions": [
+    {
+      "id": "D01",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Have you documented the scope of your business continuity management system?",
+      "clause": "4.3.1, 4.3.2",
+      "description": [
+        "Identify the included sites, teams, products and services, with clear boundaries and justified exclusions. Consider dependencies that could affect delivery."
+      ],
+      "examples": [
+        "For example in the US: A distributor includes order processing, its fulfillment center and the systems and carriers needed to deliver priority orders.",
+        "For example in England: A payroll business includes payroll processing, client communications and dependencies on its hosted software and banking arrangements."
+      ],
+      "condition": "An exclusion must not undermine the ability and responsibility to provide continuity; it is not general permission to omit requirements.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D02",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you keep current information on applicable continuity obligations?",
+      "clause": "4.2.2",
+      "description": [
+        "Identify and assess legal, regulatory and other requirements relevant to your products, services, activities and resources, and document the information."
+      ],
+      "examples": [
+        "For example in the US: A supplier records customer continuity commitments and the regulatory requirements relevant to its actual sector and role.",
+        "For example in England: A service provider records contracted recovery commitments and determines whether any sector-specific resilience rules apply to it."
+      ],
+      "condition": "There is no assumption that every business has the same statutory recovery deadline.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D03",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Is there an approved business continuity policy?",
+      "clause": "5.2.1, 5.2.2",
+      "description": [
+        "Set direction appropriate to the business, with commitments to meeting requirements and continually improving the continuity system."
+      ],
+      "examples": [
+        "For example in the US: Management commits to protecting priority customer services during disruption and providing resources for agreed arrangements.",
+        "For example in England: A firm's policy links continuity to reliable client delivery and sets a framework for objectives and responsibilities."
+      ],
+      "condition": "The policy can form part of an integrated policy, but it must be documented and communicated.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D04",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Have you documented continuity objectives and planned how to achieve them?",
+      "clause": "6.2.1, 6.2.2",
+      "description": [
+        "Set relevant objectives, measurable where practicable, with actions, resources, owners, completion dates and evaluation."
+      ],
+      "examples": [
+        "For example in the US: A business sets an objective to demonstrate recovery of priority order processing at its agreed minimum capacity.",
+        "For example in England: A firm plans to test alternative payroll processing before its next peak period and assigns the necessary resources."
+      ],
+      "condition": "Targets are chosen from business needs; ISO 22301 does not impose one universal recovery time.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D05",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Can you show that people performing continuity roles are competent?",
+      "clause": "7.2",
+      "description": [
+        "Keep suitable evidence of the knowledge, skills and practical ability needed for planning, decisions and response."
+      ],
+      "examples": [
+        "For example in the US: A company retains exercise results showing that its incident lead can assess impacts and activate the right response.",
+        "For example in England: A firm records assessed practice for staff responsible for contacting clients and reconciling recovered transactions."
+      ],
+      "condition": "Attendance at training alone may not show that someone can perform the role under pressure.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D06",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you keep the operational information needed to run the continuity system?",
+      "clause": "7.5.1, 8.1",
+      "description": [
+        "Retain enough information to show that analysis, decisions, controls and follow-up happen as planned, including relevant outsourced processes."
+      ],
+      "examples": [
+        "For example in the US: A company links its impact analysis, selected solutions, owners and exercise results in one controlled workspace.",
+        "For example in England: A business keeps agreed supplier requirements and change decisions with its continuity planning records."
+      ],
+      "condition": "Separate documents for every step are not mandatory; the necessary information must be available and reliable.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D07",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Have you recorded how disruption affects your activities over time?",
+      "clause": "8.1, 8.2.1, 8.2.2 a)–c)",
+      "description": [
+        "Use a business impact analysis to identify supporting activities, relevant types of impact and how consequences develop as the interruption continues."
+      ],
+      "examples": [
+        "For example in the US: A wholesaler assesses missed shipments after a few hours and the effect of a longer outage on customer commitments and cash flow.",
+        "For example in England: A payroll provider assesses the impact of an outage before, during and after a client's payroll deadline."
+      ],
+      "condition": "Use intervals and criteria relevant to the business; a single high or low risk score does not show time-dependent impact.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D08",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Have you recorded recovery priorities, time limits and minimum operating capacity?",
+      "clause": "8.1, 8.2.2 d)–f)",
+      "description": [
+        "Identify when impacts become unacceptable, then set earlier recovery time objectives and the minimum acceptable capacity for priority activities."
+      ],
+      "examples": [
+        "For example in the US: A distributor records when missed deliveries become unacceptable and sets an earlier target for restarting priority order processing.",
+        "For example in England: A payroll provider specifies which clients must be processed first and what capacity is needed to meet critical deadlines."
+      ],
+      "condition": "Distinguish the business impact limit from the recovery target; do not simply use the current IT recovery speed as the target.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D09",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Have you recorded the resources and dependencies needed for priority activities?",
+      "clause": "8.1, 8.2.2 g)–h)",
+      "description": [
+        "Identify people, information, premises, technology, utilities, equipment, finance, partners and suppliers, including shared dependencies."
+      ],
+      "examples": [
+        "For example in the US: A company finds that order processing and dispatch both depend on one identity service and the same small support team.",
+        "For example in England: A firm records that remote working still depends on staff connectivity, secure access, software licensing and client data."
+      ],
+      "condition": "A list of suppliers alone may miss internal dependencies and competing demands for shared resources.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D10",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Are disruption risks assessed and the results retained?",
+      "clause": "8.1, 8.2.3",
+      "description": [
+        "Identify risks to priority activities and their resources, analyse and evaluate them, and decide which need treatment."
+      ],
+      "examples": [
+        "For example in the US: A site assesses regional storms, power loss and disruption to the carrier serving its key customers.",
+        "For example in England: A business assesses office inaccessibility, ransomware, loss of a key supplier and staff unavailability."
+      ],
+      "condition": "These disruption risks are distinct from risks to the management system, such as poor ownership or outdated plans.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D11",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do records explain why you selected particular continuity strategies and solutions?",
+      "clause": "8.1, 8.3.1–8.3.3",
+      "description": [
+        "Compare options against recovery time and capacity needs, risks, resources, costs and benefits, including before, during and after disruption."
+      ],
+      "examples": [
+        "For example in the US: A company records why an alternative warehouse can meet its recovery needs and what risks remain.",
+        "For example in England: A firm compares remote work, an alternative office and temporary manual processing against its impact analysis."
+      ],
+      "condition": "A cheap solution that cannot meet the business need is not made adequate by its low cost.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D12",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Can you show that the resources for selected solutions are available and maintained?",
+      "clause": "8.1, 8.3.4, 8.3.5",
+      "description": [
+        "Keep enough evidence that solutions can actually be activated, including agreements, access, equipment and capacity."
+      ],
+      "examples": [
+        "For example in the US: A business retains a tested arrangement for alternative fulfillment capacity rather than only a supplier's sales proposal.",
+        "For example in England: A firm checks licences, access rights and staff availability for its fallback processing arrangement."
+      ],
+      "condition": "A future purchase plan does not demonstrate that a solution is ready today.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D13",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Are response roles, authority, team relationships and deputies documented?",
+      "clause": "8.4.1, 8.4.2",
+      "description": [
+        "Identify who assesses the disruption, activates plans, sets priorities, coordinates teams and authorises decisions, including when usual staff are absent."
+      ],
+      "examples": [
+        "For example in the US: A business names an incident lead and deputy, with authority to activate its alternative site and approve emergency spending.",
+        "For example in England: A firm defines the relationship between management, IT recovery and client-service teams."
+      ],
+      "condition": "A small business may use one team, but the necessary roles and authority must still be clear.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D14",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Are warning and communication procedures documented?",
+      "clause": "8.4.3",
+      "description": [
+        "Cover outgoing and incoming information, contacts, fallback channels, emergency responders, media arrangements and recording decisions and actions."
+      ],
+      "examples": [
+        "For example in the US: A business defines how it receives weather warnings and sends verified updates if its usual email system is unavailable.",
+        "For example in England: A firm defines who informs clients, how incoming enquiries are logged and who approves public statements."
+      ],
+      "condition": "Include relevant notifications and coordination; do not assume a single channel remains available during disruption.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D15",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Are continuity plans usable and complete for the activities they cover?",
+      "clause": "8.4.4",
+      "description": [
+        "Each plan should guide activation, actions, roles, dependencies, resources, reporting and stand-down, with clear purpose, scope and objectives."
+      ],
+      "examples": [
+        "For example in the US: A distribution plan tells staff how to activate an alternative operation and maintain priority shipments at agreed capacity.",
+        "For example in England: A payroll plan gives the team the steps, contacts and resources needed to continue critical runs."
+      ],
+      "condition": "Plans must be available where and when needed; an inaccessible file on the failed system is not enough.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D16",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Is there a documented process for returning from temporary arrangements?",
+      "clause": "8.4.5",
+      "description": [
+        "Plan the return to normal or a new stable state, including data reconciliation, backlog, handover and ending temporary controls safely."
+      ],
+      "examples": [
+        "For example in the US: A distributor plans how to bring orders back from an alternative warehouse without duplicate shipment.",
+        "For example in England: A firm defines how manually recorded transactions are checked and entered when the main system returns."
+      ],
+      "condition": "Restoring IT alone does not complete business recovery.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D17",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you have an exercise and testing programme that covers your continuity arrangements over time?",
+      "clause": "8.1, 8.5",
+      "description": [
+        "Plan appropriate scenarios and objectives that collectively test strategies, solutions, teamwork and capability, including after significant changes."
+      ],
+      "examples": [
+        "For example in the US: A company schedules separate exercises for loss of its site, its main system and a critical supplier.",
+        "For example in England: A firm plans an exercise near a realistic processing deadline and includes communication and decision-making."
+      ],
+      "condition": "The programme should fit risks and needs; ISO 22301 does not prescribe one universal annual frequency.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D18",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do exercise reports record results, recommendations and improvement actions?",
+      "clause": "8.5 e)–f)",
+      "description": [
+        "Keep formal reports that compare what happened with the objectives, identify gaps and support follow-up."
+      ],
+      "examples": [
+        "For example in the US: A business records that its alternative site started in time but could not handle the required order volume.",
+        "For example in England: A firm records a failed call-tree step and assigns an owner and completion date for the fix."
+      ],
+      "condition": "An attendance list or statement that the exercise went well is not an adequate outcome report.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D19",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you retain evidence that continuity arrangements and supplier capabilities have been evaluated?",
+      "clause": "8.1, 8.6",
+      "description": [
+        "Assess the suitability, adequacy and effectiveness of the analysis, solutions, plans and relevant partner arrangements using appropriate evidence."
+      ],
+      "examples": [
+        "For example in the US: A company reviews whether its alternative provider could still meet agreed capacity during a regional disruption.",
+        "For example in England: A firm evaluates its plans after an office move and records changes to access, contacts and dependencies."
+      ],
+      "condition": "Evaluate at planned intervals and after relevant incidents, activation and significant changes.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D20",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you keep results showing whether the continuity system performs as intended?",
+      "clause": "9.1",
+      "description": [
+        "Define what is measured, how, when and by whom, and retain results and conclusions."
+      ],
+      "examples": [
+        "For example in the US: A company records actual recovery time and achieved processing capacity against its agreed objectives.",
+        "For example in England: A firm tracks exercise actions, availability of key resources and results of plan-access tests."
+      ],
+      "condition": "A plan-completion percentage alone does not demonstrate recovery capability.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D21",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you have an internal audit programme and retained audit and follow-up results?",
+      "clause": "9.2.2",
+      "description": [
+        "Use objective audits to assess the standard, internal requirements and effective operation, with findings reported and necessary action verified."
+      ],
+      "examples": [
+        "For example in the US: An auditor traces a priority activity from impact analysis through selected solution, plan and test results.",
+        "For example in England: A firm audits supplier-control arrangements and checks whether previous findings were effectively resolved."
+      ],
+      "condition": "An exercise tests capability; it does not by itself replace a system audit.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D22",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Are management review decisions retained, communicated and acted on?",
+      "clause": "9.3.3.1, 9.3.3.2",
+      "description": [
+        "Record decisions on improvement, scope, analysis, solutions, plans, controls and resources, based on the required review inputs."
+      ],
+      "examples": [
+        "For example in the US: Management approves additional recovery capacity after reviewing evidence that the current solution misses the target.",
+        "For example in England: A firm assigns action after reviewing changes in client obligations and lessons from a recent disruption."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D23",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "Do not invent incidents or nonconformities. Test and audit findings can reveal real gaps even without a major disruption. Use only if none of the events covered by this question occurred in the review period. Assess readiness of the arrangements separately. Include nonconformities found through exercises and audits when deciding whether there were relevant cases."
+        }
+      },
+      "heading": "Do you record continuity nonconformities, corrective actions and their results?",
+      "clause": "10.1.2, 10.1.3",
+      "description": [
+        "Keep the issue, immediate response, cause assessment, subsequent action and effectiveness check."
+      ],
+      "examples": [
+        "For example in the US: A business records why a recovery target was missed and demonstrates the effect of the revised arrangement.",
+        "For example in England: A firm records a failure to reach key staff and checks the updated contact process in a repeat exercise."
+      ],
+      "condition": "Do not invent incidents or nonconformities. Test and audit findings can reveal real gaps even without a major disruption.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D24",
+      "section": "D",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Are continuity documents identifiable, approved, protected and current?",
+      "clause": "7.5.2, 7.5.3",
+      "description": [
+        "Control format, approval, access, versions, retention and necessary external documents so teams can trust the information."
+      ],
+      "examples": [
+        "For example in the US: A business maintains an approved offline plan with a clear version and checks it against the main repository.",
+        "For example in England: A firm controls access to emergency contact information and removes superseded copies from response packs."
+      ],
+      "condition": "A separate document register is optional; effective control and required information are not.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P01",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you understand what could affect continuity, including whether climate change is relevant?",
+      "clause": "4.1, 4.4, Amd 1:2024",
+      "description": [
+        "Consider your business context and the conditions affecting the system and its intended outcomes, then integrate them into planning."
+      ],
+      "examples": [
+        "For example in the US: A business considers regional hurricanes and heat-related power disruption in relation to its operations and dependencies.",
+        "For example in England: A firm considers flooding, overheating and transport disruption affecting its premises and staff."
+      ],
+      "condition": "A justified finding of no climate relevance is possible; skipping the assessment is not.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P02",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you understand the continuity expectations and obligations of relevant parties?",
+      "clause": "4.2.1, 4.2.2",
+      "description": [
+        "Identify relevant customers, workers, authorities and partners, assess their requirements and keep applicable obligations current."
+      ],
+      "examples": [
+        "For example in the US: A supplier confirms what its key customers require during a disruption and checks that contract commitments are understood.",
+        "For example in England: A service provider distinguishes an agreed client response target from any applicable sector-specific legal obligation."
+      ],
+      "condition": "Do not apply financial-sector or public-sector duties automatically to unrelated businesses.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P03",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Does management actively support continuity and integrate it into business decisions?",
+      "clause": "5.1, 5.2",
+      "description": [
+        "Check leadership, resources, communication and improvement, rather than treating the plan as an IT document owned by one person."
+      ],
+      "examples": [
+        "For example in the US: Management considers recovery capability before committing to a new high-volume customer.",
+        "For example in England: A director ensures that continuity responsibilities are part of project and supplier decisions."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P04",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Are responsibilities clear and enough resources available to maintain the system?",
+      "clause": "5.3, 7.1",
+      "description": [
+        "Give people the authority, time, information and support needed to plan, exercise, review and improve continuity."
+      ],
+      "examples": [
+        "For example in the US: A company allocates time for operations and IT to maintain their shared recovery arrangements.",
+        "For example in England: A firm appoints a coordinator and deputy and gives activity owners responsibility for keeping plans current."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P05",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you act on management-system risks and opportunities and track continuity objectives?",
+      "clause": "6.1, 6.2",
+      "description": [
+        "Address weaknesses such as outdated analysis or limited skills, integrate actions into work and evaluate results."
+      ],
+      "examples": [
+        "For example in the US: A business reduces dependence on one continuity specialist by training process owners and checking their work.",
+        "For example in England: A firm uses automated reminders to improve review timeliness and checks whether plans are actually updated."
+      ],
+      "condition": "Managing the continuity system is distinct from assessing disruption scenarios under 8.2.3.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P06",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Are changes assessed for their effect on continuity before they are introduced?",
+      "clause": "6.3, 8.1",
+      "description": [
+        "Consider consequences, system integrity, resources and responsibilities, and review unintended changes."
+      ],
+      "examples": [
+        "For example in the US: A company checks how a new warehouse system affects recovery time and fallback processing before migration.",
+        "For example in England: A firm updates its plans and tests access after moving to a new office and internet provider."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P07",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do people know their roles before, during and after disruption and have the ability to perform them?",
+      "clause": "7.2, 7.3",
+      "description": [
+        "Check competence, policy awareness and understanding of personal responsibilities through practical discussion or exercises."
+      ],
+      "examples": [
+        "For example in the US: A team member can explain how to report a disruption and what to do if the incident lead is unavailable.",
+        "For example in England: A payroll employee can demonstrate the approved fallback process and explain its limits."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P08",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Can people get reliable information and communicate when usual systems are unavailable?",
+      "clause": "7.4, 7.5.3, 8.4.4.3",
+      "description": [
+        "Check access to plans and supporting information, appropriate protection and alternative communication arrangements."
+      ],
+      "examples": [
+        "For example in the US: A business tests retrieval of its response plan when corporate single sign-on is unavailable.",
+        "For example in England: A firm checks that deputies can reach authorised contacts without relying on one person's phone."
+      ],
+      "condition": "Fallback access must still protect sensitive information.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P09",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Does your impact analysis show how consequences grow over time?",
+      "clause": "8.2.1, 8.2.2 a)–d)",
+      "description": [
+        "Use relevant financial, customer, legal, safety and other impact criteria to identify when interruption becomes unacceptable."
+      ],
+      "examples": [
+        "For example in the US: A distributor assesses the difference between a short order delay and missing a customer's critical delivery window.",
+        "For example in England: A payroll firm assesses a disruption against payment deadlines, rather than using the same impact rating for every day of the month."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P10",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Are recovery priorities and minimum capacity based on business needs?",
+      "clause": "8.2.2 e)–g)",
+      "description": [
+        "Set recovery time objectives inside the unacceptable-impact limit and specify the capacity needed, with supporting resources."
+      ],
+      "examples": [
+        "For example in the US: A company prioritizes critical customer orders and defines the throughput needed at its alternative operation.",
+        "For example in England: A firm defines which client payroll runs must resume first and how many staff and systems they require."
+      ],
+      "condition": "The shortest technically achievable time is not automatically the right business target, and an existing slow recovery is not a justification for an inadequate target.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P11",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Have you tested your understanding of dependencies and shared points of failure?",
+      "clause": "8.2.2 h)",
+      "description": [
+        "Check internal and external dependencies, interdependencies and resources needed by several activities at once."
+      ],
+      "examples": [
+        "For example in the US: A company discovers that its backup application and main application rely on the same identity provider.",
+        "For example in England: A firm finds that its proposed remote-working solution depends on staff who would be unavailable in the chosen scenario."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P12",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you assess disruption risks and decide which need treatment?",
+      "clause": "8.2.3",
+      "description": [
+        "Use a systematic method to evaluate risks to priority activities and resources, and review the assessment when needed."
+      ],
+      "examples": [
+        "For example in the US: A company considers whether severe weather could affect its main and alternative logistics providers simultaneously.",
+        "For example in England: A firm assesses loss of a critical hosted service and the time needed to move to an alternative."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P13",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do selected strategies and solutions meet the required time and capacity?",
+      "clause": "8.3.1–8.3.3",
+      "description": [
+        "Compare options, accepted risk, resources, costs and benefits, including prevention and response and recovery needs."
+      ],
+      "examples": [
+        "For example in the US: A company verifies that the alternative site can support the required throughput rather than only offering spare floor space.",
+        "For example in England: A firm checks that a manual workaround can handle the necessary volume before relying on it for a deadline."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P14",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Are selected solutions implemented, maintained and ready to activate?",
+      "clause": "8.3.4, 8.3.5",
+      "description": [
+        "Check people, information, premises, utilities, equipment, technology, logistics, finance and relevant partners."
+      ],
+      "examples": [
+        "For example in the US: A company verifies current access, equipment and available capacity at its alternative location.",
+        "For example in England: A firm checks fallback software licences, trained cover and access rights rather than relying on a signed plan."
+      ],
+      "condition": "Consider simultaneous demand during a wider disruption, not only availability on an ordinary day.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P15",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you control and evaluate continuity dependencies on suppliers and partners?",
+      "clause": "8.1, 8.6 c)",
+      "description": [
+        "Set relevant requirements and assess capability using suitable evidence, including tests or joint reviews where appropriate."
+      ],
+      "examples": [
+        "For example in the US: A company checks whether its carrier's proposed alternative can serve priority customers during a regional outage.",
+        "For example in England: A firm reviews a hosted provider's recovery arrangements against its own service needs."
+      ],
+      "condition": "A supplier's certificate alone does not prove the recovery time or capacity you need.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P16",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Can you recognise a disruption, assess its impact and activate the right response promptly?",
+      "clause": "8.4.1, 8.4.2.3",
+      "description": [
+        "Use clear thresholds and decisions, with life safety as the first priority, then activate the appropriate plans and solutions."
+      ],
+      "examples": [
+        "For example in the US: An incident lead assesses a site outage, protects people and activates alternative operations when the agreed trigger is met.",
+        "For example in England: A firm escalates a prolonged system outage before a critical processing deadline is missed."
+      ],
+      "condition": "Do not let the need to keep trading override immediate safety responsibilities.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P17",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Can response teams coordinate decisions when key people are unavailable?",
+      "clause": "8.4.2",
+      "description": [
+        "Test authority, deputies, competence and the relationships between operational, technical and management teams."
+      ],
+      "examples": [
+        "For example in the US: A company exercises a disruption while its usual incident lead is absent and checks the deputy's decision authority.",
+        "For example in England: A firm tests coordination between client services and IT so neither assumes the other has informed customers."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P18",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Can you warn, inform and listen to affected parties throughout a disruption?",
+      "clause": "8.4.3",
+      "description": [
+        "Use reliable information, available channels and clear responsibilities for clients, workers, authorities, responders and media as relevant. Log important communications and decisions."
+      ],
+      "examples": [
+        "For example in the US: A business uses a tested alternative channel for staff updates and checks incoming customer enquiries during an email outage.",
+        "For example in England: A firm issues approved client updates and keeps a decision log while coordinating with its building manager."
+      ],
+      "condition": "Assess applicable reporting duties and timing for the actual event; a generic message does not satisfy every obligation.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P19",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Can people use the plans to continue priority work at agreed capacity?",
+      "clause": "8.4.4",
+      "description": [
+        "Test whether instructions, resources and coordination support the required output while addressing welfare, further loss and environmental impacts."
+      ],
+      "examples": [
+        "For example in the US: A company runs its alternative fulfillment process and checks both priority throughput and safe working arrangements.",
+        "For example in England: A firm uses its fallback processing plan and checks that staff can sustain it without uncontrolled errors or unreasonable workloads."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P20",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Can you return from temporary arrangements without creating another disruption?",
+      "clause": "8.4.5",
+      "description": [
+        "Coordinate restoration, data reconciliation, backlogs, handover and stand-down, with clear authority."
+      ],
+      "examples": [
+        "For example in the US: A company reconciles orders processed at an alternative site before switching back to prevent duplication or omission.",
+        "For example in England: A firm checks manually recorded transactions against the restored system before closing the workaround."
+      ],
+      "condition": "A system being online does not mean business activities are fully recovered.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P21",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do exercises realistically test the range of continuity arrangements over time?",
+      "clause": "8.5",
+      "description": [
+        "Use planned scenarios and clear objectives to develop teamwork and validate capability, including warning and communication."
+      ],
+      "examples": [
+        "For example in the US: A company tests a site-loss scenario that also makes normal access to its plan unavailable.",
+        "For example in England: A firm tests loss of a key supplier during a realistic busy period and measures the achieved service capacity."
+      ],
+      "condition": "Use appropriate exercises after significant changes; do not assume an annual desktop discussion covers every solution.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P22",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do exercise findings result in completed improvements and follow-up checks?",
+      "clause": "8.5 e)–g)",
+      "description": [
+        "Review outcomes, assign actions and verify that changes solve the problem rather than only updating the document."
+      ],
+      "examples": [
+        "For example in the US: A company retests alternative-site access after an exercise exposed missing authorizations.",
+        "For example in England: A firm repeats the communication step after correcting an incomplete contact list."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P23",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you evaluate the whole continuity capability using evidence?",
+      "clause": "8.6, 9.1",
+      "description": [
+        "Review analysis, risks, solutions, plans, supplier capability and applicable obligations, using measures, exercises and actual-event lessons."
+      ],
+      "examples": [
+        "For example in the US: A company compares recovery time and capacity across tests and checks whether changed demand makes the solution inadequate.",
+        "For example in England: A firm reviews its plans after activation and records whether assumptions about staff availability were correct."
+      ],
+      "condition": "Evaluation is needed at planned intervals and after relevant incidents, activation and significant changes.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P24",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do internal audits test whether the continuity management system is effective?",
+      "clause": "9.2",
+      "description": [
+        "Use competent, objective auditors, defined criteria and scope, evidence-based findings and verified follow-up."
+      ],
+      "examples": [
+        "For example in the US: An auditor checks whether changed supplier dependencies were reflected in analysis, plans and exercises.",
+        "For example in England: A firm audits the handling of exercise actions and verifies that overdue corrective actions were resolved."
+      ],
+      "condition": "An exercise or external certification visit does not replace your internal audit programme.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P25",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Does management review the evidence and make decisions that improve continuity?",
+      "clause": "9.3",
+      "description": [
+        "Consider previous actions, changes, performance, feedback, analysis, capabilities, unaddressed risks and lessons, then communicate and act on decisions."
+      ],
+      "examples": [
+        "For example in the US: Management reviews an exercise that missed its capacity target and approves a stronger recovery arrangement.",
+        "For example in England: A firm reviews new client commitments and updates the scope, priorities and resources accordingly."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P26",
+      "section": "P",
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "heading": "Do you address causes of gaps and improve continuity over time?",
+      "clause": "10.1, 10.2",
+      "description": [
+        "Correct problems, consider similar issues, implement proportionate action and check effectiveness using qualitative and quantitative evidence."
+      ],
+      "examples": [
+        "For example in the US: A company addresses the cause of repeated recovery delays rather than simply extending its stated recovery target.",
+        "For example in England: A firm uses disruption lessons to improve handovers and verifies the change in later exercises."
+      ],
+      "condition": "Changing an objective to hide a failure is not evidence of corrective action.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    }
+  ],
+  "applicabilityPairs": [],
+  "$schema": "../../schemas/standard.schema.json",
+  "id": "iso-22301-en",
+  "answerVersion": "2026.1.0",
+  "contentRevision": "2026-10-30.en.1",
+  "source": {
+    "file": "06_22301_US_England_2026-10-30.docx",
+    "snapshotDirectory": "sources/2026-10-30-english-questionnaires",
+    "sha256": "338eaa3ae882268cd34a58249f5487e33ae1212dfaeac55b4f32ee6abb7a5c41",
+    "revisionDate": "2026-10-30"
+  },
+  "sections": [
+    {
+      "id": "D",
+      "title": "Documents and records",
+      "summaryTitle": "Required documents and records",
+      "description": "Check whether the necessary information is current, complete and available. Look at the evidence, not just the document title.",
+      "share": 0.4
+    },
+    {
+      "id": "P",
+      "title": "Working practices",
+      "summaryTitle": "Other requirements and working practices",
+      "description": "Check what happens in day-to-day work. Use recent examples, speak to the people involved and look at actual records.",
+      "intro": "You have reviewed the documents. Now assess how the requirements are put into practice.",
+      "share": 0.6
+    }
+  ],
+  "links": {
+    "service": "https://audit-advisor.com/",
+    "chat": ""
+  },
+  "disclaimer": "This self-check reflects your answers and supports preparation and improvement. It does not replace an independent audit, a certification decision or an assessment of all legal and regulatory obligations. A high score does not guarantee certification. Examples illustrate possible evidence and do not prescribe a mandatory document format.",
+  "guidance": {
+    "instructions": [
+      "Start with D01 to D24 for documents and records, then P01 to P26 for working practices. Each question includes a plain explanation and two illustrative examples, one in the US and one in England. Use the example to understand the requirement, not as a mandatory template.",
+      "Documents: Available means the necessary information is current and can be shown. Not available means it is missing or does not provide the evidence needed. Use Not sure when you need to check. Record gaps in incomplete documents.",
+      "Working practices: Yes means the requirement is implemented and supported by evidence. Partly means there are gaps. No means it is not implemented. Use Not sure when you need to check.",
+      "Use Not applicable only where justified and permitted. For an event-dependent record, use No events if appropriate; readiness still needs assessment. For grouped requirements, assess each applicable part before answering Yes.",
+      "Use existing contracts, procedures, system records and work evidence. Record each gap, the action, an owner and a due date. This self-check supports preparation and improvement; it is not a certification decision or a complete legal compliance assessment.",
+      "Business continuity covers priority activities, people, suppliers, premises, information and technology. An IT recovery plan or insurance policy can support the arrangements, but neither replaces the whole system. Recovery targets and capacity are determined from your business needs and obligations.",
+      "Reference edition: ISO 22301:2019 with Amendment 1:2024. England examples use relevant England, Great Britain or UK requirements according to their scope; they should not be assumed to cover every UK jurisdiction."
+    ],
+    "sections": [
+      {
+        "heading": "Terms in plain English",
+        "paragraphs": [
+          "BCMS: Business continuity management system.",
+          "Business impact analysis or BIA: Analysis of how disruption affects activities over time and what needs priority recovery.",
+          "Maximum tolerable period of disruption or MTPD: The time before the effects of not resuming an activity become unacceptable.",
+          "Recovery time objective or RTO: The target time for resuming an activity at the specified minimum capacity, within the business impact limit.",
+          "Minimum acceptable capacity: The level of output or service that must be provided during recovery.",
+          "Recovery point objective or RPO: The acceptable point in time to which data must be restored, where relevant; it concerns data loss rather than activity recovery time.",
+          "Continuity solution: An implemented arrangement that helps meet recovery needs, such as an alternative site or workable manual process.",
+          "Exercise: A planned activity used to practise and evaluate response and continuity arrangements.",
+          "Stand-down: The controlled ending of the response arrangements, coordinated with recovery and return to a stable operation."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Applying this in the US and England",
+        "paragraphs": [
+          "US: Build scenarios around the actual locations, dependencies and commitments of the business, including relevant severe weather, utilities and supplier disruption. Identify federal, state and sector obligations where applicable. Public emergency-planning resources can help with preparation, but your impact analysis must establish the specific recovery needs.",
+          "England: Consider premises access, flooding, utilities, staff availability, transport and digital dependencies appropriate to your business. Check client commitments and any applicable sector duties. Government and sector toolkits provide useful planning support; rules aimed at particular regulated organisations do not automatically apply to every company.",
+          "The standard provides the management-system requirements. Local rules and contractual obligations apply according to your activities, role and market. The examples do not set universal legal deadlines, target values, document names or technical solutions."
+        ],
+        "links": [
+          {
+            "label": "Massachusetts official continuity planning resources",
+            "url": "https://www.mass.gov/info-details/continuity-and-safety-planning-guidance"
+          },
+          {
+            "label": "UK government business continuity and resilience resources",
+            "url": "https://www.gov.uk/guidance/resilience-in-society-infrastructure-communities-and-businesses"
+          }
+        ]
+      },
+      {
+        "heading": "Standard and further information",
+        "paragraphs": [
+          "Use the stated edition when following clause references. The questions and explanations are practical paraphrases, not quotations from the standard. Regional sources were reviewed on 29 and 30 October 2026."
+        ],
+        "links": [
+          {
+            "label": "ISO 22301:2019 with Amendment 1:2024 on the ISO website",
+            "url": "https://www.iso.org/standard/75106.html"
+          },
+          {
+            "label": "Audit Advisor information for ISO 22301",
+            "url": "https://audit-advisor.com/uk/iso-22301-certification"
+          }
+        ]
+      }
+    ]
+  }
+}

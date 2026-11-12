@@ -1,0 +1,1640 @@
+{
+  "$schema": "../../schemas/standard.schema.json",
+  "schemaVersion": 1,
+  "id": "iso-45001-en",
+  "answerVersion": "2026.1.0",
+  "contentRevision": "2026-10-30.en.1",
+  "source": {
+    "file": "03_45001_US_England_2026-10-30.docx",
+    "snapshotDirectory": "sources/2026-10-30-english-questionnaires",
+    "sha256": "d5c166f27e414334371cdfbd0fdab511a3150f3a0783957031a06fa70deda3b2",
+    "revisionDate": "2026-10-30"
+  },
+  "standard": {
+    "label": "ISO 45001:2018",
+    "basis": "ISO 45001:2018 with Amendment 1:2024",
+    "note": "Questionnaire source: the approved US and England edition of 30 October 2026. Reference edition: ISO 45001:2018 with Amendment 1:2024. Questions and explanations are practical paraphrases, not quotations. Regional guidance was reviewed on 29–30 October 2026. This import is not a new full clause-by-clause verification against all licensed final standard texts. Determine the duties that apply to your actual activities, role, products and market."
+  },
+  "page": {
+    "heading": "Check your management system’s readiness for a certification audit",
+    "description": "If you already assess hazards, train people and investigate unsafe situations, you have part of the foundation of a health and safety management system. These questions connect that work with leadership, worker participation and controls that prevent injury and ill health.",
+    "duration": "About 19–30 minutes"
+  },
+  "sections": [
+    {
+      "id": "D",
+      "title": "Documents and records",
+      "summaryTitle": "Required documents and records",
+      "description": "Check whether the necessary information is current, complete and available. Look at the evidence, not just the document title.",
+      "share": 0.4
+    },
+    {
+      "id": "P",
+      "title": "Working practices",
+      "summaryTitle": "Other requirements and working practices",
+      "description": "Check what happens in day-to-day work. Use recent examples, speak to the people involved and look at actual records.",
+      "intro": "You have reviewed the documents. Now assess how the requirements are put into practice.",
+      "share": 0.6
+    }
+  ],
+  "applicabilityPairs": [],
+  "links": {
+    "service": "https://audit-advisor.com/",
+    "chat": ""
+  },
+  "disclaimer": "This self-check reflects your answers and supports preparation and improvement. It does not replace an independent audit, a certification decision or an assessment of all legal and regulatory obligations. A high score does not guarantee certification. Examples illustrate possible evidence and do not prescribe a mandatory document format.",
+  "questions": [
+    {
+      "id": "D01",
+      "section": "D",
+      "clause": "4.3",
+      "heading": "Have you documented the workers, sites and activities covered by your safety management system?",
+      "description": [
+        "Define the boundaries and work-related activities you control or influence, including relevant contractors and people working away from your premises."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer includes production, maintenance, temporary workers and work performed by contractors at its plant.",
+        "For example in England: A facilities business covers mobile engineers, its depot and work at client premises, including shared responsibilities."
+      ],
+      "condition": "Do not narrow the scope to avoid activities that affect health and safety performance.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D02",
+      "section": "D",
+      "clause": "5.2",
+      "heading": "Do you have an approved health and safety policy suited to your work?",
+      "description": [
+        "Set commitments to safe and healthy conditions, meeting requirements, eliminating hazards, reducing risks, worker participation and improvement."
+      ],
+      "examples": [
+        "For example in the US: A warehouse's policy connects its commitments to vehicle movements, manual handling and reporting unsafe conditions.",
+        "For example in England: A maintenance contractor explains its commitments to worker consultation, effective risk controls and preventing ill health."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D03",
+      "section": "D",
+      "clause": "5.3",
+      "heading": "Are health and safety responsibilities and authorities documented?",
+      "description": [
+        "Make it clear who owns decisions, provides competent support, checks implementation and reports performance to management."
+      ],
+      "examples": [
+        "For example in the US: A plant records who can stop unsafe work, approve equipment changes and follow up corrective actions.",
+        "For example in England: A contractor records site-supervisor duties and the authority of the person coordinating health and safety."
+      ],
+      "condition": "Assigning an adviser does not transfer senior management's overall responsibility.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D04",
+      "section": "D",
+      "clause": "6.1.1, 6.1.2.1",
+      "heading": "Have you identified and recorded hazards and risks across your work?",
+      "description": [
+        "Include routine and non-routine work, people affected, emergencies, human factors and changes. Consider health risks as well as immediate injury."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer assesses machine access, maintenance energy sources, noise and the work of temporary staff.",
+        "For example in England: A contractor assesses work at height, substances, lone working and risks to building occupants."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D05",
+      "section": "D",
+      "clause": "6.1.2.2",
+      "heading": "Is your risk assessment method clear, with recorded results?",
+      "description": [
+        "Use criteria that are proactive and systematic. Record enough to explain the risk, existing controls, further action and review decisions."
+      ],
+      "examples": [
+        "For example in the US: A plant's job hazard analyzes use consistent criteria and identify which controls must be in place before maintenance.",
+        "For example in England: A business records who may be harmed, how, and what it will do, with task assessments linked to actual site conditions."
+      ],
+      "condition": "A score is a tool, not a substitute for understanding the hazard or meeting a specific duty.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D06",
+      "section": "D",
+      "clause": "6.1.1, 6.1.2.3",
+      "heading": "Have you recorded opportunities to make work safer and improve the system?",
+      "description": [
+        "Look beyond fixing defects to better work design, adapting work to people and strengthening participation and competence."
+      ],
+      "examples": [
+        "For example in the US: A distribution business records an opportunity to redesign pallet handling so awkward manual lifts are removed.",
+        "For example in England: A contractor plans remote inspections where suitable to reduce unnecessary access to difficult locations."
+      ],
+      "condition": "Assess new risks before adopting a proposed improvement.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D07",
+      "section": "D",
+      "clause": "6.1.3",
+      "heading": "Do you keep current information on the safety requirements that apply to your work?",
+      "description": [
+        "Identify applicable legal and other requirements, how they apply and where authoritative updates are obtained."
+      ],
+      "examples": [
+        "For example in the US: A US business checks federal OSHA or the relevant OSHA-approved State Plan requirements for its sites.",
+        "For example in England: An English employer identifies applicable duties, including COSHH or equipment-related rules where relevant to its work."
+      ],
+      "condition": "The regulator and duties depend on the location and activity. ISO 45001 does not replace legal compliance.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D08",
+      "section": "D",
+      "clause": "6.2.2",
+      "heading": "Are safety objectives and the plans for achieving them recorded?",
+      "description": [
+        "Choose relevant outcomes and leading measures, with actions, owners, resources, deadlines and evaluation methods."
+      ],
+      "examples": [
+        "For example in the US: A warehouse sets a goal to complete effective pedestrian segregation and verifies the resulting traffic arrangements.",
+        "For example in England: A business plans to reduce exposure from a dusty task and records responsibility for selecting and checking controls."
+      ],
+      "condition": "An injury-free target alone may encourage under-reporting; include measures of effective prevention.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D09",
+      "section": "D",
+      "clause": "7.2",
+      "heading": "Can you demonstrate that workers are competent for the safety-critical tasks assigned to them?",
+      "description": [
+        "Keep evidence of relevant skills, experience and practical assessment, including contractors under your control."
+      ],
+      "examples": [
+        "For example in the US: A plant keeps equipment-specific practical evaluations for employees operating powered industrial trucks.",
+        "For example in England: A contractor checks that people carrying out specialist work have suitable training, experience and demonstrated competence."
+      ],
+      "condition": "A training card or attendance certificate alone does not establish competence for every workplace or task.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D10",
+      "section": "D",
+      "clause": "7.4.1",
+      "heading": "Do you retain important safety communications and responses?",
+      "description": [
+        "Keep evidence where appropriate of concerns, instructions, consultation and required communications, while protecting personal information."
+      ],
+      "examples": [
+        "For example in the US: A supervisor records a reported guard defect, immediate action and feedback to the employee who raised it.",
+        "For example in England: A business records concerns raised through worker representatives and explains the resulting decisions."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D11",
+      "section": "D",
+      "clause": "8.1.1",
+      "heading": "Are safe working methods documented where needed to control risks?",
+      "description": [
+        "Provide usable instructions for important controls, checks, authorisation and escalation. Match the method to the actual task."
+      ],
+      "examples": [
+        "For example in the US: A maintenance team has an equipment-specific energy-isolation procedure and checks before work begins.",
+        "For example in England: A contractor uses a risk assessment and method statement suited to the site, with clear supervision and permit arrangements where needed."
+      ],
+      "condition": "A generic template signed without checking the job does not demonstrate effective control.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D12",
+      "section": "D",
+      "clause": "8.2",
+      "heading": "Are foreseeable emergencies and first-aid arrangements covered by documented plans?",
+      "description": [
+        "Plan the response, responsibilities, resources, communication and assistance for people who may need it."
+      ],
+      "examples": [
+        "For example in the US: A warehouse plans for severe weather, fire and a serious injury, with arrangements appropriate to the workforce and layout.",
+        "For example in England: A depot plans evacuation, first-aid cover and coordination with emergency services and neighbouring occupiers."
+      ],
+      "condition": "The plan must fit actual hazards and applicable duties, not just list emergency numbers.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D13",
+      "section": "D",
+      "clause": "8.2, 9.1.1",
+      "heading": "Do you keep results from emergency exercises and response checks?",
+      "description": [
+        "Record what was tested, what happened and what must improve, including the involvement of relevant workers and other parties."
+      ],
+      "examples": [
+        "For example in the US: A plant drill identifies that a temporary worker did not receive the alarm message, and the corrective action is recorded.",
+        "For example in England: A shared-building exercise checks evacuation arrangements and records an access problem affecting an assembly area."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D14",
+      "section": "D",
+      "clause": "9.1.1",
+      "heading": "Do records show whether working conditions and protective measures are effective?",
+      "description": [
+        "Keep monitoring, inspection and evaluation results suited to the hazards. Protect confidential health information."
+      ],
+      "examples": [
+        "For example in the US: A plant retains noise assessment results and evidence that engineering controls and hearing protection arrangements were reviewed.",
+        "For example in England: A workshop retains relevant extraction-system examination results and actions on defects."
+      ],
+      "condition": "Use the assessment, inspection and monitoring arrangements required for your actual work and jurisdiction.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D15",
+      "section": "D",
+      "clause": "9.1.2",
+      "heading": "Are compliance evaluation results recorded?",
+      "description": [
+        "Check actual performance against applicable requirements and retain the conclusions and follow-up actions."
+      ],
+      "examples": [
+        "For example in the US: A site reviews whether its required safety records, inspections and training arrangements meet applicable OSHA or State Plan duties.",
+        "For example in England: A contractor checks applicable equipment inspection and substance-control obligations against actual records and conditions."
+      ],
+      "condition": "A list of laws is not a compliance evaluation.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D16",
+      "section": "D",
+      "clause": "9.2, 9.3",
+      "heading": "Do you retain internal audit evidence and management review decisions?",
+      "description": [
+        "Keep evidence that audits have been carried out and management has evaluated the system, including worker participation and performance."
+      ],
+      "examples": [
+        "For example in the US: An audit samples isolation practices and employee interviews; management records decisions on the findings and resources.",
+        "For example in England: A contractor's review considers site audit results, consultation feedback and progress on previous actions."
+      ],
+      "condition": "Audit records and management review results may be stored together, but both activities must be covered.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D17",
+      "section": "D",
+      "clause": "10.2",
+      "heading": "Do incident records include the response, cause assessment and corrective action?",
+      "description": [
+        "Capture injuries, ill health, near misses and other relevant incidents, then record what prevents recurrence and how effectiveness is checked."
+      ],
+      "examples": [
+        "For example in the US: A site investigates a forklift near miss and separately assesses any applicable OSHA recording or reporting obligation.",
+        "For example in England: A contractor investigates a fall-related incident and checks whether a RIDDOR notification is required."
+      ],
+      "condition": "Internal investigation and external notification are different tasks. No events means no invented incident records.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "Internal investigation and external notification are different tasks. No events means no invented incident records. Use only if none of the events covered by this question occurred in the review period. Assess readiness of the arrangements separately."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D18",
+      "section": "D",
+      "clause": "10.3",
+      "heading": "Can you show evidence of continual improvement in health and safety?",
+      "description": [
+        "Use results and worker feedback to demonstrate improvements in conditions, controls and the effectiveness of the system."
+      ],
+      "examples": [
+        "For example in the US: A warehouse records that redesigned loading arrangements removed a repeated pedestrian conflict and verifies the change on later shifts.",
+        "For example in England: A workshop shows that revised extraction and work methods reduced the identified exposure, with follow-up assessment."
+      ],
+      "condition": "An absence of recorded injuries alone does not demonstrate effective improvement.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P01",
+      "section": "P",
+      "clause": "4.1, 4.2",
+      "heading": "Do you consider the work environment and the needs of people affected by your activities?",
+      "description": [
+        "Understand context, workers and other relevant parties, including language, accessibility, temporary work and client-site conditions."
+      ],
+      "examples": [
+        "For example in the US: A distribution business adjusts induction and supervision for agency workers and staff who need instructions in another language.",
+        "For example in England: A contractor considers lone workers, building occupants and visitors when planning work at occupied premises."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P02",
+      "section": "P",
+      "clause": "4.1, Amd 1:2024",
+      "heading": "Have you assessed whether climate change affects worker health and safety?",
+      "description": [
+        "Consider relevant heat, weather and disruption risks and the needs of interested parties. Use the conclusion in planning."
+      ],
+      "examples": [
+        "For example in the US: A US outdoor-work employer reviews heat exposure and the implications of changing weather for scheduling and controls.",
+        "For example in England: An English employer considers overheating in workshops and flood-related hazards during travel or site access."
+      ],
+      "condition": "A justified conclusion of no relevance is possible; omitting the assessment is not.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P03",
+      "section": "P",
+      "clause": "5.1",
+      "heading": "Do management decisions support safe and healthy work?",
+      "description": [
+        "Check whether leaders provide resources, remove obstacles, support reporting and integrate safety into operational decisions."
+      ],
+      "examples": [
+        "For example in the US: A plant manager postpones a restart until a defective guard is repaired despite a delivery deadline.",
+        "For example in England: A director gives engineers enough time and equipment to complete the job safely instead of relying on shortcuts."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P04",
+      "section": "P",
+      "clause": "5.4",
+      "heading": "Do workers help shape decisions about their health and safety?",
+      "description": [
+        "Provide meaningful consultation and participation, particularly for non-managerial workers. Give people time, information and a way to influence outcomes."
+      ],
+      "examples": [
+        "For example in the US: Operators help assess a new packing line and identify a pinch point before the layout is finalized.",
+        "For example in England: A business consults employees or their representatives about a proposed shift change and records how their concerns were addressed."
+      ],
+      "condition": "Simply issuing instructions or collecting signatures is not two-way consultation.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P05",
+      "section": "P",
+      "clause": "5.1, 5.4",
+      "heading": "Can people report hazards and concerns without fear of retaliation?",
+      "description": [
+        "Remove barriers to reporting, respond constructively and let workers know what happened to their concern."
+      ],
+      "examples": [
+        "For example in the US: A temporary employee reports an unsafe loading practice and receives feedback without being penalised for stopping the task.",
+        "For example in England: A worker raises an unrealistic workload through the agreed route and the manager investigates rather than blaming the individual."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P06",
+      "section": "P",
+      "clause": "6.1.2.1",
+      "heading": "Do you look for hazards before incidents, including during unusual work?",
+      "description": [
+        "Review routine activities, maintenance, breakdowns, cleaning, start-up and emergency scenarios, including people nearby."
+      ],
+      "examples": [
+        "For example in the US: A plant assesses stored energy before an infrequent machine clean-out instead of treating it as normal production.",
+        "For example in England: A facilities team reassesses access and electrical hazards before working in an unfamiliar plant room."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P07",
+      "section": "P",
+      "clause": "6.1.2.1",
+      "heading": "Do you address fatigue, workload and other organisational factors that affect safety?",
+      "description": [
+        "Consider work organisation, working hours, demands, bullying and other relevant psychosocial risks, rather than attributing every error to carelessness."
+      ],
+      "examples": [
+        "For example in the US: A warehouse investigates whether extended overtime and unclear supervision contribute to near misses.",
+        "For example in England: A service business reviews lone-working demands and repeated out-of-hours callouts with the employees affected."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P08",
+      "section": "P",
+      "clause": "8.1.2",
+      "heading": "When selecting controls, do you first consider removing the hazard?",
+      "description": [
+        "Follow the hierarchy of controls: eliminate where possible, then consider substitution, engineering and organisational controls before relying on personal protection."
+      ],
+      "examples": [
+        "For example in the US: A plant removes the need to reach into moving equipment through redesign before considering additional gloves or reminders.",
+        "For example in England: A workshop chooses a less hazardous process and effective extraction rather than relying only on respirators."
+      ],
+      "condition": "Check whether the chosen control creates other risks.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P09",
+      "section": "P",
+      "clause": "6.2, 9.1.1",
+      "heading": "Are safety plans completed and checked for benefit?",
+      "description": [
+        "Track actions and evaluate whether they reduce risk, using meaningful evidence and worker feedback."
+      ],
+      "examples": [
+        "For example in the US: A traffic-segregation project is checked during busy loading periods, not only signed off from a drawing.",
+        "For example in England: A business verifies that revised staffing arrangements reduce excessive workload and that the new schedule is workable."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P10",
+      "section": "P",
+      "clause": "7.2, 7.3",
+      "heading": "Can workers perform their tasks safely and explain when to stop or escalate?",
+      "description": [
+        "Check practical competence, awareness of hazards and consequences, and arrangements for removing themselves from serious danger."
+      ],
+      "examples": [
+        "For example in the US: A maintenance technician demonstrates isolation checks and knows how to escalate an unidentified energy source.",
+        "For example in England: An engineer stops work when site conditions differ from the assessment and contacts the responsible supervisor."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P11",
+      "section": "P",
+      "clause": "7.5",
+      "heading": "Can people access understandable, current safety instructions?",
+      "description": [
+        "Make instructions usable at the point of work, including language and accessibility needs, and remove obsolete versions."
+      ],
+      "examples": [
+        "For example in the US: A plant supplies current equipment-specific procedures at the workstation with clear visual steps where helpful.",
+        "For example in England: A mobile contractor gives engineers offline access to the approved method and emergency contacts."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P12",
+      "section": "P",
+      "clause": "8.1.3",
+      "heading": "Do you assess safety risks before changing equipment, processes or work arrangements?",
+      "description": [
+        "Review temporary and permanent changes, including staffing, materials, legislation and knowledge of hazards."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer assesses guarding and maintenance access before commissioning a faster machine.",
+        "For example in England: A business checks lone-working and fatigue implications before moving a team to evening shifts."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P13",
+      "section": "P",
+      "clause": "8.1.4.1",
+      "heading": "Do you consider safety when buying equipment, materials and services?",
+      "description": [
+        "Define relevant safety requirements before purchase and check delivered items and arrangements against them."
+      ],
+      "examples": [
+        "For example in the US: A warehouse specifies safe access and maintenance needs before ordering a conveyor.",
+        "For example in England: A contractor reviews a chemical's hazards and handling requirements before changing products."
+      ],
+      "condition": "A supplier's claim or certification does not replace your assessment of the intended use.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P14",
+      "section": "P",
+      "clause": "8.1.4.2",
+      "heading": "Do you coordinate safe work with contractors?",
+      "description": [
+        "Share relevant hazards, agree responsibilities and control risks created by overlapping activities."
+      ],
+      "examples": [
+        "For example in the US: A plant agrees isolation, access and communication arrangements with a maintenance contractor before shutdown work.",
+        "For example in England: A building manager and roofing contractor coordinate work at height, access routes and protection of occupants."
+      ],
+      "condition": "If no contractors are used, record that fact; establish suitable controls before engaging them.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "If no contractors are used, record that fact; establish suitable controls before engaging them. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P15",
+      "section": "P",
+      "clause": "8.1.4.3",
+      "heading": "Do you control health and safety risks in outsourced processes?",
+      "description": [
+        "Define the type and degree of control needed so outsourcing remains consistent with your system and relevant duties."
+      ],
+      "examples": [
+        "For example in the US: A business reviews how an outsourced warehouse manages risks that affect its own drivers and operations.",
+        "For example in England: A facilities company oversees outsourced maintenance interfaces and checks agreed arrangements at managed buildings."
+      ],
+      "condition": "If no processes are outsourced, explain the situation. Purchasing and contractor controls may still apply.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "If no processes are outsourced, explain the situation. Purchasing and contractor controls may still apply. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P16",
+      "section": "P",
+      "clause": "8.2",
+      "heading": "Are people and resources ready for an actual emergency?",
+      "description": [
+        "Check equipment, competence, communication and assistance arrangements, including absent key people and out-of-hours work."
+      ],
+      "examples": [
+        "For example in the US: A plant verifies that the night shift can raise the alarm and access the resources in its response plan.",
+        "For example in England: A depot checks first-aid cover, accessible evacuation arrangements and coordination with other occupiers."
+      ],
+      "condition": "No previous emergency does not demonstrate readiness.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P17",
+      "section": "P",
+      "clause": "9.1.1, 9.1.2",
+      "heading": "Do you check controls and compliance even when no injuries have occurred?",
+      "description": [
+        "Use leading evidence such as observations, exposure checks and completed corrective actions alongside incident data."
+      ],
+      "examples": [
+        "For example in the US: A site checks machine guards and isolation practice during ordinary work rather than waiting for an injury.",
+        "For example in England: A workshop checks whether dust controls work and whether required examinations and follow-up actions are complete."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P18",
+      "section": "P",
+      "clause": "9.2",
+      "heading": "Do internal audits examine real work and worker involvement?",
+      "description": [
+        "Use competent, objective auditors to sample actual controls, consultation and performance against the system requirements."
+      ],
+      "examples": [
+        "For example in the US: An auditor observes a changeover and interviews operators about the isolation procedure and reporting routes.",
+        "For example in England: An auditor samples contractor work and asks employees whether consultation influenced recent decisions."
+      ],
+      "condition": "A walkaround alone may not cover the full management-system audit requirements.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P19",
+      "section": "P",
+      "clause": "9.3",
+      "heading": "Does management review performance and communicate relevant decisions to workers?",
+      "description": [
+        "Consider trends, compliance, audits, participation, changes and resources, then ensure decisions lead to action."
+      ],
+      "examples": [
+        "For example in the US: Management funds an engineering control after reviewing incident and exposure information and explains the decision to affected shifts.",
+        "For example in England: A business shares relevant review outcomes with staff and worker representatives, including action on workload concerns."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P20",
+      "section": "P",
+      "clause": "10.2, 10.3",
+      "heading": "After an incident, do you address causes and check that the new solution is safe?",
+      "description": [
+        "Involve workers, respond to consequences, investigate causes and consider similar risks. Assess changes before implementation and verify effectiveness."
+      ],
+      "examples": [
+        "For example in the US: After a near miss, a site redesigns a traffic route and checks whether the new route creates a reversing hazard elsewhere.",
+        "For example in England: After a manual-handling injury, a business trials a lifting aid with workers and checks that it suits the actual task."
+      ],
+      "condition": "External reporting, where required, must proceed within applicable rules; it is not deferred until the internal investigation ends.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    }
+  ],
+  "guidance": {
+    "instructions": [
+      "Start with D01 to D18 for documents and records, then P01 to P20 for working practices. Each question includes a plain explanation and two illustrative examples, one in the US and one in England. Use the example to understand the requirement, not as a mandatory template.",
+      "Documents: Available means the necessary information is current and can be shown. Not available means it is missing or does not provide the evidence needed. Use Not sure when you need to check. Record gaps in incomplete documents.",
+      "Working practices: Yes means the requirement is implemented and supported by evidence. Partly means there are gaps. No means it is not implemented. Use Not sure when you need to check.",
+      "Use Not applicable only where justified and permitted. For an event-dependent record, use No events if appropriate; readiness still needs assessment. For grouped requirements, assess each applicable part before answering Yes.",
+      "Use existing contracts, procedures, system records and work evidence. Record each gap, the action, an owner and a due date. This self-check supports preparation and improvement; it is not a certification decision or a complete legal compliance assessment.",
+      "Reference edition: ISO 45001:2018 with Amendment 1:2024. England examples use relevant England, Great Britain or UK requirements according to their scope; they should not be assumed to cover every UK jurisdiction."
+    ],
+    "sections": [
+      {
+        "heading": "Terms in plain English",
+        "paragraphs": [
+          "Hazard: Something with the potential to cause injury or ill health.",
+          "Risk: A combination of the likelihood of harm and its severity in the relevant circumstances.",
+          "Hierarchy of controls: An order for selecting protection, starting with removing the hazard rather than relying on personal protection.",
+          "Near miss: An incident that did not cause injury or ill health but had the potential to do so.",
+          "Consultation: Seeking workers' views before making relevant decisions.",
+          "Participation: Workers being involved in the decision-making process.",
+          "COSHH: Control of Substances Hazardous to Health, a relevant legal framework in Great Britain.",
+          "RIDDOR: Reporting of Injuries, Diseases and Dangerous Occurrences Regulations; reporting depends on the applicable criteria."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Applying this in the US and England",
+        "paragraphs": [
+          "US: Determine whether federal OSHA or an OSHA-approved State Plan applies to each workplace. Assess the requirements relevant to the industry and work, including recordkeeping and reporting where applicable. Internal incident investigation and external reporting are separate activities; one must not be used to delay the other.",
+          "England: Determine the duties and enforcing authority for your activities. HSE guidance provides practical information on worker consultation, risk assessment, COSHH and RIDDOR. Consultation involves listening and allowing employees or their representatives to influence decisions; it is more than issuing instructions. Assess whether an incident meets the applicable reporting criteria.",
+          "The standard provides the management-system requirements. Local rules and contractual obligations apply according to your activities, role and market. The examples do not set universal legal deadlines, target values, document names or technical solutions."
+        ],
+        "links": [
+          {
+            "label": "OSHA State Plans",
+            "url": "https://www.osha.gov/stateplans/"
+          },
+          {
+            "label": "OSHA severe incident reporting",
+            "url": "https://www.osha.gov/report/"
+          },
+          {
+            "label": "HSE worker consultation",
+            "url": "https://www.hse.gov.uk/simple-Health-Safety/consult.htm"
+          },
+          {
+            "label": "HSE COSHH assessment",
+            "url": "https://www.hse.gov.uk/coshh/basics/assessment.htm"
+          },
+          {
+            "label": "HSE RIDDOR reporting",
+            "url": "https://www.hse.gov.uk/RIDDOR/reporting/how-to-make-riddor-report.htm"
+          }
+        ]
+      },
+      {
+        "heading": "Standard and further information",
+        "paragraphs": [
+          "Use the stated edition when following clause references. The questions and explanations are practical paraphrases, not quotations from the standard. Regional sources were reviewed on 29 and 30 October 2026."
+        ],
+        "links": [
+          {
+            "label": "ISO 45001:2018 with Amendment 1:2024 on the ISO website",
+            "url": "https://www.iso.org/standard/45001"
+          },
+          {
+            "label": "Audit Advisor information for ISO 45001",
+            "url": "https://audit-advisor.com/uk/iso-45001-certification"
+          }
+        ]
+      }
+    ]
+  }
+}

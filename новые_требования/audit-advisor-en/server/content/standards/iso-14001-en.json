@@ -1,0 +1,1551 @@
+{
+  "$schema": "../../schemas/standard.schema.json",
+  "schemaVersion": 1,
+  "id": "iso-14001-en",
+  "answerVersion": "2026.1.0",
+  "contentRevision": "2026-10-30.en.1",
+  "source": {
+    "file": "02_14001_US_England_2026-10-30.docx",
+    "snapshotDirectory": "sources/2026-10-30-english-questionnaires",
+    "sha256": "8f6efd49f5bbc0416630f67ef5f3868887aca73ba11e5e86b74c0dd543721ea6",
+    "revisionDate": "2026-10-30"
+  },
+  "standard": {
+    "label": "ISO 14001:2026",
+    "basis": "ISO 14001:2026",
+    "note": "Questionnaire source: the approved US and England edition of 30 October 2026. Reference edition: ISO 14001:2026. Questions and explanations are practical paraphrases, not quotations. Regional guidance was reviewed on 29–30 October 2026. This import is not a new full clause-by-clause verification against all licensed final standard texts. Determine the duties that apply to your actual activities, role, products and market."
+  },
+  "page": {
+    "heading": "Check your management system’s readiness for a certification audit",
+    "description": "If you already manage waste, maintain equipment and respond to leaks, you have part of the foundation of an environmental management system. These questions help you understand the wider impacts of your work and turn obligations and improvement ideas into effective controls.",
+    "duration": "About 18–29 minutes"
+  },
+  "sections": [
+    {
+      "id": "D",
+      "title": "Documents and records",
+      "summaryTitle": "Required documents and records",
+      "description": "Check whether the necessary information is current, complete and available. Look at the evidence, not just the document title.",
+      "share": 0.4
+    },
+    {
+      "id": "P",
+      "title": "Working practices",
+      "summaryTitle": "Other requirements and working practices",
+      "description": "Check what happens in day-to-day work. Use recent examples, speak to the people involved and look at actual records.",
+      "intro": "You have reviewed the documents. Now assess how the requirements are put into practice.",
+      "share": 0.6
+    }
+  ],
+  "applicabilityPairs": [],
+  "links": {
+    "service": "https://audit-advisor.com/",
+    "chat": ""
+  },
+  "disclaimer": "This self-check reflects your answers and supports preparation and improvement. It does not replace an independent audit, a certification decision or an assessment of all legal and regulatory obligations. A high score does not guarantee certification. Examples illustrate possible evidence and do not prescribe a mandatory document format.",
+  "questions": [
+    {
+      "id": "D01",
+      "section": "D",
+      "clause": "4.3",
+      "heading": "Have you recorded which sites and activities your environmental management system covers?",
+      "description": [
+        "Define the boundaries, activities, products and services, including what you can control or influence. Make the scope available to relevant parties."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer includes its production site, storage yard and contracted waste handling within the controls described by its system.",
+        "For example in England: A facilities business covers its office and environmental controls for cleaning and maintenance at client premises."
+      ],
+      "condition": "Do not leave out a troublesome activity simply to make performance look better.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D02",
+      "section": "D",
+      "clause": "5.2",
+      "heading": "Do you have an approved environmental policy that fits your business?",
+      "description": [
+        "Set commitments to protecting the environment, meeting compliance obligations and improving the system and environmental performance."
+      ],
+      "examples": [
+        "For example in the US: A printing business links its policy to solvent use, waste reduction and meeting applicable permit conditions.",
+        "For example in England: A property services business commits to preventing pollution, using resources responsibly and improving waste handling at client sites."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D03",
+      "section": "D",
+      "clause": "6.1.1, 6.1.2",
+      "heading": "Have you recorded how your activities, products and services interact with the environment?",
+      "description": [
+        "Identify activities such as using water, generating waste or releasing emissions, and the environmental changes they can cause. Consider normal, abnormal and reasonably foreseeable emergency conditions."
+      ],
+      "examples": [
+        "For example in the US: A workshop records metalworking fluids, waste oils, electricity use and possible runoff from outside storage.",
+        "For example in England: A maintenance company considers chemical use, vehicle journeys, waste from client sites and a spill entering a surface-water drain."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D04",
+      "section": "D",
+      "clause": "6.1.2",
+      "heading": "Have you recorded which environmental aspects are significant and how you decided?",
+      "description": [
+        "Use consistent criteria to identify priorities. Keep the assessment and significant aspects clear enough for others to understand."
+      ],
+      "examples": [
+        "For example in the US: A coating plant assesses solvent emissions using its chosen criteria for scale, frequency and potential harm.",
+        "For example in England: A business servicing remote sites identifies fuel storage near a watercourse as significant because a leak could cause serious pollution."
+      ],
+      "condition": "A simple scoring method can help, but the criteria and conclusion need to suit your operations.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D05",
+      "section": "D",
+      "clause": "6.1.3",
+      "heading": "Do you keep current information about the environmental obligations that apply to your business?",
+      "description": [
+        "Identify relevant laws, permits and other commitments, their applicability and how they affect operations. Use the jurisdiction and activity, not a generic national checklist."
+      ],
+      "examples": [
+        "For example in the US: A US site checks applicable federal and state requirements, its air permit conditions and hazardous waste generator obligations.",
+        "For example in England: An English site checks whether the Environment Agency or local authority regulates its activity, alongside waste duty-of-care obligations."
+      ],
+      "condition": "A certificate does not replace a permit or demonstrate legal compliance by itself.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D06",
+      "section": "D",
+      "clause": "6.1.4, 6.1.5",
+      "heading": "Have you recorded the environmental risks, opportunities and actions that need attention?",
+      "description": [
+        "Link relevant issues, aspects and obligations to practical action. Record enough information to understand the risks and opportunities being addressed."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer plans containment improvements after identifying a stormwater pollution risk near its loading area.",
+        "For example in England: A hotel identifies an opportunity to reduce laundry water use and assigns a trial with usage measurements."
+      ],
+      "condition": "Use the 2026 clause structure for this profile; do not copy these clause numbers into a 2015 checklist without checking.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D07",
+      "section": "D",
+      "clause": "6.2.1",
+      "heading": "Have you recorded clear environmental objectives?",
+      "description": [
+        "Choose outcomes relevant to your significant aspects and commitments. State how progress will be assessed and keep the objectives up to date."
+      ],
+      "examples": [
+        "For example in the US: A plant aims to reduce solvent waste per finished unit, using a defined baseline and review period.",
+        "For example in England: A facilities company sets a target for reducing contaminated recycling collections at managed sites."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D08",
+      "section": "D",
+      "clause": "7.2",
+      "heading": "Can you show that people handling environmental tasks are competent?",
+      "description": [
+        "Keep evidence that people can perform the tasks assigned to them, including contractors whose work affects environmental performance."
+      ],
+      "examples": [
+        "For example in the US: A site keeps practical assessments for employees who identify waste streams and prepare required shipment information.",
+        "For example in England: A business retains training and observed-performance records for staff checking waste carriers and responding to spills."
+      ],
+      "condition": "Match evidence to the task; attendance at a general awareness session may not be enough.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D09",
+      "section": "D",
+      "clause": "7.4.1–7.4.3",
+      "heading": "Do you keep evidence of important environmental communications and responses?",
+      "description": [
+        "Retain communication evidence where appropriate, including required submissions, complaints, enquiries and decisions about the response."
+      ],
+      "examples": [
+        "For example in the US: A plant keeps the submitted permit report, supporting data and the regulator's acknowledgement.",
+        "For example in England: A depot records a neighbour's noise complaint, investigation, response and agreed action."
+      ],
+      "condition": "If no complaints or incidents occurred, do not invent them. Keep the communication arrangements ready.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "If no complaints or incidents occurred, do not invent them. Keep the communication arrangements ready. Use only if none of the events covered by this question occurred in the review period. Assess readiness of the arrangements separately."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D10",
+      "section": "D",
+      "clause": "8.1",
+      "heading": "Are there clear instructions for activities that need environmental control?",
+      "description": [
+        "Document the operating criteria and controls to the extent needed for reliable work, including outsourced activities and relevant purchasing requirements."
+      ],
+      "examples": [
+        "For example in the US: A warehouse has instructions for segregating waste, checking storage areas and preventing liquids entering storm drains.",
+        "For example in England: A cleaning contractor specifies chemical dilution, storage and disposal arrangements for work at client buildings."
+      ],
+      "condition": "Existing operating procedures can contain these controls; a separate environmental manual is not automatically required.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D11",
+      "section": "D",
+      "clause": "8.2",
+      "heading": "Are emergency arrangements documented for credible environmental incidents?",
+      "description": [
+        "Set out how to prevent or limit harm, raise the alarm, make notifications and deal with the aftermath safely."
+      ],
+      "examples": [
+        "For example in the US: A site has a spill response plan identifying drain locations, containment materials and the contacts relevant to its obligations.",
+        "For example in England: A fuel depot has a plan for a damaged tank, including drainage isolation and escalation to the relevant emergency and environmental contacts."
+      ],
+      "condition": "The plan must fit the actual hazards, layout and reporting duties.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D12",
+      "section": "D",
+      "clause": "9.1.1",
+      "heading": "Do you keep environmental monitoring results and conclusions?",
+      "description": [
+        "Retain the data needed to evaluate environmental performance, with enough context to explain changes."
+      ],
+      "examples": [
+        "For example in the US: A plant records waste quantities by stream and relates them to production volume before judging improvement.",
+        "For example in England: A hotel compares water use with occupancy and records the investigation of an unexpected increase."
+      ],
+      "condition": "A lower bill alone may reflect a tariff or activity change rather than better environmental performance.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D13",
+      "section": "D",
+      "clause": "9.1.2",
+      "heading": "Do records show that you have evaluated compliance with applicable obligations?",
+      "description": [
+        "Keep the checks, evidence, conclusions and action on gaps. Knowing the rules is different from checking whether you meet them."
+      ],
+      "examples": [
+        "For example in the US: A US site checks required inspection and reporting records against each applicable permit condition.",
+        "For example in England: An English contractor reviews waste transfer documentation and the authorisations relevant to its waste movements."
+      ],
+      "condition": "Choose a review frequency appropriate to the obligation and risk; do not assume one universal annual check is sufficient.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D14",
+      "section": "D",
+      "clause": "9.2.2",
+      "heading": "Do you have an environmental internal audit programme and completed audit records?",
+      "description": [
+        "Plan audits that cover the system, important activities and previous findings. Retain evidence of implementation and results."
+      ],
+      "examples": [
+        "For example in the US: An auditor samples chemical storage, waste handling and the follow-up to previous spill-control findings.",
+        "For example in England: A facilities business audits environmental controls at selected client sites, not just its head office."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D15",
+      "section": "D",
+      "clause": "9.3.3",
+      "heading": "Are management's environmental review decisions recorded?",
+      "description": [
+        "Keep decisions on performance, obligations, risks, objectives, resources and improvements so action can be followed through."
+      ],
+      "examples": [
+        "For example in the US: Management approves repairs to a containment area after reviewing inspection and spill data.",
+        "For example in England: A service business funds a revised waste collection arrangement after reviewing contamination and cost trends."
+      ],
+      "condition": "An ordinary management meeting can be used if the required inputs and decisions are covered.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D16",
+      "section": "D",
+      "clause": "10.2",
+      "heading": "Do you retain records of environmental problems, corrective actions and results?",
+      "description": [
+        "Record what went wrong, immediate action, the cause assessment and evidence that corrective action worked."
+      ],
+      "examples": [
+        "For example in the US: A site records a leaking waste container, replaces it and checks the storage inspection process that missed the damage.",
+        "For example in England: A contractor investigates repeated mixing of waste streams and records follow-up checks after changing labels and training."
+      ],
+      "condition": "If there have been no relevant cases, assess readiness and actual conditions rather than creating fictional records.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "If there have been no relevant cases, assess readiness and actual conditions rather than creating fictional records. Use only if none of the events covered by this question occurred in the review period. Assess readiness of the arrangements separately."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P01",
+      "section": "P",
+      "clause": "4.1, 4.2",
+      "heading": "Do you understand the conditions and expectations that affect your environmental work?",
+      "description": [
+        "Consider the business, local environment and relevant parties, then decide which needs become obligations and priorities."
+      ],
+      "examples": [
+        "For example in the US: A distribution site considers nearby homes, delivery traffic and customer requirements for packaging information.",
+        "For example in England: A contractor considers landlord rules, client site restrictions and concerns from neighbours about noise and waste."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P02",
+      "section": "P",
+      "clause": "4.1",
+      "heading": "Have you considered how climate change and other environmental conditions affect the business?",
+      "description": [
+        "Assess relevant conditions such as flooding, heat, water availability, pollution and ecosystem health. Consider both your impacts and external conditions affecting operations."
+      ],
+      "examples": [
+        "For example in the US: A plant checks whether more frequent flooding could damage chemical storage or interrupt access to waste collection.",
+        "For example in England: A business in a water-stressed area reviews the effect of restrictions on its operations and plans practical responses."
+      ],
+      "condition": "The assessment does not automatically require a separate objective for every environmental topic.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P03",
+      "section": "P",
+      "clause": "5.1",
+      "heading": "Does management take responsibility for environmental performance?",
+      "description": [
+        "Look for leadership decisions, integration into business processes and support for effective action."
+      ],
+      "examples": [
+        "For example in the US: A plant manager makes a containment repair a funded operational priority rather than repeatedly postponing it.",
+        "For example in England: A director reviews whether new contracts can be delivered within the company's environmental commitments."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P04",
+      "section": "P",
+      "clause": "5.3, 7.1",
+      "heading": "Are environmental responsibilities clear and adequately resourced?",
+      "description": [
+        "Make sure the people responsible have authority, time, competence and access to necessary equipment and advice."
+      ],
+      "examples": [
+        "For example in the US: A warehouse assigns waste-area inspections and gives the responsible supervisor authority to stop an unsuitable collection.",
+        "For example in England: A facilities business provides site teams with spill kits, current instructions and a clear escalation route."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P05",
+      "section": "P",
+      "clause": "6.1.2",
+      "heading": "Do you consider environmental impacts before and after your own operations?",
+      "description": [
+        "Use a life-cycle perspective when designing, buying, producing, transporting and informing customers about use and disposal."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer reviews packaging, transport and end-of-life information when selecting a new product design.",
+        "For example in England: A business buying office equipment considers durability, repair options and responsible disposal as well as the purchase price."
+      ],
+      "condition": "A full quantified life-cycle assessment of every product is not automatically required.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P06",
+      "section": "P",
+      "clause": "6.1.2, 6.1.3",
+      "heading": "Do you update aspect and obligation assessments when work changes?",
+      "description": [
+        "Review the effect of new equipment, substances, sites, products and requirements before relying on the old assessment."
+      ],
+      "examples": [
+        "For example in the US: A US plant checks whether a new coating line changes its permit or waste obligations before installation.",
+        "For example in England: An English contractor reassesses waste handling and chemical use when taking over a new client site."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P07",
+      "section": "P",
+      "clause": "6.1.5",
+      "heading": "Are environmental actions implemented and checked for effectiveness?",
+      "description": [
+        "Confirm that planned controls work and that actions address the risks, opportunities or obligations they were intended to address."
+      ],
+      "examples": [
+        "For example in the US: After installing covered storage, a site checks runoff observations and inspections to see whether the problem has reduced.",
+        "For example in England: After introducing refillable chemical containers, a contractor checks waste reduction and whether handling remains reliable."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P08",
+      "section": "P",
+      "clause": "6.2.2",
+      "heading": "Does each environmental objective have a workable plan?",
+      "description": [
+        "Identify actions, resources, responsibility, timing and how results will be evaluated. Integrate this with operational planning."
+      ],
+      "examples": [
+        "For example in the US: A production team assigns responsibility and funding for reducing scrap and sets dates to compare performance with the baseline.",
+        "For example in England: A hotel plans water-saving trials, maintenance checks and occupancy-adjusted measurements before wider installation."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P09",
+      "section": "P",
+      "clause": "6.3",
+      "heading": "Do you assess environmental consequences before introducing changes?",
+      "description": [
+        "Plan changes so controls, obligations and responsibilities remain effective. Review unintended consequences as well."
+      ],
+      "examples": [
+        "For example in the US: A warehouse reviews spill risks and drainage before relocating liquid storage.",
+        "For example in England: A contractor checks whether changing a cleaning chemical affects disposal, storage or client-site restrictions."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P10",
+      "section": "P",
+      "clause": "7.2, 7.3",
+      "heading": "Do people understand the environmental effects of their work and follow the controls?",
+      "description": [
+        "Check task-specific competence and awareness of significant aspects, policy commitments and the consequences of not following instructions."
+      ],
+      "examples": [
+        "For example in the US: A forklift operator can explain how to respond to a damaged drum without spreading liquid across the yard.",
+        "For example in England: A mobile engineer knows which waste can return to the depot and which must follow a specific agreed disposal route."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P11",
+      "section": "P",
+      "clause": "7.4",
+      "heading": "Is environmental information communicated accurately and at the right time?",
+      "description": [
+        "Decide who communicates, what is needed and how the information is checked. Make external claims consistent with reliable internal data."
+      ],
+      "examples": [
+        "For example in the US: A business checks the calculation and scope behind a customer waste-reduction claim before publishing it.",
+        "For example in England: A site prepares a required environmental submission using reviewed measurements and the correct reporting boundary."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P12",
+      "section": "P",
+      "clause": "7.5",
+      "heading": "Can people access current environmental documents and reliable records?",
+      "description": [
+        "Control versions, access, protection and retention, including permits, external requirements and monitoring records."
+      ],
+      "examples": [
+        "For example in the US: A plant gives operators access to the current permit conditions relevant to their equipment.",
+        "For example in England: A contractor removes obsolete waste instructions from its app and preserves completed collection records."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P13",
+      "section": "P",
+      "clause": "8.1",
+      "heading": "Are environmental operating controls followed every day?",
+      "description": [
+        "Observe actual storage, handling, maintenance and waste practices, including busy shifts and abnormal conditions."
+      ],
+      "examples": [
+        "For example in the US: A site checks that containers are closed, incompatible wastes are separated and required storage inspections are completed.",
+        "For example in England: A maintenance depot keeps its spill containment clear and prevents wash water entering an unsuitable drain."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P14",
+      "section": "P",
+      "clause": "8.1",
+      "heading": "Do suppliers and contractors meet the environmental requirements relevant to their work?",
+      "description": [
+        "Communicate requirements, choose suitable providers and check the controls that you can influence or control."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer checks a waste contractor's suitability and required shipment records before relying on the service.",
+        "For example in England: An English business checks carrier registration and the receiving facility's appropriate authorisation for its waste."
+      ],
+      "condition": "Using a contractor does not automatically discharge your own obligations.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P15",
+      "section": "P",
+      "clause": "8.2",
+      "heading": "Can staff respond effectively to a foreseeable environmental emergency?",
+      "description": [
+        "Check knowledge, equipment, responsibilities and escalation, including people working outside normal office hours."
+      ],
+      "examples": [
+        "For example in the US: A night-shift team can locate drain protection and raise the alarm for a spill in the loading area.",
+        "For example in England: A mobile team knows the first safe steps after a fuel leak at a client site and whom to notify."
+      ],
+      "condition": "No past incident is not evidence that preparation is unnecessary.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P16",
+      "section": "P",
+      "clause": "8.2",
+      "heading": "Do you test emergency arrangements and improve them afterwards?",
+      "description": [
+        "Exercise planned responses where practicable, review outcomes and update the plan after tests or real incidents."
+      ],
+      "examples": [
+        "For example in the US: A spill drill finds that a kit is inaccessible behind stored materials; the site changes storage and checks again.",
+        "For example in England: A depot exercise tests the call-out route and identifies that a contractor's emergency contact is out of date."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P17",
+      "section": "P",
+      "clause": "9.1.1",
+      "heading": "Are environmental measurements reliable and used to make decisions?",
+      "description": [
+        "Use suitable methods and equipment, competent people and checks that make the results trustworthy."
+      ],
+      "examples": [
+        "For example in the US: A plant checks the calibration and sampling arrangements behind a permit-related emissions result.",
+        "For example in England: A hotel investigates a meter anomaly before reporting a large water-saving improvement."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P18",
+      "section": "P",
+      "clause": "9.1.2",
+      "heading": "Do you check actual compliance even when there have been no complaints?",
+      "description": [
+        "Evaluate performance against applicable obligations and act on gaps. A quiet period does not prove compliance."
+      ],
+      "examples": [
+        "For example in the US: A site samples manifests and inspection records against applicable hazardous waste requirements.",
+        "For example in England: A business checks whether waste storage and transfers follow the conditions and duties that apply to its activity."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P19",
+      "section": "P",
+      "clause": "9.2, 9.3",
+      "heading": "Do audits and management review identify issues that need action?",
+      "description": [
+        "Use evidence from operations, not only document existence. Ensure management acts on the findings and performance information."
+      ],
+      "examples": [
+        "For example in the US: An audit finds weekend inspections missing and management changes the cover arrangements.",
+        "For example in England: A review shows that a recycling target is masking contamination; management changes the collection and monitoring approach."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P20",
+      "section": "P",
+      "clause": "10.1, 10.2",
+      "heading": "Do you remove the causes of environmental problems and improve performance?",
+      "description": [
+        "Address immediate consequences, investigate causes, check similar risks and verify that improvements last."
+      ],
+      "examples": [
+        "For example in the US: A site fixes a recurrent leak and changes preventive maintenance rather than repeatedly replacing absorbent material.",
+        "For example in England: A contractor changes purchasing and storage arrangements after repeated expired-chemical disposal and checks later waste results."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    }
+  ],
+  "guidance": {
+    "instructions": [
+      "Start with D01 to D16 for documents and records, then P01 to P20 for working practices. Each question includes a plain explanation and two illustrative examples, one in the US and one in England. Use the example to understand the requirement, not as a mandatory template.",
+      "Documents: Available means the necessary information is current and can be shown. Not available means it is missing or does not provide the evidence needed. Use Not sure when you need to check. Record gaps in incomplete documents.",
+      "Working practices: Yes means the requirement is implemented and supported by evidence. Partly means there are gaps. No means it is not implemented. Use Not sure when you need to check.",
+      "Use Not applicable only where justified and permitted. For an event-dependent record, use No events if appropriate; readiness still needs assessment. For grouped requirements, assess each applicable part before answering Yes.",
+      "Use existing contracts, procedures, system records and work evidence. Record each gap, the action, an owner and a due date. This self-check supports preparation and improvement; it is not a certification decision or a complete legal compliance assessment.",
+      "Reference edition: ISO 14001:2026. England examples use relevant England, Great Britain or UK requirements according to their scope; they should not be assumed to cover every UK jurisdiction."
+    ],
+    "sections": [
+      {
+        "heading": "Terms in plain English",
+        "paragraphs": [
+          "Environmental aspect: An activity, product or service feature that interacts with the environment, such as generating waste.",
+          "Environmental impact: A change to the environment resulting from an aspect, whether harmful or beneficial.",
+          "Significant aspect: An aspect you identify as a priority using your defined criteria.",
+          "Compliance obligation: An applicable legal requirement or another requirement your business must or chooses to meet.",
+          "Life-cycle perspective: Considering relevant impacts before, during and after your own activities, including what you can influence.",
+          "Operating control: An instruction, condition or other measure used to manage an activity reliably.",
+          "Compliance evaluation: Checking evidence of whether an applicable obligation is being met."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Applying this in the US and England",
+        "paragraphs": [
+          "US: Determine the federal, state and local requirements applicable to each site and activity. Hazardous waste duties depend on the relevant rules and generator category; state requirements can differ or be more stringent. Use the actual permits, required shipment records and site conditions when assessing compliance.",
+          "England: The Environment Agency and local authorities have different regulatory responsibilities. Check whether your activity needs an environmental permit or an exemption and apply the conditions that actually govern it. Waste duty of care includes checks on the people and facilities receiving your waste; using a contractor does not automatically remove your own duties.",
+          "The standard provides the management-system requirements. Local rules and contractual obligations apply according to your activities, role and market. The examples do not set universal legal deadlines, target values, document names or technical solutions."
+        ],
+        "links": [
+          {
+            "label": "EPA hazardous waste generator requirements",
+            "url": "https://www.epa.gov/hwgenerators/hazardous-waste-generator-regulatory-summary"
+          },
+          {
+            "label": "Environmental permit requirements in England",
+            "url": "https://www.gov.uk/guidance/check-if-you-need-an-environmental-permit"
+          },
+          {
+            "label": "Waste duty of care code of practice",
+            "url": "https://www.gov.uk/government/publications/waste-duty-of-care-code-of-practice/waste-duty-of-care-code-of-practice"
+          }
+        ]
+      },
+      {
+        "heading": "Standard and further information",
+        "paragraphs": [
+          "Use the stated edition when following clause references. The questions and explanations are practical paraphrases, not quotations from the standard. Regional sources were reviewed on 29 and 30 October 2026."
+        ],
+        "links": [
+          {
+            "label": "ISO 14001:2026 on the ISO website",
+            "url": "https://www.iso.org/standard/14001"
+          },
+          {
+            "label": "Audit Advisor information for ISO 14001",
+            "url": "https://audit-advisor.com/uk/iso-14001-certification"
+          }
+        ]
+      }
+    ]
+  }
+}

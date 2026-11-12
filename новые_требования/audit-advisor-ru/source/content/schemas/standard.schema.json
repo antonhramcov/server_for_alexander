@@ -1,0 +1,419 @@
+{
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "answerVersion",
+    "contentRevision",
+    "source",
+    "standard",
+    "page",
+    "sections",
+    "applicabilityPairs",
+    "links",
+    "disclaimer",
+    "questions"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string"
+    },
+    "answerVersion": {
+      "type": "string",
+      "description": "Change when question meaning, composition or scoring changes; preserve for wording-only edits."
+    },
+    "contentRevision": {
+      "type": "string",
+      "description": "Editorial text revision; does not reset saved answers."
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "file"
+      ],
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "snapshotDirectory": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "revisionDate": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "additionalProperties": false
+    },
+    "standard": {
+      "type": "object",
+      "required": [
+        "label",
+        "basis",
+        "note"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "basis": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "page": {
+      "type": "object",
+      "required": [
+        "heading",
+        "description",
+        "duration"
+      ],
+      "properties": {
+        "heading": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "summaryTitle",
+          "description",
+          "share"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "summaryTitle": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "share": {
+            "type": "number"
+          },
+          "intro": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "applicabilityPairs": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "required": [
+        "service",
+        "chat"
+      ],
+      "properties": {
+        "service": {
+          "type": "string"
+        },
+        "chat": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "disclaimer": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "section",
+          "clause",
+          "heading",
+          "description",
+          "examples",
+          "condition",
+          "answers",
+          "evaluation",
+          "applicability",
+          "plan"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable ID; preserve for wording-only edits."
+          },
+          "section": {
+            "type": "string"
+          },
+          "heading": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Main question heading, as plain text without HTML."
+          },
+          "description": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            },
+            "description": "Each array item is a separate explanatory paragraph."
+          },
+          "examples": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            },
+            "description": "Each array item is a separate example of evidence."
+          },
+          "condition": {
+            "type": "string"
+          },
+          "answers": {
+            "type": "object",
+            "required": [
+              "preset",
+              "overrides"
+            ],
+            "properties": {
+              "preset": {
+                "enum": [
+                  "documents",
+                  "practice"
+                ]
+              },
+              "overrides": {
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "yes",
+                    "no",
+                    "partial",
+                    "na",
+                    "no_events",
+                    "unsure"
+                  ]
+                },
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "description": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          "evaluation": {
+            "type": "object",
+            "required": [
+              "weight",
+              "important",
+              "priority"
+            ],
+            "properties": {
+              "weight": {
+                "type": "number"
+              },
+              "important": {
+                "type": "boolean"
+              },
+              "priority": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "applicability": {
+            "type": "object",
+            "required": [
+              "notApplicable",
+              "noEvents"
+            ],
+            "properties": {
+              "notApplicable": {
+                "type": "object",
+                "required": [
+                  "allowed",
+                  "explanation"
+                ],
+                "properties": {
+                  "allowed": {
+                    "type": "boolean"
+                  },
+                  "explanation": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "noEvents": {
+                "type": "object",
+                "required": [
+                  "allowed",
+                  "explanation"
+                ],
+                "properties": {
+                  "allowed": {
+                    "type": "boolean"
+                  },
+                  "explanation": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "plan": {
+            "type": "object",
+            "required": [
+              "heading",
+              "whenNo",
+              "whenPartial",
+              "confirmation",
+              "strength"
+            ],
+            "properties": {
+              "heading": {
+                "type": "string"
+              },
+              "whenNo": {
+                "type": "string"
+              },
+              "whenPartial": {
+                "type": "string"
+              },
+              "confirmation": {
+                "type": "string"
+              },
+              "strength": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "clause": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Clause reference(s) from the approved source questionnaire."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "guidance": {
+      "type": "object",
+      "required": [
+        "instructions",
+        "sections"
+      ],
+      "properties": {
+        "instructions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "heading",
+              "paragraphs",
+              "links"
+            ],
+            "properties": {
+              "heading": {
+                "type": "string"
+              },
+              "paragraphs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "label",
+                    "url"
+                  ],
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string",
+                      "pattern": "^https://"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Audit Advisor questionnaire",
+  "description": "Editable text is separate from stable IDs, weights and applicability rules."
+}

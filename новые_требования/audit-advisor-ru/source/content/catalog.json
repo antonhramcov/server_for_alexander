@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "contentRevision": "2026-10-29.2",
+  "interfaceFile": "interface.ru.json",
+  "standards": [
+    {
+      "id": "iso-9001-ru",
+      "label": "ISO 9001:2026",
+      "status": "ready",
+      "file": "standards/iso-9001-ru.json"
+    },
+    {
+      "id": "iso-14001-ru",
+      "label": "ISO 14001:2026",
+      "status": "ready",
+      "file": "standards/iso-14001-ru.json"
+    },
+    {
+      "id": "iso-45001-ru",
+      "label": "ГОСТ Р ИСО 45001-2020",
+      "status": "ready",
+      "file": "standards/iso-45001-ru.json"
+    },
+    {
+      "id": "iso-50001-ru",
+      "label": "ГОСТ Р ИСО 50001-2023",
+      "status": "ready",
+      "file": "standards/iso-50001-ru.json"
+    },
+    {
+      "id": "iso-13485-ru",
+      "label": "ГОСТ ISO 13485-2017",
+      "status": "ready",
+      "file": "standards/iso-13485-ru.json"
+    },
+    {
+      "id": "iatf-16949-ru",
+      "label": "IATF 16949:2016",
+      "status": "ready",
+      "file": "standards/iatf-16949-ru.json"
+    },
+    {
+      "id": "haccp-ru",
+      "label": "ХАССП · ГОСТ Р 51705.1-2024",
+      "status": "ready",
+      "file": "standards/haccp-ru.json"
+    },
+    {
+      "id": "iso-22000-ru",
+      "label": "ГОСТ Р ИСО 22000-2019",
+      "status": "ready",
+      "file": "standards/iso-22000-ru.json"
+    },
+    {
+      "id": "gost-rv-0015-002-ru",
+      "label": "ГОСТ РВ 0015-002-2020",
+      "status": "ready",
+      "file": "standards/gost-rv-0015-002-ru.json"
+    },
+    {
+      "id": "iso-27001-ru",
+      "label": "ISO/IEC 27001:2022",
+      "status": "ready",
+      "file": "standards/iso-27001-ru.json"
+    },
+    {
+      "id": "iso-19443-ru",
+      "label": "ГОСТ Р ИСО 19443-2020",
+      "status": "ready",
+      "file": "standards/iso-19443-ru.json"
+    }
+  ]
+}

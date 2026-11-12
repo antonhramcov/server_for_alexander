@@ -1,0 +1,1568 @@
+{
+  "$schema": "../schemas/standard.schema.json",
+  "schemaVersion": 1,
+  "id": "iso-50001-ru",
+  "answerVersion": "2026.3.0",
+  "contentRevision": "2026-10-29.2",
+  "source": {
+    "file": "04_50001_questionnaire_2026-10-29.docx",
+    "snapshotDirectory": "sources/2026-10-29-questionnaires",
+    "sha256": "608f6a39e2029e6774e22b3f3d52eec2d8cc1e23d7ac2c1a8d47065a1a22b083",
+    "revisionDate": "2026-10-29"
+  },
+  "standard": {
+    "label": "ГОСТ Р ИСО 50001-2023",
+    "basis": "ISO 50001:2018 с Amd 1:2024 по русскому чек-листу",
+    "note": "Основа вопросника: ISO 50001:2018 с Amd 1:2024 по русскому чек-листу. Вопросы перенесены из предоставленного вопросника от 29 октября 2026 года. Формулировки являются поясняющим пересказом. Полная нормативная сверка при переносе в программу не выполнялась."
+  },
+  "page": {
+    "heading": "Самостоятельная проверка готовности системы менеджмента к сертификационному аудиту",
+    "description": "Если вы собираете показания счётчиков, обслуживаете оборудование и ищете причины перерасхода, у вас уже есть часть основы системы. Начните с действующей работы и имеющихся подтверждений: определите, что подходит, а что нужно дополнить.",
+    "duration": "Ориентировочно 19–31 минут"
+  },
+  "sections": [
+    {
+      "id": "D",
+      "title": "Документы и записи",
+      "summaryTitle": "Обязательные документы и записи",
+      "description": "Посмотрите, какие нужные сведения уже сохраняются и доступны в компании. Проверьте содержание и актуальность документов и записей.",
+      "share": 0.4
+    },
+    {
+      "id": "P",
+      "title": "Работа на практике",
+      "summaryTitle": "Прочие требования и работа на практике",
+      "description": "Ориентируйтесь на реальные действия. Вспомните недавний случай, поговорите с исполнителем или посмотрите рабочие записи.",
+      "intro": "Ориентируйтесь на реальные действия. Вспомните недавний случай, поговорите с исполнителем или посмотрите рабочие записи.",
+      "share": 0.6
+    }
+  ],
+  "applicabilityPairs": [],
+  "links": {
+    "service": "https://audit-advisor.com/russia",
+    "chat": "https://t.me/chat_iso"
+  },
+  "disclaimer": "Самопроверка отражает ваши ответы и не заменяет аудит. Высокая оценка не гарантирует сертификацию. Примеры помогают найти подтверждения и не устанавливают обязательную форму документа.",
+  "questions": [
+    {
+      "id": "D01",
+      "section": "D",
+      "clause": "4.3",
+      "heading": "Записано ли, какие площадки и процессы охватывает система энергоменеджмента?",
+      "description": [
+        "Границы показывают, где компания управляет использованием энергии. Внутри этих границ учитывают все виды энергии, включая вспомогательные процессы."
+      ],
+      "examples": [
+        "Например: Указаны цеха, склад, котельная, электричество и газ.",
+        "Например: Гостиница включила здание, прачечную и все источники энергии в этих границах."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D02",
+      "section": "D",
+      "clause": "5.2",
+      "heading": "Есть ли утверждённая энергетическая политика?",
+      "description": [
+        "Политика задаёт обязательства улучшать энергетические результаты, выполнять требования и обеспечивать ресурсы. Она также поддерживает подходящие закупки и проектирование."
+      ],
+      "examples": [
+        "Например: Завод закрепил снижение потерь энергии и оценку энергопотребления при модернизации.",
+        "Например: Гостиница включила улучшение работы отопления и охлаждения в общие обязательства руководства."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D03",
+      "section": "D",
+      "clause": "6.2",
+      "heading": "Записаны ли энергетические цели, задачи и планы их достижения?",
+      "description": [
+        "Нужно определить желаемый результат, действия, ответственных, ресурсы, сроки и способ проверки. Цель без плана трудно выполнить."
+      ],
+      "examples": [
+        "Например: План устранения утечек воздуха содержит сроки ремонта и измерения результата.",
+        "Например: Гостиница запланировала настройку отопления и сравнение расхода при сопоставимой погоде."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D04",
+      "section": "D",
+      "clause": "6.3",
+      "heading": "Есть ли данные о том, где и сколько энергии расходует компания?",
+      "description": [
+        "Энергетический анализ показывает виды энергии, прошлый и текущий расход, особенности работы и ожидаемые изменения."
+      ],
+      "examples": [
+        "Например: Составлен баланс электричества и газа по цехам и вспомогательным участкам.",
+        "Например: Бизнес-центр сравнил расход отопления, охлаждения, освещения и оборудования арендаторов в выбранных границах."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D05",
+      "section": "D",
+      "clause": "6.3",
+      "heading": "Записано ли, какие потребители энергии наиболее важны и почему?",
+      "description": [
+        "Значительное использование энергии — большой расход и/или большой потенциал улучшения. Правила выбора и результаты нужно сохранить."
+      ],
+      "examples": [
+        "Например: Компрессорную выделили из-за большого расхода и многочисленных утечек.",
+        "Например: В гостинице выделили отопление и прачечную по расходу и возможностям улучшения."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D06",
+      "section": "D",
+      "clause": "6.3",
+      "heading": "Записано ли, что влияет на расход энергии важных процессов и кто может им управлять?",
+      "description": [
+        "Расход зависит от условий работы. Для важных потребителей определяют влияющие факторы, текущие результаты и людей, чьи действия их меняют."
+      ],
+      "examples": [
+        "Например: Для печи указали объём выпуска, режим загрузки и ответственных операторов.",
+        "Например: Для охлаждения гостиницы указали наружную температуру, загрузку номеров и ответственного за настройки."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D07",
+      "section": "D",
+      "clause": "6.3",
+      "heading": "Сохранены ли предложения по улучшению и прогноз будущего расхода энергии?",
+      "description": [
+        "Нужно понимать, какие меры полезнее и как изменится потребление при планируемой работе. Исходные предположения прогноза должны быть понятны."
+      ],
+      "examples": [
+        "Например: Сравнили ремонт утечек и замену компрессора, рассчитали расход при второй смене.",
+        "Например: Гостиница оценила меры по отоплению и будущий расход после открытия нового корпуса."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D08",
+      "section": "D",
+      "clause": "6.4",
+      "heading": "Описаны ли показатели для оценки использования энергии?",
+      "description": [
+        "Показатель помогает оценить результат. Нужно сохранить способ его выбора и обновления, единицы измерения, исходные данные и значения."
+      ],
+      "examples": [
+        "Например: Определён расход электричества на сопоставимый объём продукции.",
+        "Например: Для гостиницы выбран обоснованный показатель отопления с учётом погодных условий."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D09",
+      "section": "D",
+      "clause": "6.5",
+      "heading": "Зафиксировано ли, с каким исходным уровнем сравнивают энергетические результаты?",
+      "description": [
+        "Энергетическая базовая линия — обоснованная отправная точка сравнения. Сохраняют период, данные и правила её пересмотра."
+      ],
+      "examples": [
+        "Например: В качестве базы взяли представительный период с обычной загрузкой производства.",
+        "Например: Для отопления здания сохранили исходный расход и сведения о погоде за выбранный период."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D10",
+      "section": "D",
+      "clause": "6.4, 6.5",
+      "heading": "Есть ли расчёты, учитывающие различия условий при сравнении расхода энергии?",
+      "description": [
+        "Если погода, выпуск или другие переменные существенно влияют на расход, их учитывают. Такое приведение к сопоставимым условиям называется нормализацией."
+      ],
+      "examples": [
+        "Например: Расход печи сравнили с учётом объёма и состава выпуска.",
+        "Например: Расход отопления сравнили с учётом наружной температуры, а не только показаний счётчика."
+      ],
+      "condition": "специальная нормализация не нужна, если существенное влияние переменных обоснованно не выявлено.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "специальная нормализация не нужна, если существенное влияние переменных обоснованно не выявлено."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D11",
+      "section": "D",
+      "clause": "6.6",
+      "heading": "Есть ли план сбора энергетических данных и записи по этому плану?",
+      "description": [
+        "План объясняет, какие сведения нужны, откуда их брать, как часто и кто отвечает. Данные должны относиться к согласованным периодам."
+      ],
+      "examples": [
+        "Например: Записывают расход электричества, часы работы и выпуск за каждую смену.",
+        "Например: Гостиница собирает показания счётчиков, загрузку номеров и погодные данные за одинаковые периоды."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D12",
+      "section": "D",
+      "clause": "6.6",
+      "heading": "Есть ли подтверждения пригодности приборов для важных энергетических измерений?",
+      "description": [
+        "Нужно доверять точности и повторяемости показаний. Способ подтверждения зависит от прибора, задачи и применимых требований."
+      ],
+      "examples": [
+        "Например: Сохранены результаты проверки счётчика и поверки или калибровки там, где они необходимы.",
+        "Например: Показания теплосчётчика проверены; сведения о его пригодности доступны ответственному."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D13",
+      "section": "D",
+      "clause": "7.2",
+      "heading": "Есть ли подтверждения навыков сотрудников, влияющих на расход энергии?",
+      "description": [
+        "Это касается не только энергетика, но и операторов, ремонтников, закупщиков, проектировщиков и специалистов по данным."
+      ],
+      "examples": [
+        "Например: Сохранены результаты проверки навыков настройки компрессора.",
+        "Например: Специалист гостиницы подтвердил умение настраивать отопление и правильно рассчитывать показатели."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D14",
+      "section": "D",
+      "clause": "8.1",
+      "heading": "Есть ли правила работы важных потребителей энергии и записи об их соблюдении?",
+      "description": [
+        "Для оборудования определяют подходящие режимы и обслуживание. В нужном объёме сохраняют подтверждения фактической работы."
+      ],
+      "examples": [
+        "Например: Установлен рабочий диапазон давления, сохраняются настройки компрессора и записи ремонта утечек.",
+        "Например: Для вентиляции здания задан график; сохраняются изменения настроек и результаты обслуживания."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D15",
+      "section": "D",
+      "clause": "8.2",
+      "heading": "Сохранены ли расчёты энергопотребления при проектировании и модернизации?",
+      "description": [
+        "Сравнивают варианты с учётом ожидаемого срока службы. Выбранные условия передают в проект и закупочные требования."
+      ],
+      "examples": [
+        "Например: Сохранено сравнение вариантов привода при реальной нагрузке.",
+        "Например: При замене отопления гостиницы сохранили расчёт вариантов и требования к выбранному оборудованию."
+      ],
+      "condition": "Если соответствующих проектов не было, записи о них не создаются; порядок оценки должен быть готов.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "Если соответствующих проектов не было, записи о них не создаются; порядок оценки должен быть готов. Выбирайте этот ответ, только если отсутствовали все события, для которых нужны записи по данному вопросу. Готовность порядка действий оцените отдельно."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D16",
+      "section": "D",
+      "clause": "9.1.1",
+      "heading": "Есть ли результаты оценки расхода энергии и разбора крупных отклонений?",
+      "description": [
+        "Фактический расход сравнивают с ожидаемым, показателями и базой. Значительные отклонения объясняют, действия и результаты сохраняют."
+      ],
+      "examples": [
+        "Например: Записаны причины ночного расхода и отключение оборудования, работавшего без необходимости.",
+        "Например: Гостиница сохранила разбор перерасхода после изменения настроек вентиляции."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D17",
+      "section": "D",
+      "clause": "9.1.2",
+      "heading": "Есть ли записи о проверке выполнения энергетических обязательств?",
+      "description": [
+        "Проверяют конкретные применимые требования законодательства и другие принятые обязательства. В записи нужен вывод о выполнении."
+      ],
+      "examples": [
+        "Например: Сохранена проверка применимых требований к энергоэффективности и условий энергоснабжения.",
+        "Например: Бизнес-центр записал результаты проверки обязательств по учёту энергии и договорных условий."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D18",
+      "section": "D",
+      "clause": "9.2, 9.3.4",
+      "heading": "Сохраняются ли отчёты аудитов и решения руководства по энергоменеджменту?",
+      "description": [
+        "По записям должно быть видно, что проверили, какие выводы сделали и какие изменения, цели или ресурсы утвердили."
+      ],
+      "examples": [
+        "Например: Аудит выявил ошибку показателя; руководство решило изменить расчёт и проверить прошлые данные.",
+        "Например: Руководство гостиницы утвердило нужный учёт и план настройки оборудования по результатам анализа."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D19",
+      "section": "D",
+      "clause": "10.1",
+      "heading": "Есть ли записи о проблемах энергоменеджмента и устранении их причин?",
+      "description": [
+        "Сохраняют описание ошибки, её причины, действия и проверку результата. Это относится и к данным, и к работе оборудования."
+      ],
+      "examples": [
+        "Например: Исправили ошибочную формулу и проверили остальные расчётные таблицы.",
+        "Например: После потери показаний изменили порядок сбора данных и проверили его работу."
+      ],
+      "condition": "При отсутствии несоответствий не создавайте искусственные записи.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "При отсутствии несоответствий не создавайте искусственные записи. Выбирайте этот ответ, только если отсутствовали все события, для которых нужны записи по данному вопросу. Готовность порядка действий оцените отдельно."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P01",
+      "section": "P",
+      "clause": "4.1, 4.2",
+      "heading": "Понимаете ли вы, какие условия влияют на энергетические задачи компании?",
+      "description": [
+        "Учитывают технологии, загрузку, снабжение, требования сторон и значимость климатических изменений. Это помогает планировать работу системы."
+      ],
+      "examples": [
+        "Например: Дополнительная смена меняет расход и график потребления энергии.",
+        "Например: Более жаркое лето может увеличивать нагрузку на охлаждение гостиницы."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P02",
+      "section": "P",
+      "clause": "4.3",
+      "heading": "Учитываются ли все виды энергии внутри выбранных границ?",
+      "description": [
+        "Нельзя исключать неудобный потребитель или топливо, чтобы улучшить итоговую цифру. Область должна соответствовать реальной работе."
+      ],
+      "examples": [
+        "Например: В учёте есть и электричество цехов, и газ котельной.",
+        "Например: Гостиница учитывает энергию прачечной, если она входит в установленные границы."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P03",
+      "section": "P",
+      "clause": "5.1, 5.3, 7.1",
+      "heading": "Есть ли ответственные за энергоменеджмент и поддержка руководства?",
+      "description": [
+        "Ответственным нужны полномочия, время, данные и ресурсы. В небольшой компании функции команды может выполнять один компетентный человек."
+      ],
+      "examples": [
+        "Например: Энергетик получает данные выпуска и может предложить изменение неэффективного режима.",
+        "Например: Руководство гостиницы выделило сотруднику время на анализ расхода и настройку оборудования."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P04",
+      "section": "P",
+      "clause": "6.1",
+      "heading": "Принимаете ли вы меры против рисков и используете ли возможности энергоменеджмента?",
+      "description": [
+        "Смотрят, что мешает надёжным данным и улучшениям, выбирают действия и проверяют их пользу."
+      ],
+      "examples": [
+        "Например: Для риска потери показаний предусмотрели резервный сбор данных.",
+        "Например: Гостиница обучила второго сотрудника расчётам, чтобы отсутствие специалиста не останавливало анализ."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P05",
+      "section": "P",
+      "clause": "6.3",
+      "heading": "Обновляете ли вы энергетический анализ при существенных изменениях?",
+      "description": [
+        "Разовая проверка не заменяет регулярную работу. Новое оборудование или режим могут изменить важные потребители и прогноз."
+      ],
+      "examples": [
+        "Например: После запуска линии пересмотрели распределение расхода и значимых потребителей.",
+        "Например: После открытия прачечной гостиница обновила анализ использования энергии."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P06",
+      "section": "P",
+      "clause": "6.4, 6.5",
+      "heading": "Показывают ли ваши показатели реальное улучшение использования энергии?",
+      "description": [
+        "Простое уменьшение общего расхода может объясняться спадом работы. Сравнение должно учитывать существенно влияющие условия."
+      ],
+      "examples": [
+        "Например: Расход снизился после остановки цеха; это не объявили экономией от улучшений.",
+        "Например: Гостиница учла снижение загрузки номеров при оценке изменения энергопотребления."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P07",
+      "section": "P",
+      "clause": "6.5",
+      "heading": "Пересматриваете ли вы базу сравнения только по обоснованным правилам?",
+      "description": [
+        "Базу меняют, если она перестала отражать условия работы, изменились постоянные характеристики или этого требует установленный метод."
+      ],
+      "examples": [
+        "Например: После существенной перестройки производства пересмотрели базу и записали причину.",
+        "Например: После расширения площади гостиницы обновили базу по установленным правилам."
+      ],
+      "condition": "Нельзя менять базу только для получения более привлекательного результата.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P08",
+      "section": "P",
+      "clause": "6.6",
+      "heading": "Собираются ли энергетические данные регулярно и без необъяснимых пропусков?",
+      "description": [
+        "Сведения должны иметь понятный источник, единицы и период. Пробелы и сомнительные значения нужно разбирать."
+      ],
+      "examples": [
+        "Например: Показания счётчика сопоставляют с выпуском того же цеха за те же сутки.",
+        "Например: Ответственный гостиницы проверяет полноту данных и выясняет причины необычных показаний."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P09",
+      "section": "P",
+      "clause": "7.2, 7.3",
+      "heading": "Понимают ли сотрудники, как их работа влияет на расход энергии?",
+      "description": [
+        "Люди должны знать правильные режимы, последствия отклонений и способы действий без ущерба качеству и безопасности."
+      ],
+      "examples": [
+        "Например: Оператор знает, когда допускается экономичный режим оборудования.",
+        "Например: Сотрудник гостиницы понимает, как менять настройки вентиляции в разрешённых пределах."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P10",
+      "section": "P",
+      "clause": "7.4",
+      "heading": "Могут ли сотрудники предлагать улучшения и подтверждаются ли заявления об экономии?",
+      "description": [
+        "Предложения рассматривают, а сообщения о результатах основывают на проверенных данных."
+      ],
+      "examples": [
+        "Например: Предложение устранить утечку выполнили; результат подтвердили измерениями.",
+        "Например: Сотрудник предложил изменить график освещения, затем расход сравнили при сопоставимых условиях."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P11",
+      "section": "P",
+      "clause": "7.5",
+      "heading": "Защищены ли исходные данные и расчёты от потери и случайных изменений?",
+      "description": [
+        "Нужно понимать, какая версия расчёта используется и откуда взяты данные. Формулы проверяют, доступ и хранение организуют."
+      ],
+      "examples": [
+        "Например: У таблицы расхода есть версия, проверенные формулы и сохранённые показания.",
+        "Например: Гостиница ограничила изменение расчётной модели и сохраняет резервные копии данных."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P12",
+      "section": "P",
+      "clause": "8.1",
+      "heading": "Соблюдаются ли установленные режимы и обслуживание энергопотребляющего оборудования?",
+      "description": [
+        "Экономичные режимы должны применяться в реальной работе. Необходимое обслуживание помогает избежать скрытых потерь."
+      ],
+      "examples": [
+        "Например: Давление компрессора не повышают без причины, утечки устраняют.",
+        "Например: В гостинице вентиляция работает по согласованному графику, фильтры обслуживают вовремя."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P13",
+      "section": "P",
+      "clause": "8.1",
+      "heading": "Контролируете ли вы влияние изменений и подрядчиков на расход энергии?",
+      "description": [
+        "Настройки, ремонты и переданные работы могут менять расход. Важные условия согласуют и проверяют их соблюдение."
+      ],
+      "examples": [
+        "Например: Подрядчик котельной соблюдает заданные режимы; изменения настроек согласовывает.",
+        "Например: После ремонта вентиляции гостиница проверяет, сохранились ли энергетические критерии."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P14",
+      "section": "P",
+      "clause": "8.2",
+      "heading": "Сравниваете ли вы энергопотребление вариантов при проектировании?",
+      "description": [
+        "Если проект существенно влияет на энергетические результаты, оценивают варианты на ожидаемом сроке службы и при реальной работе."
+      ],
+      "examples": [
+        "Например: Выбор двигателя учитывает расход при фактическом диапазоне нагрузки.",
+        "Например: При проектировании охлаждения гостиницы сравнили варианты с учётом сезонной работы."
+      ],
+      "condition": "При отсутствии проектов оценивается готовность процесса, а не наличие вымышленных расчётов.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P15",
+      "section": "P",
+      "clause": "8.3",
+      "heading": "Учитываете ли вы расход энергии за срок службы при значимых закупках?",
+      "description": [
+        "Важна не только цена покупки. Поставщику сообщают энергетические критерии; подходящие требования устанавливают и к закупаемой энергии."
+      ],
+      "examples": [
+        "Например: Компрессоры сравнили по потреблению при нужной нагрузке и расходам эксплуатации.",
+        "Например: Гостиница включила энергетические характеристики в требования к новому холодильному оборудованию."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P16",
+      "section": "P",
+      "clause": "9.1.1",
+      "heading": "Выясняете ли вы причины значительных отклонений расхода энергии?",
+      "description": [
+        "Необычный расход нужно объяснить, выбрать действия и проверить результат. Одной констатации перерасхода недостаточно."
+      ],
+      "examples": [
+        "Например: После ремонта обнаружили неверную настройку и подтвердили результат её исправления.",
+        "Например: В гостинице ночной перерасход связали с ошибочным графиком вентиляции и устранили его."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P17",
+      "section": "P",
+      "clause": "9.1.2, 9.2",
+      "heading": "Проверяете ли вы обязательства и реальную работу системы энергоменеджмента?",
+      "description": [
+        "Оценка обязательств показывает соблюдение требований, а аудит — работу системы. Обе проверки должны опираться на факты."
+      ],
+      "examples": [
+        "Например: Аудитор проследил расчёт от показаний счётчика до вывода об улучшении.",
+        "Например: Гостиница проверила применимые обязательства и выполнение собственного плана сбора данных."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P18",
+      "section": "P",
+      "clause": "9.3",
+      "heading": "Принимает ли руководство решения на основе энергетических результатов?",
+      "description": [
+        "Руководство рассматривает цели, планы, показатели, базу, ресурсы и прошлые решения, затем определяет дальнейшие действия."
+      ],
+      "examples": [
+        "Например: При недостижении цели руководство изменило план и выделило средства на учёт.",
+        "Например: Руководство гостиницы сравнило результаты мероприятий и утвердило следующий этап улучшений."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P19",
+      "section": "P",
+      "clause": "10.1, 10.2",
+      "heading": "Подтверждается ли улучшение использования энергии сопоставимыми данными?",
+      "description": [
+        "Улучшать нужно и управление, и энергетические результаты. Вывод должен учитывать условия сравнения, а причины системных проблем — устраняться."
+      ],
+      "examples": [
+        "Например: После ремонта утечек показатель улучшился относительно подходящей базы с учётом выпуска.",
+        "Например: Гостиница подтвердила результат настройки отопления после учёта погодных условий."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    }
+  ]
+}

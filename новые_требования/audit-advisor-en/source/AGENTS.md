@@ -1,0 +1,1 @@
+Read ../README.md before editing. Editable data: content/. Generated output: ../server/ and ../frontend/. Keep stable question IDs and answer versions for wording-only edits. Build with npm run build. Only server/ contents belong on the public server.

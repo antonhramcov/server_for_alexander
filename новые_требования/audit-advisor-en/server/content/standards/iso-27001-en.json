@@ -1,0 +1,2519 @@
+{
+  "$schema": "../../schemas/standard.schema.json",
+  "schemaVersion": 1,
+  "id": "iso-27001-en",
+  "answerVersion": "2026.1.0",
+  "contentRevision": "2026-10-30.en.1",
+  "source": {
+    "file": "05_27001_US_England_2026-10-30.docx",
+    "snapshotDirectory": "sources/2026-10-30-english-questionnaires",
+    "sha256": "481752d14e9667d5ad0c4e32f7fcef32e21844f882a101d5faf8f444baa34274",
+    "revisionDate": "2026-10-30"
+  },
+  "standard": {
+    "label": "ISO/IEC 27001:2022",
+    "basis": "ISO/IEC 27001:2022 with Amendment 1:2024",
+    "note": "Questionnaire source: the approved US and England edition of 30 October 2026. Reference edition: ISO/IEC 27001:2022 with Amendment 1:2024. Questions and explanations are practical paraphrases, not quotations. Regional guidance was reviewed on 29–30 October 2026. This import is not a new full clause-by-clause verification against all licensed final standard texts. Determine the duties that apply to your actual activities, role, products and market."
+  },
+  "page": {
+    "heading": "Check your management system’s readiness for a certification audit",
+    "description": "If you already manage access, back up information and respond to suspicious activity, you have part of the foundation of an information security management system. These questions connect business risks, people, suppliers, premises and technology with evidence that protection works.",
+    "duration": "About 30–48 minutes"
+  },
+  "sections": [
+    {
+      "id": "D",
+      "title": "Documents and records",
+      "summaryTitle": "Required documents and records",
+      "description": "Check whether the necessary information is current, complete and available. Look at the evidence, not just the document title.",
+      "share": 0.4
+    },
+    {
+      "id": "P",
+      "title": "Working practices",
+      "summaryTitle": "Other requirements and working practices",
+      "description": "Check what happens in day-to-day work. Use recent examples, speak to the people involved and look at actual records.",
+      "intro": "You have reviewed the documents. Now assess how the requirements are put into practice.",
+      "share": 0.6
+    }
+  ],
+  "applicabilityPairs": [],
+  "links": {
+    "service": "https://audit-advisor.com/",
+    "chat": ""
+  },
+  "disclaimer": "This self-check reflects your answers and supports preparation and improvement. It does not replace an independent audit, a certification decision or an assessment of all legal and regulatory obligations. A high score does not guarantee certification. Examples illustrate possible evidence and do not prescribe a mandatory document format.",
+  "questions": [
+    {
+      "id": "D01",
+      "section": "D",
+      "clause": "4.3",
+      "heading": "Have you documented what your information security management system covers?",
+      "description": [
+        "Identify the services, information, people, locations and technology within scope, including important interfaces and dependencies."
+      ],
+      "examples": [
+        "For example in the US: A software provider includes its hosted service, development team, support staff and dependence on a cloud provider.",
+        "For example in England: A consultancy covers client information handled in its office, by remote staff and through its document-sharing service."
+      ],
+      "condition": "Outsourcing a service does not automatically remove it from your security responsibilities.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D02",
+      "section": "D",
+      "clause": "5.2, 6.2",
+      "heading": "Do you have an approved information security policy and clear objectives?",
+      "description": [
+        "Set direction and commitments, then record objectives that can be monitored and assessed. Make them relevant to the business."
+      ],
+      "examples": [
+        "For example in the US: A service provider sets an objective to remove overdue privileged-access reviews and checks completion and findings.",
+        "For example in England: A professional firm sets objectives for timely access removal and tested recovery of client files."
+      ],
+      "condition": "Avoid treating the number of policies written as proof of effective security.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D03",
+      "section": "D",
+      "clause": "6.1.2",
+      "heading": "Is your information security risk assessment method documented?",
+      "description": [
+        "Define risk criteria, acceptance criteria and a consistent method for identifying, analysing and evaluating risks, with named risk owners."
+      ],
+      "examples": [
+        "For example in the US: A business assesses unauthorized access to customer records using a common likelihood and impact approach.",
+        "For example in England: A firm assesses loss of access to client files, their disclosure and unauthorised alteration using the same agreed criteria."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D04",
+      "section": "D",
+      "clause": "6.1.3",
+      "heading": "Have you documented how risks are treated and controls selected?",
+      "description": [
+        "Explain how you choose treatment options, determine necessary controls and compare them with Annex A so relevant controls are not overlooked."
+      ],
+      "examples": [
+        "For example in the US: A business records why it will reduce an account-takeover risk through stronger authentication and access controls.",
+        "For example in England: A firm records why a contractual safeguard is useful but insufficient without technical and operational protection."
+      ],
+      "condition": "Controls outside Annex A may also be necessary.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D05",
+      "section": "D",
+      "clause": "6.1.3 d)",
+      "heading": "Do you have a current Statement of Applicability?",
+      "description": [
+        "The SoA records necessary controls, reasons for inclusion, implementation status and justified exclusions from Annex A."
+      ],
+      "examples": [
+        "For example in the US: A cloud business records relevant supplier and cloud controls even though the infrastructure is operated externally.",
+        "For example in England: A consultancy explains its physical-security choices for leased premises rather than excluding them because it does not own the building."
+      ],
+      "condition": "Consider all 93 Annex A controls. A control is not inapplicable merely because it has not yet been implemented.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D06",
+      "section": "D",
+      "clause": "6.1.3 e)–f)",
+      "heading": "Is there an approved risk treatment plan and acceptance of residual risks?",
+      "description": [
+        "Set actions, owners and dates, and obtain risk-owner approval of the plan and remaining risks."
+      ],
+      "examples": [
+        "For example in the US: A service owner approves the treatment plan for legacy authentication and explicitly considers the remaining exposure.",
+        "For example in England: A director accepts a defined residual risk only after reviewing the proposed controls and consequences."
+      ],
+      "condition": "A completed action list is not a substitute for risk acceptance by the appropriate owner.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D07",
+      "section": "D",
+      "clause": "7.2",
+      "heading": "Can you demonstrate the competence of people whose work affects information security?",
+      "description": [
+        "Retain evidence of relevant knowledge and practical ability, including staff and contractors performing security tasks."
+      ],
+      "examples": [
+        "For example in the US: A business assesses whether administrators can securely configure and restore its systems, not just whether they attended training.",
+        "For example in England: A firm records practical incident-response exercise results for its designated coordinator."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D08",
+      "section": "D",
+      "clause": "7.5, 8.1",
+      "heading": "Are the documents and records needed to operate the security system available and controlled?",
+      "description": [
+        "Keep the mandatory information and the additional procedures and evidence needed for your own system to work."
+      ],
+      "examples": [
+        "For example in the US: A company links risk assessments, approvals and operating instructions in a controlled repository.",
+        "For example in England: A firm gives staff current reporting instructions while protecting sensitive incident records with restricted access."
+      ],
+      "condition": "Documents may be combined or electronic; a particular folder structure or manual title is not required.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D09",
+      "section": "D",
+      "clause": "8.2",
+      "heading": "Do you retain risk assessment results and updates after significant changes?",
+      "description": [
+        "Keep the assessed risks, owners and decisions, with reviews at planned intervals and when significant change is proposed or occurs."
+      ],
+      "examples": [
+        "For example in the US: A provider reassesses risk before moving customer data to a new hosting arrangement.",
+        "For example in England: A firm reviews risks when it introduces remote access for a new outsourced team."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D10",
+      "section": "D",
+      "clause": "8.3",
+      "heading": "Do records show that risk treatment actions have actually been carried out?",
+      "description": [
+        "Retain evidence of implemented treatment and the results, rather than marking actions complete without checking."
+      ],
+      "examples": [
+        "For example in the US: A business links a completed access-control action to the approved configuration and test results.",
+        "For example in England: A firm retains evidence that backup recovery was tested after changing its protection arrangements."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D11",
+      "section": "D",
+      "clause": "9.1",
+      "heading": "Do you keep results showing how the security system and controls perform?",
+      "description": [
+        "Define useful measures, responsibilities and evaluation methods, then retain the results and conclusions."
+      ],
+      "examples": [
+        "For example in the US: A company records failed recovery tests, overdue fixes and access-review findings, with action on trends.",
+        "For example in England: A firm checks whether staff report suspicious messages promptly and whether the response process works."
+      ],
+      "condition": "A low incident count alone does not establish that information is secure.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D12",
+      "section": "D",
+      "clause": "9.2",
+      "heading": "Do you have an internal audit programme and records of completed audits?",
+      "description": [
+        "Plan and perform objective audits against the standard and your own requirements, retaining evidence of implementation and results."
+      ],
+      "examples": [
+        "For example in the US: An auditor traces a sampled risk through the treatment plan, SoA and implemented controls.",
+        "For example in England: A firm audits the joiner and leaver process using actual cases, approvals and account records."
+      ],
+      "condition": "A vulnerability scan or penetration test alone is not a management-system audit.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D13",
+      "section": "D",
+      "clause": "9.3",
+      "heading": "Are management review conclusions and decisions recorded?",
+      "description": [
+        "Keep decisions about performance, risks, changes, resources and improvement, and follow up agreed action."
+      ],
+      "examples": [
+        "For example in the US: Management reviews unresolved supplier risks and approves resources for an alternative recovery arrangement.",
+        "For example in England: A firm's leadership reviews audit findings and assigns action on delayed access removal."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D14",
+      "section": "D",
+      "clause": "10.2",
+      "heading": "Do you retain records of nonconformities, corrective actions and effectiveness checks?",
+      "description": [
+        "Record the issue, immediate action, cause assessment and what shows recurrence has been prevented."
+      ],
+      "examples": [
+        "For example in the US: A business investigates repeated missed patch deadlines and verifies the revised ownership process.",
+        "For example in England: A firm records why a former contractor retained access and checks later leaver cases after the fix."
+      ],
+      "condition": "An incident may reveal a nonconformity, but the two terms are not interchangeable.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D15",
+      "section": "D",
+      "clause": "A.5.1, A.5.9–A.5.14, A.5.37",
+      "heading": "Do you have an information asset inventory and the operating rules needed for those assets?",
+      "description": [
+        "Identify relevant information and assets, owners, acceptable use, classification, labelling, transfer, return and documented operating procedures."
+      ],
+      "examples": [
+        "For example in the US: A business links customer datasets and laptops to owners and defines how confidential files may be shared.",
+        "For example in England: A firm records client case files, responsible partners and rules for labelling and transferring restricted documents."
+      ],
+      "condition": "Assess each referenced Annex A control separately through the SoA; one inventory does not satisfy every control in this group.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Assess each referenced Annex A control separately through the SoA; one inventory does not satisfy every control in this group. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D16",
+      "section": "D",
+      "clause": "A.5.15–A.5.23, A.6.2, A.6.6",
+      "heading": "Are access rules and personnel and supplier security obligations documented?",
+      "description": [
+        "Cover identities, access rights, authentication, employment and confidentiality commitments, supplier relationships and relevant cloud arrangements."
+      ],
+      "examples": [
+        "For example in the US: A provider records role-based access rules and security terms for a subcontractor handling customer data.",
+        "For example in England: A firm documents confidentiality obligations and the review and termination arrangements for its IT support supplier."
+      ],
+      "condition": "Include only lawful, appropriate obligations and checks, matched to the role and contract.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Include only lawful, appropriate obligations and checks, matched to the role and contract. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D17",
+      "section": "D",
+      "clause": "A.5.24–A.5.30",
+      "heading": "Are incident response and continuity arrangements documented and supported by evidence?",
+      "description": [
+        "Define preparation, assessment, response, learning and evidence handling, together with security during disruption and ICT readiness for continuity."
+      ],
+      "examples": [
+        "For example in the US: A company keeps an incident playbook, escalation contacts and results from a recovery exercise.",
+        "For example in England: A firm keeps alternative communication arrangements for a ransomware scenario and tested access to its response plan."
+      ],
+      "condition": "No past incident does not remove the need for readiness where the controls are applicable.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "No past incident does not remove the need for readiness where the controls are applicable. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D18",
+      "section": "D",
+      "clause": "A.5.31–A.5.34",
+      "heading": "Have you identified applicable legal, regulatory and contractual information requirements?",
+      "description": [
+        "Cover information protection, records, intellectual property, personal information and obligations to customers and other parties."
+      ],
+      "examples": [
+        "For example in the US: A business identifies relevant state and sector obligations and contractual notification requirements for the data it handles.",
+        "For example in England: A firm identifies applicable UK data protection duties and client confidentiality and retention commitments."
+      ],
+      "condition": "Do not assume a universal retention period or notification deadline; determine the rule and triggering conditions for your situation.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Do not assume a universal retention period or notification deadline; determine the rule and triggering conditions for your situation. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D19",
+      "section": "D",
+      "clause": "A.8.9, A.8.13, A.8.15, A.8.24–A.8.34",
+      "heading": "Do records demonstrate the technical controls selected in your SoA?",
+      "description": [
+        "Keep suitable configuration, backup, logging, cryptography, development, change and testing evidence for the controls you rely on."
+      ],
+      "examples": [
+        "For example in the US: A provider retains approved configurations, restore-test results and security acceptance evidence for a new application.",
+        "For example in England: A firm retains backup reports, change approvals and evidence that its outsourced developer addressed agreed security requirements."
+      ],
+      "condition": "Assess each control separately. Having no in-house development does not remove risks in purchased or outsourced software.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Assess each control separately. Having no in-house development does not remove risks in purchased or outsourced software. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P01",
+      "section": "P",
+      "clause": "4.1, 4.2, 4.4",
+      "heading": "Do you understand the information you protect and the consequences if something goes wrong?",
+      "description": [
+        "Consider confidentiality, integrity and availability, business context and relevant parties, then operate the system around those needs."
+      ],
+      "examples": [
+        "For example in the US: A payroll provider considers disclosure of employee data, unauthorized changes and inability to run payroll on time.",
+        "For example in England: A law firm considers client confidentiality, document accuracy and access to files before court deadlines."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P02",
+      "section": "P",
+      "clause": "4.1, 4.2, Amd 1:2024",
+      "heading": "Have you assessed whether climate change is relevant to information security?",
+      "description": [
+        "Consider physical and service dependencies and any relevant interested-party requirements, then reflect the conclusion in planning."
+      ],
+      "examples": [
+        "For example in the US: A business considers heat and storm exposure affecting its offices, power and connectivity providers.",
+        "For example in England: A firm considers flooding affecting access to premises and the availability of its communications service."
+      ],
+      "condition": "A justified finding of no relevance is possible; the assessment itself is still needed.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P03",
+      "section": "P",
+      "clause": "5.1–5.3, 7.1",
+      "heading": "Does management support information security with clear roles and resources?",
+      "description": [
+        "Check that leadership sets direction, assigns responsibilities and provides the time, funding and authority to act."
+      ],
+      "examples": [
+        "For example in the US: A service owner funds the replacement of an unsupported system after reviewing its risk.",
+        "For example in England: A firm's directors assign responsibility for access reviews and make time for staff to perform them."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P04",
+      "section": "P",
+      "clause": "6.1.1–6.1.3, 8.2",
+      "heading": "Are risks assessed consistently and reviewed when circumstances change?",
+      "description": [
+        "Use your documented criteria, involve the right owners and reassess at planned intervals and after significant changes."
+      ],
+      "examples": [
+        "For example in the US: A provider applies the same method when evaluating a new integration and reviewing an existing service.",
+        "For example in England: A firm reassesses exposure after a supplier changes how it stores or accesses client information."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P05",
+      "section": "P",
+      "clause": "6.1.3, 8.3",
+      "heading": "Do implemented controls match the risk treatment plan and SoA?",
+      "description": [
+        "Check implementation, ownership and results, including controls delivered by external providers."
+      ],
+      "examples": [
+        "For example in the US: A company verifies that the chosen authentication protection covers administrators as well as ordinary users.",
+        "For example in England: A firm checks that its supplier's recovery arrangement supports the risks and commitments recorded in its plan."
+      ],
+      "condition": "A control listed as implemented needs evidence; an intention to buy it is not implementation.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P06",
+      "section": "P",
+      "clause": "6.2, 6.3, 8.1",
+      "heading": "Are objectives, changes and outsourced processes actively managed?",
+      "description": [
+        "Plan objectives and changes, define operating criteria and control relevant external services so the system stays effective."
+      ],
+      "examples": [
+        "For example in the US: A provider reviews security impact and rollback arrangements before a major platform change.",
+        "For example in England: A firm checks security responsibilities and acceptance criteria before outsourcing document processing."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P07",
+      "section": "P",
+      "clause": "7.2–7.4",
+      "heading": "Do people understand their security responsibilities and how to report concerns?",
+      "description": [
+        "Provide appropriate competence, awareness and communication, including the consequences of failing to follow requirements."
+      ],
+      "examples": [
+        "For example in the US: An employee knows how to report a suspicious authentication prompt without approving it.",
+        "For example in England: A receptionist knows where to report a misdirected client document and whom to contact urgently."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P08",
+      "section": "P",
+      "clause": "7.5",
+      "heading": "Can staff use current security documents while sensitive records remain protected?",
+      "description": [
+        "Control versions, access, approval, retention and disposal of the information needed for the system."
+      ],
+      "examples": [
+        "For example in the US: Administrators can find the current incident procedure, while detailed investigation records are restricted.",
+        "For example in England: Staff can access the approved remote-working guidance without gaining access to confidential risk records."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P09",
+      "section": "P",
+      "clause": "9.1, 9.2",
+      "heading": "Do measures and audits reveal whether protection is effective?",
+      "description": [
+        "Evaluate meaningful results and use objective internal audits, rather than equating purchased tools with security."
+      ],
+      "examples": [
+        "For example in the US: A company checks how quickly critical alerts are assessed and samples whether the response followed the plan.",
+        "For example in England: An audit tests whether an access review actually removed inappropriate permissions."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P10",
+      "section": "P",
+      "clause": "9.3, 10.1, 10.2",
+      "heading": "Do review findings lead to lasting improvement?",
+      "description": [
+        "Address nonconformities and causes, verify effectiveness and use management review to improve the system."
+      ],
+      "examples": [
+        "For example in the US: After repeat configuration errors, a provider changes its approval and checking process and measures recurrence.",
+        "For example in England: A firm funds a reliable leaver workflow after reviews show repeated delays in account closure."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P11",
+      "section": "P",
+      "clause": "A.5.1–A.5.4",
+      "heading": "Are security policies followed, roles clear and conflicting duties separated?",
+      "description": [
+        "Make policies usable, assign responsibilities, separate incompatible activities where needed and ensure managers require compliance."
+      ],
+      "examples": [
+        "For example in the US: A business requires an independent approval for a sensitive production change rather than letting its author approve it alone.",
+        "For example in England: A firm separates payment-data changes from payment approval and checks management oversight."
+      ],
+      "condition": "Use the SoA to justify each control and any exclusion individually.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Use the SoA to justify each control and any exclusion individually. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P12",
+      "section": "P",
+      "clause": "A.5.5–A.5.7",
+      "heading": "Do you maintain useful external contacts and act on relevant threat information?",
+      "description": [
+        "Know which authorities and specialist groups to contact, and assess threat intelligence relevant to your technology and activities."
+      ],
+      "examples": [
+        "For example in the US: A business reviews relevant CISA alerts and assesses whether its deployed systems are affected.",
+        "For example in England: A firm uses relevant NCSC guidance and maintains contacts for its incident-response provider and appropriate authorities."
+      ],
+      "condition": "Receiving a newsletter is not enough unless relevant information is assessed and acted on.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Receiving a newsletter is not enough unless relevant information is assessed and acted on. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P13",
+      "section": "P",
+      "clause": "A.5.8",
+      "heading": "Is information security considered from the start of projects?",
+      "description": [
+        "Include security requirements, risks and responsibilities in project planning and delivery, not just a final check."
+      ],
+      "examples": [
+        "For example in the US: A company reviews access, data flows and supplier responsibilities before launching a customer portal.",
+        "For example in England: A firm includes confidentiality and retention requirements when selecting a case-management system."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P14",
+      "section": "P",
+      "clause": "A.5.9–A.5.11",
+      "heading": "Are assets owned, used appropriately and returned when required?",
+      "description": [
+        "Maintain ownership and acceptable-use controls, and recover assets when roles or relationships end."
+      ],
+      "examples": [
+        "For example in the US: A business retrieves a contractor's laptop and checks access and locally held data when the assignment ends.",
+        "For example in England: A firm identifies who owns a client dataset and checks that shared devices are used only for approved work."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P15",
+      "section": "P",
+      "clause": "A.5.12–A.5.14",
+      "heading": "Do people classify, label and transfer information according to its sensitivity?",
+      "description": [
+        "Use practical categories and handling rules, including approved transfer methods and agreements where needed."
+      ],
+      "examples": [
+        "For example in the US: A provider labels restricted customer exports and shares them through an approved access-controlled channel.",
+        "For example in England: A firm uses its confidential classification to determine email, printing and external-sharing controls."
+      ],
+      "condition": "A label alone does not protect the information; the handling rules must be followed.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "A label alone does not protect the information; the handling rules must be followed. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P16",
+      "section": "P",
+      "clause": "A.5.15–A.5.18",
+      "heading": "Are identities and access rights granted, reviewed and removed through a controlled process?",
+      "description": [
+        "Limit access to legitimate needs, protect authentication information and review changes, including role moves and departures."
+      ],
+      "examples": [
+        "For example in the US: A business removes privileged access after a support assignment ends and retains the approval history.",
+        "For example in England: A firm reviews shared-folder permissions when a solicitor moves to another team."
+      ],
+      "condition": "Include service and system accounts where relevant, not only named employees.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Include service and system accounts where relevant, not only named employees. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P17",
+      "section": "P",
+      "clause": "A.5.19–A.5.22",
+      "heading": "Do you manage security risks throughout supplier relationships?",
+      "description": [
+        "Assess requirements, agreements, ICT supply chains, monitoring and changes, including relevant subcontractors."
+      ],
+      "examples": [
+        "For example in the US: A provider checks which subprocessor can access customer data and how changes will be notified.",
+        "For example in England: A firm reviews an IT supplier's performance and unresolved security findings before extending the contract."
+      ],
+      "condition": "A certificate or assurance report is evidence to assess, not a complete substitute for your own requirements.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "A certificate or assurance report is evidence to assess, not a complete substitute for your own requirements. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P18",
+      "section": "P",
+      "clause": "A.5.23",
+      "heading": "Do you manage cloud security from selection through to exit?",
+      "description": [
+        "Define shared responsibilities, configuration, monitoring, access, data handling and termination arrangements."
+      ],
+      "examples": [
+        "For example in the US: A business checks who protects backups and how customer data can be exported when leaving a cloud service.",
+        "For example in England: A firm tests the offboarding process before relying on a cloud document repository as its only working copy."
+      ],
+      "condition": "Apply where cloud services are used or planned and record the applicability decision in the SoA.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Apply where cloud services are used or planned and record the applicability decision in the SoA. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P19",
+      "section": "P",
+      "clause": "A.5.24–A.5.28",
+      "heading": "Can you recognise, assess and respond to incidents while preserving needed evidence?",
+      "description": [
+        "Prepare roles and procedures, distinguish events from incidents, respond, learn lessons and handle evidence appropriately."
+      ],
+      "examples": [
+        "For example in the US: A provider exercises account compromise, including triage, containment and preservation of relevant logs.",
+        "For example in England: A firm exercises a misdirected confidential document and checks escalation, evidence and communication decisions."
+      ],
+      "condition": "No incidents this year does not justify excluding preparation.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "No incidents this year does not justify excluding preparation. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P20",
+      "section": "P",
+      "clause": "A.5.29, A.5.30",
+      "heading": "Is essential information protection maintained during disruption and recovery?",
+      "description": [
+        "Plan security in degraded operations and ensure ICT continuity arrangements support business needs."
+      ],
+      "examples": [
+        "For example in the US: A company checks that emergency access is authorized and logged during recovery rather than leaving permanent privileged accounts.",
+        "For example in England: A firm verifies that its fallback file-sharing process still restricts access to the intended people."
+      ],
+      "condition": "Availability achieved by removing necessary protection is not a complete recovery solution.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Availability achieved by removing necessary protection is not a complete recovery solution. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P21",
+      "section": "P",
+      "clause": "A.5.31–A.5.34",
+      "heading": "Do you meet applicable obligations for personal information, records and intellectual property?",
+      "description": [
+        "Implement the requirements you identified, including licence terms, protection and retention of records and privacy obligations."
+      ],
+      "examples": [
+        "For example in the US: A business applies the relevant customer contract and state or sector obligations when handling a data incident.",
+        "For example in England: A firm assesses a personal data breach against applicable UK notification rules and records the decision."
+      ],
+      "condition": "Use the applicable legal and contractual triggers; do not treat ISO certification as proof that every duty is met.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Use the applicable legal and contractual triggers; do not treat ISO certification as proof that every duty is met. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P22",
+      "section": "P",
+      "clause": "A.5.35–A.5.37",
+      "heading": "Are security arrangements independently reviewed and operating procedures followed?",
+      "description": [
+        "Arrange appropriate independent reviews, check compliance with policies and standards, and maintain documented operating procedures."
+      ],
+      "examples": [
+        "For example in the US: A business commissions a review independent of the team responsible for the assessed control.",
+        "For example in England: A firm samples whether administrators followed the approved backup and change procedures."
+      ],
+      "condition": "Independence can be achieved in different ways; the scope must fit the review purpose.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Independence can be achieved in different ways; the scope must fit the review purpose. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P23",
+      "section": "P",
+      "clause": "A.6.1, A.6.2, A.6.4–A.6.6",
+      "heading": "Is security addressed when people join, change roles and leave?",
+      "description": [
+        "Use lawful screening, clear terms, confidentiality commitments, a fair disciplinary process and controls for changes and termination."
+      ],
+      "examples": [
+        "For example in the US: A business uses role-appropriate screening and updates access and ongoing confidentiality obligations when a contractor leaves.",
+        "For example in England: A firm checks which employment screening is lawful and proportionate, then removes access promptly at departure."
+      ],
+      "condition": "Do not assume that a particular criminal-record check is lawful or appropriate for every role.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Do not assume that a particular criminal-record check is lawful or appropriate for every role. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P24",
+      "section": "P",
+      "clause": "A.6.3, A.6.7, A.6.8",
+      "heading": "Can staff work securely on site and remotely and report security events?",
+      "description": [
+        "Provide practical awareness and training, secure remote-work arrangements and a clear reporting route."
+      ],
+      "examples": [
+        "For example in the US: A remote employee recognizes a fraudulent support request and reports it through a known channel.",
+        "For example in England: A mobile employee protects client information while travelling and reports a lost device promptly."
+      ],
+      "condition": "Assess remote-work controls where such work occurs; security awareness and event reporting still matter elsewhere.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Assess remote-work controls where such work occurs; security awareness and event reporting still matter elsewhere. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P25",
+      "section": "P",
+      "clause": "A.7.1–A.7.4, A.7.6",
+      "heading": "Are premises and secure areas protected against unauthorised access?",
+      "description": [
+        "Use appropriate boundaries, entry controls, monitoring and rules for work in secure areas."
+      ],
+      "examples": [
+        "For example in the US: A business controls visitor access to its equipment room and reviews entry records where appropriate.",
+        "For example in England: A firm agrees building access responsibilities with its landlord and controls access to its own records room."
+      ],
+      "condition": "Leased premises still need a risk-based assessment of your responsibilities and dependencies.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Leased premises still need a risk-based assessment of your responsibilities and dependencies. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P26",
+      "section": "P",
+      "clause": "A.7.5, A.7.8, A.7.11–A.7.13",
+      "heading": "Are equipment and supporting facilities protected against physical threats and failure?",
+      "description": [
+        "Consider location, environmental hazards, utilities, cabling and maintenance, including risks to information availability and integrity."
+      ],
+      "examples": [
+        "For example in the US: A business protects network equipment from water damage and checks its supporting power arrangements.",
+        "For example in England: A firm controls maintenance access and protects communications cabling in shared premises."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P27",
+      "section": "P",
+      "clause": "A.7.7, A.7.9, A.7.10, A.7.14",
+      "heading": "Is information protected on desks, off site and when media are reused or disposed of?",
+      "description": [
+        "Use appropriate clear-desk and clear-screen practices, off-site equipment protection and secure media handling and disposal."
+      ],
+      "examples": [
+        "For example in the US: A business verifies that retired drives are securely erased or destroyed before equipment leaves its control.",
+        "For example in England: A firm locks confidential paper files away and checks that an engineer's off-site laptop remains protected."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P28",
+      "section": "P",
+      "clause": "A.8.1",
+      "heading": "Are the devices people use to access information appropriately secured?",
+      "description": [
+        "Apply controls suited to laptops, phones and other endpoints, including configuration, access and loss scenarios."
+      ],
+      "examples": [
+        "For example in the US: A business manages work laptops so security settings and protective software remain current.",
+        "For example in England: A firm defines which personal devices may access client systems and how their use is controlled."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P29",
+      "section": "P",
+      "clause": "A.8.2–A.8.5",
+      "heading": "Are privileged access, sensitive information access, authentication and source code access controlled?",
+      "description": [
+        "Restrict powerful permissions and sensitive access, use suitable authentication and protect source code where relevant."
+      ],
+      "examples": [
+        "For example in the US: A provider separates administrator accounts from everyday use and restricts production source repositories.",
+        "For example in England: A firm limits administrator access at its outsourced IT provider and checks authentication arrangements."
+      ],
+      "condition": "Assess each control separately; no software development may affect source-code control applicability, not every control in this group.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Assess each control separately; no software development may affect source-code control applicability, not every control in this group. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P30",
+      "section": "P",
+      "clause": "A.8.6, A.8.14",
+      "heading": "Do systems have the capacity and redundancy needed for required availability?",
+      "description": [
+        "Plan and monitor capacity and provide redundancy where required by risks and business needs."
+      ],
+      "examples": [
+        "For example in the US: A provider load-tests expected demand and verifies that failover capacity can support the agreed service.",
+        "For example in England: A firm tests whether its alternative internet connection can support priority staff during an outage."
+      ],
+      "condition": "Two systems sharing the same critical dependency may not provide the resilience assumed.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Two systems sharing the same critical dependency may not provide the resilience assumed. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P31",
+      "section": "P",
+      "clause": "A.8.7–A.8.9",
+      "heading": "Are malware protection, vulnerability management and secure configuration working?",
+      "description": [
+        "Maintain appropriate protection, assess and address vulnerabilities, and control configuration through the system lifecycle."
+      ],
+      "examples": [
+        "For example in the US: A company prioritizes an actively exploited weakness affecting an internet-facing service and verifies the fix.",
+        "For example in England: A firm checks that newly supplied laptops follow the approved configuration and receive security updates."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P32",
+      "section": "P",
+      "clause": "A.8.10–A.8.12",
+      "heading": "Do you remove unneeded information and limit unnecessary disclosure?",
+      "description": [
+        "Apply appropriate deletion, masking and data-leakage controls based on purpose, retention obligations and risk."
+      ],
+      "examples": [
+        "For example in the US: A provider uses suitably masked data for support analysis and controls exports of customer information.",
+        "For example in England: A firm securely deletes expired records after checking retention and legal-hold requirements."
+      ],
+      "condition": "Masking does not automatically make data anonymous or remove all privacy obligations.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Masking does not automatically make data anonymous or remove all privacy obligations. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P33",
+      "section": "P",
+      "clause": "A.8.13",
+      "heading": "Have you proved that backups can restore the information you need?",
+      "description": [
+        "Protect backups and test recovery against business requirements, including completeness and usability."
+      ],
+      "examples": [
+        "For example in the US: A company restores a customer dataset in a controlled test and checks the recovered data against its recovery objective.",
+        "For example in England: A firm tests recovery of a project folder rather than accepting a successful backup email as proof."
+      ],
+      "condition": "A backup that cannot be restored does not provide the intended protection.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "A backup that cannot be restored does not provide the intended protection. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P34",
+      "section": "P",
+      "clause": "A.8.15–A.8.17",
+      "heading": "Do logs, monitoring and accurate timestamps help detect and investigate unusual activity?",
+      "description": [
+        "Collect and protect useful logs, monitor relevant behaviour and synchronise clocks so events can be correlated."
+      ],
+      "examples": [
+        "For example in the US: A provider investigates an unusual privileged login using protected logs from systems with consistent time settings.",
+        "For example in England: A firm checks that alerts reach a responsible person and are reviewed, not simply stored indefinitely."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P35",
+      "section": "P",
+      "clause": "A.8.18, A.8.19",
+      "heading": "Are software installation and powerful utility tools controlled?",
+      "description": [
+        "Restrict installation and the use of tools that can bypass normal controls, with appropriate authorisation and oversight."
+      ],
+      "examples": [
+        "For example in the US: A company limits the use of administrative utilities on production servers and records approved exceptions.",
+        "For example in England: A firm prevents unapproved remote-access software from being installed on staff laptops."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P36",
+      "section": "P",
+      "clause": "A.8.20–A.8.23",
+      "heading": "Are networks, network services and access to external content appropriately protected?",
+      "description": [
+        "Define network security, secure services, segregation and web-filtering controls suited to the risks."
+      ],
+      "examples": [
+        "For example in the US: A business separates guest wireless access from systems holding customer information.",
+        "For example in England: A firm checks the security responsibilities of its managed network service and restricts access to known harmful sites."
+      ],
+      "condition": "The standard does not prescribe a particular vendor or one universal network design.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "The standard does not prescribe a particular vendor or one universal network design. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P37",
+      "section": "P",
+      "clause": "A.8.24",
+      "heading": "Is cryptography used appropriately, with keys managed throughout their lifecycle?",
+      "description": [
+        "Define when encryption is needed and how keys are created, protected, used, recovered and retired."
+      ],
+      "examples": [
+        "For example in the US: A provider restricts access to encryption keys separately from access to stored customer data.",
+        "For example in England: A firm protects encrypted laptops and tests whether authorised recovery is possible after a staff departure."
+      ],
+      "condition": "Consider applicable legal and contractual obligations; encryption alone does not secure every part of a process.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Consider applicable legal and contractual obligations; encryption alone does not secure every part of a process. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P38",
+      "section": "P",
+      "clause": "A.8.25–A.8.28",
+      "heading": "Are security requirements built into software and system development or acquisition?",
+      "description": [
+        "Use a secure development lifecycle, application requirements, architecture principles and secure coding appropriate to the work."
+      ],
+      "examples": [
+        "For example in the US: A software business includes access-control requirements and secure-code review in its development workflow.",
+        "For example in England: A firm buying a case-management tool sets security requirements and assesses the proposed design before acceptance."
+      ],
+      "condition": "Assess the controls individually; purchased software still needs security requirements even without in-house coding.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Assess the controls individually; purchased software still needs security requirements even without in-house coding. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P39",
+      "section": "P",
+      "clause": "A.8.29, A.8.30",
+      "heading": "Is development security tested and outsourced development controlled?",
+      "description": [
+        "Plan security testing during development and acceptance, and oversee external developers against agreed requirements."
+      ],
+      "examples": [
+        "For example in the US: A provider tests security-relevant acceptance criteria before releasing a new customer-facing feature.",
+        "For example in England: A firm requires its developer to fix and retest agreed security findings before accepting a portal."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P40",
+      "section": "P",
+      "clause": "A.8.31–A.8.33",
+      "heading": "Are development and test environments separated from production, with controlled changes and test data?",
+      "description": [
+        "Prevent unsafe changes or unnecessary exposure of live information while supporting reliable testing and release."
+      ],
+      "examples": [
+        "For example in the US: A provider uses approved deployment changes and avoids copying unprotected customer data into a test environment.",
+        "For example in England: A firm tests a supplier's system update with suitable test data and a documented rollback arrangement."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P41",
+      "section": "P",
+      "clause": "A.8.34",
+      "heading": "Are tests of live systems agreed and controlled to protect operations and information?",
+      "description": [
+        "Define scope, timing, authorisation, access and safeguards before audit or assurance testing on operational systems."
+      ],
+      "examples": [
+        "For example in the US: A company agrees test boundaries and monitoring before a penetration test of its live service.",
+        "For example in England: A firm coordinates an auditor's technical checks with its IT provider and protects any data collected as evidence."
+      ],
+      "condition": "Testing should not create uncontrolled disruption or access to information beyond the agreed scope.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Testing should not create uncontrolled disruption or access to information beyond the agreed scope. Every Annex A control grouped in this question must be individually justified as excluded in the Statement of Applicability. If any is applicable, assess its implementation instead."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    }
+  ],
+  "guidance": {
+    "instructions": [
+      "Start with D01 to D19 for documents and records, then P01 to P41 for working practices. Each question includes a plain explanation and two illustrative examples, one in the US and one in England. Use the example to understand the requirement, not as a mandatory template.",
+      "Documents: Available means the necessary information is current and can be shown. Not available means it is missing or does not provide the evidence needed. Use Not sure when you need to check. Record gaps in incomplete documents.",
+      "Working practices: Yes means the requirement is implemented and supported by evidence. Partly means there are gaps. No means it is not implemented. Use Not sure when you need to check.",
+      "Use Not applicable only where justified and permitted. For an event-dependent record, use No events if appropriate; readiness still needs assessment. For grouped requirements, assess each applicable part before answering Yes.",
+      "Use existing contracts, procedures, system records and work evidence. Record each gap, the action, an owner and a due date. This self-check supports preparation and improvement; it is not a certification decision or a complete legal compliance assessment.",
+      "For D15 to D19 and P11 to P41, assess every referenced Annex A control separately through the Statement of Applicability. All 93 controls must be considered; the grouped questions do not make every control automatically mandatory or permit unsupported exclusions.",
+      "Reference edition: ISO/IEC 27001:2022 with Amendment 1:2024. England examples use relevant England, Great Britain or UK requirements according to their scope; they should not be assumed to cover every UK jurisdiction."
+    ],
+    "sections": [
+      {
+        "heading": "Terms in plain English",
+        "paragraphs": [
+          "ISMS: Information security management system.",
+          "Confidentiality: Information is accessible only to those who are authorised.",
+          "Integrity: Information remains accurate and protected from improper alteration.",
+          "Availability: Authorised users can obtain information and services when required.",
+          "Risk owner: The person with responsibility and authority for a particular risk.",
+          "Residual risk: Risk remaining after treatment.",
+          "Statement of Applicability or SoA: The record of necessary controls, inclusion reasons, implementation status and justified Annex A exclusions.",
+          "Security event: An observed occurrence that may indicate a security issue.",
+          "Security incident: An event or set of events assessed as threatening security and requiring incident handling.",
+          "MFA: Multi-factor authentication, using more than one type of authentication factor."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Applying this in the US and England",
+        "paragraphs": [
+          "US: Identify information obligations from the relevant states, sectors and contracts rather than assuming one rule covers every US business. NIST guidance can support risk management, but using it does not itself establish conformity with ISO/IEC 27001.",
+          "England: Assess applicable UK data protection and other obligations for the information you handle. Use current ICO guidance when deciding how to protect personal data and whether a breach requires notification. NCSC guidance can support practical controls. Certification does not by itself demonstrate compliance with all privacy or contractual duties.",
+          "The standard provides the management-system requirements. Local rules and contractual obligations apply according to your activities, role and market. The examples do not set universal legal deadlines, target values, document names or technical solutions."
+        ],
+        "links": [
+          {
+            "label": "NIST guidance for small businesses",
+            "url": "https://www.nist.gov/itl/smallbusinesscyber/nist-cybersecurity-framework-0"
+          },
+          {
+            "label": "ICO data security guidance",
+            "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/security/a-guide-to-data-security/"
+          },
+          {
+            "label": "ICO personal data breach guidance",
+            "url": "https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/personal-data-breaches-a-guide/"
+          },
+          {
+            "label": "NCSC small organisations guide",
+            "url": "https://www.ncsc.gov.uk/collection/small-organisations-guide-to-cyber-security"
+          }
+        ]
+      },
+      {
+        "heading": "Standard and further information",
+        "paragraphs": [
+          "Use the stated edition when following clause references. The questions and explanations are practical paraphrases, not quotations from the standard. Regional sources were reviewed on 29 and 30 October 2026."
+        ],
+        "links": [
+          {
+            "label": "ISO/IEC 27001:2022 with Amendment 1:2024 on the ISO website",
+            "url": "https://www.iso.org/standard/27001"
+          },
+          {
+            "label": "Audit Advisor information for ISO/IEC 27001",
+            "url": "https://audit-advisor.com/uk/iso-27001-certification"
+          }
+        ]
+      }
+    ]
+  }
+}

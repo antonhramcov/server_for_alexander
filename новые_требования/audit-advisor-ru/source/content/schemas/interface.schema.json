@@ -1,0 +1,919 @@
+{
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "locale",
+    "welcome",
+    "stages",
+    "navigation",
+    "question",
+    "answerPresets",
+    "feedback",
+    "milestones",
+    "plan",
+    "loading",
+    "storage",
+    "results",
+    "seo",
+    "selection",
+    "transition",
+    "assessment",
+    "answerStatuses",
+    "export",
+    "metadata",
+    "accessibility"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "locale": {
+      "type": "string"
+    },
+    "welcome": {
+      "type": "object",
+      "required": [
+        "heading",
+        "description",
+        "selectionLabel",
+        "selectionPlaceholder",
+        "selectionHint"
+      ],
+      "properties": {
+        "heading": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "selectionLabel": {
+          "type": "string"
+        },
+        "selectionPlaceholder": {
+          "type": "string"
+        },
+        "selectionHint": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "stages": {
+      "type": "object",
+      "required": [
+        "two",
+        "many",
+        "questionCount",
+        "sections"
+      ],
+      "properties": {
+        "two": {
+          "type": "string"
+        },
+        "many": {
+          "type": "string"
+        },
+        "questionCount": {
+          "type": "string"
+        },
+        "sections": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "summaryTitle",
+              "description",
+              "share"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "summaryTitle": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "share": {
+                "type": "number"
+              },
+              "intro": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "navigation": {
+      "type": "object",
+      "required": [
+        "start",
+        "next",
+        "back",
+        "finish",
+        "returnToResults",
+        "reset",
+        "repeat",
+        "review",
+        "editAnswer",
+        "continueSection",
+        "transitionBack"
+      ],
+      "properties": {
+        "start": {
+          "type": "string"
+        },
+        "next": {
+          "type": "string"
+        },
+        "back": {
+          "type": "string"
+        },
+        "finish": {
+          "type": "string"
+        },
+        "returnToResults": {
+          "type": "string"
+        },
+        "reset": {
+          "type": "string"
+        },
+        "repeat": {
+          "type": "string"
+        },
+        "review": {
+          "type": "string"
+        },
+        "editAnswer": {
+          "type": "string"
+        },
+        "continueSection": {
+          "type": "string"
+        },
+        "transitionBack": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "metadataLabel",
+        "section",
+        "progress",
+        "progressLabel",
+        "position",
+        "remaining",
+        "examplesHeading",
+        "chooseOne",
+        "notApplicableHeading",
+        "noEventsHeading",
+        "conditionHeading",
+        "unanswered",
+        "navigationLabel",
+        "progressHint",
+        "announcement"
+      ],
+      "properties": {
+        "metadataLabel": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "progress": {
+          "type": "string"
+        },
+        "progressLabel": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        },
+        "remaining": {
+          "type": "string"
+        },
+        "examplesHeading": {
+          "type": "string"
+        },
+        "chooseOne": {
+          "type": "string"
+        },
+        "notApplicableHeading": {
+          "type": "string"
+        },
+        "noEventsHeading": {
+          "type": "string"
+        },
+        "conditionHeading": {
+          "type": "string"
+        },
+        "unanswered": {
+          "type": "string"
+        },
+        "navigationLabel": {
+          "type": "string"
+        },
+        "progressHint": {
+          "type": "string"
+        },
+        "announcement": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "answerPresets": {
+      "type": "object",
+      "required": [
+        "documents",
+        "practice"
+      ],
+      "properties": {
+        "documents": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "value",
+              "label",
+              "description"
+            ],
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "practice": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "value",
+              "label",
+              "description"
+            ],
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "feedback": {
+      "type": "object",
+      "required": [
+        "yes",
+        "no",
+        "partial",
+        "na",
+        "no_events"
+      ],
+      "properties": {
+        "yes": {
+          "type": "string"
+        },
+        "no": {
+          "type": "string"
+        },
+        "partial": {
+          "type": "string"
+        },
+        "na": {
+          "type": "string"
+        },
+        "no_events": {
+          "type": "string"
+        },
+        "unsure": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "milestones": {
+      "type": "object",
+      "required": [
+        "25",
+        "50",
+        "75"
+      ],
+      "properties": {
+        "25": {
+          "type": "string"
+        },
+        "50": {
+          "type": "string"
+        },
+        "75": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "plan": {
+      "type": "object",
+      "required": [
+        "whenNoPrefix",
+        "whenPartialPrefix",
+        "confirmationHeading",
+        "positiveDocument",
+        "positivePractice"
+      ],
+      "properties": {
+        "whenNoPrefix": {
+          "type": "string"
+        },
+        "whenPartialPrefix": {
+          "type": "string"
+        },
+        "confirmationHeading": {
+          "type": "string"
+        },
+        "positiveDocument": {
+          "type": "string"
+        },
+        "positivePractice": {
+          "type": "string"
+        },
+        "whenUnsurePrefix": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "loading": {
+      "type": "object",
+      "required": [
+        "program",
+        "standard",
+        "retry",
+        "programError",
+        "standardError",
+        "setupRequired",
+        "unsupported"
+      ],
+      "properties": {
+        "program": {
+          "type": "string"
+        },
+        "standard": {
+          "type": "string"
+        },
+        "retry": {
+          "type": "string"
+        },
+        "programError": {
+          "type": "string"
+        },
+        "standardError": {
+          "type": "string"
+        },
+        "setupRequired": {
+          "type": "string"
+        },
+        "unsupported": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "storage": {
+      "type": "object",
+      "required": [
+        "unavailable",
+        "version",
+        "damaged",
+        "migrated",
+        "resumeComplete",
+        "resumePartial",
+        "openResults",
+        "resume",
+        "resetPrompt",
+        "resetFailure",
+        "resetAnnouncement"
+      ],
+      "properties": {
+        "unavailable": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "damaged": {
+          "type": "string"
+        },
+        "migrated": {
+          "type": "string"
+        },
+        "resumeComplete": {
+          "type": "string"
+        },
+        "resumePartial": {
+          "type": "string"
+        },
+        "openResults": {
+          "type": "string"
+        },
+        "resume": {
+          "type": "string"
+        },
+        "resetPrompt": {
+          "type": "string"
+        },
+        "resetFailure": {
+          "type": "string"
+        },
+        "resetAnnouncement": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "results": {
+      "type": "object",
+      "required": [
+        "reportHeading",
+        "completed",
+        "readinessHeading",
+        "gapsHeading",
+        "firstHeading",
+        "applicabilityHeading",
+        "strengthsHeading",
+        "attentionHeading",
+        "planHeading",
+        "excludedHeading",
+        "limitationsHeading",
+        "save",
+        "copy",
+        "serviceHeading",
+        "serviceDescription",
+        "serviceButton",
+        "chatHeading",
+        "chatDescription",
+        "chatButton",
+        "gapsDescription",
+        "applicabilityDescription",
+        "strengthsIntro",
+        "moreStrengths",
+        "noStrengths",
+        "attentionIntro",
+        "noGaps",
+        "planCount",
+        "planDescription",
+        "allYesHeading",
+        "allYesDescription",
+        "exclusionsDescription",
+        "printHint",
+        "notCalculated",
+        "announcement"
+      ],
+      "properties": {
+        "reportHeading": {
+          "type": "string"
+        },
+        "completed": {
+          "type": "string"
+        },
+        "readinessHeading": {
+          "type": "string"
+        },
+        "gapsHeading": {
+          "type": "string"
+        },
+        "firstHeading": {
+          "type": "string"
+        },
+        "applicabilityHeading": {
+          "type": "string"
+        },
+        "strengthsHeading": {
+          "type": "string"
+        },
+        "attentionHeading": {
+          "type": "string"
+        },
+        "planHeading": {
+          "type": "string"
+        },
+        "excludedHeading": {
+          "type": "string"
+        },
+        "limitationsHeading": {
+          "type": "string"
+        },
+        "save": {
+          "type": "string"
+        },
+        "copy": {
+          "type": "string"
+        },
+        "serviceHeading": {
+          "type": "string"
+        },
+        "serviceDescription": {
+          "type": "string"
+        },
+        "serviceButton": {
+          "type": "string"
+        },
+        "chatHeading": {
+          "type": "string"
+        },
+        "chatDescription": {
+          "type": "string"
+        },
+        "chatButton": {
+          "type": "string"
+        },
+        "gapsDescription": {
+          "type": "string"
+        },
+        "applicabilityDescription": {
+          "type": "string"
+        },
+        "strengthsIntro": {
+          "type": "string"
+        },
+        "moreStrengths": {
+          "type": "string"
+        },
+        "noStrengths": {
+          "type": "string"
+        },
+        "attentionIntro": {
+          "type": "string"
+        },
+        "noGaps": {
+          "type": "string"
+        },
+        "planCount": {
+          "type": "string"
+        },
+        "planDescription": {
+          "type": "string"
+        },
+        "allYesHeading": {
+          "type": "string"
+        },
+        "allYesDescription": {
+          "type": "string"
+        },
+        "exclusionsDescription": {
+          "type": "string"
+        },
+        "printHint": {
+          "type": "string"
+        },
+        "notCalculated": {
+          "type": "string"
+        },
+        "announcement": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "seo": {
+      "type": "object",
+      "required": [
+        "title",
+        "description"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "selection": {
+      "type": "object",
+      "required": [
+        "summary",
+        "planned"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "planned": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "transition": {
+      "type": "object",
+      "required": [
+        "count",
+        "heading",
+        "description",
+        "announcement"
+      ],
+      "properties": {
+        "count": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "announcement": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "assessment": {
+      "type": "object",
+      "required": [
+        "noDataHeading",
+        "noDataDescription",
+        "closingHigh",
+        "closingOther",
+        "method",
+        "levels"
+      ],
+      "properties": {
+        "noDataHeading": {
+          "type": "string"
+        },
+        "noDataDescription": {
+          "type": "string"
+        },
+        "closingHigh": {
+          "type": "string"
+        },
+        "closingOther": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "levels": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "min",
+              "title",
+              "text"
+            ],
+            "properties": {
+              "min": {
+                "type": "number"
+              },
+              "title": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "answerStatuses": {
+      "type": "object",
+      "required": [
+        "documents",
+        "practice",
+        "na",
+        "no_events"
+      ],
+      "properties": {
+        "documents": {
+          "type": "object",
+          "required": [
+            "yes",
+            "no"
+          ],
+          "properties": {
+            "yes": {
+              "type": "string"
+            },
+            "no": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "practice": {
+          "type": "object",
+          "required": [
+            "yes",
+            "partial",
+            "no"
+          ],
+          "properties": {
+            "yes": {
+              "type": "string"
+            },
+            "partial": {
+              "type": "string"
+            },
+            "no": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "na": {
+          "type": "string"
+        },
+        "no_events": {
+          "type": "string"
+        },
+        "unsure": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "export": {
+      "type": "object",
+      "required": [
+        "date",
+        "readiness",
+        "notCalculated",
+        "dateAssessment",
+        "version",
+        "boundaries",
+        "condition",
+        "noStrengths",
+        "gapCount",
+        "noGaps",
+        "noPlan",
+        "conflict",
+        "printFrame",
+        "printSuccess",
+        "printError",
+        "copySuccess",
+        "copySuccessFallback",
+        "copyManual"
+      ],
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "readiness": {
+          "type": "string"
+        },
+        "notCalculated": {
+          "type": "string"
+        },
+        "dateAssessment": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "boundaries": {
+          "type": "string"
+        },
+        "condition": {
+          "type": "string"
+        },
+        "noStrengths": {
+          "type": "string"
+        },
+        "gapCount": {
+          "type": "string"
+        },
+        "noGaps": {
+          "type": "string"
+        },
+        "noPlan": {
+          "type": "string"
+        },
+        "conflict": {
+          "type": "string"
+        },
+        "printFrame": {
+          "type": "string"
+        },
+        "printSuccess": {
+          "type": "string"
+        },
+        "printError": {
+          "type": "string"
+        },
+        "copySuccess": {
+          "type": "string"
+        },
+        "copySuccessFallback": {
+          "type": "string"
+        },
+        "copyManual": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "section",
+        "annex",
+        "general",
+        "clause",
+        "firstPriority",
+        "nextPriority",
+        "guidanceHeading"
+      ],
+      "properties": {
+        "section": {
+          "type": "string"
+        },
+        "annex": {
+          "type": "string"
+        },
+        "general": {
+          "type": "string"
+        },
+        "clause": {
+          "type": "string"
+        },
+        "firstPriority": {
+          "type": "string"
+        },
+        "nextPriority": {
+          "type": "string"
+        },
+        "guidanceHeading": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "accessibility": {
+      "type": "object",
+      "required": [
+        "toolLabel",
+        "copyFallback",
+        "noScript"
+      ],
+      "properties": {
+        "toolLabel": {
+          "type": "string"
+        },
+        "copyFallback": {
+          "type": "string"
+        },
+        "noScript": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Audit Advisor interface copy",
+  "description": "Edit text values; preserve keys, answer values and template placeholders."
+}

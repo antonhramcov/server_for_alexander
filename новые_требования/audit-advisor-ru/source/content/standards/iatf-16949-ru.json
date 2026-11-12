@@ -1,0 +1,1968 @@
+{
+  "$schema": "../schemas/standard.schema.json",
+  "schemaVersion": 1,
+  "id": "iatf-16949-ru",
+  "answerVersion": "2026.3.0",
+  "contentRevision": "2026-10-29.2",
+  "source": {
+    "file": "06_16949_questionnaire_2026-10-29.docx",
+    "snapshotDirectory": "sources/2026-10-29-questionnaires",
+    "sha256": "8ee54c59bdd731027c6f69efea449a43f664e9c9d37e76f6bd87e7066291cab2",
+    "revisionDate": "2026-10-29"
+  },
+  "standard": {
+    "label": "IATF 16949:2016",
+    "basis": "IATF 16949:2016 совместно с ISO 9001:2015",
+    "note": "Основа вопросника: IATF 16949:2016 совместно с ISO 9001:2015. Вопросы перенесены из предоставленного вопросника от 29 октября 2026 года. Исходный русский чек-лист расширен до вопросов о документах и реальной работе. Полного текста IATF 16949 в предоставленной папке нет. Ключевые различия проверены по официальным материалам IATF; для окончательной постатейной проверки нужны полный стандарт, действующие интерпретации и требования конкретных заказчиков."
+  },
+  "page": {
+    "heading": "Самостоятельная проверка готовности системы менеджмента к сертификационному аудиту",
+    "description": "Если вы согласуете требования заказчиков, проверяете детали, готовите производство и разбираете дефекты, у вас уже есть часть основы системы. Начните с действующей работы и имеющихся подтверждений: определите, что подходит, а что нужно дополнить.",
+    "duration": "Ориентировочно 24–39 минут"
+  },
+  "sections": [
+    {
+      "id": "D",
+      "title": "Документы и записи",
+      "summaryTitle": "Обязательные документы и записи",
+      "description": "Посмотрите, какие нужные сведения уже сохраняются и доступны в компании. Проверьте содержание и актуальность документов и записей.",
+      "share": 0.4
+    },
+    {
+      "id": "P",
+      "title": "Работа на практике",
+      "summaryTitle": "Прочие требования и работа на практике",
+      "description": "Ориентируйтесь на реальные действия. Вспомните недавний случай, поговорите с исполнителем или посмотрите рабочие записи.",
+      "intro": "Ориентируйтесь на реальные действия. Вспомните недавний случай, поговорите с исполнителем или посмотрите рабочие записи.",
+      "share": 0.6
+    }
+  ],
+  "applicabilityPairs": [],
+  "links": {
+    "service": "https://audit-advisor.com/russia",
+    "chat": "https://t.me/chat_iso"
+  },
+  "disclaimer": "Самопроверка отражает ваши ответы и не заменяет аудит. Высокая оценка не гарантирует сертификацию. Примеры помогают найти подтверждения и не устанавливают обязательную форму документа.",
+  "questions": [
+    {
+      "id": "D01",
+      "section": "D",
+      "clause": "4.3, 4.3.1, 7.5.1.1",
+      "heading": "Описано ли, какие изделия, площадки и подразделения охватывает СМК?",
+      "description": [
+        "Руководство по качеству связывает область, процессы и правила. Учитывают также удалённые подразделения, влияющие на производство."
+      ],
+      "examples": [
+        "Например: Завод связал производство с удалённым конструкторским отделом.",
+        "Например: В область включены закупки, которые выполняются в другом офисе."
+      ],
+      "condition": "Отсутствие ответственности за конструкцию изделия не отменяет проектирование процесса изготовления.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D02",
+      "section": "D",
+      "clause": "4.3.2, 7.5.1.1",
+      "heading": "Можно ли найти, как выполнены специальные требования каждого заказчика?",
+      "description": [
+        "Требования автомобильных заказчиков могут различаться. Их связывают с процессами и документами компании; отдельная матрица удобна, но её название не обязательно."
+      ],
+      "examples": [
+        "Например: Требование заказчика связано с конкретным пунктом плана управления.",
+        "Например: В перечне требований указаны ответственный и инструкция, по которой оно выполняется."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D03",
+      "section": "D",
+      "clause": "5.1.1.1, 5.2, 6.2",
+      "heading": "Есть ли политика, измеримые цели по качеству и правила ответственного поведения?",
+      "description": [
+        "Нужны понятные обязательства по качеству, а также правила противодействия взяточничеству, этики и сообщения о нарушениях."
+      ],
+      "examples": [
+        "Например: Цеху установили измеримые цели по дефектам и своевременной поставке.",
+        "Например: В кодексе поведения описали, как сообщить о попытке скрыть брак."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D04",
+      "section": "D",
+      "clause": "5.3.1, 5.3.2",
+      "heading": "Записано ли, кто отвечает за требования заказчика и может остановить выпуск?",
+      "description": [
+        "Ответственные должны иметь реальные полномочия во всех сменах. Одного формального назначения представителя недостаточно."
+      ],
+      "examples": [
+        "Например: Назначено лицо, которое блокирует отгрузку при сомнении в качестве.",
+        "Например: Для ночной смены определены полномочия остановки и порядок вызова ответственного."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D05",
+      "section": "D",
+      "clause": "4.4.1.2",
+      "heading": "Описаны ли правила обеспечения безопасности продукции?",
+      "description": [
+        "Правила связывают требования безопасности, ответственных, согласования, обучение и изменения. Необходимые требования передают поставщикам."
+      ],
+      "examples": [
+        "Например: Для детали, влияющей на безопасность автомобиля, установлен особый порядок согласования изменений.",
+        "Например: Поставщику переданы требования безопасности и условия сообщения об отклонениях."
+      ],
+      "condition": "Объём специальных мер зависит от продукции и применимых требований; применимость должна быть обоснована.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D06",
+      "section": "D",
+      "clause": "6.1.2.1, 6.1.2.2",
+      "heading": "Сохранены ли оценки рисков и меры предупреждения возможных отказов?",
+      "description": [
+        "Используют опыт брака, возвратов и эксплуатации, чтобы не повторять ошибки. Записи показывают, какие риски рассмотрели и что решили."
+      ],
+      "examples": [
+        "Например: После похожего отказа обновили оценку риска новой детали.",
+        "Например: В анализе учли риск сбоя производственной программы и предусмотрели меры."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D07",
+      "section": "D",
+      "clause": "6.1.2.3",
+      "heading": "Есть ли планы работы при серьёзных сбоях и записи их проверки?",
+      "description": [
+        "Планы помогают сохранять поставки и безопасно возобновлять выпуск. Учитывают реальные угрозы, уведомление заказчика и проверку продукции после запуска."
+      ],
+      "examples": [
+        "Например: Сохранены план при поломке линии и результаты учебного запуска резервного решения.",
+        "Например: Проверен порядок действий при кибератаке, нарушившей доступ к производственным системам."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D08",
+      "section": "D",
+      "clause": "7.1.3.1, 8.2.3.1.3",
+      "heading": "Есть ли подтверждения, что заказ выполним по качеству, объёму и срокам?",
+      "description": [
+        "До обещания заказчику оценивают технологию, оборудование, мощность и людей. После значимых изменений оценку пересматривают."
+      ],
+      "examples": [
+        "Например: Сохранён расчёт загрузки линии для нового заказа.",
+        "Например: Пробный выпуск подтвердил нужную производительность при выполнении требований качества."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D09",
+      "section": "D",
+      "clause": "7.1.5.1.1, 7.1.5.2.1",
+      "heading": "Есть ли результаты анализа измерительной системы и проверки приборов?",
+      "description": [
+        "MSA оценивает весь способ измерения: прибор, метод и исполнителей. Калибровка или поверка одного прибора не заменяет эту оценку."
+      ],
+      "examples": [
+        "Например: Сохранено исследование повторяемости измерений разными операторами.",
+        "Например: Для приборов из плана управления доступны записи калибровки и статус пригодности."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D10",
+      "section": "D",
+      "clause": "7.1.5.3.1, 7.1.5.3.2",
+      "heading": "Подтверждено ли, что лаборатории могут выполнять нужные испытания?",
+      "description": [
+        "Проверяют компетентность именно для необходимых методов и параметров. Документы лаборатории должны подтверждать подходящую область работ."
+      ],
+      "examples": [
+        "Например: Внутренняя лаборатория описала методы, оборудование и подготовку персонала.",
+        "Например: Для внешней лаборатории проверили охват нужного испытания и применимые подтверждения компетентности."
+      ],
+      "condition": "Условия использования внешней лаборатории сверяют с действующей официальной интерпретацией IATF.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D11",
+      "section": "D",
+      "clause": "7.2.1, 7.2.2, 7.2.3",
+      "heading": "Есть ли подтверждения навыков работников и компетентности внутренних аудиторов?",
+      "description": [
+        "Навыки соотносят с конкретной работой. Аудитору системы, процесса и продукции могут требоваться разные знания."
+      ],
+      "examples": [
+        "Например: Оператор подтвердил навык новой операции на рабочем месте.",
+        "Например: В списке внутренних аудиторов указаны виды аудитов и результаты оценки компетентности."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D12",
+      "section": "D",
+      "clause": "7.2.4, 8.4.2.4.1",
+      "heading": "Подтверждена ли компетентность аудиторов поставщиков и обоснованы ли их проверки?",
+      "description": [
+        "Это аудиторы второй стороны. Необходимость и частота проверок поставщика зависят от риска и требований заказчика."
+      ],
+      "examples": [
+        "Например: Сохранены оценка аудитора поставщиков и основания выбора проверяемых операций.",
+        "Например: Проблемного поставщика включили в программу по результатам оценки риска."
+      ],
+      "condition": "Не нужно автоматически назначать одинаковый ежегодный аудит каждому поставщику.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D13",
+      "section": "D",
+      "clause": "7.5.3, 7.5.3.2.1, 7.5.3.2.2",
+      "heading": "Установлены ли сроки хранения записей и порядок внедрения технических изменений?",
+      "description": [
+        "Нужно сохранять требуемую историю и своевременно внедрять новые спецификации заказчика. Сроки определяют по применимым требованиям."
+      ],
+      "examples": [
+        "Например: Установлены сроки хранения записей производства и одобрений.",
+        "Например: Получение новой редакции чертежа связано с записью её внедрения на участке."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D14",
+      "section": "D",
+      "clause": "8.3.2, 8.3.3, 8.3.5",
+      "heading": "Есть ли документы разработки изделия и процесса изготовления?",
+      "description": [
+        "Разработка связывает требования, возможные отказы, решения и проверки. DFMEA анализирует отказы конструкции, PFMEA — производственного процесса."
+      ],
+      "examples": [
+        "Например: Для изделия сохранены исходные требования и результаты проверки конструкции.",
+        "Например: Схема процесса связана с PFMEA и планом управления производством."
+      ],
+      "condition": "При отсутствии ответственности за конструкцию проверяют применимость разработки изделия; разработку процесса не исключают.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D15",
+      "section": "D",
+      "clause": "8.3.3.3, 8.5.1.1",
+      "heading": "Совпадают ли специальные характеристики в связанных документах?",
+      "description": [
+        "Это характеристики, отклонения которых требуют особого внимания. Их обозначения и контроль должны согласовываться между чертежом, анализом риска и рабочими документами."
+      ],
+      "examples": [
+        "Например: Важный размер одинаково обозначен в чертеже и плане управления.",
+        "Например: Риск по этому размеру отражён в PFMEA и инструкции оператора."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D16",
+      "section": "D",
+      "clause": "8.3.4.4",
+      "heading": "Есть ли требуемое заказчиком одобрение продукции и процесса?",
+      "description": [
+        "До поставки получают нужные подтверждения и одобрения. PPAP — один из порядков представления доказательств; состав пакета зависит от заказчика."
+      ],
+      "examples": [
+        "Например: Сохранено одобрение согласованного комплекта документов по новой детали.",
+        "Например: После изменения процесса получено требуемое разрешение на дальнейшие поставки."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D17",
+      "section": "D",
+      "clause": "8.4.1, 8.4.2.1, 8.4.2.3, 8.4.2.4",
+      "heading": "Есть ли критерии выбора поставщиков, оценки их работы и планы развития?",
+      "description": [
+        "Оценивают качество, сроки, риски и систему поставщика. При проблемах определяют меры и проверяют улучшение."
+      ],
+      "examples": [
+        "Например: Рейтинг поставщика содержит данные по дефектам и задержкам.",
+        "Например: Для проблемного поставщика согласован план развития с ответственными и сроками."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D18",
+      "section": "D",
+      "clause": "8.5.1.1, 8.5.1.2, 8.5.1.3",
+      "heading": "Есть ли рабочие инструкции и записи проверки наладки?",
+      "description": [
+        "Работнику должны быть понятны операция, контроль и действия при отклонении. Записи подтверждают правильную наладку перед выпуском."
+      ],
+      "examples": [
+        "Например: На рабочем месте доступна инструкция с нужными проверками.",
+        "Например: После смены оснастки сохранён результат проверки первой детали."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D19",
+      "section": "D",
+      "clause": "8.5.1.5, 8.5.1.6",
+      "heading": "Есть ли планы и записи обслуживания оборудования и оснастки?",
+      "description": [
+        "Нужно управлять износом, ремонтом, запасными частями и состоянием инструмента, а не ждать поломки."
+      ],
+      "examples": [
+        "Например: У пресса есть план обслуживания и история выполненных работ.",
+        "Например: В карточке штампа отражены износ, ремонт и текущая пригодность."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D20",
+      "section": "D",
+      "clause": "8.5.6.1, 8.5.6.1.1",
+      "heading": "Сохраняются ли согласования изменений и правила временной замены контроля?",
+      "description": [
+        "Изменение оценивают до внедрения. Если основной контроль временно заменяют другим, нужны разрешение, ограничения и управляемый возврат."
+      ],
+      "examples": [
+        "Например: Изменение материала связано с оценкой риска и одобрением.",
+        "Например: Временный ручной контроль описан в разрешённой инструкции и журнале применения."
+      ],
+      "condition": "Не для каждого основного контроля обязателен резервный метод; существующие альтернативы должны быть управляемыми.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D21",
+      "section": "D",
+      "clause": "8.5.2, 8.5.2.1, 8.6",
+      "heading": "Можно ли проследить партию и найти разрешение её выпуска?",
+      "description": [
+        "Записи связывают материалы, операции, результаты контроля и готовую продукцию в требуемом объёме."
+      ],
+      "examples": [
+        "Например: По партии найдены использованное сырьё и результаты испытаний.",
+        "Например: В записи выпуска указаны выполненные критерии и разрешивший отгрузку сотрудник."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D22",
+      "section": "D",
+      "clause": "8.7, 8.7.1.1, 8.7.1.4, 8.7.1.5",
+      "heading": "Есть ли записи о дефектах, переделке, ремонте и согласованных отклонениях?",
+      "description": [
+        "Переделка возвращает к исходным требованиям, ремонт может иметь иной результат. Нужные разрешения заказчика получают до соответствующих действий."
+      ],
+      "examples": [
+        "Например: Карточка переделки содержит инструкцию и повторный контроль.",
+        "Например: Решение о ремонте связано с оценкой риска и необходимым разрешением заказчика."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D23",
+      "section": "D",
+      "clause": "9.2.2.1–9.2.2.4",
+      "heading": "Есть ли программа и отчёты по трём видам внутренних аудитов?",
+      "description": [
+        "Отдельно проверяют систему качества, процесс изготовления и продукцию. Аудит поставщика относится к другой задаче и не заменяет эти проверки."
+      ],
+      "examples": [
+        "Например: Программа содержит аудит системы и аудит процесса сварки.",
+        "Например: Отчёт аудита продукции показывает проверенные характеристики и найденные отклонения."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D24",
+      "section": "D",
+      "clause": "9.3, 9.3.2.1, 10.2, 10.3",
+      "heading": "Сохранены ли решения руководства и результаты устранения причин проблем?",
+      "description": [
+        "Руководство рассматривает показатели, рекламации, риски и потери от плохого качества. По проблемам сохраняют причины, меры и проверку результата."
+      ],
+      "examples": [
+        "Например: Протокол содержит решение по повторным рекламациям и необходимые ресурсы.",
+        "Например: Отчёт решения проблемы связан с обновлением PFMEA и плана управления."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P01",
+      "section": "P",
+      "clause": "4.1, 4.2, 4.4",
+      "heading": "Понимают ли руководители процессов, что мешает выполнять требования заказчиков?",
+      "description": [
+        "Нужно учитывать изменения, ресурсы, поставщиков и взаимодействие отделов. Проблему важно заметить до нарушения поставки."
+      ],
+      "examples": [
+        "Например: Продажи сообщили о росте заказа, производство заранее проверило мощность.",
+        "Например: Закупки предупредили о риске задержки материала и согласовали действия."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P02",
+      "section": "P",
+      "clause": "4.3.2, 7.5.1.1",
+      "heading": "Доходят ли новые требования заказчика до рабочих мест?",
+      "description": [
+        "Получить письмо недостаточно. Изменения должны попасть в документы, программы, обучение и фактические проверки."
+      ],
+      "examples": [
+        "Например: Новый допуск внесли в чертёж и программу измерений.",
+        "Например: Оператора ознакомили с изменённым контролем и проверили понимание."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P03",
+      "section": "P",
+      "clause": "5.1, 5.3.2",
+      "heading": "Могут ли ответственные остановить выпуск или отгрузку при риске брака?",
+      "description": [
+        "Полномочия должны работать в любой смене. Руководство обеспечивает возможность удержать сомнительную продукцию до решения."
+      ],
+      "examples": [
+        "Например: Ночная смена заблокировала партию при непонятном результате измерения.",
+        "Например: Контролёр остановил отгрузку до завершения необходимой проверки."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P04",
+      "section": "P",
+      "clause": "4.4.1.2",
+      "heading": "Контролируются ли характеристики, от которых зависит безопасность продукции?",
+      "description": [
+        "Требование должно пройти от заказчика через разработку и поставщиков до производства и контроля изменений."
+      ],
+      "examples": [
+        "Например: Материал детали безопасности меняют только после предусмотренного согласования.",
+        "Например: Оператор знает особый контроль и действия при отклонении важной характеристики."
+      ],
+      "condition": "Проверяется в применимом объёме требований безопасности продукции.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P05",
+      "section": "P",
+      "clause": "6.1.2.1, 6.1.2.2",
+      "heading": "Используете ли вы опыт отказов для предупреждения похожих проблем?",
+      "description": [
+        "После проблемы проверяют аналогичные изделия и процессы. Это помогает не ждать следующей рекламации."
+      ],
+      "examples": [
+        "Например: После отказа крепления проверили подобные операции второй линии.",
+        "Например: Выводы по возврату включили в анализ риска нового изделия."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P06",
+      "section": "P",
+      "clause": "6.1.2.3",
+      "heading": "Проверяете ли вы на практике планы действий при остановке производства?",
+      "description": [
+        "Тренировка показывает, доступны ли резервные ресурсы, связь и нужное время. Найденные пробелы устраняют."
+      ],
+      "examples": [
+        "Например: При проверке выяснилось, что резервная оснастка недоступна; доступ обеспечили.",
+        "Например: Отработали уведомление заказчика и проверку продукции после восстановления системы управления."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P07",
+      "section": "P",
+      "clause": "7.1.3.1, 8.2.3.1.3",
+      "heading": "Проверяете ли вы выполнимость заказа до обещания заказчику?",
+      "description": [
+        "Оценка должна охватывать технологию, объём, качество и сроки с участием нужных подразделений."
+      ],
+      "examples": [
+        "Например: Пробный выпуск подтвердил требуемое количество годных деталей за смену.",
+        "Например: Перед ростом заказа проверили мощность узкого участка и наличие обученных людей."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P08",
+      "section": "P",
+      "clause": "7.1.5.1.1, 7.1.5.2.1",
+      "heading": "Можно ли доверять измерениям в реальных условиях производства?",
+      "description": [
+        "Проверяют прибор, метод, исполнителя и влияние условий. При ошибке оценивают также ранее принятые изделия."
+      ],
+      "examples": [
+        "Например: MSA выявил сильную зависимость результата от оператора; метод доработали.",
+        "Например: После отказа прибора определили затронутые партии и перепроверили их."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P09",
+      "section": "P",
+      "clause": "7.2, 7.3",
+      "heading": "Умеют ли работники выполнять операцию и понимают ли последствия ошибок?",
+      "description": [
+        "Проверяют реальный навык, специальные характеристики и реакцию на дефект. Это относится и к временным сотрудникам."
+      ],
+      "examples": [
+        "Например: Оператор показывает проверку важного размера и место для сомнительных деталей.",
+        "Например: Новый работник объясняет, когда остановить операцию и кому сообщить."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P10",
+      "section": "P",
+      "clause": "7.2.3, 9.2.2.2–9.2.2.4",
+      "heading": "Проводят ли внутренние аудиторы проверки, для которых подтверждена их компетентность?",
+      "description": [
+        "Для разных аудитов нужны разные знания. Проверка должна быть объективной и сопровождаться действиями по замечаниям."
+      ],
+      "examples": [
+        "Например: Аудит сварочного процесса проводит человек, понимающий технологию и контроль.",
+        "Например: Аудитор продукции умеет оценить требования и результаты измерений детали."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P11",
+      "section": "P",
+      "clause": "7.2.4, 8.4.2.4.1",
+      "heading": "Помогают ли аудиты поставщиков управлять рисками поставок?",
+      "description": [
+        "Проверки поставщиков проводят по обоснованным критериям и отдельно от внутренних аудитов. Важен результат устранения замечаний."
+      ],
+      "examples": [
+        "Например: После роста дефектов проверили критическую операцию у поставщика.",
+        "Например: Повторная оценка подтвердила, что поставщик выполнил согласованные меры."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P12",
+      "section": "P",
+      "clause": "8.3.2–8.3.5",
+      "heading": "Согласованно ли разрабатываются изделие и процесс его изготовления?",
+      "description": [
+        "Разработку обсуждают с производством, качеством, закупками и другими нужными функциями. Решения проверяют до серии."
+      ],
+      "examples": [
+        "Например: Пробный запуск выявил повреждение детали, оснастку изменили.",
+        "Например: При разработке процесса учли требования конструкции и возможности поставщика материала."
+      ],
+      "condition": "Разработка конструкции применяется при соответствующей ответственности; разработка процесса — для изготовителя.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P13",
+      "section": "P",
+      "clause": "8.3.3.3, 8.5.1.1",
+      "heading": "Выполняется ли установленный контроль специальных характеристик?",
+      "description": [
+        "Метод, частота, записи и реакция на отклонение должны соответствовать плану управления."
+      ],
+      "examples": [
+        "Например: Важный размер измеряют с установленной частотой, результаты сохраняют.",
+        "Например: При отклонении линия останавливается по плану реакции, партия удерживается."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P14",
+      "section": "P",
+      "clause": "8.3.4.4",
+      "heading": "Получаете ли вы нужное одобрение до серии и после изменений?",
+      "description": [
+        "Внутренняя подпись не заменяет одобрения заказчика там, где оно требуется. Условия проверяют для конкретной поставки."
+      ],
+      "examples": [
+        "Например: Серию начали после предусмотренного одобрения заказчика.",
+        "Например: После переноса операции получили необходимое разрешение до возобновления поставок."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P15",
+      "section": "P",
+      "clause": "8.4.2, 8.4.3",
+      "heading": "Получают ли поставщики актуальные требования и выполняют ли их?",
+      "description": [
+        "Передают нужные характеристики, условия контроля и изменения. При ухудшении результатов усиливают подходящие меры."
+      ],
+      "examples": [
+        "Например: Поставщик обработки работает по актуальной редакции чертежа.",
+        "Например: Рост дефектности привёл к дополнительному контролю и плану улучшений поставщика."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P16",
+      "section": "P",
+      "clause": "8.5.1.2, 8.5.1.3, 8.5.1.4",
+      "heading": "Проверяете ли вы наладку и правильность запуска после остановки?",
+      "description": [
+        "До выпуска подтверждают установленные условия. Проверки первой и последней детали применяют там, где они предусмотрены."
+      ],
+      "examples": [
+        "Например: После смены штампа измерили первую деталь и разрешили выпуск.",
+        "Например: После длительной остановки выполнили предусмотренные проверки запуска."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P17",
+      "section": "P",
+      "clause": "8.5.1.5, 8.5.1.6",
+      "heading": "Предотвращаете ли вы дефекты из-за износа оборудования и оснастки?",
+      "description": [
+        "Обслуживание должно выполняться, а повторные поломки — разбираться по причинам. Проверяют также наличие нужных запасных частей."
+      ],
+      "examples": [
+        "Например: Износ инструмента заметили по контролю и заменили его до брака.",
+        "Например: Повторные простои привели к изменению профилактики узла."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P18",
+      "section": "P",
+      "clause": "8.5.2, 8.5.3, 8.5.4",
+      "heading": "Защищены ли материалы, детали и имущество заказчика от повреждения и смешения?",
+      "description": [
+        "Нужны подходящие хранение, упаковка, маркировка и управление запасами. История партии должна сохраняться."
+      ],
+      "examples": [
+        "Например: Оснастка заказчика учтена, её состояние и место хранения известны.",
+        "Например: Упаковка защищает поверхность деталей, партии на складе не смешиваются."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P19",
+      "section": "P",
+      "clause": "8.5.6.1, 8.5.6.1.1",
+      "heading": "Оцениваются и разрешаются ли производственные изменения до внедрения?",
+      "description": [
+        "Проверяют риски, нужные испытания и согласования. Временные меры имеют понятные условия и срок действия."
+      ],
+      "examples": [
+        "Например: Новое оборудование вводят после проверки процесса и нужного одобрения.",
+        "Например: Временный контроль действует по разрешённой инструкции до восстановления основного средства."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P20",
+      "section": "P",
+      "clause": "8.6, 8.6.2",
+      "heading": "Выпускается ли продукция после всех предусмотренных успешных проверок?",
+      "description": [
+        "Нужны результаты измерений и испытаний, включая полный размерный контроль там, где он установлен. Отсутствующий протокол нельзя заменить обещанием."
+      ],
+      "examples": [
+        "Например: Партию удерживают до получения необходимого результата испытаний.",
+        "Например: Перед выпуском проверяют выполнение всех критериев плана управления."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P21",
+      "section": "P",
+      "clause": "8.7",
+      "heading": "Исключена ли случайная отгрузка сомнительной или дефектной продукции?",
+      "description": [
+        "Статус должен быть понятен, продукция отделена, решение разрешено. После переделки нужен подтверждённый результат контроля."
+      ],
+      "examples": [
+        "Например: Переделанные детали получили статус годных только после повторной проверки.",
+        "Например: Сомнительную партию заблокировали физически и в учётной системе."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P22",
+      "section": "P",
+      "clause": "9.1.1, 9.1.2, 9.3",
+      "heading": "Использует ли руководство показатели процессов и оценки заказчиков для решений?",
+      "description": [
+        "Рассматривают стабильность процессов, дефекты, сроки, рекламации и выполнение предыдущих мер. Анализ должен менять работу."
+      ],
+      "examples": [
+        "Например: Ухудшение оценки заказчика привело к плану с ответственными и сроками.",
+        "Например: Нестабильность размера стала основанием для изменения процесса и проверки результата."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P23",
+      "section": "P",
+      "clause": "10.2.3, 10.2.4",
+      "heading": "Устраняете ли вы причины дефектов и проверяете ли защиту от ошибок?",
+      "description": [
+        "Сортировка ограничивает последствия, но не устраняет причину. Защитное устройство или метод нужно проверять на срабатывание."
+      ],
+      "examples": [
+        "Например: После неверной сборки установили блокиратор и проверили его на ошибочной установке.",
+        "Например: Причину дефекта устранили, PFMEA и план управления обновили."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P24",
+      "section": "P",
+      "clause": "10.2.5, 10.2.6, 10.3",
+      "heading": "Используете ли вы претензии и отказы в эксплуатации для улучшений?",
+      "description": [
+        "Возвраты и сообщения разбирают, включая случаи, когда отказ не подтвердился. Выводы возвращают в разработку и производство."
+      ],
+      "examples": [
+        "Например: Исследование возвращённой детали привело к изменению контроля.",
+        "Например: Повторяемость гарантийных обращений стала основанием для изменения процесса и проверки эффекта."
+      ],
+      "condition": "Гарантийное управление применяется в объёме ответственности и условий заказчика.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    }
+  ]
+}

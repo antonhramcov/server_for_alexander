@@ -1,0 +1,2144 @@
+{
+  "$schema": "../../schemas/standard.schema.json",
+  "schemaVersion": 1,
+  "id": "iso-13485-en",
+  "answerVersion": "2026.1.0",
+  "contentRevision": "2026-10-30.en.1",
+  "source": {
+    "file": "07_13485_US_England_2026-10-30.docx",
+    "snapshotDirectory": "sources/2026-10-30-english-questionnaires",
+    "sha256": "6a1180a3b1ecfa11fb2023fa06c911ff2f892e7a26cabd7e9cdcdf6b2e2d1c0e",
+    "revisionDate": "2026-10-30"
+  },
+  "standard": {
+    "label": "ISO 13485:2016",
+    "basis": "ISO 13485:2016",
+    "note": "Questionnaire source: the approved US and England edition of 30 October 2026. Reference edition: ISO 13485:2016. Questions and explanations are practical paraphrases, not quotations. Regional guidance was reviewed on 29–30 October 2026. This import is not a new full clause-by-clause verification against all licensed final standard texts. Determine the duties that apply to your actual activities, role, products and market."
+  },
+  "page": {
+    "heading": "Check your management system’s readiness for a certification audit",
+    "description": "If you already control device specifications, keep traceability records and investigate complaints, you have part of the foundation of a medical device quality system. These questions connect the controls with your actual role, device risks and the requirements of the markets you serve.",
+    "duration": "About 25–40 minutes"
+  },
+  "sections": [
+    {
+      "id": "D",
+      "title": "Documents and records",
+      "summaryTitle": "Required documents and records",
+      "description": "Check whether the necessary information is current, complete and available. Look at the evidence, not just the document title.",
+      "share": 0.4
+    },
+    {
+      "id": "P",
+      "title": "Working practices",
+      "summaryTitle": "Other requirements and working practices",
+      "description": "Check what happens in day-to-day work. Use recent examples, speak to the people involved and look at actual records.",
+      "intro": "You have reviewed the documents. Now assess how the requirements are put into practice.",
+      "share": 0.6
+    }
+  ],
+  "applicabilityPairs": [
+    [
+      "D11",
+      "P08",
+      "Are design controls documented, with the required development records?"
+    ],
+    [
+      "D17",
+      "P12",
+      "Do records demonstrate validated sterilisation and sterile barrier processes where applicable?"
+    ],
+    [
+      "D19",
+      "P15",
+      "Are installation and servicing requirements documented, with records of the work?"
+    ],
+    [
+      "D27",
+      "P23",
+      "For implantable devices, do you retain the additional traceability records required?"
+    ]
+  ],
+  "links": {
+    "service": "https://audit-advisor.com/",
+    "chat": ""
+  },
+  "disclaimer": "This self-check reflects your answers and supports preparation and improvement. It does not replace an independent audit, a certification decision or an assessment of all legal and regulatory obligations. A high score does not guarantee certification. Examples illustrate possible evidence and do not prescribe a mandatory document format.",
+  "questions": [
+    {
+      "id": "D01",
+      "section": "D",
+      "clause": "4.1.1, 4.2.2",
+      "heading": "Have you documented your role in the medical device supply chain and the scope of your quality system?",
+      "description": [
+        "Your quality manual should explain the scope, processes and their interaction, with justified exclusions or non-applicability where permitted. Identify your actual regulatory role."
+      ],
+      "examples": [
+        "For example in the US: A US finished-device manufacturer identifies the devices and manufacturing activities covered and the regulatory responsibilities it holds.",
+        "For example in England: An English business identifies whether it manufactures, imports, distributes, installs or services devices and defines the corresponding system scope."
+      ],
+      "condition": "Unlike ISO 9001, ISO 13485 requires a quality manual. Applicability depends on the device, role and regulatory requirements.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D02",
+      "section": "D",
+      "clause": "4.2.3",
+      "heading": "Is there a medical device file for each device type or family?",
+      "description": [
+        "Keep or reference the specifications and procedures needed to demonstrate conformity, including relevant production, packaging, storage, installation and servicing information."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer links device specifications, labeling, manufacturing controls and acceptance criteria in its controlled device file.",
+        "For example in England: A supplier maintains the relevant product information and procedures for storage, handling and any installation activities it performs."
+      ],
+      "condition": "A file may reference controlled information stored elsewhere; it must still be complete for the applicable activities.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D03",
+      "section": "D",
+      "clause": "4.2.4, 4.2.5",
+      "heading": "Are document and record controls defined in written procedures?",
+      "description": [
+        "Set rules for review, approval, changes, availability, protection, retention and disposal, including necessary external documents."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer controls approved work instructions and retains evidence of changes and review.",
+        "For example in England: An English distributor protects device traceability records and prevents obsolete instructions being used by warehouse staff."
+      ],
+      "condition": "Determine retention from the applicable standard, device lifetime and regulatory requirements; do not assume one period fits every record.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D04",
+      "section": "D",
+      "clause": "5.3, 5.4.1",
+      "heading": "Are the quality policy and measurable quality objectives documented?",
+      "description": [
+        "Connect the policy to meeting requirements and maintaining an effective system, then set objectives relevant to device quality and regulatory compliance."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer measures completion of complaint assessments and effectiveness of corrective actions.",
+        "For example in England: A service organisation sets objectives for accurate service records and timely escalation of safety-related findings."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D05",
+      "section": "D",
+      "clause": "5.5.1, 5.5.2",
+      "heading": "Are responsibilities documented and a management representative appointed?",
+      "description": [
+        "Define authority, relationships and appropriate independence for quality activities. Identify the representative responsible for the required system duties."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer gives quality staff authority to hold product and reports system performance through its management representative.",
+        "For example in England: A distributor assigns responsibilities for complaint forwarding, record control and management reporting."
+      ],
+      "condition": "A consultant may support the system, but management remains responsible for its effectiveness.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D06",
+      "section": "D",
+      "clause": "5.6",
+      "heading": "Do you have a management review procedure and retained review results?",
+      "description": [
+        "Define planned reviews and cover the required inputs, conclusions, improvements, changes and resource needs."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer reviews complaints, regulatory reporting, supplier performance and corrective-action effectiveness, then records decisions.",
+        "For example in England: A service business reviews repair trends, audit findings and competence needs and assigns follow-up actions."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D07",
+      "section": "D",
+      "clause": "6.2",
+      "heading": "Are competence and training arrangements documented, with evidence that people can do the work?",
+      "description": [
+        "Define necessary competence, provide suitable development and evaluate its effectiveness in proportion to the risk."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer retains practical assessment records for staff performing final device inspection.",
+        "For example in England: A service provider records supervised assessments before engineers work independently on a particular device type."
+      ],
+      "condition": "Training attendance alone may not demonstrate competence for a safety-relevant task.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D08",
+      "section": "D",
+      "clause": "6.3, 6.4",
+      "heading": "Are infrastructure, work environment, cleanliness and maintenance requirements documented?",
+      "description": [
+        "Specify the conditions needed to protect product quality and control contamination, with appropriate monitoring and maintenance."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer defines environmental and cleaning controls for its assembly process and retains checks.",
+        "For example in England: A distributor defines storage conditions and handling arrangements for devices that are sensitive to moisture or temperature."
+      ],
+      "condition": "Non-sterile devices can still require controlled cleanliness and environmental conditions.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D09",
+      "section": "D",
+      "clause": "7.1",
+      "heading": "Are product risk-management arrangements documented and used throughout product realisation?",
+      "description": [
+        "Keep the risk-management process and records relevant to planning and delivering the device, including information from later experience."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer links identified device hazards to risk controls and verification evidence.",
+        "For example in England: A service organisation assesses risks associated with replacement components and the service activities within its responsibility."
+      ],
+      "condition": "Risk management here concerns the device and relevant activities, not just commercial project risk.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D10",
+      "section": "D",
+      "clause": "7.2.2",
+      "heading": "Do you retain results of order and change reviews before making commitments?",
+      "description": [
+        "Confirm product requirements, regulatory requirements and your ability to fulfil them, including changes to agreed terms."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer reviews the intended market and required product configuration before accepting an order.",
+        "For example in England: A distributor checks the requested model, storage needs and delivery conditions before confirming supply."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D11",
+      "section": "D",
+      "clause": "7.3",
+      "heading": "Are design controls documented, with the required development records?",
+      "description": [
+        "Maintain procedures and evidence covering planning, inputs, outputs, reviews, verification, validation, transfer and design changes."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer keeps traceable design decisions and evidence that the device meets user needs and intended use.",
+        "For example in England: An English device developer maintains its design file and records the review of outsourced engineering work."
+      ],
+      "condition": "Justify permitted design exclusions in the quality manual. Outsourcing design does not itself remove responsibility.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Justify permitted design exclusions in the quality manual. Outsourcing design does not itself remove responsibility. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D12",
+      "section": "D",
+      "clause": "4.1.5",
+      "heading": "Are outsourced processes covered by written quality agreements?",
+      "description": [
+        "Define the controls and responsibilities needed for processes affecting conformity, in proportion to risk and the supplier's capability."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer has a quality agreement with its contract sterilizer covering responsibilities, records and change notification.",
+        "For example in England: A business agrees quality controls and escalation arrangements with a provider performing outsourced device assembly."
+      ],
+      "condition": "Applies where processes are outsourced. Your responsibility for conformity remains.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Applies where processes are outsourced. Your responsibility for conformity remains. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D13",
+      "section": "D",
+      "clause": "7.4",
+      "heading": "Do purchasing records show supplier control and verification of purchased items?",
+      "description": [
+        "Retain supplier selection, evaluation and monitoring evidence, clear purchasing requirements and appropriate receipt or other verification results."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer links a critical component's purchasing specification to supplier approval and incoming verification.",
+        "For example in England: A distributor checks the suitability of a logistics provider and records relevant handling requirements."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D14",
+      "section": "D",
+      "clause": "7.5.1",
+      "heading": "Can batch or device records show what was done and who authorised release?",
+      "description": [
+        "Retain the required production and verification information, traceability and the approval of each batch record, including quantities manufactured and approved for distribution."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer can link a lot to component use, processing steps, acceptance results and release approval.",
+        "For example in England: An assembler can reconstruct a batch and explain any difference between the quantity built and the quantity released."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D15",
+      "section": "D",
+      "clause": "4.1.6, 7.5.6, 7.6",
+      "heading": "Are software validation procedures and results available for relevant applications?",
+      "description": [
+        "Validate software used in the quality system, production or measurement before use and after changes as appropriate, with a risk-based approach."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer validates the application used to determine final acceptance rather than relying only on the software supplier's claim.",
+        "For example in England: A distributor assesses and validates the quality-relevant functions of a system used for device traceability."
+      ],
+      "condition": "Assess each application and its use. Absence of one software category does not make all software validation inapplicable.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D16",
+      "section": "D",
+      "clause": "7.5.6",
+      "heading": "Have you validated processes whose results cannot be fully verified by later inspection?",
+      "description": [
+        "Document the arrangements, acceptance criteria, qualification, methods and records needed to demonstrate consistent results and revalidation where appropriate."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer validates a bonding process where a hidden weakness would not be reliably detected by final inspection.",
+        "For example in England: An assembler validates a sealing process and defines which changes trigger review or revalidation."
+      ],
+      "condition": "Determine applicability from what later checks can actually establish and the consequences of an undetected defect.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Determine applicability from what later checks can actually establish and the consequences of an undetected defect. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D17",
+      "section": "D",
+      "clause": "7.5.5, 7.5.7",
+      "heading": "Do records demonstrate validated sterilisation and sterile barrier processes where applicable?",
+      "description": [
+        "Retain validation and routine process records that connect the sterile device to the controlled sterilisation and packaging arrangements."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer links outsourced sterilization records to each relevant production batch.",
+        "For example in England: An English manufacturer retains sterile barrier validation and evidence that approved sealing conditions were followed."
+      ],
+      "condition": "Applies to relevant sterile devices and processes, including outsourced work; it is not a universal requirement for every device business.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Applies to relevant sterile devices and processes, including outsourced work; it is not a universal requirement for every device business. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D18",
+      "section": "D",
+      "clause": "7.5.8, 7.5.9",
+      "heading": "Are identification and traceability procedures documented and supported by records?",
+      "description": [
+        "Define how devices are identified, their inspection status and the extent of traceability required by the applicable rules."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer links a device identifier and lot to the production and distribution records required for its product.",
+        "For example in England: A distributor can identify which customers received an affected lot and distinguish released stock from held stock."
+      ],
+      "condition": "UDI requirements, where applicable, are assessed separately in D26.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D19",
+      "section": "D",
+      "clause": "7.5.3, 7.5.4",
+      "heading": "Are installation and servicing requirements documented, with records of the work?",
+      "description": [
+        "Define acceptance criteria and the information needed to perform and verify these activities reliably."
+      ],
+      "examples": [
+        "For example in the US: A business installing equipment retains site acceptance results and evidence that the installation met the specified requirements.",
+        "For example in England: An English service provider keeps device identity, work performed, parts used and verification results in the service record."
+      ],
+      "condition": "Apply to installation or servicing within your responsibilities and relevant product requirements.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Apply to installation or servicing within your responsibilities and relevant product requirements. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D20",
+      "section": "D",
+      "clause": "7.6",
+      "heading": "Are measurement controls documented, with evidence that equipment is suitable?",
+      "description": [
+        "Define required measurements and control calibration or verification, traceability, identification and the response to unreliable equipment."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer checks that a test instrument's range and uncertainty are suitable for the device acceptance limit.",
+        "For example in England: A service provider records calibration status and investigates the effect of an out-of-tolerance instrument on previous work."
+      ],
+      "condition": "Use the assurance appropriate to the measurement and applicable requirements, not a blanket national metrology assumption.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D21",
+      "section": "D",
+      "clause": "8.2.1–8.2.3",
+      "heading": "Do written procedures cover feedback, complaints and regulatory reporting?",
+      "description": [
+        "Define receipt, review, investigation, reporting decisions, records and communication with relevant external parties."
+      ],
+      "examples": [
+        "For example in the US: A US manufacturer links complaint assessment to the applicable FDA medical device reporting process.",
+        "For example in England: An English manufacturer links feedback to post-market surveillance and assessment of MHRA reporting obligations."
+      ],
+      "condition": "Market, role, event type and applicable rules determine reporting; not every complaint is automatically reportable.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D22",
+      "section": "D",
+      "clause": "8.2.4, 8.4",
+      "heading": "Are internal audit and data-analysis procedures in place, with results retained?",
+      "description": [
+        "Define how audits and analysis will evaluate the system and relevant trends, and keep the evidence and follow-up."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer analyzes complaint, supplier and nonconformity trends and audits the processes behind them.",
+        "For example in England: A distributor audits traceability and reviews recurring delivery-condition failures."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D23",
+      "section": "D",
+      "clause": "8.2.6, 8.3",
+      "heading": "Do acceptance and nonconforming-product records support release decisions?",
+      "description": [
+        "Keep acceptance criteria, results, identity of the person authorising release and the disposition of nonconforming devices."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer records failed final tests, holds affected devices and retains reinspection and release evidence.",
+        "For example in England: A distributor documents damage found on receipt and the authorised decision to return or otherwise control the stock."
+      ],
+      "condition": "Any concession must meet applicable regulatory requirements and be properly justified and approved.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D24",
+      "section": "D",
+      "clause": "8.3.3",
+      "heading": "Is there a documented process for responding to problems in devices already supplied?",
+      "description": [
+        "Define advisory notices, responsibilities, communication and action appropriate to the risk, with records when an event occurs."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer prepares a process for assessing and carrying out a field action, including applicable FDA reporting.",
+        "For example in England: An English manufacturer prepares arrangements for a field safety corrective action and communications required for its situation."
+      ],
+      "condition": "No previous field action does not remove the need for a ready process.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D25",
+      "section": "D",
+      "clause": "8.5.2, 8.5.3",
+      "heading": "Are corrective and preventive action procedures documented and used?",
+      "description": [
+        "Address causes of actual and potential nonconformities, assess risks, verify actions and avoid adverse effects on safety or compliance."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer investigates a recurring test failure and verifies that the corrective action works without creating another risk.",
+        "For example in England: A distributor acts on a trend indicating a potential cold-chain failure before affected devices are supplied."
+      ],
+      "condition": "ISO 13485 retains a preventive-action requirement; do not remove it by analogy with ISO 9001.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D26",
+      "section": "D",
+      "clause": "7.5.8",
+      "heading": "Where UDI is required, is the identification process documented?",
+      "description": [
+        "Determine the applicable unique device identification requirements for the device and market, then control assignment, labelling and related records."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer checks the applicable FDA UDI requirements and controls the identifiers and submission responsibilities for its device.",
+        "For example in England: A business supplying England assesses the identification requirements applicable to its chosen market-access route and product."
+      ],
+      "condition": "Do not assume that every device or market has identical UDI obligations. Justify any non-applicability.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Do not assume that every device or market has identical UDI obligations. Justify any non-applicability. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D27",
+      "section": "D",
+      "clause": "7.5.9.2",
+      "heading": "For implantable devices, do you retain the additional traceability records required?",
+      "description": [
+        "Maintain the necessary history of relevant components, materials, environmental conditions and distribution, including information held by others where required."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer links an implantable device batch to relevant material lots and inspection records.",
+        "For example in England: A supplier maintains records identifying the consignee of an implantable-device shipment and can retrieve the history required for its role."
+      ],
+      "condition": "Applies to implantable devices within the relevant scope; protect personal information where it is held.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Applies to implantable devices within the relevant scope; protect personal information where it is held. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P01",
+      "section": "P",
+      "clause": "4.1, 5.2",
+      "heading": "Do you determine requirements for your actual role, device and target market?",
+      "description": [
+        "Identify applicable regulatory duties and translate them into the quality system and operations."
+      ],
+      "examples": [
+        "For example in the US: A US finished-device manufacturer assesses QMSR applicability alongside its other device obligations.",
+        "For example in England: A business placing devices on the market in England assesses the applicable Great Britain route and its manufacturer or supplier responsibilities."
+      ],
+      "condition": "ISO 13485 certification is not FDA clearance or approval and does not by itself establish UK market access.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P02",
+      "section": "P",
+      "clause": "5.1, 6.1",
+      "heading": "Does management provide resources to maintain device quality and meet requirements?",
+      "description": [
+        "Check leadership decisions, customer and regulatory focus, competence, infrastructure and independent quality authority."
+      ],
+      "examples": [
+        "For example in the US: Management provides enough qualified staff to assess complaints and release devices without bypassing checks.",
+        "For example in England: A business funds necessary storage monitoring and training after a review identifies a gap."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P03",
+      "section": "P",
+      "clause": "4.1.4, 4.2.4",
+      "heading": "Are changes assessed before implementation for their effect on the device and quality system?",
+      "description": [
+        "Review system, process and document changes for safety, conformity, regulatory obligations and needed verification or validation."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer assesses a material change before approving it for production.",
+        "For example in England: A distributor reviews whether a warehouse change affects required device storage conditions."
+      ],
+      "condition": "A supplier describing a change as minor does not remove your need to assess its impact.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P04",
+      "section": "P",
+      "clause": "6.2",
+      "heading": "Do you verify competence before people work independently?",
+      "description": [
+        "Match assessment to the task and risk, and check that training or other development has worked."
+      ],
+      "examples": [
+        "For example in the US: An inspector demonstrates that they can apply the device acceptance criteria consistently.",
+        "For example in England: A service engineer completes an observed task and verification before approval for independent work on the device."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P05",
+      "section": "P",
+      "clause": "6.3, 6.4",
+      "heading": "Are necessary infrastructure, environmental and contamination controls maintained?",
+      "description": [
+        "Check actual conditions, cleanliness, maintenance and personnel practices that affect product quality."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer checks that assembly areas remain within the conditions established for its process.",
+        "For example in England: A distributor investigates a storage-temperature excursion before releasing the affected stock."
+      ],
+      "condition": "The required controls depend on the product and process, not simply on whether the device is sterile.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P06",
+      "section": "P",
+      "clause": "7.1",
+      "heading": "Do new findings feed back into device risk management?",
+      "description": [
+        "Use production, servicing, complaints and other relevant feedback to reassess risks and controls."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer reviews a new failure pattern from service reports against the device risk file.",
+        "For example in England: A service organisation escalates repeated component failures and reviews its service-related risk controls."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P07",
+      "section": "P",
+      "clause": "7.2",
+      "heading": "Before accepting an order, do you verify the requirements and your ability to meet them?",
+      "description": [
+        "Clarify intended requirements and changes, including relevant regulatory and delivery conditions."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer checks that the requested configuration is covered by the applicable technical and market requirements.",
+        "For example in England: A supplier checks that it can maintain the required storage and transport conditions through delivery."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P08",
+      "section": "P",
+      "clause": "7.3.6, 7.3.7",
+      "heading": "Do you verify the design against its inputs and validate it for intended use?",
+      "description": [
+        "Use planned, documented methods appropriate to the device and risk, with acceptance criteria and suitable evidence."
+      ],
+      "examples": [
+        "For example in the US: A developer verifies technical performance and separately validates use under the intended conditions.",
+        "For example in England: An English manufacturer assesses whether representative users can use the device as intended, alongside technical verification."
+      ],
+      "condition": "Applies according to the justified design scope and regulatory requirements, not whether development is in-house.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Applies according to the justified design scope and regulatory requirements, not whether development is in-house. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P09",
+      "section": "P",
+      "clause": "7.3.8, 7.3.9",
+      "heading": "Do you control design transfer and assess design changes before release?",
+      "description": [
+        "Confirm that design outputs are suitable for manufacture and production can meet requirements. Review changes and their effect on existing devices."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer verifies that production instructions and equipment can consistently deliver the approved design.",
+        "For example in England: A developer assesses a design change for effects on risk controls, verification, validation and devices already supplied."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P10",
+      "section": "P",
+      "clause": "4.1.5, 7.4",
+      "heading": "Do you control important suppliers and outsourced processes in practice?",
+      "description": [
+        "Match control to risk, supplier performance and the effect on conformity; verify that agreements and requirements are followed."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer monitors a contract sterilizer's performance and reviews relevant changes before accepting them.",
+        "For example in England: A business checks an outsourced assembler's results and follows up recurring defects rather than relying only on its certificate."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P11",
+      "section": "P",
+      "clause": "7.5.1, 7.5.6",
+      "heading": "Is production carried out under the defined controls, including validated processes where needed?",
+      "description": [
+        "Check current instructions, equipment, conditions, monitoring and records during real work."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer verifies that operators use the approved process settings and record required in-process checks.",
+        "For example in England: An assembler stops a validated process when conditions fall outside the approved range and assesses affected output."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P12",
+      "section": "P",
+      "clause": "7.5.5, 7.5.7",
+      "heading": "Are sterilisation and sterile barrier controls maintained during routine work?",
+      "description": [
+        "Check that validated conditions are followed, required records are available and relevant changes are assessed."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer reviews the appropriate batch sterilization evidence before release.",
+        "For example in England: An English manufacturer checks sealing parameters and package handling against its approved process."
+      ],
+      "condition": "Conditional on the devices and processes in scope, including outsourced activities.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Conditional on the devices and processes in scope, including outsourced activities. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P13",
+      "section": "P",
+      "clause": "7.5.8, 7.5.9",
+      "heading": "Can you trace a batch or device and distinguish its current acceptance status?",
+      "description": [
+        "Use identifiers and records to reconstruct the required history and prevent confusion between released, held and rejected output."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer traces an affected component lot to finished devices and relevant shipments.",
+        "For example in England: A distributor retrieves the customers supplied with a device lot while keeping returned stock clearly on hold."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P14",
+      "section": "P",
+      "clause": "7.5.10, 7.5.11",
+      "heading": "Are devices and customer property protected during handling, storage and transport?",
+      "description": [
+        "Maintain required conditions and protect property, including confidential health information where it is entrusted to you."
+      ],
+      "examples": [
+        "For example in the US: A supplier verifies protective packing and required transport conditions for sensitive devices.",
+        "For example in England: A service business protects a customer's equipment and any patient information present during repair."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P15",
+      "section": "P",
+      "clause": "7.5.3, 7.5.4",
+      "heading": "Are installation and servicing results verified and used as feedback?",
+      "description": [
+        "Check the work against defined criteria, retain results and assess whether service findings need complaint or risk-management action."
+      ],
+      "examples": [
+        "For example in the US: An installer verifies the device after setup and records the acceptance results.",
+        "For example in England: A service provider escalates a repeated failure pattern rather than treating each repair as an unrelated job."
+      ],
+      "condition": "Apply where these activities are part of your responsibilities.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Apply where these activities are part of your responsibilities. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P16",
+      "section": "P",
+      "clause": "7.6",
+      "heading": "Do you prevent unreliable measuring equipment from affecting acceptance decisions?",
+      "description": [
+        "Check suitability and status before use, and assess previous results when equipment is found unfit."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer holds devices potentially affected by an out-of-tolerance test instrument pending assessment.",
+        "For example in England: A service provider identifies previous jobs checked with a faulty meter and determines the necessary action."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P17",
+      "section": "P",
+      "clause": "8.2.1–8.2.3",
+      "heading": "Are complaints, feedback and required notifications handled without gaps?",
+      "description": [
+        "Ensure information reaches the right people, investigations and reporting decisions are documented, and applicable deadlines are met."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer evaluates a complaint for FDA reportability without waiting for the full root-cause investigation to finish.",
+        "For example in England: A manufacturer supplying England assesses the event under applicable MHRA vigilance and post-market requirements."
+      ],
+      "condition": "A distributor or service provider must understand its own escalation duties; it should not assume the manufacturer's role without basis.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P18",
+      "section": "P",
+      "clause": "8.2.6",
+      "heading": "Are devices released only after required checks have been satisfactorily completed?",
+      "description": [
+        "Verify acceptance evidence, necessary approvals and the identity of the person authorising release."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer prevents distribution while required final test results are incomplete.",
+        "For example in England: An assembler checks the approved batch record before moving devices to released stock."
+      ],
+      "condition": "Do not use customer pressure as a reason to bypass applicable acceptance or regulatory requirements.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P19",
+      "section": "P",
+      "clause": "8.3",
+      "heading": "Are nonconforming devices controlled so they cannot be used or supplied unintentionally?",
+      "description": [
+        "Identify, segregate or otherwise control affected devices, assess the issue and authorise the disposition, including rework and subsequent verification."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer blocks a suspect lot in both the stock system and the storage area.",
+        "For example in England: A distributor holds damaged devices separately and obtains an authorised disposition before further supply."
+      ],
+      "condition": "Acceptance by concession requires justification, approval and compliance with applicable regulatory requirements.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P20",
+      "section": "P",
+      "clause": "8.2.4, 5.6",
+      "heading": "Do audits and management review examine actual quality-system results?",
+      "description": [
+        "Use objective audit evidence and meaningful review inputs, including complaints, reporting, performance and corrective action."
+      ],
+      "examples": [
+        "For example in the US: An auditor samples complaint files through assessment, action and closure rather than checking procedure existence alone.",
+        "For example in England: Management reviews traceability-test results and funds improvements where retrieval is unreliable."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P21",
+      "section": "P",
+      "clause": "8.4, 8.5",
+      "heading": "Do you use data to address causes of problems while protecting device safety?",
+      "description": [
+        "Analyse trends, decide proportionate corrective or preventive action and verify the results and absence of adverse effects."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer checks that a process improvement reduces defects without weakening an established risk control.",
+        "For example in England: A service business reviews recurring failures and verifies that revised service instructions do not introduce a new hazard."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P22",
+      "section": "P",
+      "clause": "7.5.8",
+      "heading": "Are returned devices identified and kept separate from stock approved for supply?",
+      "description": [
+        "Control returns until they have been assessed through the required process and an authorised decision has been made."
+      ],
+      "examples": [
+        "For example in the US: A distributor blocks returned devices from automatic restocking and records their assessment status.",
+        "For example in England: A business keeps returned equipment on hold until its condition, history and any required checks are reviewed."
+      ],
+      "condition": "No returns during the period does not remove the need for a ready procedure.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P23",
+      "section": "P",
+      "clause": "7.5.9.2",
+      "heading": "Can you reconstruct the additional history required for an implantable device?",
+      "description": [
+        "Test that relevant material, process, condition and distribution information is complete and retrievable across the supply chain."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer samples an implantable-device lot and retrieves the relevant component and manufacturing records.",
+        "For example in England: A supplier traces a selected shipment to its consignee and retrieves the additional records required by its role."
+      ],
+      "condition": "Applies to implantable devices in scope; traceability needs must be met without unnecessary disclosure of personal information.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Applies to implantable devices in scope; traceability needs must be met without unnecessary disclosure of personal information. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    }
+  ],
+  "guidance": {
+    "instructions": [
+      "Start with D01 to D27 for documents and records, then P01 to P23 for working practices. Each question includes a plain explanation and two illustrative examples, one in the US and one in England. Use the example to understand the requirement, not as a mandatory template.",
+      "Documents: Available means the necessary information is current and can be shown. Not available means it is missing or does not provide the evidence needed. Use Not sure when you need to check. Record gaps in incomplete documents.",
+      "Working practices: Yes means the requirement is implemented and supported by evidence. Partly means there are gaps. No means it is not implemented. Use Not sure when you need to check.",
+      "Use Not applicable only where justified and permitted. For an event-dependent record, use No events if appropriate; readiness still needs assessment. For grouped requirements, assess each applicable part before answering Yes.",
+      "Use existing contracts, procedures, system records and work evidence. Record each gap, the action, an owner and a due date. This self-check supports preparation and improvement; it is not a certification decision or a complete legal compliance assessment.",
+      "Assess design, sterile devices, installation, servicing, UDI and implantable-device questions against your actual scope and applicable regulatory requirements. A distributor, manufacturer and service provider do not automatically have identical duties. Record any permitted non-applicability with its justification.",
+      "Reference edition: ISO 13485:2016. England examples use relevant England, Great Britain or UK requirements according to their scope; they should not be assumed to cover every UK jurisdiction."
+    ],
+    "sections": [
+      {
+        "heading": "Terms in plain English",
+        "paragraphs": [
+          "Medical device file: The controlled documents or references needed to demonstrate conformity for a device type or family.",
+          "Intended use: The use for which a device is intended, as defined in the applicable product information.",
+          "Verification: Evidence that specified requirements have been met.",
+          "Validation: Evidence that the device or process is suitable for its intended use or purpose.",
+          "Traceability: The ability to reconstruct the required history and distribution of a device.",
+          "CAPA: Corrective and preventive action addressing causes of actual or potential nonconformities.",
+          "UDI: Unique device identification, subject to the applicable market and device requirements.",
+          "QMSR: FDA Quality Management System Regulation under 21 CFR Part 820.",
+          "MHRA: The UK Medicines and Healthcare products Regulatory Agency.",
+          "Post-market surveillance: Collection and evaluation of relevant information about devices after they are placed on the market."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Applying this in the US and England",
+        "paragraphs": [
+          "US: FDA's Quality Management System Regulation became effective on 2 February 2026 and incorporates ISO 13485:2016 by reference, with additional US provisions. Determine QMSR applicability and other device obligations for your role and product, including market authorisation, reporting and UDI where applicable. ISO certification is not FDA clearance or approval.",
+          "England: For devices placed on the market in England, assess the applicable Great Britain regulatory route, registration, marking and post-market obligations using current MHRA guidance. CE acceptance depends on the relevant conditions and device route; do not assume that UKCA is the only available route. Northern Ireland has a distinct regime and is outside these England examples.",
+          "The standard provides the management-system requirements. Local rules and contractual obligations apply according to your activities, role and market. The examples do not set universal legal deadlines, target values, document names or technical solutions."
+        ],
+        "links": [
+          {
+            "label": "FDA Quality Management System Regulation",
+            "url": "https://www.fda.gov/medical-devices/postmarket-requirements-devices/quality-management-system-regulation-qmsr"
+          },
+          {
+            "label": "FDA mandatory device reporting",
+            "url": "https://www.fda.gov/medical-devices/postmarket-requirements-devices/mandatory-reporting-requirements-manufacturers-importers-and-device-user-facilities"
+          },
+          {
+            "label": "FDA UDI basics",
+            "url": "https://www.fda.gov/medical-devices/unique-device-identification-system-udi-system/udi-basics"
+          },
+          {
+            "label": "MHRA regulation and market access",
+            "url": "https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk"
+          },
+          {
+            "label": "MHRA post-market surveillance",
+            "url": "https://www.gov.uk/government/collections/medical-devices-guidance-for-manufacturers-on-vigilance"
+          }
+        ]
+      },
+      {
+        "heading": "Standard and further information",
+        "paragraphs": [
+          "Use the stated edition when following clause references. The questions and explanations are practical paraphrases, not quotations from the standard. Regional sources were reviewed on 29 and 30 October 2026."
+        ],
+        "links": [
+          {
+            "label": "ISO 13485:2016 on the ISO website",
+            "url": "https://www.iso.org/standard/59752.html"
+          },
+          {
+            "label": "Audit Advisor information for ISO 13485",
+            "url": "https://audit-advisor.com/uk/iso-13485-certification"
+          }
+        ]
+      }
+    ]
+  }
+}

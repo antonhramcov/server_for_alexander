@@ -1,0 +1,12 @@
+{
+  "name": "audit-advisor-self-hosted-en",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "check:content": "node validate.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

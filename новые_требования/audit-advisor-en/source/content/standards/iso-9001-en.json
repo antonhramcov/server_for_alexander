@@ -1,0 +1,2236 @@
+{
+  "$schema": "../../schemas/standard.schema.json",
+  "schemaVersion": 1,
+  "id": "iso-9001-en",
+  "answerVersion": "2026.1.0",
+  "contentRevision": "2026-10-30.en.1",
+  "source": {
+    "file": "01_9001_US_England_2026-10-30.docx",
+    "snapshotDirectory": "sources/2026-10-30-english-questionnaires",
+    "sha256": "118815f0bfbf72da5e4c551f21b926d312bfacc72576cbcd89fcb4f712969a80",
+    "revisionDate": "2026-10-30"
+  },
+  "standard": {
+    "label": "ISO 9001:2026",
+    "basis": "ISO 9001:2026",
+    "note": "Questionnaire source: the approved US and England edition of 30 October 2026. Reference edition: ISO 9001:2026. Questions and explanations are practical paraphrases, not quotations. Regional guidance was reviewed on 29–30 October 2026. This import is not a new full clause-by-clause verification against all licensed final standard texts. Determine the duties that apply to your actual activities, role, products and market."
+  },
+  "page": {
+    "heading": "Check your management system’s readiness for a certification audit",
+    "description": "If you already agree customer requirements, check work and deal with mistakes, you have part of the foundation of a quality management system. Use these questions to connect those everyday activities, identify gaps and decide what to improve.",
+    "duration": "About 26–42 minutes"
+  },
+  "sections": [
+    {
+      "id": "D",
+      "title": "Documents and records",
+      "summaryTitle": "Required documents and records",
+      "description": "Check whether the necessary information is current, complete and available. Look at the evidence, not just the document title.",
+      "share": 0.4
+    },
+    {
+      "id": "P",
+      "title": "Working practices",
+      "summaryTitle": "Other requirements and working practices",
+      "description": "Check what happens in day-to-day work. Use recent examples, speak to the people involved and look at actual records.",
+      "intro": "You have reviewed the documents. Now assess how the requirements are put into practice.",
+      "share": 0.6
+    }
+  ],
+  "applicabilityPairs": [
+    [
+      "D06",
+      "P26",
+      "Can you show that the measuring equipment used to check quality is fit for purpose?"
+    ],
+    [
+      "D08",
+      "P15",
+      "Do you keep the records needed to control product or service development?"
+    ],
+    [
+      "D20",
+      "P25",
+      "Where later inspection cannot fully verify the result, do you retain evidence that the process is capable?"
+    ]
+  ],
+  "links": {
+    "service": "https://audit-advisor.com/",
+    "chat": ""
+  },
+  "disclaimer": "This self-check reflects your answers and supports preparation and improvement. It does not replace an independent audit, a certification decision or an assessment of all legal and regulatory obligations. A high score does not guarantee certification. Examples illustrate possible evidence and do not prescribe a mandatory document format.",
+  "questions": [
+    {
+      "id": "D01",
+      "section": "D",
+      "clause": "4.3",
+      "heading": "Have you written down what your quality management system covers?",
+      "description": [
+        "State the products or services, locations and activities included. Make any limits clear so customers and staff understand what your system controls."
+      ],
+      "examples": [
+        "For example in the US: A machine shop lists precision machining and assembly at its Ohio site, including outsourced heat treatment under its control.",
+        "For example in England: A facilities maintenance business identifies its office, mobile engineers and contracted maintenance services across England."
+      ],
+      "condition": "A scope statement can sit within an existing document. ISO 9001 does not require a separately titled quality manual.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D02",
+      "section": "D",
+      "clause": "4.4.2, 7.5",
+      "heading": "Do staff have clear, current instructions for work that affects quality?",
+      "description": [
+        "Provide enough guidance for people to do the work consistently, including important checks. Use existing procedures, drawings or digital workflows where they work well."
+      ],
+      "examples": [
+        "For example in the US: A fabrication shop displays the approved setup sheet and inspection steps at each workstation, with obsolete revisions removed.",
+        "For example in England: A property maintenance business puts job instructions, photographs and completion checks in the engineers' work-order app."
+      ],
+      "condition": "You do not need a separate written instruction for every simple task.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D03",
+      "section": "D",
+      "clause": "5.2",
+      "heading": "Has senior management approved a quality policy that fits your business?",
+      "description": [
+        "Explain the company's commitments to meeting requirements and improving the quality system. Staff should understand how those commitments affect their work."
+      ],
+      "examples": [
+        "For example in the US: A contract manufacturer connects its policy to reliable delivery, meeting specifications and acting on recurring defects.",
+        "For example in England: A consultancy explains its commitments to accurate advice, agreed deadlines and resolving client concerns, then discusses them at induction."
+      ],
+      "condition": "Keep the policy documented, communicate it internally and make it available to relevant interested parties when appropriate.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D04",
+      "section": "D",
+      "clause": "6.2.1",
+      "heading": "Have you set and recorded clear quality objectives?",
+      "description": [
+        "Choose results that matter, with measures that show progress. Avoid goals such as 'improve quality' without a way to tell whether performance improved."
+      ],
+      "examples": [
+        "For example in the US: A distributor sets a target for picking accuracy and reviews errors against the number of order lines shipped.",
+        "For example in England: A maintenance company tracks first-time completion and repeat visits, with targets and review dates agreed by management."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D05",
+      "section": "D",
+      "clause": "7.2",
+      "heading": "Can you show that people have the skills needed for their work?",
+      "description": [
+        "Keep appropriate evidence of competence, such as assessed experience, qualifications and practical sign-off. A training attendance record alone may not show ability."
+      ],
+      "examples": [
+        "For example in the US: A machine shop keeps operator assessments showing which machines and inspection tasks each person can perform independently.",
+        "For example in England: A consultancy records relevant qualifications, supervised work reviews and approval to handle particular client assignments."
+      ],
+      "condition": "Evidence must relate to the actual task; a qualification or long service is not automatically sufficient.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D06",
+      "section": "D",
+      "clause": "7.1.5",
+      "heading": "Can you show that the measuring equipment used to check quality is fit for purpose?",
+      "description": [
+        "Keep calibration or verification evidence appropriate to the measurement. Check the range, accuracy, traceability where required and what happens when a result is unreliable."
+      ],
+      "examples": [
+        "For example in the US: A US supplier checks that a micrometer's calibration covers the tolerances and units on the customer's drawing.",
+        "For example in England: An engineering company uses a laboratory whose accredited calibration scope covers the pressure instruments and ranges it needs."
+      ],
+      "condition": "Use 'Not applicable' only if this equipment is neither used nor needed to demonstrate conformity. Select calibration or verification based on the task and applicable requirements.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Use 'Not applicable' only if this equipment is neither used nor needed to demonstrate conformity. Select calibration or verification based on the task and applicable requirements. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D07",
+      "section": "D",
+      "clause": "8.2.3.2, 8.2.4",
+      "heading": "Do you keep the customer's requirements and evidence of the order review?",
+      "description": [
+        "Record what you agreed, including specifications, acceptance criteria, timing and changes. Keep evidence that you reviewed the requirements before accepting the commitment."
+      ],
+      "examples": [
+        "For example in the US: A contract manufacturer links the purchase order, drawing revision and review approval in its order-management system.",
+        "For example in England: An IT support business keeps the agreed statement of work, service levels, exclusions and approved variations with the contract."
+      ],
+      "condition": "An email or system record can work; a verbal discussion alone may not provide the required retained evidence.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D08",
+      "section": "D",
+      "clause": "8.3.2–8.3.6",
+      "heading": "Do you keep the records needed to control product or service development?",
+      "description": [
+        "Show how requirements became a design, how it was reviewed and checked, and how changes were approved. Include evidence that the result works for its intended use."
+      ],
+      "examples": [
+        "For example in the US: A product developer keeps design inputs, review decisions, test results and approved changes for a new dispenser.",
+        "For example in England: A training provider records client needs, course design reviews and pilot-session feedback before launching a new service."
+      ],
+      "condition": "Outsourcing design, or having no design department, does not remove your design responsibility. Justify any non-applicability.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Outsourcing design, or having no design department, does not remove your design responsibility. Justify any non-applicability. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D09",
+      "section": "D",
+      "clause": "8.4.1",
+      "heading": "Do you keep records of how you select and review suppliers and contractors?",
+      "description": [
+        "Show why a supplier is suitable, how performance is checked and what you do when it falls short. Match the depth of review to the effect on your customers."
+      ],
+      "examples": [
+        "For example in the US: A metalworking business records supplier approval, delivery performance and action on recurring material certificate errors.",
+        "For example in England: A facilities company reviews subcontractor competence, insurance where relevant, service quality and complaints before renewing approval."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D10",
+      "section": "D",
+      "clause": "8.1, 8.5.1",
+      "heading": "Are product or service requirements and key checks clearly documented?",
+      "description": [
+        "Give staff the acceptance criteria and work information needed to deliver the order. Keep results that show important activities and checks were completed."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer uses a job traveler with drawing revision, process stages, inspection points and recorded results.",
+        "For example in England: A commercial cleaning business uses a site specification and supervisor checks agreed with the client."
+      ],
+      "condition": "The information may be in a business system; the document's title is less important than its content and use.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D11",
+      "section": "D",
+      "clause": "8.5.2",
+      "heading": "Where traceability is required, can you reconstruct the history of a product or job?",
+      "description": [
+        "Use the required identifiers to link the output to relevant materials, work, people and checks. Make the detail appropriate to the customer and regulatory requirements."
+      ],
+      "examples": [
+        "For example in the US: A component supplier traces a shipped serial number to its material heat, machining record and final inspection.",
+        "For example in England: A repair business links a customer job number to the replacement part batch, engineer and completion test."
+      ],
+      "condition": "Traceability is conditional on need. Identifying the item and its inspection status is assessed separately in P21.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Traceability is conditional on need. Identifying the item and its inspection status is assessed separately in P21. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D12",
+      "section": "D",
+      "clause": "8.5.3",
+      "heading": "If customer or supplier property was lost, damaged or unsuitable, did you record it and tell the owner?",
+      "description": [
+        "Keep the facts, notification and outcome. Property can include tools, equipment, documents, intellectual property and personal data entrusted to you."
+      ],
+      "examples": [
+        "For example in the US: A machine shop records damage to a customer-owned fixture and agrees the next step before using it again.",
+        "For example in England: A consultancy records an accidentally deleted client file, informs the client and follows its recovery and incident process."
+      ],
+      "condition": "If no such event occurred, record 'No events'. Do not create fictional incident records; protecting property is covered in P22.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "If no such event occurred, record 'No events'. Do not create fictional incident records; protecting property is covered in P22. Use only if none of the events covered by this question occurred in the review period. Assess readiness of the arrangements separately."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D13",
+      "section": "D",
+      "clause": "8.6",
+      "heading": "Do records show that the finished product or service was accepted for release?",
+      "description": [
+        "Keep evidence that acceptance criteria were met and identify the person who authorised release. An invoice alone rarely proves this."
+      ],
+      "examples": [
+        "For example in the US: A US assembler retains final test results and the electronic approval linked to each shipment.",
+        "For example in England: An installation business retains commissioning results and the responsible person's approval before handing over the completed work."
+      ],
+      "condition": "A certificate of conformity or completion record must contain the evidence needed for that job, not just a document title.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D14",
+      "section": "D",
+      "clause": "8.7.2",
+      "heading": "Do you record defects, service errors and the decisions made about them?",
+      "description": [
+        "Describe the problem, what happened to the affected output, any authorised concession and who made the decision."
+      ],
+      "examples": [
+        "For example in the US: A distributor records a wrong-item shipment, retrieval arrangements, replacement and approval of the resolution.",
+        "For example in England: A consultancy records an incorrect report, withdraws the affected version and records the corrected issue sent to the client."
+      ],
+      "condition": "If no cases occurred, say so. People still need to know how a problem would be recorded and handled.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "If no cases occurred, say so. People still need to know how a problem would be recorded and handled. Use only if none of the events covered by this question occurred in the review period. Assess readiness of the arrangements separately."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D15",
+      "section": "D",
+      "clause": "9.1.1",
+      "heading": "Do you keep useful evidence of how well the business is performing?",
+      "description": [
+        "Retain results from the checks and measures you rely on to judge quality. Include enough context to understand changes and trends."
+      ],
+      "examples": [
+        "For example in the US: A warehouse keeps order accuracy, damage and on-time shipment results alongside monthly order volumes.",
+        "For example in England: A service business retains complaint themes, missed appointments and client feedback rather than only a single satisfaction score."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D16",
+      "section": "D",
+      "clause": "9.2.2",
+      "heading": "Do you have an internal audit programme and records of completed audits?",
+      "description": [
+        "Plan audits around important processes and previous findings. Keep evidence of what was checked, what was found and what follow-up was needed."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer schedules purchasing and production audits and retains sampled order references and findings.",
+        "For example in England: A consultancy audits how scope changes are agreed, using completed projects and interviews with project managers."
+      ],
+      "condition": "A future audit calendar does not show that audits have happened. Use a format that suits the business.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D17",
+      "section": "D",
+      "clause": "9.3.3",
+      "heading": "Are management review decisions recorded and followed through?",
+      "description": [
+        "Keep the conclusions and decisions from management's review of the quality system, including improvements, changes and resource needs."
+      ],
+      "examples": [
+        "For example in the US: A plant leadership team records a decision to replace an unreliable gauge and assigns funding and an owner.",
+        "For example in England: A company providing technical support records staffing and training decisions after reviewing recurring service-level failures."
+      ],
+      "condition": "An existing management meeting can serve this purpose if it covers the required inputs and retains the results.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D18",
+      "section": "D",
+      "clause": "10.2.2",
+      "heading": "Do records show the causes of problems and actions to prevent recurrence?",
+      "description": [
+        "Connect each significant problem to the cause assessment, action taken and evidence that the action worked. Include internal findings as well as customer complaints."
+      ],
+      "examples": [
+        "For example in the US: A supplier's corrective-action record links mixed parts to an unclear storage layout and shows the results of the revised layout.",
+        "For example in England: A maintenance business records why jobs were closed without tests and checks later jobs after changing its workflow."
+      ],
+      "condition": "If there have been no relevant cases, say so and show that arrangements are ready. Avoid inventing corrective actions.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "If there have been no relevant cases, say so and show that arrangements are ready. Avoid inventing corrective actions. Use only if none of the events covered by this question occurred in the review period. Assess readiness of the arrangements separately."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D19",
+      "section": "D",
+      "clause": "8.5.6",
+      "heading": "Do you record significant changes to production or service delivery and their approval?",
+      "description": [
+        "Keep the review results, authorisation and any necessary action when work arrangements change. Staff need to know which version or method now applies."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer records approval of a substitute machine, required first-off checks and the jobs affected.",
+        "For example in England: A support provider records approval of a changed escalation process and updates the on-call instructions."
+      ],
+      "condition": "No change means no event record is needed; readiness to assess changes is covered in P17.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "No change means no event record is needed; readiness to assess changes is covered in P17. Use only if none of the events covered by this question occurred in the review period. Assess readiness of the arrangements separately."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D20",
+      "section": "D",
+      "clause": "4.4.2, 8.1, 8.5.1",
+      "heading": "Where later inspection cannot fully verify the result, do you retain evidence that the process is capable?",
+      "description": [
+        "Keep the validation and control evidence needed for processes whose results cannot be fully checked afterwards. Identify the conditions that make the process reliable."
+      ],
+      "examples": [
+        "For example in the US: A fabricator retains the applicable welding procedure qualification and operator qualification records required for its work.",
+        "For example in England: A specialist coating business keeps evidence that its application process consistently achieves the specified performance."
+      ],
+      "condition": "Applicability depends on the process and what later checks can establish, not simply on the name of the operation.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Applicability depends on the process and what later checks can establish, not simply on the name of the operation. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P01",
+      "section": "P",
+      "clause": "4.1",
+      "heading": "Do you understand what could affect your ability to deliver good work on time?",
+      "description": [
+        "Consider internal and external conditions, including skills, supply chains, technology and whether climate change is relevant. Use that understanding in business decisions."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer reviews storm-related supplier disruption and the availability of qualified machinists when planning capacity.",
+        "For example in England: A business serving commercial buildings considers overheating, flood exposure and changes in client needs when planning its services."
+      ],
+      "condition": "A separate context matrix is optional; the understanding and decisions matter.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P02",
+      "section": "P",
+      "clause": "4.2",
+      "heading": "Do you know whose requirements affect your products and services?",
+      "description": [
+        "Identify relevant customers, regulators, employees and other parties, then determine which requirements the quality system must address."
+      ],
+      "examples": [
+        "For example in the US: A component maker checks customer specifications, applicable product rules and requirements passed down by its main contractor.",
+        "For example in England: A consultancy distinguishes the client's agreed deliverables from applicable professional and confidentiality obligations."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P03",
+      "section": "P",
+      "clause": "4.4.1",
+      "heading": "Is it clear who does what at each stage of an order or project?",
+      "description": [
+        "Connect the stages, handovers, responsibilities and checks so important work does not fall between teams."
+      ],
+      "examples": [
+        "For example in the US: A US distributor defines how sales hands special packing requirements to purchasing and the shipping team.",
+        "For example in England: An engineering consultancy assigns responsibility for the client brief, technical review, issue of drawings and approved changes."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P04",
+      "section": "P",
+      "clause": "5.1.1",
+      "heading": "Does senior management help resolve quality problems and provide the resources needed?",
+      "description": [
+        "Look for decisions and involvement, not just a signed policy. Management should make quality part of everyday business priorities."
+      ],
+      "examples": [
+        "For example in the US: The plant manager funds maintenance after repeated breakdowns cause rushed inspection and late deliveries.",
+        "For example in England: A managing director adjusts workloads when project reviews show that unrealistic deadlines are causing errors."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P05",
+      "section": "P",
+      "clause": "5.3",
+      "heading": "Do staff understand their quality responsibilities and authority?",
+      "description": [
+        "People should know what they are responsible for, when to stop work and who can approve a decision or change."
+      ],
+      "examples": [
+        "For example in the US: A production operator knows they can hold a batch when the first-piece check fails and whom to contact.",
+        "For example in England: A project coordinator knows that an unreviewed technical report cannot be sent merely because the client is chasing it."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P06",
+      "section": "P",
+      "clause": "6.1.1, 6.1.2",
+      "heading": "Do you anticipate what could go wrong and act before it affects the customer?",
+      "description": [
+        "Choose proportionate action based on the likely effect, and check whether it reduces the risk. A complicated scoring system is not always needed."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer qualifies an alternative source for a long-lead component before the current supplier's planned shutdown.",
+        "For example in England: A payroll services business tests cover arrangements before the employee responsible for a critical client run takes leave."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P07",
+      "section": "P",
+      "clause": "6.1.1, 6.1.3",
+      "heading": "Do you identify opportunities to work better and check the results?",
+      "description": [
+        "Use ideas that improve outcomes, then compare the result with what you expected. Distinguish an actual improvement from activity alone."
+      ],
+      "examples": [
+        "For example in the US: A warehouse pilots barcode confirmation and checks whether wrong-item shipments fall after rollout.",
+        "For example in England: A consultancy introduces an earlier client briefing call and reviews whether late scope changes become less frequent."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P08",
+      "section": "P",
+      "clause": "6.2.2",
+      "heading": "Does each quality objective have a practical delivery plan?",
+      "description": [
+        "Agree the actions, owner, resources, timescale and method for checking results. Make the plan part of normal management."
+      ],
+      "examples": [
+        "For example in the US: A production supervisor owns a setup-error reduction project, with time for trials and a defined review measure.",
+        "For example in England: A maintenance manager assigns refresher training and a scheduling change to improve first-time completion."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P09",
+      "section": "P",
+      "clause": "7.1.1–7.1.4",
+      "heading": "Do you have enough capable people, suitable equipment and appropriate working conditions?",
+      "description": [
+        "Check that resources support consistent work, including the physical and human conditions that affect quality."
+      ],
+      "examples": [
+        "For example in the US: A machine shop checks capacity, maintenance status, lighting and temperature where these affect inspection results.",
+        "For example in England: A remote support business checks staffing, secure access and reliable connections before taking on a larger client."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P10",
+      "section": "P",
+      "clause": "7.2",
+      "heading": "Do you check that people can actually perform the tasks assigned to them?",
+      "description": [
+        "Observe relevant work or use an appropriate practical assessment. Follow up training to see whether it has helped."
+      ],
+      "examples": [
+        "For example in the US: A supervisor observes a new operator setting up a job and interpreting the inspection result before independent work.",
+        "For example in England: A consultancy reviews a new analyst's work against agreed criteria before allowing unsupervised client delivery."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P11",
+      "section": "P",
+      "clause": "7.3",
+      "heading": "Do people know what affects quality and what to do when something goes wrong?",
+      "description": [
+        "Make the policy, relevant objectives, consequences of errors and reporting routes meaningful to each role."
+      ],
+      "examples": [
+        "For example in the US: A packing employee can explain why the correct label revision matters and how to stop a mixed-label shipment.",
+        "For example in England: A helpdesk adviser knows when an unresolved issue must be escalated rather than marked complete to meet a target."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P12",
+      "section": "P",
+      "clause": "8.2.2–8.2.4",
+      "heading": "Before accepting work, do you check that you can meet the requirements?",
+      "description": [
+        "Resolve unclear or conflicting requirements and confirm capacity, capability and relevant obligations before making the commitment."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer reviews drawing units, tolerances, inspection requirements and delivery dates before accepting the purchase order.",
+        "For example in England: A maintenance business checks site access, specialist competence and response-time commitments before signing the service agreement."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P13",
+      "section": "P",
+      "clause": "9.1.1–9.1.3",
+      "heading": "Do you look for patterns in errors and customer feedback?",
+      "description": [
+        "Combine relevant performance information, analyse it and use the results. A lack of complaints does not by itself prove satisfaction."
+      ],
+      "examples": [
+        "For example in the US: A distributor finds that damage clusters around one packing method and checks it against shipment data.",
+        "For example in England: A consultancy compares client feedback, rework and repeat business to identify where project handovers need improvement."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P14",
+      "section": "P",
+      "clause": "8.4",
+      "heading": "Do you check the quality of supplied products and outsourced work?",
+      "description": [
+        "Set appropriate controls, communicate requirements and review results. Outsourcing does not remove your responsibility for managing the outcome."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer checks material identity and required certificates before releasing incoming stock to production.",
+        "For example in England: A facilities company checks subcontracted maintenance reports and samples completed work before accepting it."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P15",
+      "section": "P",
+      "clause": "8.3",
+      "heading": "Before launching a new product or service, do you verify that it meets the requirements and works as intended?",
+      "description": [
+        "Plan reviews, verification and validation suited to the development. Resolve problems before release and retain the evidence."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer verifies dimensions against the design and trials the product in the intended operating conditions.",
+        "For example in England: A provider pilots a new client onboarding service and checks that users can complete the intended process reliably."
+      ],
+      "condition": "Use the same design applicability decision as D08; an external designer does not automatically make this inapplicable.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Use the same design applicability decision as D08; an external designer does not automatically make this inapplicable. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P16",
+      "section": "P",
+      "clause": "8.1, 8.5.1",
+      "heading": "Do people follow the agreed work methods and check important stages?",
+      "description": [
+        "Observe what actually happens, including acceptance criteria, suitable equipment and controls that reduce human error."
+      ],
+      "examples": [
+        "For example in the US: An assembly team records torque checks at the specified stage rather than reconstructing results at the end of the shift.",
+        "For example in England: A maintenance engineer follows the approved work order and records required tests before closing the job."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P17",
+      "section": "P",
+      "clause": "6.3, 8.5.6",
+      "heading": "Before changing how work is done, do you assess the effect on quality?",
+      "description": [
+        "Consider the purpose, consequences, resources and responsibilities. Control temporary changes as well as permanent ones."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer checks process capability and inspection needs before moving a job to a different machine.",
+        "For example in England: A support company tests a new ticketing system and confirms that open client actions transfer correctly before switchover."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P18",
+      "section": "P",
+      "clause": "10.2.1",
+      "heading": "When problems occur, do you address the causes so they do not recur?",
+      "description": [
+        "Contain the immediate issue, investigate why it happened, consider similar risks elsewhere and check the effectiveness of corrective action."
+      ],
+      "examples": [
+        "For example in the US: After repeated wrong-revision parts, a shop changes drawing access controls and checks subsequent jobs for recurrence.",
+        "For example in England: After missed appointments, a contractor investigates the scheduling handover and confirms the revised process works."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P19",
+      "section": "P",
+      "clause": "9.2",
+      "heading": "Do internal audits check whether the quality system works in practice?",
+      "description": [
+        "Use competent, objective auditors to sample processes against the standard and your own requirements. Report findings and follow up actions."
+      ],
+      "examples": [
+        "For example in the US: An auditor follows an order from quotation through purchasing, production and release rather than checking only the manual.",
+        "For example in England: A consultancy samples completed projects and interviews staff to test whether review and approval steps actually occurred."
+      ],
+      "condition": "Routine product inspection is useful but does not replace a system audit.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P20",
+      "section": "P",
+      "clause": "9.3, 10.1",
+      "heading": "Does management regularly review the quality system and decide what to improve?",
+      "description": [
+        "Review performance, changes, risks, customer feedback, audit results, previous actions and resources, then make decisions."
+      ],
+      "examples": [
+        "For example in the US: The leadership team considers defect trends and supplier performance before deciding where to invest in process improvements.",
+        "For example in England: A management meeting reviews complaints, project outcomes and capacity, then assigns actions with owners and review dates."
+      ],
+      "condition": "The review can sit within an existing meeting if the required subjects and results are covered.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P21",
+      "section": "P",
+      "clause": "8.5.2",
+      "heading": "Can people identify a product or job and see whether required checks are complete?",
+      "description": [
+        "Use suitable labels, system status or other controls to prevent confusion between items and stages."
+      ],
+      "examples": [
+        "For example in the US: A warehouse distinguishes incoming goods awaiting inspection from released stock in both the system and storage locations.",
+        "For example in England: A design consultancy marks drawings as draft, reviewed or approved for issue, so clients receive the correct version."
+      ],
+      "condition": "Detailed batch or job history is assessed in D11; identification and inspection status have their own purpose.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P22",
+      "section": "P",
+      "clause": "8.5.3",
+      "heading": "Do you protect property and information entrusted to you by customers and suppliers?",
+      "description": [
+        "Identify, check and safeguard property under your control. Include digital information as well as physical items."
+      ],
+      "examples": [
+        "For example in the US: A machine shop labels customer-owned tooling and controls its use and storage.",
+        "For example in England: A consultancy restricts access to client data and uses an agreed secure channel to exchange working files."
+      ],
+      "condition": "Non-applicability requires genuinely having no relevant property, including documents, data and intellectual property.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Non-applicability requires genuinely having no relevant property, including documents, data and intellectual property. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P23",
+      "section": "P",
+      "clause": "8.5.4",
+      "heading": "Do you protect products and service outputs from damage, loss or deterioration?",
+      "description": [
+        "Use suitable handling, storage, packing, transport and information controls throughout delivery."
+      ],
+      "examples": [
+        "For example in the US: A component supplier uses protective caps and packaging suited to the part and shipment, then checks damage trends.",
+        "For example in England: A survey company backs up field measurements and protects the approved report from accidental overwrite."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P24",
+      "section": "P",
+      "clause": "8.5.5",
+      "heading": "Do you meet the commitments that continue after delivery?",
+      "description": [
+        "Identify applicable warranty, support, maintenance, contractual and regulatory responsibilities, then make sure they are fulfilled."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer tracks warranty returns and gives customers the agreed replacement and support arrangements.",
+        "For example in England: An installation company hands over maintenance instructions and arranges the agreed follow-up visit."
+      ],
+      "condition": "No dedicated service department does not mean there are no post-delivery obligations.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "No dedicated service department does not mean there are no post-delivery obligations. Use only if no relevant post-delivery obligations apply within the justified scope."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P25",
+      "section": "P",
+      "clause": "8.5.1",
+      "heading": "Do you confirm that processes whose results cannot be fully checked later consistently achieve the required outcome?",
+      "description": [
+        "Validate the process, control the conditions and revalidate when needed. A finished-item check alone may not demonstrate the hidden characteristic."
+      ],
+      "examples": [
+        "For example in the US: A fabricator uses qualified welding procedures and personnel and reviews whether a process change needs requalification.",
+        "For example in England: A coating contractor validates the application process for the specified service conditions and controls the agreed parameters."
+      ],
+      "condition": "Applies where later monitoring or measurement cannot fully verify the process result; see D20.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Applies where later monitoring or measurement cannot fully verify the process result; see D20. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P26",
+      "section": "P",
+      "clause": "7.1.5",
+      "heading": "Are measuring devices suitable, reliable and correctly used?",
+      "description": [
+        "Check identification, status, protection and the method of use. If equipment is found unreliable, assess earlier results and take action."
+      ],
+      "examples": [
+        "For example in the US: An inspector finds a gauge out of tolerance and identifies which accepted jobs may need reassessment.",
+        "For example in England: An engineering firm checks the instrument range and calibration status before recording commissioning measurements."
+      ],
+      "condition": "Use the applicability decision in D06. External laboratory results must be suitable for your measurement task.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Use the applicability decision in D06. External laboratory results must be suitable for your measurement task. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P27",
+      "section": "P",
+      "clause": "8.6",
+      "heading": "Are all required checks complete and release authorised before handover?",
+      "description": [
+        "Confirm the acceptance evidence and responsible approval before shipping goods or closing the service deliverable."
+      ],
+      "examples": [
+        "For example in the US: Shipping staff cannot release an order until final inspection is approved in the system.",
+        "For example in England: A project manager checks commissioning results and authorisation before issuing the handover pack."
+      ],
+      "condition": "Any exceptional early release needs the appropriate authority and customer approval where applicable; it is not a routine shortcut.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P28",
+      "section": "P",
+      "clause": "8.7",
+      "heading": "Do people know how to deal with defective products or service errors?",
+      "description": [
+        "Control the affected output, choose an authorised disposition, communicate as needed and verify corrected work before release."
+      ],
+      "examples": [
+        "For example in the US: A supplier's review team decides whether rejected parts can be reworked, returned or scrapped and records the decision.",
+        "For example in England: A consultancy withdraws an incorrect report, informs affected recipients and rechecks the corrected version."
+      ],
+      "condition": "A customer concession cannot override an applicable legal requirement. Segregation is assessed separately in P32.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P29",
+      "section": "P",
+      "clause": "7.5.2, 7.5.3",
+      "heading": "Do staff use current documents and retain the records they need?",
+      "description": [
+        "Control approval, access, changes, retention and protection, including necessary external information."
+      ],
+      "examples": [
+        "For example in the US: A shop-floor terminal opens the approved drawing revision and prevents uncontrolled local copies becoming the working instruction.",
+        "For example in England: A contractor updates client specifications in its work-order system and preserves completion records for the agreed retention period."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P30",
+      "section": "P",
+      "clause": "7.4, 8.2.1",
+      "heading": "Do staff and customers receive important order information in time?",
+      "description": [
+        "Make communication responsibilities clear, including enquiries, changes, feedback, complaints and relevant contingency arrangements."
+      ],
+      "examples": [
+        "For example in the US: Sales notifies production of an approved quantity change before the job is cut and confirms the revised date with the customer.",
+        "For example in England: A maintenance provider informs the client about a missed access appointment and agrees the next step through the contract contact."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P31",
+      "section": "P",
+      "clause": "7.1.6",
+      "heading": "Do you share essential knowledge so the business does not depend on one person?",
+      "description": [
+        "Identify knowledge needed for reliable work, make it accessible and keep it up to date as needs change."
+      ],
+      "examples": [
+        "For example in the US: An experienced machinist documents a proven setup and coaches a second operator before retirement.",
+        "For example in England: A consultancy keeps reusable review guidance and project handover notes instead of relying on one senior colleague's inbox."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P32",
+      "section": "P",
+      "clause": "8.7.1",
+      "heading": "Do you identify and hold defective work so it cannot be used or sent by mistake?",
+      "description": [
+        "Use physical or digital controls that actually prevent unintended use or delivery until an authorised decision is made."
+      ],
+      "examples": [
+        "For example in the US: A warehouse places suspect parts in a hold location and blocks allocation in the inventory system.",
+        "For example in England: A service provider restricts access to an incorrect deliverable and marks it withdrawn before preparing the corrected version."
+      ],
+      "condition": "A separate quarantine room is not always necessary; the chosen controls must work in practice.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P33",
+      "section": "P",
+      "clause": "5.1.1",
+      "heading": "Can people report mistakes openly and record honest results?",
+      "description": [
+        "Check whether leadership encourages truthful reporting, ethical conduct and early escalation, including when deadlines or targets are under pressure."
+      ],
+      "examples": [
+        "For example in the US: An inspector reports a failed result without being asked to change it so a shipment can leave on time.",
+        "For example in England: An engineer raises a missed check, and the manager arranges the check rather than asking for a backdated record."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    }
+  ],
+  "guidance": {
+    "instructions": [
+      "Start with D01 to D20 for documents and records, then P01 to P33 for working practices. Each question includes a plain explanation and two illustrative examples, one in the US and one in England. Use the example to understand the requirement, not as a mandatory template.",
+      "Documents: Available means the necessary information is current and can be shown. Not available means it is missing or does not provide the evidence needed. Use Not sure when you need to check. Record gaps in incomplete documents.",
+      "Working practices: Yes means the requirement is implemented and supported by evidence. Partly means there are gaps. No means it is not implemented. Use Not sure when you need to check.",
+      "Use Not applicable only where justified and permitted. For an event-dependent record, use No events if appropriate; readiness still needs assessment. For grouped requirements, assess each applicable part before answering Yes.",
+      "Use existing contracts, procedures, system records and work evidence. Record each gap, the action, an owner and a due date. This self-check supports preparation and improvement; it is not a certification decision or a complete legal compliance assessment.",
+      "Reference edition: ISO 9001:2026. England examples use relevant England, Great Britain or UK requirements according to their scope; they should not be assumed to cover every UK jurisdiction."
+    ],
+    "sections": [
+      {
+        "heading": "Terms in plain English",
+        "paragraphs": [
+          "Quality management system: The connected responsibilities, processes and controls used to deliver work that meets requirements.",
+          "Scope: The activities, products, services and locations covered by the system.",
+          "Acceptance criteria: The conditions that must be met before work is accepted or released.",
+          "Nonconformity: A failure to meet a requirement, including an internal requirement.",
+          "Correction: Action to fix the immediate problem.",
+          "Corrective action: Action addressing the cause so the problem does not recur or arise elsewhere.",
+          "Verification: Checking that specified requirements have been met.",
+          "Validation: Checking that the result is suitable for its intended use.",
+          "Traceability: The ability to reconstruct the required history of an item or job."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Applying this in the US and England",
+        "paragraphs": [
+          "US: Use the language and evidence familiar to your operations: purchase orders, job travelers, inspection records, nonconformance reports and approved statements of work. Identify applicable federal, state and sector requirements for the product or service. A quality-system certificate does not replace a product approval, professional licence or contractual acceptance.",
+          "England: Use existing job sheets, work orders, specifications, completion records and client-approved variations where they provide the necessary evidence. Determine the actual legal and contractual requirements for the work. A signed completion record is useful only if it demonstrates the relevant acceptance checks and authorisation.",
+          "The standard provides the management-system requirements. Local rules and contractual obligations apply according to your activities, role and market. The examples do not set universal legal deadlines, target values, document names or technical solutions."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Standard and further information",
+        "paragraphs": [
+          "Use the stated edition when following clause references. The questions and explanations are practical paraphrases, not quotations from the standard. Regional sources were reviewed on 29 and 30 October 2026."
+        ],
+        "links": [
+          {
+            "label": "ISO 9001:2026 on the ISO website",
+            "url": "https://www.iso.org/standard/9001"
+          },
+          {
+            "label": "Audit Advisor information for ISO 9001",
+            "url": "https://audit-advisor.com/uk/iso-9001-certification"
+          }
+        ]
+      }
+    ]
+  }
+}

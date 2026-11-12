@@ -1,0 +1,300 @@
+{
+  "$schema": "../schemas/interface.schema.json",
+  "schemaVersion": 1,
+  "locale": "en-GB",
+  "welcome": {
+    "heading": "Check your management system’s readiness for a certification audit",
+    "description": "Choose one standard and assess your documents and working practices. Use practical examples from the United States and England to identify what is working and what needs attention.",
+    "selectionLabel": "Choose one standard",
+    "selectionPlaceholder": "Select a standard for your self-check",
+    "selectionHint": "Select one standard, then start your self-check."
+  },
+  "stages": {
+    "two": "Two stages of your self-check",
+    "many": "Stages of your self-check",
+    "questionCount": "Questions: {count}.",
+    "sections": [
+      {
+        "id": "D",
+        "title": "Documents and records",
+        "summaryTitle": "Required documents and records",
+        "description": "Check whether the necessary information is current, complete and available. Look at the evidence, not just the document title.",
+        "share": 0.4
+      },
+      {
+        "id": "P",
+        "title": "Working practices",
+        "summaryTitle": "Other requirements and working practices",
+        "description": "Check what happens in day-to-day work. Use recent examples, speak to the people involved and look at actual records.",
+        "intro": "You have reviewed the documents. Now assess how the requirements are put into practice.",
+        "share": 0.6
+      }
+    ]
+  },
+  "navigation": {
+    "start": "Start self-check",
+    "next": "Next",
+    "back": "Back",
+    "finish": "View results",
+    "returnToResults": "Back to results",
+    "reset": "Start again",
+    "repeat": "Start a new self-check",
+    "review": "Review and change answers",
+    "editAnswer": "Review answer",
+    "continueSection": "Continue to the next stage",
+    "transitionBack": "Return to the last question"
+  },
+  "question": {
+    "metadataLabel": "About this self-check",
+    "section": "Stage {current} of {total}",
+    "progress": "{percent}% completed",
+    "progressLabel": "Completion progress",
+    "position": "Question {current} of {total}",
+    "remaining": "Unanswered: {count}",
+    "examplesHeading": "Examples",
+    "chooseOne": "Choose one answer",
+    "notApplicableHeading": "When “Not applicable” is allowed:",
+    "noEventsHeading": "When “No events” is allowed:",
+    "conditionHeading": "Note:",
+    "unanswered": "Choose the answer that best describes your current situation.",
+    "navigationLabel": "Question navigation",
+    "progressHint": "This bar shows completion progress. Your readiness assessment will appear in the results.",
+    "announcement": "Question {current} of {total}. Stage {section}."
+  },
+  "answerPresets": {
+    "documents": [
+      {
+        "value": "yes",
+        "label": "Available",
+        "description": "The necessary information is current, complete and can be shown"
+      },
+      {
+        "value": "no",
+        "label": "Not available",
+        "description": "The information is missing, incomplete, outdated or does not provide the evidence needed"
+      },
+      {
+        "value": "na",
+        "label": "Not applicable",
+        "description": "Only if the condition below is met and the exclusion is justified"
+      },
+      {
+        "value": "no_events",
+        "label": "No events",
+        "description": "No relevant events in the period reviewed; check the condition below"
+      },
+      {
+        "value": "unsure",
+        "label": "Not sure",
+        "description": "I need to check the evidence before deciding"
+      }
+    ],
+    "practice": [
+      {
+        "value": "yes",
+        "label": "Yes",
+        "description": "The requirement is implemented and supported by evidence"
+      },
+      {
+        "value": "partial",
+        "label": "Partly",
+        "description": "Some arrangements work, but there are gaps"
+      },
+      {
+        "value": "no",
+        "label": "No",
+        "description": "The requirement is not yet implemented"
+      },
+      {
+        "value": "na",
+        "label": "Not applicable",
+        "description": "Only if the condition below is met and the exclusion is justified"
+      },
+      {
+        "value": "no_events",
+        "label": "No events",
+        "description": "No relevant events in the period reviewed; check the condition below"
+      },
+      {
+        "value": "unsure",
+        "label": "Not sure",
+        "description": "I need to check the evidence before deciding"
+      }
+    ]
+  },
+  "feedback": {
+    "yes": "Answer saved. Make sure current evidence supports your answer.",
+    "no": "Answer saved. This item will be included in your preparation plan.",
+    "partial": "Answer saved. The remaining work will be included in your preparation plan.",
+    "na": "Answer saved. Verify the justification for non-applicability. This item is excluded from the score.",
+    "no_events": "Answer saved. No events does not demonstrate that the process is ready. The event-dependent record is excluded from the score.",
+    "unsure": "Answer saved for follow-up. Check the evidence and update this answer. An overall readiness score will be available once all “Not sure” answers are resolved."
+  },
+  "milestones": {
+    "25": "You have completed a quarter of the questions. Keep assessing what actually happens.",
+    "50": "You are halfway through. Your strengths and areas for improvement are taking shape.",
+    "75": "Most of the self-check is complete. Your preparation plan will be ready soon."
+  },
+  "plan": {
+    "whenNoPrefix": "Check and address the gaps in this requirement.",
+    "whenPartialPrefix": "Complete the remaining work and verify the result.",
+    "whenUnsurePrefix": "Verify the evidence and decide whether this requirement is met. Update the answer after checking.",
+    "confirmationHeading": "Examples of evidence",
+    "positiveDocument": "information available",
+    "positivePractice": "implemented"
+  },
+  "loading": {
+    "program": "Loading the self-check…",
+    "standard": "Loading questions for your chosen standard…",
+    "retry": "Try loading again",
+    "programError": "The self-check could not load. Check your connection and try again.",
+    "standardError": "The questionnaire could not load. Select the standard again or retry.",
+    "setupRequired": "Set the public hosting address for the application files before starting.",
+    "unsupported": "Your browser does not support the features this self-check needs. Open it in a current browser."
+  },
+  "storage": {
+    "unavailable": "Browser storage is unavailable. You can continue in this page, but save your results before closing it.",
+    "version": "The questionnaire version has changed or the saved data is incompatible. Start a new self-check.",
+    "damaged": "The saved browser data could not be read. You can start a new self-check.",
+    "migrated": "The document-answer format has changed. Compatible answers have been restored; review the remaining questions.",
+    "resumeComplete": "A completed self-check is saved in this browser.",
+    "resumePartial": "{count} of {total} answers are saved. You can continue where you stopped.",
+    "openResults": "Open my results",
+    "resume": "Continue self-check",
+    "resetPrompt": "Start again and return to standard selection? The saved answers for this self-check will be removed from this browser.",
+    "resetFailure": "The browser could not remove the saved answers. They may reappear when you select this standard again.",
+    "resetAnnouncement": "Self-check reset. Choose a standard to start again."
+  },
+  "results": {
+    "reportHeading": "YOUR PREPARATION REPORT",
+    "completed": "Self-check complete",
+    "readinessHeading": "INDICATIVE SYSTEM READINESS",
+    "gapsHeading": "What to check or improve before the audit",
+    "firstHeading": "Check these items first:",
+    "applicabilityHeading": "Check which requirements apply",
+    "strengthsHeading": "What you already have in place",
+    "attentionHeading": "Where to focus your attention",
+    "planHeading": "Your preparation plan",
+    "excludedHeading": "Excluded from the score",
+    "limitationsHeading": "Assessment basis and limitations",
+    "save": "Save results",
+    "copy": "Copy action plan",
+    "serviceHeading": "Planning certification to {standard}?",
+    "serviceDescription": "Audit Advisor can help you explore accredited certification bodies, often called ISO registrars in the United States. Choose your market to see available certification options and compare providers, accreditation scope and proposed terms. Audit Advisor does not conduct certification audits or issue certificates.",
+    "serviceButton": "Explore certification options for your market ↗",
+    "chatHeading": "Questions about {standard}?",
+    "chatDescription": "Use the terms, regional guidance and official sources provided with this questionnaire to support your preparation.",
+    "chatButton": "Explore further guidance ↗",
+    "gapsDescription": "{count} of {total} items need checking or improvement. A high overall score does not resolve an individual gap. The plan below includes every “No”, “Not available”, “Partly” and “Not sure” answer.",
+    "applicabilityDescription": "You selected “Not applicable” for a document question but a different applicability answer for the related working-practice question, or the other way round. Review both answers.",
+    "strengthsIntro": "Based on the evidence you reported:",
+    "moreStrengths": "{count} more criteria received a positive answer.",
+    "noStrengths": "There are no positive answers yet. Your self-check provides a starting point and a list of preparation tasks.",
+    "attentionIntro": "Topics with items to check or improve:",
+    "noGaps": "You have not reported gaps against these criteria. Next, arrange an independent review of the evidence and the consistency of your processes.",
+    "planCount": "Items to check or improve: {count}",
+    "planDescription": "Tasks are grouped by topic. Groups containing important items appear first. Set the actual priorities, owners and due dates according to your organisation’s risks and needs.",
+    "allYesHeading": "Verify the objective evidence",
+    "allYesDescription": "All applicable criteria received positive answers. Independently review the evidence, test whether processes work consistently and agree the next steps for an external audit.",
+    "exclusionsDescription": "These exclusions reflect your answers. They have not been verified by an independent auditor.",
+    "printHint": "Use your browser’s print dialog to print or save as PDF.",
+    "notCalculated": "not calculated",
+    "announcement": "Self-check complete. Indicative readiness: {result}."
+  },
+  "seo": {
+    "title": "ISO Certification Audit Readiness Self-Check | Audit Advisor",
+    "description": "Assess your management system against one of seven ISO standards. Review documents and working practices, use US and England examples, and get a preparation plan."
+  },
+  "selection": {
+    "summary": "{standard} · {count} questions · {duration} · Free self-check",
+    "planned": "in development"
+  },
+  "transition": {
+    "count": "{count} of {total} questions completed",
+    "heading": "“{section}” completed",
+    "description": "Continue your self-check. Next stage: {section}.",
+    "announcement": "Stage completed. Next: {section}."
+  },
+  "assessment": {
+    "noDataHeading": "Resolve the remaining checks before calculating readiness",
+    "noDataDescription": "Review any “Not sure” answers and update them after checking the evidence. An overall score is also unavailable if every criterion in a stage has been excluded. Your preparation plan remains available below.",
+    "closingHigh": "Save your results, check the remaining items and repeat the assessment after completing the actions.",
+    "closingOther": "You now have a starting point and a practical task list. Save the plan and use it to improve your management system step by step.",
+    "method": "Available / Yes = 1, Not available / No = 0, and Partly = 0.5 for working-practice questions. Incomplete, outdated or unapproved required documents count as Not available. Permitted Not applicable and No events answers are excluded from the score and do not count as meeting a requirement. Not sure is a follow-up answer: it is included in the plan, and the affected stage and overall score are not calculated until it is resolved. Stage score = 100 × weighted points earned / applicable question weights. Stage shares: {shares}. The overall score combines the stage scores using those shares and is rounded at the end. Question weights: {weights}. If a stage has no applicable criteria, no overall score is calculated. All negative, partial and uncertain answers appear in the plan. Questions have equal numerical weight. Important items are editorial priorities, not an official classification of nonconformities. This is Audit Advisor’s preparation method, not an official conformity scoring system.",
+    "levels": [
+      {
+        "min": 0,
+        "title": "Early preparation stage",
+        "text": "Your answers indicate that some management-system elements are in place. Start with the gaps that matter most to your activities."
+      },
+      {
+        "min": 40,
+        "title": "Substantial preparation remains",
+        "text": "Some elements are working. Address the identified gaps systematically and connect them into an effective management system."
+      },
+      {
+        "min": 60,
+        "title": "The main foundations are in place",
+        "text": "You have a management-system foundation, with important work still to complete. Finish the actions and verify their effectiveness before the certification audit."
+      },
+      {
+        "min": 80,
+        "title": "High indicative readiness",
+        "text": "You reported that most of the criteria are met. Focus on the remaining gaps and check that key processes work consistently."
+      },
+      {
+        "min": 90,
+        "title": "Very high indicative readiness",
+        "text": "Most criteria received positive answers. Next, verify the objective evidence and complete the arrangements for an external audit."
+      }
+    ]
+  },
+  "answerStatuses": {
+    "documents": {
+      "yes": "Information available",
+      "no": "Information missing or needs improvement"
+    },
+    "practice": {
+      "yes": "Implemented",
+      "partial": "Partly implemented",
+      "no": "Not yet implemented"
+    },
+    "na": "Not applicable",
+    "no_events": "No events",
+    "unsure": "Not sure — verification needed"
+  },
+  "export": {
+    "date": "Date",
+    "readiness": "Indicative readiness",
+    "notCalculated": "not calculated",
+    "dateAssessment": "Self-check date",
+    "version": "Assessment version",
+    "boundaries": "Scope and limitations of the assessment",
+    "condition": "Condition",
+    "noStrengths": "No positive answers have been recorded yet. Use the findings to set your first tasks.",
+    "gapCount": "Items to check or improve: {count}. See the plan below.",
+    "noGaps": "No gaps were reported. This does not establish that there are no nonconformities.",
+    "noPlan": "No gaps were reported. Independently check the objective evidence and consistency of your processes.",
+    "conflict": "{title}: answers {first} and {second} differ on applicability.",
+    "printFrame": "Printable assessment report",
+    "printSuccess": "The print dialog has opened. Choose “Save as PDF” or the equivalent browser option to save a PDF.",
+    "printError": "The browser could not open printing. Try another tab or copy the action plan.",
+    "copySuccess": "Action plan copied.",
+    "copySuccessFallback": "Action plan copied. The text is also available below.",
+    "copyManual": "Automatic copying is unavailable. The text is selected: press Ctrl+C or ⌘C, or use your device’s Copy command."
+  },
+  "metadata": {
+    "section": "Clause {chapter}",
+    "annex": "Annex A controls, group {chapter}",
+    "general": "General requirements",
+    "clause": "clause",
+    "firstPriority": "First",
+    "nextPriority": "Next",
+    "guidanceHeading": "Terms, US and England guidance, and sources"
+  },
+  "accessibility": {
+    "toolLabel": "Certification audit readiness self-check",
+    "copyFallback": "Action plan for manual copying",
+    "noScript": "Enable JavaScript to use the interactive self-check. Your answers are processed in this browser and are not sent to a server."
+  }
+}

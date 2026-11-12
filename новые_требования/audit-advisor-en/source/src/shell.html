@@ -1,0 +1,30 @@
+<section id="aa-iso-readiness" lang="__LANG__" aria-label="__TOOL_LABEL__" data-view="welcome"
+  data-assets-base="__ASSET_BASE_URL__"
+  data-load-message="__LOAD_MESSAGE__"
+  data-load-error="__LOAD_ERROR__"
+  data-setup-message="__SETUP_MESSAGE__">
+  <style>/*__STYLES__*/</style>
+  <div class="aa-shell">
+    <div class="aa-intro">
+      <h2 id="aa-tool-title" data-copy-key="welcome.heading">__TITLE__</h2>
+      <p class="aa-lead" data-copy-key="welcome.description">__INTRO__</p>
+      <div class="aa-stages" id="aa-stages">__STAGES__</div>
+      <div class="aa-selection">
+        <label for="aa-standard" id="aa-selection-label" data-copy-key="welcome.selectionLabel">__SELECTION_LABEL__</label>
+        <select id="aa-standard" name="aa-standard" required disabled>
+          <option value="" selected disabled>__SELECTION_PLACEHOLDER__</option>
+          __STANDARD_OPTIONS__
+        </select>
+        <p id="aa-selection-info" class="aa-selection-info" role="status" aria-live="polite">__SELECTION_HINT__</p>
+      </div>
+      <div id="aa-start-area"><button type="button" class="aa-button aa-primary" data-action="start" disabled>__START_LABEL__ →</button></div>
+      <div id="aa-guidance"></div>
+    </div>
+    <div class="aa-loading"><p id="aa-load-status" role="status" aria-live="polite"></p><button type="button" class="aa-button" data-action="retry-program" hidden>__RETRY_LABEL__</button></div>
+    <div class="aa-runtime" id="aa-runtime"></div>
+    <p id="aa-storage-status" class="aa-storage" role="status" aria-live="polite"></p>
+    <p id="aa-announcer" class="aa-sr" role="status" aria-live="polite" aria-atomic="true"></p>
+    <noscript><p class="aa-notice">__NOSCRIPT__</p></noscript>
+  </div>
+  <script>/*__SCRIPT__*/</script>
+</section>

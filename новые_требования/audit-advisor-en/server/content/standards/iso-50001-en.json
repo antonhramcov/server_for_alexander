@@ -1,0 +1,1629 @@
+{
+  "$schema": "../../schemas/standard.schema.json",
+  "schemaVersion": 1,
+  "id": "iso-50001-en",
+  "answerVersion": "2026.1.0",
+  "contentRevision": "2026-10-30.en.1",
+  "source": {
+    "file": "04_50001_US_England_2026-10-30.docx",
+    "snapshotDirectory": "sources/2026-10-30-english-questionnaires",
+    "sha256": "f56539231590b8ae08f15d291d7a2cba78735fe79cd5d6860f87c1e32c7fd339",
+    "revisionDate": "2026-10-30"
+  },
+  "standard": {
+    "label": "ISO 50001:2018",
+    "basis": "ISO 50001:2018 with Amendment 1:2024",
+    "note": "Questionnaire source: the approved US and England edition of 30 October 2026. Reference edition: ISO 50001:2018 with Amendment 1:2024. Questions and explanations are practical paraphrases, not quotations. Regional guidance was reviewed on 29–30 October 2026. This import is not a new full clause-by-clause verification against all licensed final standard texts. Determine the duties that apply to your actual activities, role, products and market."
+  },
+  "page": {
+    "heading": "Check your management system’s readiness for a certification audit",
+    "description": "If you already collect meter readings, maintain equipment and investigate high consumption, you have part of the foundation of an energy management system. These questions help distinguish real improvement from changes caused by prices, weather, occupancy or production.",
+    "duration": "About 19–30 minutes"
+  },
+  "sections": [
+    {
+      "id": "D",
+      "title": "Documents and records",
+      "summaryTitle": "Required documents and records",
+      "description": "Check whether the necessary information is current, complete and available. Look at the evidence, not just the document title.",
+      "share": 0.4
+    },
+    {
+      "id": "P",
+      "title": "Working practices",
+      "summaryTitle": "Other requirements and working practices",
+      "description": "Check what happens in day-to-day work. Use recent examples, speak to the people involved and look at actual records.",
+      "intro": "You have reviewed the documents. Now assess how the requirements are put into practice.",
+      "share": 0.6
+    }
+  ],
+  "applicabilityPairs": [],
+  "links": {
+    "service": "https://audit-advisor.com/",
+    "chat": ""
+  },
+  "disclaimer": "This self-check reflects your answers and supports preparation and improvement. It does not replace an independent audit, a certification decision or an assessment of all legal and regulatory obligations. A high score does not guarantee certification. Examples illustrate possible evidence and do not prescribe a mandatory document format.",
+  "questions": [
+    {
+      "id": "D01",
+      "section": "D",
+      "clause": "4.3",
+      "heading": "Have you documented the boundaries and scope of your energy management system?",
+      "description": [
+        "Identify the sites, activities and areas of control covered. Include all energy types within those boundaries."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer covers its plant, warehouse and on-site utilities, including purchased electricity, natural gas and vehicle fuel within scope.",
+        "For example in England: A hotel group identifies the properties and activities included, with clear arrangements for landlord-controlled supplies."
+      ],
+      "condition": "Do not omit a difficult energy source simply to improve the reported result.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D02",
+      "section": "D",
+      "clause": "5.2",
+      "heading": "Do you have an approved energy policy that guides business decisions?",
+      "description": [
+        "Set commitments to improving energy performance, meeting applicable requirements, providing information and resources, and supporting suitable purchasing and design."
+      ],
+      "examples": [
+        "For example in the US: A plant's policy commits management to using energy performance when assessing major equipment purchases.",
+        "For example in England: A property services business links its policy to building operation, maintenance and investment decisions."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D03",
+      "section": "D",
+      "clause": "6.2",
+      "heading": "Have you recorded objectives, energy targets and action plans?",
+      "description": [
+        "Show the intended results, actions, resources, owners, dates and how achievement and energy performance improvement will be verified."
+      ],
+      "examples": [
+        "For example in the US: A plant plans to reduce compressed-air losses, with a leak survey, repair budget and measured follow-up.",
+        "For example in England: A hotel plans to improve heating performance, with responsibility for control changes and weather-adjusted verification."
+      ],
+      "condition": "Use meaningful measures; reducing the bill alone does not necessarily show improved energy performance.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D04",
+      "section": "D",
+      "clause": "6.3",
+      "heading": "Do you have a reliable picture of where and how much energy is used?",
+      "description": [
+        "Use the energy review to analyse current and past energy use and consumption from suitable measurements and other data."
+      ],
+      "examples": [
+        "For example in the US: A site combines electricity bills, natural gas data and submeters to understand the largest energy uses.",
+        "For example in England: A business compares half-hourly electricity data with gas bills and building occupancy records."
+      ],
+      "condition": "Convert units consistently, and distinguish energy consumed from cost and peak demand.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D05",
+      "section": "D",
+      "clause": "6.3",
+      "heading": "Have you identified significant energy uses and recorded the basis for selection?",
+      "description": [
+        "Identify uses with substantial consumption or considerable improvement potential. Keep the method and results clear."
+      ],
+      "examples": [
+        "For example in the US: A plant identifies its compressed-air system and furnaces as significant energy uses after reviewing data and savings potential.",
+        "For example in England: A hotel identifies space heating and hot water as significant uses rather than treating every small appliance equally."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D06",
+      "section": "D",
+      "clause": "6.3",
+      "heading": "For significant energy uses, have you recorded the variables, current performance and people who influence them?",
+      "description": [
+        "Understand what drives consumption and who can change operation. Include relevant variables such as output, weather or occupancy."
+      ],
+      "examples": [
+        "For example in the US: A plant records production mix, operating hours and the people controlling furnace loading and temperature settings.",
+        "For example in England: A hotel records occupancy and heating degree days, with responsibility assigned for heating schedules and controls."
+      ],
+      "condition": "Do not assume that total consumption alone explains performance.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D07",
+      "section": "D",
+      "clause": "6.3",
+      "heading": "Have you recorded improvement opportunities and estimates of future energy use?",
+      "description": [
+        "Use the energy review to prioritise practical opportunities and estimate future consumption based on expected conditions."
+      ],
+      "examples": [
+        "For example in the US: A factory ranks compressed-air repairs and motor replacement, then forecasts consumption for the planned production volume.",
+        "For example in England: A property operator considers control upgrades and estimates the effect of an extended opening schedule."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D08",
+      "section": "D",
+      "clause": "6.4",
+      "heading": "Are your energy performance indicators defined clearly?",
+      "description": [
+        "Describe the measure, data, calculation and comparison method so it can demonstrate performance and improvement."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer defines an indicator that accounts for production output and product mix where they significantly affect consumption.",
+        "For example in England: A hotel defines a heating indicator using weather and occupancy rather than comparing unadjusted monthly bills."
+      ],
+      "condition": "An indicator can be simple or model-based; it must be appropriate to the energy use.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D09",
+      "section": "D",
+      "clause": "6.5",
+      "heading": "Have you established and recorded an energy baseline?",
+      "description": [
+        "Set the reference period or model used for comparison, explain why it is suitable and retain the underlying data."
+      ],
+      "examples": [
+        "For example in the US: A plant records a representative operating period and the production data used to establish its baseline.",
+        "For example in England: A building operator records the weather and occupancy conditions behind its reference heating consumption."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D10",
+      "section": "D",
+      "clause": "6.4, 6.5",
+      "heading": "Where conditions significantly affect consumption, do calculations make comparisons fair?",
+      "description": [
+        "Normalise indicators and baselines for relevant variables when needed, so changed activity is not mistaken for improvement."
+      ],
+      "examples": [
+        "For example in the US: A plant adjusts for reduced output before claiming that a lower electricity total represents an efficiency gain.",
+        "For example in England: A hotel adjusts heating comparisons for a milder winter and a change in occupied rooms."
+      ],
+      "condition": "Special normalisation is not needed where analysis shows no significant variable effect; record the reasoning.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": true,
+          "explanation": "Special normalisation is not needed where analysis shows no significant variable effect; record the reasoning. Use only where non-applicability is permitted and justified for your actual scope and responsibilities."
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D11",
+      "section": "D",
+      "clause": "6.6",
+      "heading": "Do you have an energy data collection plan and the resulting records?",
+      "description": [
+        "Identify what to collect, the method, frequency, responsibilities and retention. Include relevant variables, significant uses and action-plan results."
+      ],
+      "examples": [
+        "For example in the US: A plant schedules meter readings and production-data capture with checks for missing shifts.",
+        "For example in England: A property team collects interval electricity data, gas consumption, occupancy and control settings on a defined schedule."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D12",
+      "section": "D",
+      "clause": "6.6",
+      "heading": "Can you show that important energy measurements are accurate and repeatable enough?",
+      "description": [
+        "Use suitable equipment and maintain evidence of the calibration, verification or other checks needed for reliable data."
+      ],
+      "examples": [
+        "For example in the US: A plant checks the suitability of a temporary power logger before using its results to approve a major project.",
+        "For example in England: A facilities team investigates inconsistent submeter readings before using them to judge boiler performance."
+      ],
+      "condition": "The required assurance depends on the measurement purpose; do not assume every meter needs the same procedure.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D13",
+      "section": "D",
+      "clause": "7.2",
+      "heading": "Do you retain evidence that people affecting energy performance are competent?",
+      "description": [
+        "Identify needed competence and retain suitable evidence of skills, experience and effective training."
+      ],
+      "examples": [
+        "For example in the US: A plant assesses operators on energy-efficient start-up and shutdown of a significant energy use.",
+        "For example in England: A building operator records practical checks that engineers can use the building management system correctly."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D14",
+      "section": "D",
+      "clause": "8.1",
+      "heading": "Are operating criteria for significant energy uses documented, with evidence of control?",
+      "description": [
+        "Set the conditions and maintenance practices needed to avoid significant performance deviations, and retain records to the necessary extent."
+      ],
+      "examples": [
+        "For example in the US: A site records the agreed compressed-air pressure range, leak checks and shutdown arrangements.",
+        "For example in England: A hotel documents heating schedules and controls, with maintenance and exception records."
+      ],
+      "condition": "Operating criteria should protect quality, safety and required service as well as energy performance.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D15",
+      "section": "D",
+      "clause": "8.2",
+      "heading": "Do design and upgrade records show that energy performance was considered?",
+      "description": [
+        "Consider relevant improvement opportunities and operational controls over the planned operating life, then retain the design results."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer compares motor and drive options for a replacement production line using expected loading.",
+        "For example in England: A building operator compares heating options using expected occupancy, control strategy and operating hours."
+      ],
+      "condition": "If no relevant project occurred, assess the process for future projects; do not invent design calculations.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "If no relevant project occurred, assess the process for future projects; do not invent design calculations. Use only if none of the events covered by this question occurred in the review period. Assess readiness of the arrangements separately."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D16",
+      "section": "D",
+      "clause": "9.1.1",
+      "heading": "Do you retain performance evaluations and investigations of significant deviations?",
+      "description": [
+        "Compare results against indicators, baselines and targets, and record the response to significant unexpected changes."
+      ],
+      "examples": [
+        "For example in the US: A plant investigates a rise in weekend electricity use and retains the finding that a compressor was left running.",
+        "For example in England: A hotel records an investigation showing that a control override kept heating active in an unused wing."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D17",
+      "section": "D",
+      "clause": "9.1.2",
+      "heading": "Do records show that applicable energy-related obligations have been evaluated?",
+      "description": [
+        "Identify which legal and other requirements apply, then retain the compliance evaluation and action on gaps."
+      ],
+      "examples": [
+        "For example in the US: A US business checks energy-related obligations applicable to its facility and any commitments made in a utility program.",
+        "For example in England: A qualifying English business records how it meets applicable ESOS obligations, including the conditions of any ISO 50001 compliance route."
+      ],
+      "condition": "Neither ESOS nor a particular US programme applies automatically to every business.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D18",
+      "section": "D",
+      "clause": "9.2, 9.3.4",
+      "heading": "Do you keep internal audit results and management review decisions?",
+      "description": [
+        "Retain evidence that audits assess the system and energy performance improvement, and that management acts on review results."
+      ],
+      "examples": [
+        "For example in the US: A plant audit traces meter data through the indicator calculation and management records action on unreliable readings.",
+        "For example in England: A property business reviews target progress, resources and opportunities, then records approved upgrades and owners."
+      ],
+      "condition": "An energy survey alone does not replace a management-system internal audit.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D19",
+      "section": "D",
+      "clause": "10.1",
+      "heading": "Do you retain records of energy-management problems and corrective actions?",
+      "description": [
+        "Record nonconformities, causes, action and effectiveness checks, including unreliable information or failed operating controls."
+      ],
+      "examples": [
+        "For example in the US: A plant corrects an incorrectly configured meter and checks whether earlier performance reports need revision.",
+        "For example in England: A hotel investigates repeated control overrides and checks that revised access and training prevent recurrence."
+      ],
+      "condition": "If no nonconformities occurred, assess readiness without creating artificial cases.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "If no nonconformities occurred, assess readiness without creating artificial cases. Use only if none of the events covered by this question occurred in the review period. Assess readiness of the arrangements separately."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P01",
+      "section": "P",
+      "clause": "4.1, 4.2",
+      "heading": "Do you understand the conditions and requirements affecting energy management?",
+      "description": [
+        "Consider the business context, interested parties and whether climate change is relevant, including operational and supply conditions."
+      ],
+      "examples": [
+        "For example in the US: A plant considers hotter summers, cooling demand and relevant utility conditions when planning its energy work.",
+        "For example in England: A business considers landlord arrangements, weather exposure and applicable energy-related commitments."
+      ],
+      "condition": "Energy cost and carbon performance are relevant considerations, but neither is a direct substitute for energy performance.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P02",
+      "section": "P",
+      "clause": "4.3",
+      "heading": "Are all energy types within your chosen boundaries included?",
+      "description": [
+        "Account for electricity, fuels and other relevant energy, including activities that are easy to overlook."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer includes natural gas and on-site vehicle fuel alongside electricity in the energy review.",
+        "For example in England: A property operator includes purchased heat and backup generator fuel where these fall within the system boundary."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P03",
+      "section": "P",
+      "clause": "5.1, 5.3, 7.1",
+      "heading": "Is there clear responsibility for energy management and active management support?",
+      "description": [
+        "Give the energy team suitable authority, skills, time, information and resources. Integrate decisions into normal operations."
+      ],
+      "examples": [
+        "For example in the US: A plant manager gives maintenance and production staff time to investigate significant energy uses together.",
+        "For example in England: A director ensures the facilities team can access consumption data and obtain approval for justified improvements."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P04",
+      "section": "P",
+      "clause": "6.1",
+      "heading": "Do you act on risks and opportunities affecting the energy management system?",
+      "description": [
+        "Plan proportionate action, integrate it into work and check results. Include risks to data quality and sustained operation."
+      ],
+      "examples": [
+        "For example in the US: A site addresses dependence on one person who maintains its performance model by training a second analyst.",
+        "For example in England: A business plans to use a building refurbishment to improve controls rather than treating energy as an afterthought."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P05",
+      "section": "P",
+      "clause": "6.3",
+      "heading": "Is the energy review updated after significant changes and at planned intervals?",
+      "description": [
+        "Keep the picture of consumption, significant uses, variables and opportunities aligned with the actual business."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer updates its review after adding a second shift and a new process line.",
+        "For example in England: A hotel revises the review after closing a wing and replacing its hot-water plant."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P06",
+      "section": "P",
+      "clause": "6.4, 6.5",
+      "heading": "Do your indicators distinguish real improvement from changed circumstances?",
+      "description": [
+        "Check the basis of comparisons and use normalisation where significant variables affect the result."
+      ],
+      "examples": [
+        "For example in the US: A plant separates improved machine performance from lower consumption caused by fewer production hours.",
+        "For example in England: A hotel separates heating-control improvement from reduced demand during a warmer winter."
+      ],
+      "condition": "Buying cheaper energy or renewable electricity does not, by itself, demonstrate improved energy performance.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P07",
+      "section": "P",
+      "clause": "6.5",
+      "heading": "Are baselines revised only for defined, justified reasons?",
+      "description": [
+        "Use established rules when indicators no longer reflect performance, static factors change or another predetermined condition applies. Preserve the change history."
+      ],
+      "examples": [
+        "For example in the US: A plant documents a baseline revision after a major process redesign and explains how future comparisons will work.",
+        "For example in England: A property business records the effect of a substantial floor-area change instead of silently resetting the baseline."
+      ],
+      "condition": "Do not change a baseline merely to produce a more attractive result.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P08",
+      "section": "P",
+      "clause": "6.6",
+      "heading": "Is energy data collected consistently, with gaps and anomalies investigated?",
+      "description": [
+        "Check completeness, timing, units and plausibility before using information in decisions."
+      ],
+      "examples": [
+        "For example in the US: A plant flags a missing meter interval and records how the gap was treated in the calculation.",
+        "For example in England: A facilities team compares a sudden gas-data drop with meter communications and operating conditions before accepting it."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P09",
+      "section": "P",
+      "clause": "7.2, 7.3",
+      "heading": "Do staff understand how their work affects energy performance?",
+      "description": [
+        "Make relevant operating criteria, policy commitments and improvement opportunities clear to the people doing the work."
+      ],
+      "examples": [
+        "For example in the US: An operator understands why leaving compressed-air equipment running between jobs wastes energy and follows the shutdown procedure.",
+        "For example in England: A hotel engineer knows when an override is justified and how to restore the agreed schedule afterwards."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P10",
+      "section": "P",
+      "clause": "7.4",
+      "heading": "Can people suggest improvements, and are energy-saving claims reliable?",
+      "description": [
+        "Provide a route for ideas and ensure communicated performance information is consistent with the underlying data."
+      ],
+      "examples": [
+        "For example in the US: A maintenance technician suggests fixing a recurring leak and receives feedback on the measured result.",
+        "For example in England: A business checks the baseline and calculation before describing a control upgrade as an energy saving to clients."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P11",
+      "section": "P",
+      "clause": "7.5",
+      "heading": "Are source data and calculations protected, current and retrievable?",
+      "description": [
+        "Control access, versions, changes, backup and retention so a result can be reproduced and explained."
+      ],
+      "examples": [
+        "For example in the US: A plant stores meter exports and the approved calculation version together, with a record of changes.",
+        "For example in England: A facilities team protects baseline formulas from accidental editing while allowing authorised updates."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P12",
+      "section": "P",
+      "clause": "8.1",
+      "heading": "Are significant energy uses operated and maintained within agreed criteria?",
+      "description": [
+        "Check actual settings, schedules and maintenance, including periods when usual supervisors are absent."
+      ],
+      "examples": [
+        "For example in the US: A plant checks compressor pressure and shutdown practice during the night shift.",
+        "For example in England: A hotel checks that heating and ventilation schedules follow occupancy needs and that overrides do not remain indefinitely."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P13",
+      "section": "P",
+      "clause": "8.1",
+      "heading": "Do you control the energy effects of changes and outsourced activities?",
+      "description": [
+        "Communicate relevant criteria and review planned and unintended changes that could affect significant energy uses."
+      ],
+      "examples": [
+        "For example in the US: A plant ensures an external maintenance provider restores agreed settings after servicing a furnace.",
+        "For example in England: A property operator checks that an outsourced building-management service follows the agreed control strategy."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P14",
+      "section": "P",
+      "clause": "8.2",
+      "heading": "Does design consider energy performance over the expected operating life?",
+      "description": [
+        "Compare suitable options and integrate improvement opportunities and controls into specifications and purchasing."
+      ],
+      "examples": [
+        "For example in the US: A manufacturer assesses expected loading and energy use before selecting a replacement compressor.",
+        "For example in England: A building project compares plant sizing and control options using realistic operating conditions."
+      ],
+      "condition": "Where no relevant project occurred, assess readiness; completed project records are event-dependent.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P15",
+      "section": "P",
+      "clause": "8.3",
+      "heading": "Do significant purchases consider energy performance over the expected lifetime?",
+      "description": [
+        "Set relevant evaluation criteria and inform suppliers when energy performance will influence selection."
+      ],
+      "examples": [
+        "For example in the US: A factory compares purchase and operating costs for equipment with a significant effect on energy performance.",
+        "For example in England: A hotel specifies efficiency and control requirements for a replacement hot-water system and evaluates supplier responses."
+      ],
+      "condition": "Apply a proportionate assessment; a lower purchase price or bill is not the only decision criterion.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P16",
+      "section": "P",
+      "clause": "9.1.1",
+      "heading": "Do you investigate significant deviations and act on the findings?",
+      "description": [
+        "Determine why performance differs from expectation, assess the consequences and verify corrective action."
+      ],
+      "examples": [
+        "For example in the US: A plant finds that higher base-load electricity came from a failed automatic shutdown and checks consumption after repair.",
+        "For example in England: A property team traces excess heating demand to a faulty sensor and verifies the corrected control response."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P17",
+      "section": "P",
+      "clause": "9.1.2, 9.2",
+      "heading": "Do you evaluate obligations and audit how the system actually operates?",
+      "description": [
+        "Check applicable commitments and use competent, objective audits to examine the system and demonstrated improvement."
+      ],
+      "examples": [
+        "For example in the US: An auditor samples indicator calculations, operating criteria and corrective actions against the defined energy system.",
+        "For example in England: A business separately checks its applicable ESOS obligations and audits whether its energy-management processes work."
+      ],
+      "condition": "DOE 50001 Ready recognition and ISO 50001 certification are different; identify the outcome you actually hold or seek.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P18",
+      "section": "P",
+      "clause": "9.3",
+      "heading": "Does management use energy performance evidence to make decisions?",
+      "description": [
+        "Review targets, indicators, audits, compliance, risks, resources and improvement opportunities, then assign action."
+      ],
+      "examples": [
+        "For example in the US: Management approves a submetering project because current data cannot explain a significant use.",
+        "For example in England: A property owner prioritises heating improvements using verified results and realistic operating-life comparisons."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P19",
+      "section": "P",
+      "clause": "10.1, 10.2",
+      "heading": "Can you demonstrate sustained energy performance improvement using comparable evidence?",
+      "description": [
+        "Evaluate improvement, address causes of problems and keep the system effective over time."
+      ],
+      "examples": [
+        "For example in the US: A plant shows that consumption improved against its appropriate production-adjusted indicator after changes were implemented.",
+        "For example in England: A hotel demonstrates weather-adjusted improvement and checks that the benefit continues after the initial trial."
+      ],
+      "condition": "No universal percentage saving is imposed by these examples; the evidence must support your own improvement claim.",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    }
+  ],
+  "guidance": {
+    "instructions": [
+      "Start with D01 to D19 for documents and records, then P01 to P19 for working practices. Each question includes a plain explanation and two illustrative examples, one in the US and one in England. Use the example to understand the requirement, not as a mandatory template.",
+      "Documents: Available means the necessary information is current and can be shown. Not available means it is missing or does not provide the evidence needed. Use Not sure when you need to check. Record gaps in incomplete documents.",
+      "Working practices: Yes means the requirement is implemented and supported by evidence. Partly means there are gaps. No means it is not implemented. Use Not sure when you need to check.",
+      "Use Not applicable only where justified and permitted. For an event-dependent record, use No events if appropriate; readiness still needs assessment. For grouped requirements, assess each applicable part before answering Yes.",
+      "Use existing contracts, procedures, system records and work evidence. Record each gap, the action, an owner and a due date. This self-check supports preparation and improvement; it is not a certification decision or a complete legal compliance assessment.",
+      "Reference edition: ISO 50001:2018 with Amendment 1:2024. England examples use relevant England, Great Britain or UK requirements according to their scope; they should not be assumed to cover every UK jurisdiction."
+    ],
+    "sections": [
+      {
+        "heading": "Terms in plain English",
+        "paragraphs": [
+          "Energy performance: Measurable results relating to energy efficiency, use and consumption.",
+          "Energy review: Analysis of energy use and consumption that identifies significant uses and improvement opportunities.",
+          "Significant energy use: An energy use with substantial consumption or considerable potential for improvement.",
+          "Energy performance indicator or EnPI: A measure used to assess energy performance.",
+          "Energy baseline or EnB: The reference used to compare energy performance over time.",
+          "Relevant variable: A changing factor, such as output or weather, that significantly affects energy performance.",
+          "Normalisation: Adjusting a comparison for relevant variables so different conditions do not distort the result.",
+          "Static factor: A significant factor that does not routinely change, such as facility size or installed equipment.",
+          "ESOS: The UK Energy Savings Opportunity Scheme, with eligibility and compliance conditions that must be checked."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Applying this in the US and England",
+        "paragraphs": [
+          "US: Keep electricity, natural gas and other energy data in clear, consistent units. US bills may use kWh, therms or other units; document conversions before combining data. The Department of Energy's 50001 Ready program supports implementation and self-attestation. Its recognition is not the same as independent ISO 50001 certification.",
+          "England: Check whether the business qualifies for ESOS and identify the applicable compliance period and requirements. ISO 50001 can provide a compliance route only when the relevant conditions are met; certification is not an automatic exemption from every energy-related obligation. Use consumption data, suitable conversions and relevant operating variables when evaluating performance.",
+          "The standard provides the management-system requirements. Local rules and contractual obligations apply according to your activities, role and market. The examples do not set universal legal deadlines, target values, document names or technical solutions."
+        ],
+        "links": [
+          {
+            "label": "US Department of Energy 50001 Ready",
+            "url": "https://www.energy.gov/cmei/ito/50001-ready-program"
+          },
+          {
+            "label": "ESOS eligibility and compliance guidance",
+            "url": "https://www.gov.uk/guidance/energy-savings-opportunity-scheme-esos"
+          }
+        ]
+      },
+      {
+        "heading": "Standard and further information",
+        "paragraphs": [
+          "Use the stated edition when following clause references. The questions and explanations are practical paraphrases, not quotations from the standard. Regional sources were reviewed on 29 and 30 October 2026."
+        ],
+        "links": [
+          {
+            "label": "ISO 50001:2018 with Amendment 1:2024 on the ISO website",
+            "url": "https://www.iso.org/standard/69426.html"
+          },
+          {
+            "label": "Audit Advisor information for ISO 50001",
+            "url": "https://audit-advisor.com/uk/iso-50001-certification"
+          }
+        ]
+      }
+    ]
+  }
+}

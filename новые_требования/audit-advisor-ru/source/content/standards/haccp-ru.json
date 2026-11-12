@@ -1,0 +1,1648 @@
+{
+  "$schema": "../schemas/standard.schema.json",
+  "schemaVersion": 1,
+  "id": "haccp-ru",
+  "answerVersion": "2026.3.0",
+  "contentRevision": "2026-10-29.2",
+  "source": {
+    "file": "07_haccp_questionnaire_2026-10-29.docx",
+    "snapshotDirectory": "sources/2026-10-29-questionnaires",
+    "sha256": "a3e7ea0831189ecfb70531d3e61d5bf34343543b96844ebc935aba1f75bf73f1",
+    "revisionDate": "2026-10-29"
+  },
+  "standard": {
+    "label": "ХАССП · ГОСТ Р 51705.1-2024",
+    "basis": "ГОСТ Р 51705.1-2024",
+    "note": "Основа вопросника: ГОСТ Р 51705.1-2024. Вопросы перенесены из предоставленного вопросника от 29 октября 2026 года. Формулировки являются поясняющим пересказом. Полная нормативная сверка при переносе в программу не выполнялась."
+  },
+  "page": {
+    "heading": "Самостоятельная проверка готовности системы менеджмента к сертификационному аудиту",
+    "description": "Если вы контролируете сырьё, соблюдаете гигиену, проверяете режимы и сохраняете результаты, у вас уже есть часть основы системы. Начните с действующей работы и имеющихся подтверждений: определите, что подходит, а что нужно дополнить.",
+    "duration": "Ориентировочно 20–32 минут"
+  },
+  "sections": [
+    {
+      "id": "D",
+      "title": "Документы и записи",
+      "summaryTitle": "Обязательные документы и записи",
+      "description": "Посмотрите, какие нужные сведения уже сохраняются и доступны в компании. Проверьте содержание и актуальность документов и записей.",
+      "share": 0.4
+    },
+    {
+      "id": "P",
+      "title": "Работа на практике",
+      "summaryTitle": "Прочие требования и работа на практике",
+      "description": "Ориентируйтесь на реальные действия. Вспомните недавний случай, поговорите с исполнителем или посмотрите рабочие записи.",
+      "intro": "Ориентируйтесь на реальные действия. Вспомните недавний случай, поговорите с исполнителем или посмотрите рабочие записи.",
+      "share": 0.6
+    }
+  ],
+  "applicabilityPairs": [],
+  "links": {
+    "service": "https://audit-advisor.com/russia",
+    "chat": "https://t.me/chat_iso"
+  },
+  "disclaimer": "Самопроверка отражает ваши ответы и не заменяет аудит. Высокая оценка не гарантирует сертификацию. Примеры помогают найти подтверждения и не устанавливают обязательную форму документа.",
+  "questions": [
+    {
+      "id": "D01",
+      "section": "D",
+      "clause": "4.1–4.3",
+      "heading": "Записано ли, кто входит в группу ХАССП и за что отвечает?",
+      "description": [
+        "Группа объединяет людей, знающих продукт, технологию и пищевые опасности. Нужны координатор, распределение задач, полномочия и ресурсы."
+      ],
+      "examples": [
+        "Например: В приказе указаны технолог, представитель производства и специалист по качеству.",
+        "Например: В кафе распределили задачи по сырью, приготовлению, хранению и проверкам."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D02",
+      "section": "D",
+      "clause": "4.3.2",
+      "heading": "Сохраняются ли решения группы ХАССП?",
+      "description": [
+        "Запись объясняет, что обсудили, что решили и кто выполняет решение. По ней можно восстановить причину изменения."
+      ],
+      "examples": [
+        "Например: В протоколе рассмотрели новую рецептуру и поручили обновить анализ опасностей.",
+        "Например: Группа кафе записала решение по повторным нарушениям охлаждения блюд."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D03",
+      "section": "D",
+      "clause": "5.1",
+      "heading": "Описано ли, какие продукты и работы охватывает ХАССП и какие требования нужны?",
+      "description": [
+        "Область охватывает продукцию, площадки, процессы и услуги, влияющие на безопасность. Учитывают обязательные и согласованные требования."
+      ],
+      "examples": [
+        "Например: В область включены производство, хранение и собственная перевозка продукции.",
+        "Например: Кафе описало приготовление блюд, хранение заготовок и доставку заказов."
+      ],
+      "condition": "При заявлении соответствия ГОСТ Р 51705.1-2024 требования разделов 4 и 5 не исключают.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D04",
+      "section": "D",
+      "clause": "5.2",
+      "heading": "Есть ли необходимые актуальные документы и записи по ХАССП?",
+      "description": [
+        "Документы объясняют действия, записи показывают их выполнение. Нужны сведения, позволяющие управлять безопасностью и принимать решения."
+      ],
+      "examples": [
+        "Например: Есть план управления опасностями, инструкции и заполненные журналы.",
+        "Например: В кафе доступны действующие правила контроля и записи фактических результатов."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D05",
+      "section": "D",
+      "clause": "5.3",
+      "heading": "Описаны и одобрены ли основные меры гигиены и безопасной работы?",
+      "description": [
+        "Предварительные мероприятия создают базовые условия: уборку, гигиену, безопасную воду, защиту от вредителей и содержание помещений."
+      ],
+      "examples": [
+        "Например: Утверждена программа уборки с участками, средствами, ответственными и проверкой.",
+        "Например: В кафе описаны разделение инвентаря, гигиена работников и обращение с отходами."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D06",
+      "section": "D",
+      "clause": "5.4.2.1, 5.4.2.2",
+      "heading": "Собраны ли сведения о сырье, ингредиентах и упаковке?",
+      "description": [
+        "Для анализа опасностей нужны состав, происхождение, показатели безопасности, хранение и применение. Сведения должны подходить именно вашему продукту."
+      ],
+      "examples": [
+        "Например: В спецификации ингредиента указаны состав, аллергены и условия хранения.",
+        "Например: Кафе хранит сведения о сырье и пригодности упаковки для выбранных блюд."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D07",
+      "section": "D",
+      "clause": "5.4.2.3, 5.4.2.4",
+      "heading": "Описаны ли готовый продукт и способ его употребления?",
+      "description": [
+        "Нужно знать характеристики, упаковку, срок и условия хранения, необходимость приготовления и предполагаемых потребителей."
+      ],
+      "examples": [
+        "Например: В описании продукта указано, требуется ли нагрев перед употреблением.",
+        "Например: Для готового блюда описаны хранение, доставка и предполагаемая подача потребителю."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D08",
+      "section": "D",
+      "clause": "5.4.2.5, 5.4.2.6",
+      "heading": "Есть ли схема всех этапов работы и описание условий?",
+      "description": [
+        "Схема показывает реальное движение продукта, включая возвраты, ожидание и промежуточное хранение. Её сверяют с работой на месте."
+      ],
+      "examples": [
+        "Например: На схеме есть приёмка, обработка, охлаждение, хранение и отгрузка.",
+        "Например: В кафе отражены хранение заготовок и передача готовых блюд в доставку."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D09",
+      "section": "D",
+      "clause": "5.4.3",
+      "heading": "Сохранён ли анализ опасностей и оценка их значимости?",
+      "description": [
+        "Рассматривают биологические, химические и физические опасности. Оценивают вероятность и тяжесть вреда, обосновывают значимость и подходящий приемлемый уровень."
+      ],
+      "examples": [
+        "Например: В анализе рассмотрели опасные микроорганизмы и посторонние включения.",
+        "Например: В кафе оценили перенос аллергена между блюдами и остатки моющего средства."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D10",
+      "section": "D",
+      "clause": "5.4.4, 5.4.5.1",
+      "heading": "Описано ли, какие меры управляют каждой значимой опасностью?",
+      "description": [
+        "Для опасности нужен понятный этап и действие, которое предотвращает её или снижает до приемлемого уровня. Учитывают возможность ошибки и последствия."
+      ],
+      "examples": [
+        "Например: Опасность связана с обоснованной обработкой и контролем её параметров.",
+        "Например: Для переноса аллергена определили подходящие меры разделения и очистки."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D11",
+      "section": "D",
+      "clause": "5.4.4, 5.4.5.2",
+      "heading": "Обосновано ли, какие меры относятся к ККТ и ППОПМ?",
+      "description": [
+        "ККТ — критическая контрольная точка с критическими пределами. ППОПМ — производственные предварительные мероприятия с критериями действия. Категорию выбирают по анализу, а не удобству."
+      ],
+      "examples": [
+        "Например: В решении объяснено, почему этап обработки отнесён к ККТ.",
+        "Например: Для другой меры сохранено обоснование отнесения к ППОПМ и способ контроля."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D12",
+      "section": "D",
+      "clause": "5.4.5.2, 5.4.6",
+      "heading": "Записаны ли обоснованные пределы ККТ и критерии действия ППОПМ?",
+      "description": [
+        "Критический предел измеряют; критерий действия измеряют или наблюдают. Значения должны подходить продукту, опасности и процессу."
+      ],
+      "examples": [
+        "Например: Для обработки указаны параметр, допустимая граница и основание выбора.",
+        "Например: Для установленной ППОПМ определён наблюдаемый критерий и способ оценки."
+      ],
+      "condition": "Числовые пределы из чужого примера нельзя переносить без обоснования.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D13",
+      "section": "D",
+      "clause": "5.4.5.3, 5.4.6",
+      "heading": "Есть ли план контроля опасностей и действий при отклонении?",
+      "description": [
+        "План показывает, что, как, когда и кто контролирует, кто оценивает результат и что делать при нарушении."
+      ],
+      "examples": [
+        "Например: Для ККТ указаны измерение, частота, ответственный и блокировка затронутой продукции.",
+        "Например: Для ППОПМ описаны проверка критерия и запись принятого решения."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D14",
+      "section": "D",
+      "clause": "5.4.6",
+      "heading": "Сохраняются ли фактические результаты контроля ККТ и ППОПМ?",
+      "description": [
+        "Мониторинг — текущая проверка управления опасностью. Записи должны показывать время, результат, исполнителя и действия при отклонении."
+      ],
+      "examples": [
+        "Например: В журнале записаны реальные показания и реакция на нарушение.",
+        "Например: В кафе ответственный фиксирует результат в момент контроля, а не заполняет журнал задним числом."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D15",
+      "section": "D",
+      "clause": "5.5.1, 5.5.2",
+      "heading": "Есть ли записи по потенциально опасной продукции и её изъятию при необходимости?",
+      "description": [
+        "Нужно определить затронутые партии, оценить их, записать решение и необходимые уведомления. Учитывают продукцию, изготовленную в сходных условиях."
+      ],
+      "examples": [
+        "Например: Сохранены блокировка партии, оценка и решение о дальнейшем обращении.",
+        "Например: В кафе записали, какие заказы затронуты отклонением и какие действия выполнены."
+      ],
+      "condition": "Если таких случаев не было, проверяют готовность порядка; не создают вымышленные записи.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": true,
+          "explanation": "Если таких случаев не было, проверяют готовность порядка; не создают вымышленные записи. Выбирайте этот ответ, только если отсутствовали все события, для которых нужны записи по данному вопросу. Готовность порядка действий оцените отдельно."
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D16",
+      "section": "D",
+      "clause": "5.5.3",
+      "heading": "Записаны ли причины нарушений и результат действий против их повторения?",
+      "description": [
+        "Исправление партии устраняет текущую проблему. Корректирующее действие устраняет причину; его результат нужно проверить."
+      ],
+      "examples": [
+        "Например: После повторного сбоя изменили обслуживание оборудования и подтвердили устойчивую работу.",
+        "Например: После пропуска контроля изменили распределение обязанностей и проверили следующие смены."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D17",
+      "section": "D",
+      "clause": "5.6",
+      "heading": "Связывают ли записи сырьё, готовую партию и первого получателя?",
+      "description": [
+        "Прослеживаемость позволяет восстановить путь продукта через операции и промежуточное хранение. Записи должны сохранять нужные связи."
+      ],
+      "examples": [
+        "Например: По готовой партии найдены партии всех использованных ингредиентов.",
+        "Например: Компания по доставке связывает полученные партии продукции с отгрузками клиентам."
+      ],
+      "condition": "Хранение записей должно охватывать как минимум срок годности продукта; более длительные требования также учитываются.",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D18",
+      "section": "D",
+      "clause": "5.7",
+      "heading": "Есть ли подтверждения пригодности приборов для контроля безопасности?",
+      "description": [
+        "Прибор должен быть опознаваемым, а его калибровка или поверка — выполненной по установленному порядку и применимым требованиям."
+      ],
+      "examples": [
+        "Например: Номер термометра связан с действующим подтверждением проверки.",
+        "Например: Для контрольных весов доступны результаты проверки и установленный срок следующей."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D19",
+      "section": "D",
+      "clause": "5.8",
+      "heading": "Есть ли программа внутренних аудитов ХАССП и отчёты по ним?",
+      "description": [
+        "Программа определяет охват, сроки, методы и ответственных. Отчёты показывают факты, выводы и действия по нарушениям."
+      ],
+      "examples": [
+        "Например: Аудит охватил выполнение мониторинга ККТ и записи за выбранный период.",
+        "Например: В кафе проверили гигиену, хранение и действия при отклонениях."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "D20",
+      "section": "D",
+      "clause": "5.9, 5.10",
+      "heading": "Сохранены ли анализ работы ХАССП и решения об обновлении системы?",
+      "description": [
+        "Группа рассматривает результаты, сообщает выводы руководству и определяет изменения анализа опасностей и планов."
+      ],
+      "examples": [
+        "Например: После изменения сырья сохранили решение и новую версию плана.",
+        "Например: По повторным нарушениям группа кафе предложила изменения и необходимые ресурсы."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "documents",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P01",
+      "section": "P",
+      "clause": "4.1–4.3",
+      "heading": "Работает ли группа ХАССП как команда, понимающая ваш продукт и процесс?",
+      "description": [
+        "Важна совместная работа людей с нужными знаниями. Консультант может помогать, но не заменяет ответственность компании."
+      ],
+      "examples": [
+        "Например: Технолог и производство вместе оценивают опасности новой операции.",
+        "Например: В кафе повар и ответственный за качество разбирают реальное хранение заготовок."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P02",
+      "section": "P",
+      "clause": "5.1",
+      "heading": "Охватывает ли ХАССП все операции, влияющие на безопасность продукции?",
+      "description": [
+        "Проверяют фактическую деятельность, включая склады, перемещение, подрядчиков и новые продукты. Неучтённый этап может оставить опасность без управления."
+      ],
+      "examples": [
+        "Например: В анализ включили склад ожидания отгрузки.",
+        "Например: Кафе учло перевозку готовых блюд, переданную подрядчику."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P03",
+      "section": "P",
+      "clause": "5.2",
+      "heading": "Пользуются ли работники действующими инструкциями и вовремя ли делают записи?",
+      "description": [
+        "Правила должны быть понятны и доступны. Записывают фактический результат в нужный момент, а не предполагаемые значения."
+      ],
+      "examples": [
+        "Например: Оператор сверяет показание с допустимым пределом и сразу фиксирует результат.",
+        "Например: В кафе новая инструкция доступна на рабочем месте, старая изъята."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P04",
+      "section": "P",
+      "clause": "5.3",
+      "heading": "Выполняются ли основные меры гигиены на практике?",
+      "description": [
+        "Проверяют людей, уборку, воду, помещения, отходы, вредителей и предотвращение загрязнения. Программа в папке не заменяет действия."
+      ],
+      "examples": [
+        "Например: Чистый и загрязнённый инвентарь хранят раздельно.",
+        "Например: В кафе соблюдают установленный порядок уборки и личной гигиены."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P05",
+      "section": "P",
+      "clause": "5.4.2.2",
+      "heading": "Проверяете ли вы безопасность поступающего сырья и упаковки?",
+      "description": [
+        "Фактическое состояние и сведения должны соответствовать условиям, принятым в анализе опасностей. Изменения оценивают до применения."
+      ],
+      "examples": [
+        "Например: Партию с нарушенной упаковкой удержали для оценки.",
+        "Например: Изменённый состав соуса передали группе ХАССП до приготовления блюд."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P06",
+      "section": "P",
+      "clause": "5.4.2.3, 5.4.2.4",
+      "heading": "Учитывает ли анализ, кто и как будет употреблять продукт?",
+      "description": [
+        "Условия употребления влияют на опасности. Учитывают предполагаемое применение, возможное неправильное обращение и чувствительные группы, когда это относится к продукту."
+      ],
+      "examples": [
+        "Например: Продукт без последующего нагрева оценивают как готовый к употреблению.",
+        "Например: При выпуске продукции для определённой группы потребителей учитывают её особенности."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P07",
+      "section": "P",
+      "clause": "5.4.2.5, 5.4.2.6",
+      "heading": "Совпадает ли схема процесса с работой всех смен?",
+      "description": [
+        "Нужно видеть реальные маршруты, возвраты, временное хранение и перевозку. Несовпадение исправляют в схеме и анализе."
+      ],
+      "examples": [
+        "Например: Обход выявил неучтённую промежуточную ёмкость; схему обновили.",
+        "Например: В кафе проверили вечернюю подготовку заготовок, отсутствовавшую в первоначальной схеме."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P08",
+      "section": "P",
+      "clause": "5.4.3",
+      "heading": "Оцениваете ли вы опасности отдельно на каждом этапе?",
+      "description": [
+        "Общий перечень мало помогает: нужно понять, где опасность появляется, сохраняется или увеличивается и насколько это значимо."
+      ],
+      "examples": [
+        "Например: Остаток моющего средства оценили после мойки оборудования.",
+        "Например: В кафе оценили возможное загрязнение готового блюда при выдаче."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P09",
+      "section": "P",
+      "clause": "5.4.3.4, 5.4.5.1",
+      "heading": "Подтверждено ли, что выбранные меры обеспечивают нужную безопасность?",
+      "description": [
+        "Нужно обоснование пригодности меры или сочетания мер для продукта и условий. Сам факт наличия инструкции этого не подтверждает."
+      ],
+      "examples": [
+        "Например: Группа проверила обоснование режима обработки до его утверждения.",
+        "Например: До новой рецептуры оценили, сохраняется ли достаточность установленных мер."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P10",
+      "section": "P",
+      "clause": "5.4.4, 5.4.5.2",
+      "heading": "Различаете ли вы ККТ, ППОПМ и основные гигиенические мероприятия?",
+      "description": [
+        "Категория зависит от анализа опасностей и роли меры. Нельзя считать любой журнал ККТ или упрощать категорию ради удобства."
+      ],
+      "examples": [
+        "Например: Группа объясняет, почему для выбранной ККТ нужен критический предел.",
+        "Например: Работник понимает отличие общей уборки от специальной меры управления значимой опасностью."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P11",
+      "section": "P",
+      "clause": "5.4.5.3, 5.4.6",
+      "heading": "Позволяет ли текущий контроль вовремя обнаружить потерю управления опасностью?",
+      "description": [
+        "Метод и частота должны позволять отреагировать и определить затронутую продукцию до её неконтролируемого выпуска."
+      ],
+      "examples": [
+        "Например: Отклонение режима обнаружили, партию заблокировали до решения.",
+        "Например: В кафе проверка выявила нарушение до передачи затронутых блюд в доставку."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P12",
+      "section": "P",
+      "clause": "5.4.6",
+      "heading": "Знают ли работники допустимые пределы и действия при нарушении?",
+      "description": [
+        "Работник должен понимать свой контроль и уметь действовать при отклонении. Подписи об ознакомлении недостаточно."
+      ],
+      "examples": [
+        "Например: Оператор показывает установленную границу и способ остановки выпуска.",
+        "Например: Работник кафе объясняет, как обозначить затронутую продукцию и кому сообщить."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P13",
+      "section": "P",
+      "clause": "5.5.1",
+      "heading": "Удерживается ли потенциально опасная продукция до обоснованного решения?",
+      "description": [
+        "Затронутые партии определяют, отделяют и не допускают к случайному использованию. Дальнейший путь должен иметь основание."
+      ],
+      "examples": [
+        "Например: Партию после нарушения режима поместили в выделенную зону.",
+        "Например: Блюда с сомнительным статусом не выдают до оценки ответственным."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P14",
+      "section": "P",
+      "clause": "5.5.2",
+      "heading": "Можете ли вы вовремя решить вопрос изъятия и уведомить нужных получателей?",
+      "description": [
+        "Нужно учитывать продукцию за пределами компании и партии в сходных условиях. Контакты и полномочия определяют заранее."
+      ],
+      "examples": [
+        "Например: По затронутой партии быстро нашли первых получателей.",
+        "Например: Кафе определило затронутые заказы доставки и ответственного за необходимые уведомления."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P15",
+      "section": "P",
+      "clause": "5.5.3",
+      "heading": "Устраняете ли вы причину опасного отклонения и проверяете ли результат?",
+      "description": [
+        "Текущую ситуацию исправляют, затем предотвращают повторение. Меры выбирают с учётом риска и подтверждают их действие."
+      ],
+      "examples": [
+        "Например: Причину сбоя подачи пара устранили и проверили устойчивость режима.",
+        "Например: После повторных пропусков контроля изменили организацию смены и проверили исполнение."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P16",
+      "section": "P",
+      "clause": "5.6",
+      "heading": "Можете ли вы проследить реальную партию от сырья до первого получателя?",
+      "description": [
+        "Практическая проверка показывает, работают ли связи между записями. Одного описания процедуры недостаточно."
+      ],
+      "examples": [
+        "Например: По выбранной партии нашли ингредиенты, операции и накладные.",
+        "Например: Компания по доставке восстановила путь партии от поставщика до отгрузок."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P17",
+      "section": "P",
+      "clause": "5.7",
+      "heading": "Используются ли только пригодные приборы с понятным статусом?",
+      "description": [
+        "Сотрудник должен различать приборы и знать, разрешено ли их использовать. Непригодный прибор не должен подтверждать безопасность продукта."
+      ],
+      "examples": [
+        "Например: Перед измерением проверили номер и статус термометра.",
+        "Например: Прибор с истёкшим сроком необходимой проверки убрали из работы."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P18",
+      "section": "P",
+      "clause": "5.8",
+      "heading": "Находят ли внутренние аудиты реальные отклонения в ХАССП?",
+      "description": [
+        "Объективная проверка включает наблюдение, записи и принятые решения. По нарушениям проверяют устранение причины."
+      ],
+      "examples": [
+        "Например: Аудитор заметил пропуск мониторинга и проверил последующие меры.",
+        "Например: В кафе сопоставили записи уборки с фактическим состоянием участка."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P19",
+      "section": "P",
+      "clause": "5.9",
+      "heading": "Использует ли группа ХАССП результаты работы для улучшений?",
+      "description": [
+        "Данные контроля, проверки, нарушения и изменения должны приводить к решениям. Руководство получает выводы и потребность в ресурсах."
+      ],
+      "examples": [
+        "Например: Повторные отклонения стали основанием для замены неисправного узла.",
+        "Например: Группа кафе предложила изменить организацию охлаждения и получила нужные ресурсы."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": true,
+        "priority": 1
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    },
+    {
+      "id": "P20",
+      "section": "P",
+      "clause": "5.10",
+      "heading": "Обновляете ли вы ХАССП при изменении продукта, процесса или сведений об опасностях?",
+      "description": [
+        "Новый ингредиент, оборудование или маршрут может сделать прежние решения недостаточными. Изменения оценивают и отражают в системе."
+      ],
+      "examples": [
+        "Например: До новой рецептуры обновили анализ опасностей и план.",
+        "Например: После смены маршрута доставки пересмотрели условия перевозки и контроль."
+      ],
+      "condition": "",
+      "answers": {
+        "preset": "practice",
+        "overrides": {}
+      },
+      "evaluation": {
+        "weight": 1,
+        "important": false,
+        "priority": 2
+      },
+      "applicability": {
+        "notApplicable": {
+          "allowed": false,
+          "explanation": ""
+        },
+        "noEvents": {
+          "allowed": false,
+          "explanation": ""
+        }
+      },
+      "plan": {
+        "heading": "",
+        "whenNo": "",
+        "whenPartial": "",
+        "confirmation": "",
+        "strength": ""
+      }
+    }
+  ]
+}

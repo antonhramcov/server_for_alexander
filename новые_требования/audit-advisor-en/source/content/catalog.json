@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "contentRevision": "2026-10-30.en.1",
+  "interfaceFile": "interface.en.json",
+  "standards": [
+    {
+      "id": "iso-9001-en",
+      "label": "ISO 9001:2026",
+      "status": "ready",
+      "file": "standards/iso-9001-en.json"
+    },
+    {
+      "id": "iso-14001-en",
+      "label": "ISO 14001:2026",
+      "status": "ready",
+      "file": "standards/iso-14001-en.json"
+    },
+    {
+      "id": "iso-45001-en",
+      "label": "ISO 45001:2018",
+      "status": "ready",
+      "file": "standards/iso-45001-en.json"
+    },
+    {
+      "id": "iso-50001-en",
+      "label": "ISO 50001:2018",
+      "status": "ready",
+      "file": "standards/iso-50001-en.json"
+    },
+    {
+      "id": "iso-27001-en",
+      "label": "ISO/IEC 27001:2022",
+      "status": "ready",
+      "file": "standards/iso-27001-en.json"
+    },
+    {
+      "id": "iso-22301-en",
+      "label": "ISO 22301:2019",
+      "status": "ready",
+      "file": "standards/iso-22301-en.json"
+    },
+    {
+      "id": "iso-13485-en",
+      "label": "ISO 13485:2016",
+      "status": "ready",
+      "file": "standards/iso-13485-en.json"
+    }
+  ]
+}
