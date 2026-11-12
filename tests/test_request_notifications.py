@@ -51,11 +51,16 @@ class RequestNotificationTests(unittest.TestCase):
             "the exact Telegram message",
         )
 
-    def test_russian_readiness_assets_are_public_and_scoped(self):
-        index = self.client.get("/readiness-ru/")
-        script = self.client.get("/readiness-ru/audit-advisor.js")
-        catalog = self.client.get("/readiness-ru/content/catalog.json")
-        outside_file = self.client.get("/readiness-ru/%2e%2e/server.py")
+    def test_readiness_assets_are_public_and_scoped(self):
+        for language in ("ru", "en"):
+            with self.subTest(language=language):
+                self._assert_readiness_assets(language)
+
+    def _assert_readiness_assets(self, language: str):
+        index = self.client.get(f"/readiness-{language}/")
+        script = self.client.get(f"/readiness-{language}/audit-advisor.js")
+        catalog = self.client.get(f"/readiness-{language}/content/catalog.json")
+        outside_file = self.client.get(f"/readiness-{language}/%2e%2e/server.py")
 
         try:
             self.assertEqual(index.status_code, 200)

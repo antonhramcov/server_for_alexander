@@ -30,6 +30,12 @@ RUSSIAN_READINESS_DIR = (
     / "audit-advisor-ru"
     / "server"
 )
+ENGLISH_READINESS_DIR = (
+    Path(__file__).resolve().parent
+    / "новые_требования"
+    / "audit-advisor-en"
+    / "server"
+)
 cors = CORS(
     app,
     resources={
@@ -51,6 +57,13 @@ cors = CORS(
 def russian_readiness(filename: str):
     """Serve the self-contained Russian assessment frontend and its content."""
     return send_from_directory(RUSSIAN_READINESS_DIR, filename, max_age=0)
+
+
+@app.route('/readiness-en/', defaults={'filename': 'index.html'}, methods=['GET'])
+@app.route('/readiness-en/<path:filename>', methods=['GET'])
+def english_readiness(filename: str):
+    """Serve the self-contained English assessment frontend and its content."""
+    return send_from_directory(ENGLISH_READINESS_DIR, filename, max_age=0)
 
 
 @app.route('/get_names_companies_from_standarts', methods=['POST', 'OPTIONS'])
