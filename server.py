@@ -1,8 +1,9 @@
 import random
 import string
 from io import BytesIO
+from pathlib import Path
 
-from flask import Flask, jsonify, request, send_file
+from flask import Flask, jsonify, request, send_file, send_from_directory
 from flask_cors import CORS
 
 from config import FLASK_HOST, FLASK_PORT, REQUEST_NOTIFICATION_EMAIL
@@ -23,6 +24,12 @@ from telegram_notifier import send_request_notification
 
 
 app = Flask(__name__)
+RUSSIAN_READINESS_DIR = (
+    Path(__file__).resolve().parent
+    / "новые_требования"
+    / "audit-advisor-ru"
+    / "server"
+)
 cors = CORS(
     app,
     resources={
@@ -37,6 +44,13 @@ cors = CORS(
         }
     },
 )
+
+
+@app.route('/readiness-ru/', defaults={'filename': 'index.html'}, methods=['GET'])
+@app.route('/readiness-ru/<path:filename>', methods=['GET'])
+def russian_readiness(filename: str):
+    """Serve the self-contained Russian assessment frontend and its content."""
+    return send_from_directory(RUSSIAN_READINESS_DIR, filename, max_age=0)
 
 
 @app.route('/get_names_companies_from_standarts', methods=['POST', 'OPTIONS'])

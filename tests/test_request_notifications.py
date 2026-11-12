@@ -51,6 +51,27 @@ class RequestNotificationTests(unittest.TestCase):
             "the exact Telegram message",
         )
 
+    def test_russian_readiness_assets_are_public_and_scoped(self):
+        index = self.client.get("/readiness-ru/")
+        script = self.client.get("/readiness-ru/audit-advisor.js")
+        catalog = self.client.get("/readiness-ru/content/catalog.json")
+        outside_file = self.client.get("/readiness-ru/%2e%2e/server.py")
+
+        try:
+            self.assertEqual(index.status_code, 200)
+            self.assertEqual(index.mimetype, "text/html")
+            self.assertIn(b"aa-iso-readiness", index.data)
+            self.assertEqual(script.status_code, 200)
+            self.assertEqual(script.mimetype, "text/javascript")
+            self.assertEqual(catalog.status_code, 200)
+            self.assertEqual(catalog.mimetype, "application/json")
+            self.assertEqual(outside_file.status_code, 404)
+        finally:
+            index.close()
+            script.close()
+            catalog.close()
+            outside_file.close()
+
 
 if __name__ == "__main__":
     unittest.main()
